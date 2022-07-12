@@ -1,0 +1,63 @@
+# let与const
+
+## ES5之前
+
+  - 全局作用域 ：window
+
+  - 函数作用域 ： 由于函数执行产生的作用域
+
+## 使用建议
+
+  - 默认情况下使用 `const` ，只有在你知道变量值需要被改变的情况下才使用 `let` 。这在代码中能确保基本层次的不可变性，有助于防止某些类型的错误。
+
+## let 和 const 相同点
+
+  - 不存在变量提升，所以必须先声明后使用
+
+    ```javascript
+    a =2;
+    let a; // 报错
+    ```
+
+  - 暂时性死区(**TDZ**)：在当前作用域下,能识别块级作用域：
+
+    - 预编译阶段，在 `JavaScript` 引擎扫描代码时，如果是用 `var` 声明时，变量声明整体提升
+
+    - 如果用 `let a = 1` `const` 声明时，把 **变量**放进 **TDZ** 中
+
+      ```javascript
+      // ES5
+      typeof(name); // 虽然没有声明，不会报错
+      ```
+
+      ```javascript
+      // ES6
+      typeof(name); // 报错 name is not defined
+      let name = '小刚刚';
+
+      let x = 10;
+      {
+        let x = x; // 报错 x is not defined
+      }
+      ```
+
+  - 不允许重复声明
+
+    ```javascript
+    // 3 个 i 不在同一个作用域
+    let i = 10; // 报错
+    for(let i = 0; i < 10;i++) {
+      let i = 2222; // 不报错 因为在for中定义的let和在for里定义的let不在同一个作用域
+    }
+
+    if(false) {
+      // es3 和 es5内 if 语句禁止函数声明 function fu() {}
+      let fu = function(){}
+    }
+    ```
+
+## let和const不同点
+
+  - `const`： 常量，不能改变的变量。
+
+  - 通过 `const` 声明的变量是保存的变量地址，所以通过 `const` 声明一个对象，然后改变对象的属性（只要不重新赋值），不会报错
