@@ -2,15 +2,15 @@
 
 ## 语法
 
-*   `arr.forEach(function (ele, index, array){});`
+  - `arr.forEach(function (ele, index, array){});`
 
 ## 注意
 
-*   每次执行时都会把 `func` 函数传进 `for` 循环，所以 `break` 和 `return` 无效
+  - 每次执行时都会把 `func` 函数传进 `for` 循环，所以 `break` 和 `return` 无效
 
 ## 源码
 
-*   代码
+  - 代码
 
     ```javascript
     Array.prototype.forEach = function(func) {
