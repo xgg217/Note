@@ -2,7 +2,7 @@
 
 ## keys()
 
-*   `keys()` 方法返回一个包含数组中每个索引键的Array Iterator对象
+  - `keys()` 方法返回一个包含数组中每个索引键的Array Iterator对象
 
     ```javascript
     const array1 = ['a', 'b', 'c'];
@@ -28,7 +28,7 @@
 
 ## values()
 
-*   `values()` 方法返回一个新的 Array Iterator 对象，该对象包含数组每个索引的值
+  - `values()` 方法返回一个新的 Array Iterator 对象，该对象包含数组每个索引的值
 
     ```javascript
     let arr = ['w', 'y', 'k', 'o', 'p'];
@@ -41,7 +41,7 @@
 
 ## entries()
 
-*   `entries()` 方法返回一个新的 Array Iterator对象，该对象包含数组中每个索引的键/值对
+  - `entries()` 方法返回一个新的 Array Iterator对象，该对象包含数组中每个索引的键/值对
 
     ```javascript
     const arr = ["a", "b", "c"];
