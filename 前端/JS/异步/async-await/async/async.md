@@ -1,0 +1,86 @@
+# async
+
+## async 异步
+
+*   用于修饰函数（无论是函数字面量还是函数函数表达式）
+
+*   放置在函数最开始的地方，被修饰函数的返回结果一定是 `Promise` 对象
+
+    ```javascript
+    async function test() {
+      console.log(1);
+      return 2;
+    }
+
+    // 相当于
+    function test() {
+      return newPromise((resolve, reject) => {
+        console.log(1);
+        return 2;
+      })
+    }
+    ```
+
+    ```javascript
+    // 返回 Promise，则 test 得到的 Promise 状态和其一致
+    async function test() {
+      return Promise.resolve(0);
+    }
+
+    test() // Promise{1}
+
+    ```
+
+    ```javascript
+    // 若执行过程报错，则任务状态是 rejected
+    async function test() {
+      throw new Error('错误')
+    }
+
+    test() // 失败状态
+    ```
+
+## 使用形式
+
+*   立即执行
+
+    ```javascript
+    (async function() {
+      // 执行代码
+    })();
+
+    // 箭头函数
+    (async () => {
+      // 执行代码
+    })();
+    ```
+
+*   函数表达式
+
+    ```javascript
+    const foo = async function () {};
+    ```
+
+*   `Class` 的方法
+
+    ```javascript
+    class Storage {
+      constructor() {
+        this.cachePromise = caches.open('avatars');
+      }
+
+      async getAvatar(name) {
+        const cache = await this.cachePromise;
+        return cache.match(`/avatars/${name}.jpg`);
+      }
+    }
+
+    const storage = new Storage();
+    storage.getAvatar('jake').then(…);
+    ```
+
+*   箭头函数
+
+    ```javascript
+    const foo = async () => {};
+    ```

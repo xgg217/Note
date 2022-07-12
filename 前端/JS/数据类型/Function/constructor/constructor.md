@@ -1,0 +1,33 @@
+# constructor
+
+## constructor
+
+*   `constructor` 作用和 `instanceof` 非常相似。
+
+*   但 `constructor` 检测 `Object` 与 `instanceof` 不一样，还可以处理基本数据类型的检测
+
+    ```javascript
+    var aa=[1,2];
+    console.log(aa.constructor===Array);//true
+
+    console.log(aa.constructor===RegExp);//false
+
+    console.log((1).constructor===Number);//true
+
+    var reg=/^$/;
+    console.log(reg.constructor===RegExp);//true
+    console.log(reg.constructor===Object);//false
+    ```
+
+## constructor 两大弊端
+
+1.  `null` 和 `undefined` 是无效的对象，因此是不会有 `constructor` 存在的，这两种类型的数据需要通过其他方式来判断;
+
+2.  函数的 `constructor` 是不稳定的，这个主要体现在把类的原型进行重写，在重写的过程中很有可能出现把之前的 `constructor` 给覆盖了，这样检测出来的结果就是不准确的
+
+    ```javascript
+    function Fn(){}
+    Fn.prototype = new Array()
+    var f = new Fn
+    console.log(f.constructor)//Array
+    ```

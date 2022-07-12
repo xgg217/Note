@@ -1,0 +1,22 @@
+# pop
+
+## 作用
+
+*   `pop` 方法用于删除数组的最后一个元素，并返回该元素
+
+    ```javascript
+    var a = ['a', 'b', 'c'];
+
+    a.pop() // 'c'
+    a // ['a', 'b']
+    ```
+
+## 注意
+
+*   该方法会改变原数组
+
+*   对空数组使用 `pop` 方法，不会报错，而是返回 `undefined`
+
+    ```javascript
+    [].pop() // undefined
+    ```
