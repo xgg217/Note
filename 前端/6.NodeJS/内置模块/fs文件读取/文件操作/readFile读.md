@@ -1,0 +1,36 @@
+# readFile读
+
+## 作用
+
+*   `fs.readFile` **异步**地读取文件的全部内容
+
+## fs.readFile(path\[, options], callback)
+
+*   path `<string>` | `<Buffer>` | `<URL>` | `<integer>` 文件名或文件描述符。
+
+*   options `<Object>` | `<string>`
+
+    *   encoding `<string>` | `<null>` 默认值: `null`。
+
+    *   flag `<string>` 参见文件系统 flag 的支持。默认值: `'r'`。
+
+    ```javascript
+    fs.readFile('文件名', (err, data) => {
+      if (err) throw err;
+      console.log(data);
+    });
+    ```
+
+*   如果 `options` 是字符串，则它指定字符编码：
+
+    ```javascript
+    fs.readFile('/etc/passwd', 'utf-8', callback);
+    ```
+
+## readFileSync
+
+*   `readFileSync` ：同步
+
+*   会导致 JS 运行阻塞，极其影响性能
+
+*   通常在程序启动时运行有限的次数即可

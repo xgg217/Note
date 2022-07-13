@@ -1,0 +1,20 @@
+# Set
+
+## Set操作
+
+*   示例
+
+    ```javascript
+    const set = reactive(new Set(["bss", 12, ref(0)]));
+
+    // 查找
+    console.log(sets.has("2")); // false
+    console.log(sets.has("bss")); // true
+
+    // 添加
+    console.log(sets.add("2")); // true
+
+    // 删除
+    console.log(sets.delete(12)); // true
+    console.log(sets.has(12)); // false
+    ```
