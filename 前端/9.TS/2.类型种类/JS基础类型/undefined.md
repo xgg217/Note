@@ -1,0 +1,31 @@
+# undefined
+
+## undefined 和 null
+
+*   typeScript里，`undefined` 和 `null` 两者各自有自己的类型分别叫做 `undefined` 和 `null` 。
+
+*   `undefined` 和 `null` 是所有类型的子类型，它可以赋值给其他类型。
+
+*   和 `void` 相似，它们的本身的类型用处不是很大：
+
+    ```javascript
+    let u: undefined = undefined;
+    let n: null = null;
+    ```
+
+*   解决该问题:：设置 `tsconfig.json` 文件。设置以后 `undefined` 和 `null` 只能赋值给自身
+
+    ```json
+    {
+      // 配置编译选项的默认值
+      "compilerOptions": {
+        "strictNullChecks": true, // 更加严格的空类型检查
+      },
+    }
+    ```
+
+    ```javascript
+    let num:number | undefined;
+
+    console.log(num); // 正确
+    ```

@@ -1,0 +1,96 @@
+# 可选与readonly
+
+## 可选属性
+
+*   属性名后面加一个 `?` 标记表示这个属性是可选的
+
+    ```typescript
+    interface PaintOptions {
+      shape: Shape;
+      xPos?: number; // 可选
+      yPos?: number; // 可选
+    }
+
+    function paintShape(opts: PaintOptions) {
+      // ...
+    }
+     
+    const shape = getShape();
+    paintShape({ shape });
+    paintShape({ shape, xPos: 100 });
+    paintShape({ shape, yPos: 100 });
+    paintShape({ shape, xPos: 100, yPos: 100 });
+
+    ```
+
+*   读取的时候需要进行判空处理
+
+    ```typescript
+    // 未针对 undefined 特殊
+    function paintShape(opts: PaintOptions) {
+      let xPos = opts.xPos;              
+      // (property) PaintOptions.xPos?: number | undefined
+      let yPos = opts.yPos;
+      // (property) PaintOptions.yPos?: number | undefined
+    }
+
+    // 针对 undefined 特殊
+    function paintShape(opts: PaintOptions) {
+      let xPos = opts.xPos === undefined ? 0 : opts.xPos;
+      // let xPos: number
+      let yPos = opts.yPos === undefined ? 0 : opts.yPos;
+      // let yPos: number
+    }
+
+    // 或者提供默认值
+    function paintShape({ shape, xPos = 0, yPos = 0 }: PaintOptions) {
+      console.log("x coordinate at", xPos); // (parameter) xPos: number
+      console.log("y coordinate at", yPos); // (parameter) yPos: number
+      // ...
+    }
+
+    ```
+
+## readonly
+
+*   属性可以被标记为 `readonly`，这不会改变任何运行时的行为
+
+*   但在类型检查的时候，一个标记为 `readonly`的属性是不能被写入的
+
+    ```typescript
+    interface SomeType {
+      readonly prop: string;
+    }
+     
+    function doSomething(obj: SomeType) {
+      // We can read from 'obj.prop'.
+      console.log(`prop has the value '${obj.prop}'.`);
+     
+      // 不能修改
+      obj.prop = "hello";
+    }
+    ```
+
+*   不过使用 `readonly` 并不意味着一个值就完全是不变的，亦或者说，内部的内容是不能变的。`readonly` 仅仅表明属性本身是不能被重新写入的
+
+    ```typescript
+    // type HelloWorld = string // expected to be a string
+    interface Home {
+      readonly resident: { name: string; age: number };
+    }
+     
+    function visitForBirthday(home: Home) {
+      console.log(`Happy birthday ${home.resident.name}!`);
+      // 可以修该
+      home.resident.age++;
+    }
+     
+    function evict(home: Home) {
+      // 报错 无法分配到 "resident" ，因为它是只读属性
+      home.resident = { 
+      // Cannot assign to 'resident' because it is a read-only property.
+        name: "Victor the Evictor",
+        age: 42,
+      };
+    }
+    ```
