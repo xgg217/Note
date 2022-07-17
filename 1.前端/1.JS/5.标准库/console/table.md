@@ -2,7 +2,7 @@
 
 ## table()
 
-*   对于某些复合类型的数据，`console.table` 方法可以将其转为表格显示。
+  - 对于某些复合类型的数据，`console.table` 方法可以将其转为表格显示。
 
     ```javascript
     var languages = [
@@ -14,9 +14,9 @@
     console.table(languages);
     ```
 
-*   对象时空固定
+  - 对象时空固定
 
-    *   代码
+      - 代码
 
         ```javascript
         let a = { b: { c: 1 } }

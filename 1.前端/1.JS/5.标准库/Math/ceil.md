@@ -2,7 +2,7 @@
 
 ## Math.ceil(x)
 
-*   返回x向上取整后的值.
+  - 返回x向上取整后的值.
 
     ```javascript
     Math.ceil(.95);    // 1

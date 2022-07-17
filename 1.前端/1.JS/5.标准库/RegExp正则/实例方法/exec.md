@@ -2,27 +2,27 @@
 
 ## 概述
 
-*   `RegExp.prototype.exec()`
+  - `RegExp.prototype.exec()`
 
-*   在一个指定字符串中执行一个搜索匹配。
+  - 在一个指定字符串中执行一个搜索匹配。
 
-*   返回一个结果数组或 `null`
+  - 返回一个结果数组或 `null`
 
-*   `exec` 比 `match` 更强大：当正则没有 `g` 时，使用 `match` 返回的信息比较多
+  - `exec` 比 `match` 更强大：当正则没有 `g` 时，使用 `match` 返回的信息比较多
 
-    *   `input`：整个原字符串
+      - `input`：整个原字符串
 
-    *   `index`：模式匹配成功的开始位置（从0开始计数）
+      - `index`：模式匹配成功的开始位置（从0开始计数）
 
-*   但是有 `g` 后，就没有关键的信息 `index` 了
+  - 但是有 `g` 后，就没有关键的信息 `index` 了
 
-*   而 `exec` 方法就能解决这个问题，它能接着上一次匹配后继续匹配
+  - 而 `exec` 方法就能解决这个问题，它能接着上一次匹配后继续匹配
 
 ## 语法
 
-*   `regexObj.exec(str)`
+  - `regexObj.exec(str)`
 
-*   返回值：返回一个数组（包含额外的属性 `index` 和 `input` ，参见下方表格），并更新正则表达式对象的 `lastIndex` 属性。完全匹配成功的文本将作为返回数组的第一项，从第二项起，后续每项都对应正则表达式内捕获括号里匹配成功的文本
+  - 返回值：返回一个数组（包含额外的属性 `index` 和 `input` ，参见下方表格），并更新正则表达式对象的 `lastIndex` 属性。完全匹配成功的文本将作为返回数组的第一项，从第二项起，后续每项都对应正则表达式内捕获括号里匹配成功的文本
 
     ```javascript
     var r = /a(b+)a/;
@@ -34,13 +34,13 @@
     arr.input // "_abbba_aba_"
     ```
 
-*   如果 正则表达式中不加 `g` ,则永远匹配第一个
+  - 如果 正则表达式中不加 `g` ,则永远匹配第一个
 
 ## reg.lastIndex
 
-*   匹配的游标
+  - 匹配的游标
 
-*   可读、可写
+  - 可读、可写
 
     ```javascript
     var reg = /a/g;
@@ -68,7 +68,7 @@
 
 ## exec配合while
 
-*   在使用 `exec` 时，经常需要配合使用 `while` 循环
+  - 在使用 `exec` 时，经常需要配合使用 `while` 循环
 
     ```javascript
     const string = "2017.06.27";
@@ -84,7 +84,7 @@
 
 ## 示例
 
-*   示例1
+  - 示例1
 
     ```javascript
     const str = 'abababab';
@@ -109,7 +109,7 @@
     console.log(reg.exec(str)); // [ 'ab', index: 0, input: 'abababab' ]
     ```
 
-*   示例2：获取中文字符的数量
+  - 示例2：获取中文字符的数量
 
     ```javascript
     const str = "sfsfs大师傅似的dsfs1564s大水发";

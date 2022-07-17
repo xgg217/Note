@@ -2,7 +2,7 @@
 
 ## 作用
 
-*   `Object.fromEntries()` 方法是 `Object.entries()` 的逆操作，用于将一个键值对数组转为对象。
+- `Object.fromEntries()` 方法是 `Object.entries()` 的逆操作，用于将一个键值对数组转为对象。
 
     ```javascript
     Object.fromEntries([
@@ -14,13 +14,13 @@
 
 ## 用途
 
-1.  将键值对的数据结构还原为对象
+  1.  将键值对的数据结构还原为对象
 
-2.  配合URLSearchParams对象，将查询字符串转为对象
+  2.  配合URLSearchParams对象，将查询字符串转为对象
 
 ## 将 Map 结构转为对象
 
-*   示例1
+- 示例1
 
     ```javascript
     // 例一
@@ -33,7 +33,7 @@
     // { foo: "bar", baz: 42 }
     ```
 
-*   示例2
+- 示例2
 
     ```javascript
     // 例二
@@ -44,7 +44,7 @@
 
 ## 将查询字符串转为对象
 
-*   代码
+- 代码
 
     ```javascript
     Object.fromEntries(new URLSearchParams('foo=bar&baz=qux'))

@@ -2,9 +2,9 @@
 
 ## async 异步
 
-*   用于修饰函数（无论是函数字面量还是函数函数表达式）
+  - 用于修饰函数（无论是函数字面量还是函数函数表达式）
 
-*   放置在函数最开始的地方，被修饰函数的返回结果一定是 `Promise` 对象
+  - 放置在函数最开始的地方，被修饰函数的返回结果一定是 `Promise` 对象
 
     ```javascript
     async function test() {
@@ -42,7 +42,7 @@
 
 ## 使用形式
 
-*   立即执行
+  - 立即执行
 
     ```javascript
     (async function() {
@@ -55,13 +55,13 @@
     })();
     ```
 
-*   函数表达式
+  - 函数表达式
 
     ```javascript
     const foo = async function () {};
     ```
 
-*   `Class` 的方法
+  - `Class` 的方法
 
     ```javascript
     class Storage {
@@ -79,7 +79,7 @@
     storage.getAvatar('jake').then(…);
     ```
 
-*   箭头函数
+  - 箭头函数
 
     ```javascript
     const foo = async () => {};

@@ -2,7 +2,7 @@
 
 ## 利用 Promise， 对 ajax 进行封装
 
-*   代码
+  - 代码
 
     ```javascript
     const myAjax = (url, method = 'get') => {

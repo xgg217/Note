@@ -2,7 +2,7 @@
 
 ## 解决 频繁的在 async 函数中写 try/catch 的逻辑
 
-*   问题：在开发中，为了系统健壮性，亦或者是为了捕获异步的错误，而频繁的在 `async` 函数中写 `try/catch` 的逻辑
+  - 问题：在开发中，为了系统健壮性，亦或者是为了捕获异步的错误，而频繁的在 `async` 函数中写 `try/catch` 的逻辑
 
     ```javascript
     asyncfunction func() {
@@ -16,7 +16,7 @@
 
 ## 解决办法
 
-*   优雅处理 `async/await`
+  - 优雅处理 `async/await`
 
     ```javascript
     async function errorCaptured(asyncFunc) {
@@ -29,7 +29,7 @@
     }
     ```
 
-*   实际使用
+  - 实际使用
 
     ```javascript
     async ffunction func() {

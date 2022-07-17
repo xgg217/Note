@@ -2,19 +2,19 @@
 
 ## innerHTML
 
-*   获取和设置元素内部 HTML 文本
+  - 获取和设置元素内部 HTML 文本
 
 ## innerText
 
-*   获取和设置元素内部 纯 文本
+  - 获取和设置元素内部 纯 文本
 
 ## Node.textContent
 
-*   属性表示一个节点及其后代的文本内容。
+  - 属性表示一个节点及其后代的文本内容。
 
-*   与`innerText`功能类似
+  - 与`innerText`功能类似
 
-*   在节点上设置 `textContent` 属性的话，会删除它的所有子节点，并替换为一个具有给定值的文本节点。
+  - 在节点上设置 `textContent` 属性的话，会删除它的所有子节点，并替换为一个具有给定值的文本节点。
 
     ```javascript
     <div id="divA">This is <span>some</span> text</div>
@@ -29,14 +29,14 @@
     <div id="divA">This is some text</div>
     ```
 
-*   与 `innerText` 的区别
+  - 与 `innerText` 的区别
 
-    *   `textContent` 会获取所有元素的内容，包括 `<script>` 和 `<style>` 元素，然而 `innerText` 不会。
+      - `textContent` 会获取所有元素的内容，包括 `<script>` 和 `<style>` 元素，然而 `innerText` 不会。
 
-    *   `innerText` 受 `CSS` 样式的影响，并且不会返回隐藏元素的文本，而`textContent`会。
+      - `innerText` 受 `CSS` 样式的影响，并且不会返回隐藏元素的文本，而`textContent`会。
 
-    *   由于 `innerText` 受 `CSS` 样式的影响，它会触发重排（`reflow`），但 `textContent` 不会。
+      - 由于 `innerText` 受 `CSS` 样式的影响，它会触发重排（`reflow`），但 `textContent` 不会。
 
-    *   与 `textContent` 不同的是, 在 `Internet Explorer` (对于小于等于 IE11 的版本) 中对 `innerText` 进行修改， 不仅会移除当前元素的子节点，而且还会永久性地破坏所有后代文本节点（所以不可能再次将节点再次插入到任何其他元素或同一元素中）。
+      - 与 `textContent` 不同的是, 在 `Internet Explorer` (对于小于等于 IE11 的版本) 中对 `innerText` 进行修改， 不仅会移除当前元素的子节点，而且还会永久性地破坏所有后代文本节点（所以不可能再次将节点再次插入到任何其他元素或同一元素中）。
 
-    *   与 `innerHTML` 的区别 : 正如其名称，`innerHTML` 返回 `HTML` 文本。通常，为了在元素中检索或写入文本，人们使用 `innerHTML` 。但是，`textContent` 通常具有更好的性能，因为文本不会被解析为HTML。此外，使用 `textContent` 可以防止  XSS 攻击。
+      - 与 `innerHTML` 的区别 : 正如其名称，`innerHTML` 返回 `HTML` 文本。通常，为了在元素中检索或写入文本，人们使用 `innerHTML` 。但是，`textContent` 通常具有更好的性能，因为文本不会被解析为HTML。此外，使用 `textContent` 可以防止  XSS 攻击。

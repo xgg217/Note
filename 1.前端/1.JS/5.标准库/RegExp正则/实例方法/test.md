@@ -2,15 +2,15 @@
 
 ## 概述
 
-*   `RegExp.prototype.test()`
+  - `RegExp.prototype.test()`
 
-*   执行一个检索，用来查看正则表达式与指定的字符串是否匹配。
+  - 执行一个检索，用来查看正则表达式与指定的字符串是否匹配。
 
 ## 语法
 
-*   `regexObj.test(str)`
+  - `regexObj.test(str)`
 
-*   返回值：如果正则表达式与指定的字符串匹配，返回 `true`；否则 `false`
+  - 返回值：如果正则表达式与指定的字符串匹配，返回 `true`；否则 `false`
 
     ```javascript
     var r = /x/g;
@@ -26,7 +26,7 @@
     r.test(s) // false
     ```
 
-*   可以通过正则对象的`lastIndex`属性指定开始搜索的位置
+  - 可以通过正则对象的`lastIndex`属性指定开始搜索的位置
 
     ```javascript
     var r = /x/g;
@@ -41,7 +41,7 @@
 
 ## 注意事项
 
-*   如果，要整体匹配，正则前后需要添加开头和结尾
+  - 如果，要整体匹配，正则前后需要添加开头和结尾
 
     ```javascript
     console.log( /123/.test("a123b") );
@@ -54,7 +54,7 @@
     // => true
     ```
 
-*   如果正则模式是一个空字符串(`''`)，则匹配所有字符串.
+  - 如果正则模式是一个空字符串(`''`)，则匹配所有字符串.
 
     ```javascript
     new RegExp('').test('abc')
@@ -63,7 +63,7 @@
 
 ## 不具有重复性
 
-*   示例
+  - 示例
 
     ```javascript
     // 2012-12-12 12:12:12
@@ -75,7 +75,7 @@
     console.log(regex.test("2012-12-12 12:12:12"));// false
     ```
 
-*   解决办法
+  - 解决办法
 
     ```javascript
     // 2012-12-12 12:12:12
@@ -91,7 +91,7 @@
 
 ## 示例
 
-*   示例1
+  - 示例1
 
     ```javascript
     let str = 'hello world!';

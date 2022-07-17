@@ -2,9 +2,9 @@
 
 ## URL.createObjectURL()
 
-*   `URL.createObjectURL()` 方法用来为上传/下载的文件、流媒体文件生成一个 URL 字符串。
+  - `URL.createObjectURL()` 方法用来为上传/下载的文件、流媒体文件生成一个 URL 字符串。
 
-*   这个字符串代表了 `File` 对象或 `Blob` 对象的 URL。
+  - 这个字符串代表了 `File` 对象或 `Blob` 对象的 URL。
 
     ```javascript
     // HTML 代码如下
@@ -32,15 +32,15 @@
     blob:http://localhost/c745ef73-ece9-46da-8f66-ebes574789b1
     ```
 
-*   注意，每次使用 `URL.createObjectURL()` 方法，都会在内存里面生成一个 URL 实例。
+  - 注意，每次使用 `URL.createObjectURL()` 方法，都会在内存里面生成一个 URL 实例。
 
-*   如果不再需要该方法生成的 URL 字符串，为了节省内存，可以使用 `URL.revokeObjectURL()` 方法释放这个实例。
+  - 如果不再需要该方法生成的 URL 字符串，为了节省内存，可以使用 `URL.revokeObjectURL()` 方法释放这个实例。
 
 ## URL.revokeObjectURL()
 
-*   `URL.revokeObjectURL()` 方法用来释放 `URL.createObjectURL()` 方法生成的 URL 实例。
+  - `URL.revokeObjectURL()` 方法用来释放 `URL.createObjectURL()` 方法生成的 URL 实例。
 
-*   它的参数就是 `URL.createObjectURL()` 方法返回的 URL 字符串。
+  - 它的参数就是 `URL.createObjectURL()` 方法返回的 URL 字符串。
 
     ```javascript
     var div = document.getElementById('display');

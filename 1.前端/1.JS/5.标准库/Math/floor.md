@@ -2,7 +2,7 @@
 
 ## Math.floor(x)
 
-*   返回小于x的最大整数。 向下取整
+  - 返回小于x的最大整数。 向下取整
 
     ```javascript
     Math.floor( 45.95);  // 45

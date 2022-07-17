@@ -2,9 +2,9 @@
 
 ## 示例
 
-*   如果你曾经与cookie进行交互，那么必须处理 `document.cookie`
+  - 如果你曾经与cookie进行交互，那么必须处理 `document.cookie`
 
-*   这是一个不寻常的API，因为API是一个 `String` ，它读出所有 `cookie` ，以分号分隔。
+  - 这是一个不寻常的API，因为API是一个 `String` ，它读出所有 `cookie` ，以分号分隔。
 
     ```text
     _octo=GH1.2.2591.47507; _ga=GA1.1.62208.4087; has_recent_activity=1

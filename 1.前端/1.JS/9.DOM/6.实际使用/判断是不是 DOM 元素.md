@@ -2,7 +2,7 @@
 
 ## isElement
 
-*   代码
+  - 代码
 
     ```javascript
     isElement = function(obj) {

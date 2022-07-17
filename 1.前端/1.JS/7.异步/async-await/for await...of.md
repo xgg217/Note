@@ -2,7 +2,7 @@
 
 ## 使用方式
 
-*   代码
+  - 代码
 
     ```javascript
     async function () {
@@ -16,7 +16,7 @@
     }
     ```
 
-*   node 中使用
+  - node 中使用
 
     ```javascript
     async function main(inputFilePath) {
