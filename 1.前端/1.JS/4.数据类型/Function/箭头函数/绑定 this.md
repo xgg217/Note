@@ -2,7 +2,7 @@
 
 ## 箭头函数绑定的规则
 
-*   箭头函数没有 `prototype` (原型)，所以箭头函数本身没有 `this`
+  - 箭头函数没有 `prototype` (原型)，所以箭头函数本身没有 `this`
 
     ```javascript
     const a = () =>{};
@@ -10,7 +10,7 @@
     console.log(a.prototype); // undefined
     ```
 
-*   绑定离自己最近的非**箭头函数**作用域中的 `this`，即箭头函数的 `this` 指向在定义的时候继承自外层第一个普通函数的 `this`
+  - 绑定离自己最近的非**箭头函数**作用域中的 `this`，即箭头函数的 `this` 指向在定义的时候继承自外层第一个普通函数的 `this`
 
     ```javascript
     let a,

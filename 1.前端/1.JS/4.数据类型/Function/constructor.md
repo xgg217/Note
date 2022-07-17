@@ -2,9 +2,9 @@
 
 ## constructor
 
-*   `constructor` 作用和 `instanceof` 非常相似。
+  - `constructor` 作用和 `instanceof` 非常相似。
 
-*   但 `constructor` 检测 `Object` 与 `instanceof` 不一样，还可以处理基本数据类型的检测
+  - 但 `constructor` 检测 `Object` 与 `instanceof` 不一样，还可以处理基本数据类型的检测
 
     ```javascript
     var aa=[1,2];
@@ -21,9 +21,8 @@
 
 ## constructor 两大弊端
 
-1.  `null` 和 `undefined` 是无效的对象，因此是不会有 `constructor` 存在的，这两种类型的数据需要通过其他方式来判断;
-
-2.  函数的 `constructor` 是不稳定的，这个主要体现在把类的原型进行重写，在重写的过程中很有可能出现把之前的 `constructor` 给覆盖了，这样检测出来的结果就是不准确的
+  1. `null` 和 `undefined` 是无效的对象，因此是不会有 `constructor` 存在的，这两种类型的数据需要通过其他方式来判断;
+  2. 函数的 `constructor` 是不稳定的，这个主要体现在把类的原型进行重写，  在重写的过程中很有可能出现把之前的 `constructor` 给覆盖了，这样检测出来  的结果就是不准确的
 
     ```javascript
     function Fn(){}
