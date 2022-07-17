@@ -2,13 +2,13 @@
 
 ## 插件
 
-*   `koa-jwt`
+  - `koa-jwt`
 
-*   `jsonwebtoken`
+  - `jsonwebtoken`
 
 ## 示例
 
-*   代码
+  - 代码
 
     ```javascript
     import jsonwebtoken from 'jsonwebtoken'

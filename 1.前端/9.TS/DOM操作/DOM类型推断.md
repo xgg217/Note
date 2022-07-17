@@ -2,7 +2,7 @@
 
 ## 类型推断
 
-*   示例
+  - 示例
 
     ```typescript
     const a = document.querySelector('body') as HTMLBodyElement; // 断言成 body 元素
@@ -10,7 +10,7 @@
 
     ```
 
-*   在控制台中查看元素类型
+  - 在控制台中查看元素类型
 
     ```javascript
     const a = document.createElement('div')

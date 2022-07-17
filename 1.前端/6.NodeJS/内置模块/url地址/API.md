@@ -2,7 +2,7 @@
 
 ## 构造函数
 
-*   代码
+  - 代码
 
     ```javascript
     const URL = require("url");
@@ -38,7 +38,7 @@
 
 ## parse
 
-*   代码
+  - 代码
 
     ```javascript
     const urls = URL.parse("https://3w.huanqiu.com:8080/a/b/c?agt=8&e=5#abc");
@@ -62,7 +62,7 @@
 
 ## format
 
-*   对象转换成字符串
+  - 对象转换成字符串
 
     ```javascript
     const obj = {

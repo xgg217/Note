@@ -2,7 +2,7 @@
 
 ## Props标注类型
 
-*   当使用 `<script setup>` 时，这个 `defineProps()` 宏函数支持从它的参数中推导类型
+  - 当使用 `<script setup>` 时，这个 `defineProps()` 宏函数支持从它的参数中推导类型
 
     ```vue
     <script setup lang="ts">
@@ -16,7 +16,7 @@
     </script>
     ```
 
-*   通过泛型参数来定义 prop 的类型通常更直接
+  - 通过泛型参数来定义 prop 的类型通常更直接
 
     ```vue
     <script setup lang="ts">
@@ -40,7 +40,7 @@
 
 ## 语法限制
 
-*   接口或对象字面类型可以包含从其他文件导入的类型引用，但是，传递给 `defineProps` 的泛型参数本身**不能**是一个导入的类型：
+  - 接口或对象字面类型可以包含从其他文件导入的类型引用，但是，传递给 `defineProps` 的泛型参数本身**不能**是一个导入的类型：
 
     ```typescript
     import type { Props } from './other-file'
@@ -52,7 +52,7 @@
 
 ## 默认值
 
-*   使用 `withDefaults`
+  - 使用 `withDefaults`
 
     ```vue
     interface Props {
@@ -66,7 +66,7 @@
     })
     ```
 
-*   当使用基于类型的声明时，我们失去了对 prop 定义默认值的能力。这可以通过目前实验性的[响应性语法糖](https://staging-cn.vuejs.org/guide/extras/reactivity-transform.html#reactive-props-destructure "响应性语法糖")来解决
+  - 当使用基于类型的声明时，我们失去了对 prop 定义默认值的能力。这可以通过目前实验性的[响应性语法糖](https://staging-cn.vuejs.org/guide/extras/reactivity-transform.html#reactive-props-destructure "响应性语法糖")来解决
 
     ```vue
     <script setup lang="ts">

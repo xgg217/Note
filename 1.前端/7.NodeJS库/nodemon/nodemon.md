@@ -2,13 +2,13 @@
 
 ## 命令行辅助工具
 
-*   安装插件
+  - 安装插件
 
     ```bash
     npm i -D nodemon
     ```
 
-*   使用
+  - 使用
 
     ```bash
     // 使用 持续监听
@@ -17,7 +17,7 @@
 
 ## 配合文件
 
-*   在根目录下增加 `nodemon.json` 文件
+  - 在根目录下增加 `nodemon.json` 文件
 
     ```json
     {
@@ -37,7 +37,7 @@
     }
     ```
 
-*   在 `package.json` 增加配置，并且启动 浏览器 调试 node
+  - 在 `package.json` 增加配置，并且启动 浏览器 调试 node
 
     ```json
     "scripts": {

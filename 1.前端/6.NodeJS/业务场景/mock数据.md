@@ -2,7 +2,7 @@
 
 ## 随机生成数组对象
 
-*   示例
+  - 示例
 
     ```javascript
     const arr = Mock.mock({
@@ -18,7 +18,7 @@
 
 ## 随机生成名字
 
-*   示例
+  - 示例
 
     ```javascript
     const arr = Mock.mock({

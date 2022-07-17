@@ -2,7 +2,7 @@
 
 ## 布尔 boolean
 
-*   最基本的数据类型就是简单的 `true` / `false` 值，在JavaScript和TypeScript里叫做 `boolean`
+  - 最基本的数据类型就是简单的 `true` / `false` 值，在JavaScript和TypeScript里叫做 `boolean`
 
     ```javascript
     let flag:boolean = true;

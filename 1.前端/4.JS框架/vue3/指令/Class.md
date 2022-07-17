@@ -2,14 +2,14 @@
 
 ## 对象
 
-*   对象
+  - 对象
 
     ```vue
     // active 是否存在取决于数据属性 isActive 的真假值
     <div :class="{ active: isActive }"></div>
     ```
 
-*   多个对象
+  - 多个对象
 
     ```vue
     const classObject = reactive({
@@ -23,7 +23,7 @@
 
 ## 数组
 
-*   数组
+  - 数组
 
     ```vue
     const activeClass = ref('active')
@@ -38,7 +38,7 @@
 
 ## 三元表达式
 
-*   三元表达式
+  - 三元表达式
 
     ```vue
     const activeClass = ref('active');
@@ -52,7 +52,7 @@
 
 ## :class与class
 
-*   `:class` 指令和一般的 `class` 共存
+  - `:class` 指令和一般的 `class` 共存
 
     ```vue
     const isActive = ref(true)
@@ -71,7 +71,7 @@
 
 ## 计算属性
 
-*   计算属性
+  - 计算属性
 
     ```vue
     const isActive = ref(true)
@@ -87,7 +87,7 @@
 
 ## 和组件配合
 
-*   对于只有一个根元素的组件，当你使用了 `class` attribute 时，这些 class 会被添加到根元素上，并与该元素上已有的 class 合并
+  - 对于只有一个根元素的组件，当你使用了 `class` attribute 时，这些 class 会被添加到根元素上，并与该元素上已有的 class 合并
 
     ```html
     <!-- 子组件模板 -->
@@ -107,7 +107,7 @@
 
     ```
 
-*   如果你的组件有多个根元素，你将需要指定哪个根元素来接收这个 class。你可以通过组件的 `$attrs` property 来实现指定
+  - 如果你的组件有多个根元素，你将需要指定哪个根元素来接收这个 class。你可以通过组件的 `$attrs` property 来实现指定
 
     ```html
     <!-- my-component 模板使用 $attrs 时 -->

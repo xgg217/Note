@@ -2,7 +2,7 @@
 
 ## 标注类型TS
 
-*   `computed()` 会从其计算函数的返回值上推导出类型：
+  - `computed()` 会从其计算函数的返回值上推导出类型：
 
     ```typescript
     import { ref, computed } from 'vue'
@@ -16,7 +16,7 @@
     const result = double.value.split('')
     ```
 
-*   你还可以通过泛型参数显式指定类型
+  - 你还可以通过泛型参数显式指定类型
 
     ```typescript
     const double = computed<number>(() => {

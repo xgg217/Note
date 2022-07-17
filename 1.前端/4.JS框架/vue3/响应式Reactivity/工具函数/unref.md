@@ -2,7 +2,7 @@
 
 ## unref
 
-*   等同于：`isRef(val) ? val.value : val`
+  - 等同于：`isRef(val) ? val.value : val`
 
     ```typescript
     import type { Ref } from 'vue';

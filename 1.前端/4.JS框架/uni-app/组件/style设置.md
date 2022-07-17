@@ -2,7 +2,7 @@
 
 ## 全局样式
 
-*   `uni.scss`
+  - `uni.scss`
 
     ```javascript
     $uni-color-primary: #007aff;
@@ -20,7 +20,7 @@
 
 ## scss
 
-*   使用
+  - 使用
 
     ```css
     <style scoped lang="scss">
@@ -39,7 +39,7 @@
 
 ## class
 
-*   class
+  - class
 
     ```javascript
     <view class="normal_view" />
@@ -55,7 +55,7 @@
 
 ## 行内样式设置
 
-*   style
+  - style
 
     ```javascript
     <view :style="{color:color}"></view>

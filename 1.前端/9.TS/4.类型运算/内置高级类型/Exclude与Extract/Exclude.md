@@ -2,7 +2,7 @@
 
 ## Exclude\<T, U>
 
-*   从 T 中的删除可以赋值给 U 的类型
+  - 从 T 中的删除可以赋值给 U 的类型
 
     ```typescript
     type A = number | string | boolean
@@ -16,13 +16,13 @@
 
 ## 源码
 
-*   源码
+  - 源码
 
     ```typescript
     type Exclude<T, U> = T extends U ? never : T;
     ```
 
-*   代码分析
+  - 代码分析
 
     1.  首先能明确联合类型 `"a" | "b" | "c"` 会被分成三个分支进行条件类型运算，并且产生一个联合类型
 

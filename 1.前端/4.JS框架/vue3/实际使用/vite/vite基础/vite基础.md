@@ -2,7 +2,7 @@
 
 ## 地址
 
-*   vite <https://github.com/vitejs/vite>
+  - vite <https://github.com/vitejs/vite>
 
 ## 面试题 谈谈你对vite的理解，最好对比webpack说明
 

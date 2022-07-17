@@ -2,7 +2,7 @@
 
 ## 数值类型 number
 
-*   不分是整数还是小数
+  - 不分是整数还是小数
 
     ```typescript
     let flag:number = 123;
@@ -20,7 +20,7 @@
 
 ## bigint
 
-*   大数字
+  - 大数字
 
     ```javascript
     let big: bigint =  100n;
@@ -28,7 +28,7 @@
 
 ## 注意
 
-*   然number和bigint都表示数字，但是这两个类型不兼容
+  - 然number和bigint都表示数字，但是这两个类型不兼容
 
     ```javascript
     let big: bigint =  100n;

@@ -2,9 +2,9 @@
 
 ## 使用 cookie-parser
 
-*   属于 **对称加密**
+  - 属于 **对称加密**
 
-*   加密
+  - 加密
 
     ```javascript
     const express = require("express");

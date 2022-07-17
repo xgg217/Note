@@ -2,13 +2,13 @@
 
 ## 概述
 
-*   对接口做裁剪
+  - 对接口做裁剪
 
 ## 功能
 
-*   从 T 中取出 一系列 K 的属性
+  - 从 T 中取出 一系列 K 的属性
 
-*   实际使用
+  - 实际使用
 
     ```typescript
     interface Todo {
@@ -16,13 +16,13 @@
       description: string;
       completed: boolean;
     }
-     
+
     type TodoPreview = Pick<Todo, "title" | "completed">;
     // type TodoPreview = {
     //   title: string;
     //   completed: boolean;
     // }
-     
+
     const todo: TodoPreview = {
       title: "Clean room",
       completed: false,
@@ -31,7 +31,7 @@
 
 ## JS实现Pick
 
-*   代码
+  - 代码
 
     ```javascript
     function myPick(todo: object, keys: []) {
@@ -50,7 +50,7 @@
 
 ## TS模拟实现Pick
 
-*   `K extend keyof T` 表示 K 是 T 的子类型，这里是一个类型约束声明
+  - `K extend keyof T` 表示 K 是 T 的子类型，这里是一个类型约束声明
 
     ```typescript
     type T = "a" | "b" | "c";
@@ -60,7 +60,7 @@
 
     ```
 
-*   代码
+  - 代码
 
     ```typescript
     /**
@@ -74,7 +74,7 @@
     }
     ```
 
-*   使用
+  - 使用
 
     ```typescript
     // 使用

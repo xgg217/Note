@@ -2,7 +2,7 @@
 
 ## 云函数 与 云数据库
 
-*   云函数
+  - 云函数
 
     ```javascript
     'use strict'
@@ -13,7 +13,7 @@
     }
     ```
 
-*   云数据库
+  - 云数据库
 
     ```javascript
     'use strict'
@@ -57,7 +57,7 @@
 
 ## 创建云函数工程
 
-*   创建云函数工程
+  - 创建云函数工程
 
     ```javascript
     'use strict'

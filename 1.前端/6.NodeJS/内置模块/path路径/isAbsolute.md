@@ -2,13 +2,13 @@
 
 ## path.isAbsolute(path) 判断是否为绝对路径
 
-*   `path.isAbsolute()` 方法确定 path 是否为绝对路径。
+  - `path.isAbsolute()` 方法确定 path 是否为绝对路径。
 
-*   参数
+  - 参数
 
-    *   path `<string>`
+      - path `<string>`
 
-*   返回值 `<boolean>`
+  - 返回值 `<boolean>`
 
     ```javascript
     path.isAbsolute('//server');    // true

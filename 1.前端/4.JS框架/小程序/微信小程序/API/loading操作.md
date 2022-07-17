@@ -10,7 +10,7 @@
 
 ## \<loading>
 
-*   代码
+  - 代码
 
     ```javascript
     data: {

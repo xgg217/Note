@@ -2,19 +2,19 @@
 
 ## 概述
 
-*   TS中
+  - TS中
 
-    *   `typeof` 操作符用于获取变量的类型
+      - `typeof` 操作符用于获取变量的类型
 
-    *   因此这个操作符的后面接的始终是一个**变量**，且需要运用到类型定义当中
+      - 因此这个操作符的后面接的始终是一个**变量**，且需要运用到类型定义当中
 
-    *   可以将 `JS` 转成 `TS`
+      - 可以将 `JS` 转成 `TS`
 
         ![](image/image_p5Tywr7-oi.png)
 
 ## 基础类型
 
-*   TypeScript 添加了一个`typeof`运算符，您可以在\_类型\_上下文中使用它来引用变量或属性的类型
+  - TypeScript 添加了一个`typeof`运算符，您可以在\_类型\_上下文中使用它来引用变量或属性的类型
 
     ```typescript
     let s = "hello";
@@ -23,7 +23,7 @@
 
 ## 对象
 
-*   对一个对象使用 `typeof`
+  - 对一个对象使用 `typeof`
 
     ```typescript
     const lolo = {
@@ -44,7 +44,7 @@
 
 ## 类型别名type
 
-*   代码
+  - 代码
 
     ```typescript
     type Person = {
@@ -62,7 +62,7 @@
 
 ## 函数
 
-*   对一个函数使用 `typeof`，获取对应函数类型
+  - 对一个函数使用 `typeof`，获取对应函数类型
 
     ```typescript
     function add(a: number, b: number) {
@@ -74,13 +74,13 @@
     type AddParamsType = Parameters<AddType> // [a: number, b: number]
     ```
 
-*   可以继续利用 TypeScript 内置的 `ReturnType` 和 `Parameters` 工具类型来分别获取函数的返回值类型和参数类型
+  - 可以继续利用 TypeScript 内置的 `ReturnType` 和 `Parameters` 工具类型来分别获取函数的返回值类型和参数类型
 
     ![](image/image_CEk5DfFn6W.png)
 
 ## 枚举
 
-*   利用 `keyof` 和 `typeof` 操作符，你就可以获取枚举类型的所有属性名
+  - 利用 `keyof` 和 `typeof` 操作符，你就可以获取枚举类型的所有属性名
 
     ```typescript
     enum HttpMethod {
@@ -100,7 +100,7 @@
 
 ## 获取数组元素类型
 
-*   用 `number` 来获取数组元素的类型。结合 `typeof` 可以方便的捕获数组字面量的元素类型
+  - 用 `number` 来获取数组元素的类型。结合 `typeof` 可以方便的捕获数组字面量的元素类型
 
     ```typescript
     const MyArray = [
@@ -108,25 +108,25 @@
       { name: "Bob", age: 23 },
       { name: "Eve", age: 38 },
     ];
-     
+
     type Person = typeof MyArray[number];
-           
+
     // type Person = {
     //    name: string;
     //    age: number;
     // }
 
-    type Age = typeof MyArray[number]["age"];  
+    type Age = typeof MyArray[number]["age"];
     // type Age = number
 
     // Or
-    type Age2 = Person["age"];   
+    type Age2 = Person["age"];
     // type Age2 = number
     ```
 
 ## 搭配const断言
 
-*   在使用 typeof 操作符的过程中，如果你想要获取更精确的类型，那么你可以结合 TypeScript 3.4 版本中引入的 `const` 断言
+  - 在使用 typeof 操作符的过程中，如果你想要获取更精确的类型，那么你可以结合 TypeScript 3.4 版本中引入的 `const` 断言
 
     ```typescript
     let requestMethod = "Get";
@@ -157,6 +157,6 @@
 
 ## 限制
 
-*   TypeScript 有意的限制了可以使用 `typeof` 的表达式的种类
+  - TypeScript 有意的限制了可以使用 `typeof` 的表达式的种类
 
-*   在 TypeScript 中，只有对**标识符**（比如**变量名**）或者他们的属性使用 `typeof` 才是合法的
+  - 在 TypeScript 中，只有对**标识符**（比如**变量名**）或者他们的属性使用 `typeof` 才是合法的

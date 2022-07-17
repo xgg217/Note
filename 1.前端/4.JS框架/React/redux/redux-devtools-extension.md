@@ -4,9 +4,9 @@
 
 ## npm 安装 redux-devtools-extension
 
-*   `npm install --save redux-devtools-extension`
+  - `npm install --save redux-devtools-extension`
 
-*   使用
+  - 使用
 
     ```javascript
     import { createStore, applyMiddleware } from 'redux';

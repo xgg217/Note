@@ -1,28 +1,29 @@
-parse解析
+parse
+解析
 ==
 
 ## 概述
-
+  -
 *   解析路径
 
 ## path.parse(path)
-
+  -
 *   与 `path.join()` 相反操作
-
+  -
 *   参数
-
+  -
     *   path `<string>`
-
+  -
 *   返回值：`<Object>` 返回的对象将具有以下属性
-
+  -
     *   dir `<string>`&#x20;
-
+  -
     *   root `<string>` 根目录
-
+  -
     *   base `<string>`&#x20;
-
+  -
     *   name `<string>`&#x20;
-
+  -
     *   ext `<string>` 扩展名
 
     ```javascript

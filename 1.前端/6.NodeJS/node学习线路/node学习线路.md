@@ -2,9 +2,9 @@
 
 ## 1. 后端的规范与思想
 
-*   分层
+  - 分层
 
-*   模块导入（`require`）和导出(`exports` `module.exports`)
+  - 模块导入（`require`）和导出(`exports` `module.exports`)
 
 ## 2. 基础API
 

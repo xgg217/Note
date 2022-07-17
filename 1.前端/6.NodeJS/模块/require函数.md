@@ -2,7 +2,7 @@
 
 ## 模拟 require
 
-*   代码
+  - 代码
 
     ```javascript
     function require(modlePath) {
@@ -11,7 +11,7 @@
       // 3. 没有缓存,读取文件内容
       // 4. 包裹到一个函数中
       function __temp(module, exports, require, __dirname, __filename) {
-        
+
       }
 
       module.exports = {};

@@ -2,7 +2,7 @@
 
 ## vue 3 的变化
 
-*   允许组件出现多个根节点
+  - 允许组件出现多个根节点
 
     ```html
     <!-- App.vue -->
@@ -17,7 +17,7 @@
           <template v-for="(item, index) of sdfAll" :key="item.ids">
             <li>{{ index + 1 }}--{{ item.title }}</li>
           </template>
-          
+
         </ul>
       </div>
     </template>

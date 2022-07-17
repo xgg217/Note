@@ -2,11 +2,11 @@
 
 ## cwd()
 
-*   返回当前nodejs进程的工作目录(命令行)
+  - 返回当前nodejs进程的工作目录(命令行)
 
-*   和当前文件所在的目录没有关系
+  - 和当前文件所在的目录没有关系
 
-*   绝对路径
+  - 绝对路径
 
     ```javascript
     console.log(process.cwd()); // d:\LX\node\20200511
@@ -14,13 +14,13 @@
 
 ## exit()
 
-*   强制退出当前node进程
+  - 强制退出当前node进程
 
-*   可传入退出码
+  - 可传入退出码
 
-    *   0：表示成功退出。默认为 0
+      - 0：表示成功退出。默认为 0
 
-    *   1：表示错误
+      - 1：表示错误
 
     ```javascript
     process.exit();
@@ -32,9 +32,9 @@
 
 ## argv
 
-*   String\[]
+  - String\[]
 
-*   获取命令中的所有参数
+  - 获取命令中的所有参数
 
     ```javascript
     // 命令
@@ -50,7 +50,7 @@
 
 ## platform&#x20;
 
-*   获取当前的操作系统
+  - 获取当前的操作系统
 
     ```javascript
     console.log(process.platform); // win32
@@ -58,9 +58,9 @@
 
 ## kill(pid)
 
-*   根据进程ID杀死进程
+  - 根据进程ID杀死进程
 
-*   pid：任务管理器能看到（每个应用每次启动的 pid 都不一样）
+  - pid：任务管理器能看到（每个应用每次启动的 pid 都不一样）
 
     ```javascript
     process.kill(pid);
@@ -71,7 +71,7 @@
 
 ## env
 
-*   获取环境变量对象
+  - 获取环境变量对象
 
     ```javascript
     process.env

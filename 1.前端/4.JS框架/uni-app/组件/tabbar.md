@@ -2,7 +2,7 @@
 
 ## 配置
 
-*   pages.json
+  - pages.json
 
     ```json
     "tabBar": {

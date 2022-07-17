@@ -2,15 +2,15 @@
 
 ## Reducer 基本使用
 
-*   是用于改变数据的函数。
+  - 是用于改变数据的函数。
 
-*   因为 `store` 在收到我们传递过去的 `action` 之后需要对 `state` 进行更新，这个计算过程就叫做 `reducer`。
+  - 因为 `store` 在收到我们传递过去的 `action` 之后需要对 `state` 进行更新，这个计算过程就叫做 `reducer`。
 
-*   一个数据仓库，有且仅有一个 ` reducer`，并且通常情况下，一个工程有且仅有一个仓库。
+  - 一个数据仓库，有且仅有一个 ` reducer`，并且通常情况下，一个工程有且仅有一个仓库。
 
-*   `reducer`是一个函数，接受 `state` 和 `action` 作为参数，返回一个新的 `state`。（和Vuex中的 `Mutation` 一致）
+  - `reducer`是一个函数，接受 `state` 和 `action` 作为参数，返回一个新的 `state`。（和Vuex中的 `Mutation` 一致）
 
-*   为了方便管理，通常会将 `reducer` 放到单独的文件中
+  - 为了方便管理，通常会将 `reducer` 放到单独的文件中
 
 ## reducer 被调用的时机
 
@@ -37,7 +37,7 @@ import { ADD, DEL, SET } from "redux/action/action-type";
 
  console.log(11111);
 
-  
+
 
  switch (type) {
 
@@ -45,7 +45,7 @@ import { ADD, DEL, SET } from "redux/action/action-type";
 
  return state + 1;
 
-  
+
 
  case DEL:
 
@@ -55,7 +55,7 @@ import { ADD, DEL, SET } from "redux/action/action-type";
 
  return payload.value;
 
-  
+
 
  default:
 
@@ -69,7 +69,7 @@ import { ADD, DEL, SET } from "redux/action/action-type";
 
 ## reducer 设置
 
-*   `reducer` 内部通常使用 `switch` 来判断 `type` 的值
+  - `reducer` 内部通常使用 `switch` 来判断 `type` 的值
 
 ```javascript
 /**
@@ -110,27 +110,27 @@ import { ADD, DEL, SET } from "redux/action/action-type";
 
 ## reducer 要求
 
-*   `reducer` **必须**是一个没有副作用的**纯函数**
+  - `reducer` **必须**是一个没有副作用的**纯函数**
 
-*   有利于测试和调试
+  - 有利于测试和调试
 
-*   有利于还原数据
+  - 有利于还原数据
 
-*   有利于将来和 `react` 结合时的优化
+  - 有利于将来和 `react` 结合时的优化
 
-*   不能改变参数，一次因此若要让状态变化，必须得到一个新的状态
+  - 不能改变参数，一次因此若要让状态变化，必须得到一个新的状态
 
-*   不能有异步
+  - 不能有异步
 
-*   不能对外部环境（`cookie` `localStorge`）造成影响
+  - 不能对外部环境（`cookie` `localStorge`）造成影响
 
 ## combineReducers
 
-*   由于在大中型项目中，操作比较复杂，数据结构也比较复杂，因此需要对 `reducer` 进行细化
+  - 由于在大中型项目中，操作比较复杂，数据结构也比较复杂，因此需要对 `reducer` 进行细化
 
-*   `redux` 提供了方法（`combineReducers`），可以帮助我们更加方便的合并 `reducer`
+  - `redux` 提供了方法（`combineReducers`），可以帮助我们更加方便的合并 `reducer`
 
-*   `combineReducers`：合并 `reducer` 得到一个新的 `reducer`，该新的 `reducer` 管理一个对象，该对象中的每一个属性交给对应的 `reducer` 管理
+  - `combineReducers`：合并 `reducer` 得到一个新的 `reducer`，该新的 `reducer` 管理一个对象，该对象中的每一个属性交给对应的 `reducer` 管理
 
 ```javascript
 import { createStore, bindActionCreators } from 'redux'
@@ -146,13 +146,13 @@ import { createStore, bindActionCreators } from 'redux'
 
  import { combineReducers } from 'redux'
 
-  
+
 
  import LoginUser from './LoginUser'
 
  import users from './users';
 
-  
+
 
  export default combineReducers({
 
@@ -162,7 +162,7 @@ import { createStore, bindActionCreators } from 'redux'
 
  });
 
-  
+
 
  // combineReducers 函数的原理
 
@@ -184,7 +184,7 @@ import { createStore, bindActionCreators } from 'redux'
 
 ## 示例代码
 
-*   action 设置
+  - action 设置
 
 ```javascript
 // usersAction.js
@@ -195,7 +195,7 @@ import { createStore, bindActionCreators } from 'redux'
 
  export const UPDATE_USER = Symbol('update-user')
 
-  
+
 
  // 添加用户
 
@@ -211,7 +211,7 @@ import { createStore, bindActionCreators } from 'redux'
 
  }
 
-  
+
 
  // 删除用户
 
@@ -231,7 +231,7 @@ import { createStore, bindActionCreators } from 'redux'
 
  }
 
-  
+
 
  // 更新用户
 
@@ -260,7 +260,7 @@ import { createStore, bindActionCreators } from 'redux'
 
  import * as usersAction from './../action/usersAction'
 
-  
+
 
  const initialState = [
 
@@ -272,7 +272,7 @@ import { createStore, bindActionCreators } from 'redux'
 
  ];
 
-  
+
 
  export default function(state = initialState, { type, payload }) {
 
@@ -290,7 +290,7 @@ import { createStore, bindActionCreators } from 'redux'
 
  return [...newState, payload];
 
-  
+
 
  case usersAction.DEL_USER:
 
@@ -300,7 +300,7 @@ import { createStore, bindActionCreators } from 'redux'
 
  });
 
-  
+
 
  case usersAction.UPDATE_USER:
 
@@ -318,7 +318,7 @@ import { createStore, bindActionCreators } from 'redux'
 
  });
 
-  
+
 
  default:
 
@@ -339,7 +339,7 @@ import { createStore, bindActionCreators } from 'redux'
 
  import users from './users'
 
-  
+
 
  // 合并方法1
 
@@ -353,13 +353,13 @@ import { createStore, bindActionCreators } from 'redux'
 
  }
 
-  
+
 
  return newState;
 
  }
 
-  
+
 
  // 合并方法2
 
@@ -378,11 +378,11 @@ import { createStore } from 'redux'
 
  import reducer from './reducer/index'
 
-  
+
 
  import { addUser, delUser, updateUser } from './action/usersAction'
 
-  
+
 
  console.log(store.getState()); // 查看仓库数据
 
@@ -390,7 +390,7 @@ import { createStore } from 'redux'
 
  console.log(store.getState())
 
-  
+
 
  store.dispatch(delUser(21)) // 删除
 
@@ -398,8 +398,8 @@ import { createStore } from 'redux'
 
 ```
 
-*   使用
+  - 使用
 
-*   合并 reducer
+  - 合并 reducer
 
-*   细分 reducer
+  - 细分 reducer

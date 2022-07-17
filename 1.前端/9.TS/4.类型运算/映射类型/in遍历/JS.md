@@ -2,18 +2,18 @@
 
 ## 类型收窄
 
-*   JavaScript 中有一个 `in` 操作符可以判断一个对象是否有对应的属性名。TypeScript 也可以通过这个收窄类型
+  - JavaScript 中有一个 `in` 操作符可以判断一个对象是否有对应的属性名。TypeScript 也可以通过这个收窄类型
 
     ```typescript
     type Fish = { swim: () => void };
     type Bird = { fly: () => void };
-     
+
     function move(animal: Fish | Bird) {
       if ("swim" in animal) {
         return animal.swim();
         // (parameter) animal: Fish
       }
-     
+
       return animal.fly();
       // (parameter) animal: Bird
     }
@@ -21,7 +21,7 @@
 
 ## &#x20;使用
 
-*   用于判断一个属性/方法是否属于某个对象
+  - 用于判断一个属性/方法是否属于某个对象
 
     ```typescript
     interface Foo {

@@ -2,11 +2,11 @@
 
 ## 中间件
 
-*   `@koa/cors`
+  - `@koa/cors`
 
 ## 跨域请求
 
-*   后台设置
+  - 后台设置
 
     ```javascript
     app.use(Cors(corsHandler))
@@ -28,7 +28,7 @@
     }
     ```
 
-*   浏览器：设置 `withCredentials: true` 时， `Access-Control-Allow-Origin` 不能设置为 `*`
+  - 浏览器：设置 `withCredentials: true` 时， `Access-Control-Allow-Origin` 不能设置为 `*`
 
     ```javascript
     const instance = axios.create({

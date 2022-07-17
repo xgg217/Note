@@ -2,12 +2,12 @@
 
 ## 安装@koa/router
 
-*   安装
+  - 安装
 
     ```bash
-    # npm .. 
+    # npm ..
     npm i @koa/router
-    # yarn .. 
+    # yarn ..
     yarn add @koa/router
     ```
 
@@ -18,7 +18,7 @@
 
 ## 基础使用
 
-*   使用
+  - 使用
 
     ```javascript
     // index.ts

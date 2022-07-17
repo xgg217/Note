@@ -2,37 +2,37 @@
 
 ## 基础
 
-*   Vue实例将会在实例化时调用 `$watch`，遍历 `watch` 对象的每一个属性。
+  - Vue实例将会在实例化时调用 `$watch`，遍历 `watch` 对象的每一个属性。
 
-*   我们也可以利用 `vm.$watch` 来实现侦听，用法与 `watch` 选项部分一致，略有不同。以下为使用方法。
+  - 我们也可以利用 `vm.$watch` 来实现侦听，用法与 `watch` 选项部分一致，略有不同。以下为使用方法。
 
 ## 侦听某个数据的变化
 
-*   三个参数，一参为被侦听的数据；二参为数据改变时执行的回调函数；三参可选，为设置的选项对象
+  - 三个参数，一参为被侦听的数据；二参为数据改变时执行的回调函数；三参可选，为设置的选项对象
 
     ```javascript
     vm.$watch(
-      'msg', 
+      'msg',
       function () {
         // 干了点事儿
-      }, 
+      },
       {
-        deep: Boolean, 
+        deep: Boolean,
         immediate: Boolean
       }
     )
     ```
 
-*   二个参数，一参为被侦听的数据；二参为选项对象，其中handler属性为必需，是数据改变时执行的回调函数，其他属性可选。
+  - 二个参数，一参为被侦听的数据；二参为选项对象，其中handler属性为必需，是数据改变时执行的回调函数，其他属性可选。
 
     ```javascript
     vm.$watch(
-    'msg', 
+    'msg',
       {
         handler () {
           // 干了点事儿
         },
-        deep: Boolean, 
+        deep: Boolean,
         immediate: Boolean
       }
     )
@@ -40,11 +40,11 @@
 
 ## 侦听某个对象属性的变化
 
-*   `vm.$watch('obj.name', /**参数和上面一之*/)`
+  - `vm.$watch('obj.name', /**参数和上面一之*/)`
 
 ## 当监听的数据的在初始不确定
 
-*   当监听的数据的在初始不确定，由多个数据得到时，此时可以将第一个参数写成函数类型
+  - 当监听的数据的在初始不确定，由多个数据得到时，此时可以将第一个参数写成函数类型
 
     ```javascript
     vm.$watch(function () {
@@ -56,14 +56,14 @@
 
 ## 取消侦听
 
-*   侦听器函数执行后，会返回一个取消侦听函数，用来停止触发回调：
+  - 侦听器函数执行后，会返回一个取消侦听函数，用来停止触发回调：
 
     ```javascript
     const unwatch = vm.$watch('msg', function () {});
     unwatch(); // 执行后会取消侦听msg数据
     ```
 
-*   使用 `unwatch` 时，需要注意的是，在带有 `immediate` 选项时，不能在第一次回调时取消侦听数据。
+  - 使用 `unwatch` 时，需要注意的是，在带有 `immediate` 选项时，不能在第一次回调时取消侦听数据。
 
     ```javascript
     const unwatch = vm.$watch('msg', function () {
@@ -75,13 +75,13 @@
     })
     ```
 
-*   如果仍然希望在回调内部用一个取消侦听的函数，那么可以先检查该函数的可用性：
+  - 如果仍然希望在回调内部用一个取消侦听的函数，那么可以先检查该函数的可用性：
 
     ```javascript
     var unwatch = vm.$watch('msg', function () {
         // 干了点儿事
         if(unwatch) {
-          unwatch();  
+          unwatch();
         }
       },{
         immediate: true

@@ -2,7 +2,7 @@
 
 ## 功能
 
-*   代码
+  - 代码
 
     ```typescript
     const tuple = ['tesla', 'model 3', 'model X', 'model Y'] as const
@@ -10,7 +10,7 @@
     type result = TupleToObject<typeof tuple> // expected { tesla: 'tesla', 'model 3': 'model 3', 'model X': 'model X', 'model Y': 'model Y'}
     ```
 
-*   实现
+  - 实现
 
     ```typescript
     // 只能传入 内容为 string 、 number 、symbol 类型的只读数组
@@ -28,7 +28,7 @@
 
 ## JS实现
 
-*   代码
+  - 代码
 
     ```typescript
     const tuple = ['xgg', '1'];
@@ -51,7 +51,7 @@
 
 ## TS获取数组的索引
 
-*   代码
+  - 代码
 
     ```typescript
     // 只能传入 内容为 string 、 number 、symbol 类型的只读数组
@@ -66,7 +66,7 @@
 
 ## TS获取数组的值
 
-*   代码
+  - 代码
 
     ```typescript
     // 只能传入 内容为 string 、 number 、symbol 类型的只读数组

@@ -2,13 +2,13 @@
 
 ## 概述
 
-*   对接口做裁剪
+  - 对接口做裁剪
 
-*   与 Pick 操作相反
+  - 与 Pick 操作相反
 
 ## 功能
 
-*   代码
+  - 代码
 
     ```typescript
     interface Foo {
@@ -40,7 +40,7 @@
 
 ## 修改已有属性
 
-*   代码
+  - 代码
 
     ```typescript
     type User = {
@@ -68,7 +68,7 @@
 
 ## 内部实现
 
-*   代码
+  - 代码
 
     ```typescript
     type Omit<T, K extends keyof any> = Pick<T, Exclude<keyof T, K>>;

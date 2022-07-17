@@ -2,17 +2,17 @@
 
 ## 安装
 
-*   全局安装 `npm install -g eslint`
+  - 全局安装 `npm install -g eslint`
 
-*   项目安装 `npm install eslint --save-dev`
+  - 项目安装 `npm install eslint --save-dev`
 
-*   如果你想你所有项目都使用eslint，请全局安装；如果你想当前项目使用，请局部安装。
+  - 如果你想你所有项目都使用eslint，请全局安装；如果你想当前项目使用，请局部安装。
 
-*   局部安装时请使用 –save-dev，因为 eslint 是适用于开发环境（Software Development Environment，SDE）的插件，请不要添加到生产环境中
+  - 局部安装时请使用 –save-dev，因为 eslint 是适用于开发环境（Software Development Environment，SDE）的插件，请不要添加到生产环境中
 
 ## 初始化
 
-*   初始化  `npx eslint --init`
+  - 初始化  `npx eslint --init`
 
 ## 设置
 
@@ -112,7 +112,7 @@
 
 ## .eslintrc.js
 
-*   内容1
+  - 内容1
 
     ```javascript
     module.exports = {
@@ -218,13 +218,13 @@
           "no-spaced-func": 2,//函数调用时 函数名与()之间不能有空格
           "no-sparse-arrays": 2,//禁止稀疏数组， [1,,2]
           "no-sync": 0,//nodejs 禁止同步方法
-         
+
           // 请看内容2
         }
     }
     ```
 
-*   内容2
+  - 内容2
 
     ```javascript
     "rules": {

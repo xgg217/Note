@@ -2,13 +2,13 @@
 
 ## 概述
 
-*   在 JavaScript 中，最基本的将数据成组和分发的方式就是通过对象
+  - 在 JavaScript 中，最基本的将数据成组和分发的方式就是通过对象
 
-*   在 TypeScript 中，我们通过对象类型（object types）来描述对象
+  - 在 TypeScript 中，我们通过对象类型（object types）来描述对象
 
 ## 定义
 
-*   象类型可以是匿名的
+  - 象类型可以是匿名的
 
     ```typescript
     function greet(person: { name: string; age: number }) {
@@ -16,27 +16,27 @@
     }
     ```
 
-*   可以使用接口进行定义
+  - 可以使用接口进行定义
 
     ```typescript
     interface Person {
       name: string;
       age: number;
     }
-     
+
     function greet(person: Person) {
       return "Hello " + person.name;
     }
     ```
 
-*   可以使用类型别名
+  - 可以使用类型别名
 
     ```typescript
     type Person = {
       name: string;
       age: number;
     };
-     
+
     function greet(person: Person) {
       return "Hello " + person.name;
     }

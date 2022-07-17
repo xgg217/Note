@@ -2,11 +2,11 @@
 
 ## Readonly\<T>
 
-*   将类型 T 中的成员变成 **只读**
+  - 将类型 T 中的成员变成 **只读**
 
 ## TS实现Readonly
 
-*   代码
+  - 代码
 
     ```typescript
      type MyReadonly<T> = {
@@ -32,7 +32,7 @@
 
 ## JS实现
 
-*   代码
+  - 代码
 
     ```javascript
     const readonly = function readonly(obj:object) {

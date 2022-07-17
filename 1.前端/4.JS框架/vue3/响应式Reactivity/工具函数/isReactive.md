@@ -2,11 +2,11 @@
 
 ## 概述
 
-*   判断某个数据是否是通过`reactive()` 或 `shallowReactive()` 创建的
+  - 判断某个数据是否是通过`reactive()` 或 `shallowReactive()` 创建的
 
 ## TS类型
 
-*   类型
+  - 类型
 
     ```typescript
     function isReactive(value: unknown): boolean
@@ -14,7 +14,7 @@
 
 ## 示例
 
-*   示例
+  - 示例
 
     ```javascript
     const obj1 = reactive({ a:' 张三' });

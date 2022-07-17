@@ -2,9 +2,9 @@
 
 ## callbackify
 
-*   `util.callbackify(original)`
+  - `util.callbackify(original)`
 
-*   将 `async` 异步函数（或者一个返回值为 `Promise` 的函数）转换成遵循异常优先的回调风格的函数
+  - 将 `async` 异步函数（或者一个返回值为 `Promise` 的函数）转换成遵循异常优先的回调风格的函数
 
     ```javascript
     const util = require('util');
@@ -42,7 +42,7 @@
 
 ## promisify
 
-*   传入一个遵循常见的错误优先的回调风格的函数（即以 `(err, value) => ...` 回调作为最后一个参数），并返回一个返回 `promise` 的版本。
+  - 传入一个遵循常见的错误优先的回调风格的函数（即以 `(err, value) => ...` 回调作为最后一个参数），并返回一个返回 `promise` 的版本。
 
     ```javascript
     const util = require('util');
@@ -71,7 +71,7 @@
 
 ## isDeepStrictEqual
 
-*   深度严格比较两个对象是否相等
+  - 深度严格比较两个对象是否相等
 
     ```javascript
     const obj1 = {
@@ -125,6 +125,6 @@
 
 ## inherits
 
-*   继承
+  - 继承
 
-*   现在请使用 ES6 `Class`
+  - 现在请使用 ES6 `Class`

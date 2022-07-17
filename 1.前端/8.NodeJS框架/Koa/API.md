@@ -2,13 +2,13 @@
 
 ## 下载
 
-*   `npm i koa`
+  - `npm i koa`
 
-*   ts 还需要安装 `npm i --save-dev @types/koa`
+  - ts 还需要安装 `npm i --save-dev @types/koa`
 
 ## 创建 Koa 应用
 
-*   方式1
+  - 方式1
 
     ```javascript
     // ts 版本
@@ -32,7 +32,7 @@
     server.listen(port, callback);
     ```
 
-*   方式2：
+  - 方式2：
 
     ```javascript
     const Koa = require('koa');
@@ -43,7 +43,7 @@
 
 ## 注册中间件
 
-*   注册中间件
+  - 注册中间件
 
     ```javascript
     app.use(middleware1);
@@ -51,7 +51,7 @@
     app.use(middleware3);
     ```
 
-*   中间件格式
+  - 中间件格式
 
     ```javascript
     function(ctx, next) {

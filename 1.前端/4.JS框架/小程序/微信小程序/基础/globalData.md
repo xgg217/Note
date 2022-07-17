@@ -2,7 +2,7 @@
 
 ## 定义
 
-*   globalData 在 app.js 文件中的 app() 全局应用实例中
+  - globalData 在 app.js 文件中的 app() 全局应用实例中
 
     ```javascript
     // app.js
@@ -16,7 +16,7 @@
 
 ## 在 app.js 中使用
 
-*   获取数据：直接使用 `this`
+  - 获取数据：直接使用 `this`
 
     ```javascript
     App({
@@ -30,7 +30,7 @@
     })
     ```
 
-*   修改数据
+  - 修改数据
 
     ```javascript
     App({

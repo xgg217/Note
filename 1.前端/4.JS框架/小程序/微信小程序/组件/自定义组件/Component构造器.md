@@ -2,17 +2,17 @@
 
 ## 作用
 
-*   Component 构造器可用于定义组件，调用 Component 构造器时可以指定组件的属性、数据、方法等。
+  - Component 构造器可用于定义组件，调用 Component 构造器时可以指定组件的属性、数据、方法等。
 
 ## 属性
 
-*   `properties`：组件对外属性，是属性名到属性的映射
+  - `properties`：组件对外属性，是属性名到属性的映射
 
-*   `data`：组件内容部的数据，可以渲染模板
+  - `data`：组件内容部的数据，可以渲染模板
 
-*   `lefttimes`：组件生命周期生命
+  - `lefttimes`：组件生命周期生命
 
-*   `methods`：组件的方法，包括事件的相应方法和响应函数的使用
+  - `methods`：组件的方法，包括事件的相应方法和响应函数的使用
 
     ```javascript
     Component({
@@ -58,16 +58,16 @@
 
 ## properties
 
-*   `type` 类型现在支持
+  - `type` 类型现在支持
 
-    *   `String`
+      - `String`
 
-    *   `Number`
+      - `Number`
 
-    *   `Boolean`
+      - `Boolean`
 
-    *   `Object`
+      - `Object`
 
-    *   `Array`
+      - `Array`
 
-    *   `null` (表示任意类型)
+      - `null` (表示任意类型)

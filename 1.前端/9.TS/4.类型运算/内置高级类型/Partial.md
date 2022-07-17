@@ -2,7 +2,7 @@
 
 ## Partial\<T>
 
-*   将类型 T 中的成员变成 **可选**
+  - 将类型 T 中的成员变成 **可选**
 
     ```javascript
     interface User {

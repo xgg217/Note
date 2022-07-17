@@ -2,9 +2,9 @@
 
 ## 概述
 
-*   我们可以使用集合来理解 `never`，`unknown`  是全集，`never` 是最小单元（空集），任意类型都包含了 `never`
+  - 我们可以使用集合来理解 `never`，`unknown`  是全集，`never` 是最小单元（空集），任意类型都包含了 `never`
 
-*   `unknown` — 表示万物
+  - `unknown` — 表示万物
 
     ![](image/image_pocVeDiZGi.png)
 
@@ -33,7 +33,7 @@
       }
     }
 
-    invokeCallback(1); 
+    invokeCallback(1);
     ```
 
 2.  在实际工作中，你还可以通过 instanceof 或用户自定义类型守卫等方式来缩窄变量的类型
@@ -67,7 +67,7 @@
 
 ## any与unknown
 
-*   你可以把任何值赋给 any 类型的变量，并对该变量执行任何操作；
+  - 你可以把任何值赋给 any 类型的变量，并对该变量执行任何操作；
 
     ```typescript
     // 使用 any
@@ -81,7 +81,7 @@
     value[0][1]; // OK
     ```
 
-*   你可以把任何值赋给 unknown 类型的变量，但你必须进行类型检查或类型断言才能对变量进行操作。
+  - 你可以把任何值赋给 unknown 类型的变量，但你必须进行类型检查或类型断言才能对变量进行操作。
 
     ```typescript
     // 使用 unknown
@@ -95,7 +95,7 @@
     value[0][1]; // Error
     ```
 
-*   `unknown` 类型的变量只能赋值给 `any` 类型和 `unknown` 类型本身
+  - `unknown` 类型的变量只能赋值给 `any` 类型和 `unknown` 类型本身
 
     ```typescript
     let value: unknown;
@@ -112,13 +112,13 @@
 
 ## 总结any与unknown
 
-*   `unknown` 类型可以理解成我不知道它的类型
+  - `unknown` 类型可以理解成我不知道它的类型
 
-*   `any` 类型可以理解成我不在乎它的类型
+  - `any` 类型可以理解成我不在乎它的类型
 
 ## 联合类型
 
-*   如果联合类型中有unknown，那么最终得到的都是`unknown`类型
+  - 如果联合类型中有unknown，那么最终得到的都是`unknown`类型
 
     ```typescript
     type U1 = unknown | null;
@@ -130,8 +130,8 @@
 
 ## keyof unknown
 
-*   用 keyof 操作符对 `any` 和 `unknown` 进行操作：
+  - 用 keyof 操作符对 `any` 和 `unknown` 进行操作：
 
-    *   `keyof any`：是 `string | number | symbol` 的联合类型
+      - `keyof any`：是 `string | number | symbol` 的联合类型
 
-    *   `keyof unknown`：是 `never` 类型
+      - `keyof unknown`：是 `never` 类型

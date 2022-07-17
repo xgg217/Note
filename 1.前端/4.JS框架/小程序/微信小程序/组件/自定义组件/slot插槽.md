@@ -2,7 +2,7 @@
 
 ## slot 使用
 
-*   代码
+  - 代码
 
     ```html
     <!-- 组件模板 -->
@@ -24,11 +24,11 @@
 
 ## 多个 slot 使用
 
-*   需要在模板 js 中写声明语句 `options: { multipleSlots: true }`
+  - 需要在模板 js 中写声明语句 `options: { multipleSlots: true }`
 
-*   每个模板大学要为每个 `slot` 加入的 `name` 名称来区分
+  - 每个模板大学要为每个 `slot` 加入的 `name` 名称来区分
 
-*   在引入模板的 page 页面的每个子节点添加 `slot` 属性来区分传入的 `slot` 位置
+  - 在引入模板的 page 页面的每个子节点添加 `slot` 属性来区分传入的 `slot` 位置
 
     ```html
     // 自定义组件 wxml 文件

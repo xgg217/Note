@@ -2,19 +2,19 @@
 
 ## 上下文(Context)
 
-*   Koa `Context` 将 node 的 `request` 和 `response` 对象封装到单个对象中，为编写 Web 应用程序和 API 提供了许多有用的方法。
+  - Koa `Context` 将 node 的 `request` 和 `response` 对象封装到单个对象中，为编写 Web 应用程序和 API 提供了许多有用的方法。
 
-*   `context`中包含4个重要对象：
+  - `context`中包含4个重要对象：
 
-    *   `req`：`http`模块内置对象（不建议使用）
+      - `req`：`http`模块内置对象（不建议使用）
 
-    *   `res`：`http`模块内置对象（不建议使用）
+      - `res`：`http`模块内置对象（不建议使用）
 
-    *   `request`：`koa`封装的请求对象，用于获取请求传递的信息
+      - `request`：`koa`封装的请求对象，用于获取请求传递的信息
 
-    *   `response`：`koa`封装的响应对象，用户设置响应信息
+      - `response`：`koa`封装的响应对象，用户设置响应信息
 
-    *   `app` : 获取自己
+      - `app` : 获取自己
 
     ```javascript
     app.use(async ctx => {

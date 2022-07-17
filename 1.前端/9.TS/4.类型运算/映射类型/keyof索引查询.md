@@ -2,11 +2,11 @@
 
 ## 作用
 
-*   `keyof` 与 `Object.keys` 略有相似，**该操作符可以用于获取某种类型的所有键(key 值)，其返回类型是联合类型**
+  - `keyof` 与 `Object.keys` 略有相似，**该操作符可以用于获取某种类型的所有键(key 值)，其返回类型是联合类型**
 
 ## 基本数据类型
 
-*   代码
+  - 代码
 
     ```typescript
     let K1: keyof boolean; // let K1: "valueOf"
@@ -16,7 +16,7 @@
 
 ## 对象
 
-*   代码
+  - 代码
 
     ```typescript
     type Point = { x: number; y: number };
@@ -24,7 +24,7 @@
 
     ```
 
-*   如果该类型具有`string`或`number`索引签名，`keyof`则将返回这些类型
+  - 如果该类型具有`string`或`number`索引签名，`keyof`则将返回这些类型
 
     ```typescript
     type Arrayish = { [n: number]: unknown };
@@ -49,7 +49,7 @@
 
 ## 接口interface
 
-*   示例
+  - 示例
 
     ```typescript
     interface Person {
@@ -80,7 +80,7 @@
 
 ## 枚举
 
-*   代码
+  - 代码
 
     ```typescript
     enum HttpMethod {
