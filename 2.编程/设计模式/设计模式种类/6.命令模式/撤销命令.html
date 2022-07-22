@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>撤销命令</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    .ball{
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: red;
+    }
+    
+  </style>
+</head>
+<body>
+  
+  <form>
+    <label for="pos">输入小球位置</label>
+    <input type="text" id="pos" placeholder="移动位置">
+    <button class="qd" type="button">确定</button>
+    <button class="qx" type="button">取消</button>
+  </form>
+  <div class="ball"></div>
+
+  <script>
+    const oInp = document.querySelector('input');
+    const qd = document.querySelector('.qd');
+    const qx = document.querySelector('.qx');
+    const ball = document.querySelector('.ball');
+
+    // class MoveCommand{
+    //   constructor(rec, pos) {
+    //     this.rec = rec;
+    //     this.pos = pos;
+    //     this.oldPos = null;
+    //   }
+
+    //   execute() {
+    //     this.rec.start('left', this.pos, 1000, 'strongEaseOut');
+    //     // 记录小球开始移动前的位置
+    //     // this.oldPos = this.tec.dom.getBoundingClienClientRect()[this.rec.propertyName];
+    //   }
+
+    //   // 撤回
+    //   undo() {
+    //     this.rec.start('left', this.oldPos, 1000, 'strongEaseOut')
+    //   }
+    // }
+
+    class Animate{
+      constructor(rec, pos) {
+        this.rec = rec;
+        this.pos = pos;
+      }
+    }
+    let moveCommand;
+
+    qd.addEventListener('click', () => {
+      const anit = new Animate(ball);
+      console.log(anit)
+      // moveCommand = new MoveCommand(anit, pos.value);
+      // console.log(moveCommand)
+      // moveCommand.execute();
+    }, false);
+
+    // qx.addEventListener('click', () => {
+    //   moveCommand.undo();
+    // }, false);
+  </script>
+</body>
+</html>

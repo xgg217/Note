@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    (function() {
+      "use strict";
+
+      const mrDeng = {
+        sendFloeer(target) {
+          const flower = "sunflower";
+          target.receiveFlower(flower);
+        }
+      };
+
+      const goddess = {
+        mood: null,
+        receiveFlower(flower) {
+          console.log(this);
+          this.mood ? console.log("ok") : console.log("滚");
+        },
+        changeMood() {
+          this.mood = Math.random() > 0.5;
+          console.log(this);
+          console.log(this.mood);
+        },
+        createMood() {
+          var that = this;
+          that.changeMood();
+          setInterval(function() {
+            // console.log(12);
+            that.changeMood();
+          }, 1500);
+          
+        }
+      }
+
+      // goddess.createMood();
+
+      // mrDeng.sendFloeer(goddess);
+    })();
+  </script>
+</body>
+</html>
