@@ -24,7 +24,7 @@
 
     ```
 
-  - 如果该类型具有`string`或`number`索引签名，`keyof`则将返回这些类型
+  - 如果该类型具有 `string` 或 `number` 索引签名，`keyof` 则将返回这些类型
 
     ```typescript
     type Arrayish = { [n: number]: unknown };
