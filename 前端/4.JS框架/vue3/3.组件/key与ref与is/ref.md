@@ -23,7 +23,7 @@
 
   - 使用组合式 API，引用将存储在与名字匹配的 ref 里
 
-    ```vue
+    ```typescript
     <script setup>
     import { onMounted, reactive, ref } from 'vue';
 
@@ -48,7 +48,7 @@
 
 3.  `ref` 可以接收一个函数值，用于对存储引用位置的完全控制
 
-    ```vue
+    ```typescript
     <ChildComponent :ref="(el) => child = el" />
     ```
 

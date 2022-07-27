@@ -4,14 +4,14 @@
 
   - 对象
 
-    ```vue
+    ```typescript
     // active 是否存在取决于数据属性 isActive 的真假值
     <div :class="{ active: isActive }"></div>
     ```
 
   - 多个对象
 
-    ```vue
+    ```typescript
     const classObject = reactive({
       active: true,
       'text-danger': false
@@ -25,7 +25,7 @@
 
   - 数组
 
-    ```vue
+    ```typescript
     const activeClass = ref('active')
     const errorClass = ref('text-danger')
 
@@ -40,7 +40,7 @@
 
   - 三元表达式
 
-    ```vue
+    ```typescript
     const activeClass = ref('active');
 
     <div :class="[isActive ? activeClass : '']"></div>
@@ -54,7 +54,7 @@
 
   - `:class` 指令和一般的 `class` 共存
 
-    ```vue
+    ```typescript
     const isActive = ref(true)
     const hasError = ref(false)
 
@@ -73,7 +73,7 @@
 
   - 计算属性
 
-    ```vue
+    ```typescript
     const isActive = ref(true)
     const error = ref(null)
 

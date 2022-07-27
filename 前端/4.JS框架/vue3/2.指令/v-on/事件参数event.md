@@ -30,7 +30,7 @@
 
   - 在处理原生 DOM 事件时，应该为我们传递给事件处理器的参数正确地标注类型
 
-    ```vue
+    ```typescript
     <script setup lang="ts">
     // 没有标注
     function handleChange(event) {

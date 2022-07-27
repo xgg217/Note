@@ -1,10 +1,14 @@
-# 搭配TS
+# defineEmits
+
+## 概述
+
+  - 为了在声明 `emits` 选项时获得完整的类型推断支持，我们可以使用 `defineEmits` API，它将自动地在 `script setup` 中使用
 
 ## 标注类型
 
-  - 在 `<script setup>` 中，`emit` 函数的类型标注可以通过运行时声明或类型声明进行
+  1. `defineEmits()` 标注类型直接推荐泛型形式
 
-    ```vue
+    ```typescript
     // 子组件
     <script setup lang="ts">
     // 运行时
@@ -20,7 +24,7 @@
 
     ```javascript
     // 父组件
-    <Comp @kk="handleClick"/>
+    <Comp @update="handleClick"/>
 
     <script lang="ts" setup>
     const handleClick = (data) => {

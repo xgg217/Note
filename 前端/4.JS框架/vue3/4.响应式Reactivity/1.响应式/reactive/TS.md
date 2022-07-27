@@ -1,6 +1,14 @@
 # TS
 
-## 标注类型TS
+## 类型定义
+
+  - 类型定义
+
+    ```typescript
+    function reactive<T extends object>(target: T): UnwrapNestedRefs<T>
+    ```
+
+## 标注类型TS 默认推导
 
   - `reactive()` 也会隐式地从它的参数中推导类型
 
@@ -11,23 +19,44 @@
     const book = reactive({ title: 'Vue 3 指引' })
     ```
 
-  - 要显式地标注一个 `reactive` property 的类型，我们可以使用接口
+## 标注类型TS 泛型
+
+  1. 直接给声明的变量添加类型 **推荐**
 
     ```typescript
     import { reactive } from 'vue'
 
-    interface Book {
-      title: string
-      year?: number
+    interface User {
+      name: string
+      age: string | number
     }
 
-    const book: Book = reactive({ title: 'Vue 3 指引' })
+    const user:User = reactive({
+      name:"前端开发爱好者",
+      age:'20'
+    })
     ```
 
-  - 注意：不推荐使用 `reactive()` 的泛型参数，因为处理了深层次 ref 解包的返回值与泛型参数的类型不同
+      ```typescript
+      // 不推荐使用
+      const book = reactive<Book>({ title: 'Vue 3 指引' });
+
+      ```
+
+  2. 通过泛型参数的形式来给 `reactive()` 增加类型
+
+    - 不推荐使用 `reactive()` 的泛型参数，因为处理了深层次 ref 解包的返回值与泛型参数的类型不同
 
     ```typescript
-    // 不推荐使用
-    const book = reactive<Book>({ title: 'Vue 3 指引' });
+    import { reactive } from 'vue'
 
+    interface User {
+      name: string
+      age: string | number
+    }
+
+    const user = reactive<User>({
+      name:"前端开发爱好者",
+      age:'20'
+    })
     ```

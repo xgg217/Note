@@ -38,7 +38,7 @@
 
       - 触发过渡
 
-        ```vue
+        ```typescript
         // 当 text 变化时，<span> 总是会被替换而不是更新，因此 transition 将会被触发
         <transition>
           <span :key="text">{{ text }}</span>

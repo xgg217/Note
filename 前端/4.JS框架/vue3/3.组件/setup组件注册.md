@@ -4,7 +4,7 @@
 
   - 组件不需要再注册
 
-    ```vue
+    ```typescript
     // 组件 testCom.vue
     <template>
         <div>
@@ -14,7 +14,7 @@
 
     ```
 
-    ```vue
+    ```typescript
     // 使用组件
     <template>
       <div class="home">

@@ -1,10 +1,14 @@
 # 与TS搭配
 
+## 概述
+
+  - 为了在声明 `props` 选项时获得完整的类型推断支持，我们可以使用 `defineProps` API，它将自动地在 `script setup` 中使用
+
 ## Props标注类型
 
-  - 当使用 `<script setup>` 时，这个 `defineProps()` 宏函数支持从它的参数中推导类型
+  - 从它的参数中推导类型
 
-    ```vue
+    ```typescript
     <script setup lang="ts">
     const props = defineProps({
       foo: { type: String, required: true },
@@ -16,16 +20,18 @@
     </script>
     ```
 
-  - 通过泛型参数来定义 prop 的类型通常更直接
+  - 通过泛型参数来定义 `prop` 的类型通常更直接
 
-    ```vue
+    ```typescript
     <script setup lang="ts">
     const props = defineProps<{
       foo: string
       bar?: number
     }>()
     </script>
+    ```
 
+    ```typescript
     // 或者 将 prop 的类型移入一个单独的接口中
     <script setup lang="ts">
     interface Props {
@@ -35,7 +41,6 @@
 
     const props = defineProps<Props>()
     </script>
-
     ```
 
 ## 语法限制
@@ -52,9 +57,9 @@
 
 ## 默认值
 
-  - 使用 `withDefaults`
+  1. 使用 `withDefaults`
 
-    ```vue
+    ```typescript
     interface Props {
       msg?: string
       labels?: string[]
@@ -66,9 +71,20 @@
     })
     ```
 
-  - 当使用基于类型的声明时，我们失去了对 prop 定义默认值的能力。这可以通过目前实验性的[响应性语法糖](https://staging-cn.vuejs.org/guide/extras/reactivity-transform.html#reactive-props-destructure "响应性语法糖")来解决
+  2. 当使用基于类型的声明时，我们失去了对 prop 定义默认值的能力。这可以通过目前实验性的[响应性语法糖](https://staging-cn.vuejs.org/guide/extras/reactivity-transform.html#reactive-props-destructure "响应性语法糖")来解决
 
-    ```vue
+    ```typescript
+    // vite.config.js
+    export default {
+      plugins: [
+        vue({
+          reactivityTransform: true
+        })
+      ]
+    }
+    ```
+
+    ```typescript
     <script setup lang="ts">
       interface Props {
         msg: string

@@ -1,6 +1,19 @@
 # TS
 
-## 标注类型TS
+## 类型定义
+
+  - 定义
+
+    ```typescript
+    interface Ref<T> {
+      value: T
+    }
+
+    function ref<T>(value: T): Ref<UnwrapRef<T>>
+
+    ```
+
+## 标注类型TS 默认推导其类型
 
   - ref 会根据初始化时的值推导其类型
 
@@ -14,7 +27,9 @@
     year.value = '2020'
     ```
 
-  - 指定类型
+## 标注类型TS 泛型
+
+  1. 指定类型：通过泛型参数的形式来给 `ref()` 增加类型 **推荐**
 
     ```typescript
     import { ref } from 'vue'
@@ -23,7 +38,6 @@
     const year: Ref<string | number> = ref('2020')
 
     year.value = 2020 // 成功！
-
     ```
 
     ```typescript
@@ -34,22 +48,38 @@
     year.value = 2020 // 成功！
     ```
 
+  2. 指定类型：使用 `interface` **推荐**
+
+    ```typescript
+    import { ref } from 'vue'
+
+    interface User {
+      name: string
+      age: string | number
+    }
+
+    const user = ref<User>({
+      name:'前端开发爱好者',
+      age: 20
+    })
+    ```
+
+  3. 指定类型：通过使用 `Ref` 这个类型为 `ref` 内的值指定一个更复杂的类型
+
+    - 不推荐使用：因为需要额外的引入（少写一行是一行原则）
+
+    ```typescript
+    import { ref } from 'vue'
+    import type { Ref } from 'vue'
+
+    const initCode: Ref<string | number> = ref('200')
+    ```
+
+## 注意
+
   - 如果你指定了一个泛型参数但没有给出初始值，那么最后得到的就将是一个包含 `undefined` 的联合类型
 
     ```typescript
     // 推导得到的类型：Ref<number | undefined>
     const n = ref<number>()
-    ```
-
-## 类型定义
-
-  - 定义
-
-    ```typescript
-    interface Ref<T> {
-      value: T
-    }
-
-    function ref<T>(value: T): Ref<UnwrapRef<T>>
-
     ```
