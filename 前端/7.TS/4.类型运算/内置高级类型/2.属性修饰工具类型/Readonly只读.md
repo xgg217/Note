@@ -1,18 +1,32 @@
-# Required
+# Readonly
 
-## Readonly\<T>
+## Readonly<T>
 
   - 将类型 T 中的成员变成 **只读**
 
-## TS实现Readonly
+    ```typescript
+    type Readonly<T> = {
+      readonly [P in keyof T]: T[P]
+    }
+    ```
 
-  - 代码
+  - `Readonly` 中也可以使用 `+readonly` `-readonly`
 
     ```typescript
-     type MyReadonly<T> = {
-        readonly [P in keyof T]: T[P]
-      }
+    type Readonly<T> = {
+      +readonly [P in keyof T]: T[P];
+    };
     ```
+
+    ```typescript
+    type Mutable<T> = {
+      -readonly [P in keyof T]: T[P];
+    };
+    ```
+
+## 使用示例
+
+  - 代码
 
     ```typescript
     // 使用
@@ -21,7 +35,7 @@
       description: string
     }
 
-    const todo: MyReadonly<Todo> = {
+    const todo: Readonly<Todo> = {
       title: "Hey",
       description: "foobar"
     }

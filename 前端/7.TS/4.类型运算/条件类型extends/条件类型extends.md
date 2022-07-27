@@ -8,7 +8,7 @@
 
 ## 语法
 
-  - 语法：当类型 T 可以赋值给 U 时（extends  在 TypeScript 中可以理解为 Assignable），返回 X 类型，否则返回 Y 类型
+  - 语法：当类型 T 可以赋值给 U 时（`extends` 在 TypeScript 中可以理解为 Assignable），返回 X 类型，否则返回 Y 类型
 
     ```typescript
     // 其中的 T、U、X、Y 都是类型占位符
@@ -16,6 +16,10 @@
     ```
 
     ![](image/image_4sdTxpy8K4.png)
+
+## extends
+
+  - 条件类型中使用 `extends` 判断类型的兼容性，而非判断类型的全等性。这是因为在类型层面中，对于能够进行赋值操作的两个变量，我们并不需要它们的类型完全相等，只需要具有兼容性，而两个完全相同的类型，其 `extends` 自然也是成立的
 
 ## 条件类型使用
 
