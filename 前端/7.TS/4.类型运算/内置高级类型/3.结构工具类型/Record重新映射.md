@@ -23,6 +23,10 @@
 
   - K可以是联合类型、对象、枚举
 
+## 实际使用
+
+  - `Record<string, unknown>` 和 `Record<string, any>` 是日常使用较多的形式，通常我们使用这两者来代替 `object`
+
 ## 示例1
 
   - 将petsGroup中的每个值(‘dog’ | ‘cat’ | ‘fish’)都转为 IPetInfo 类型
@@ -94,6 +98,4 @@
     interface: ProxKType {
       [key: string]: number
     }
-
-
     ```

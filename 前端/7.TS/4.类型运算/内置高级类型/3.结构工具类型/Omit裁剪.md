@@ -4,7 +4,7 @@
 
   - 对接口做裁剪
 
-  - 与 Pick 操作相反
+  - 与 `Pick` 操作相反
 
 ## 功能
 
@@ -12,9 +12,9 @@
 
     ```typescript
     interface Foo {
-     a: number;
-     b: string;
-     c: boolean;
+      a: number;
+      b: string;
+      c: boolean;
     }
 
     // { b: string; c: boolean}
