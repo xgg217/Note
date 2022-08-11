@@ -24,9 +24,9 @@
 
 ## encodeURI()
 
-  - `encodeURI()`方法用于转码整个 URL。
+  - `encodeURI()`方法用于转码整个 URL
 
-  - 它的参数是一个字符串，代表整个 `URL`。
+  - 它的参数是一个字符串，代表整个 `URL`
 
   - 它会将元字符和语义字符之外的字符，都进行转义
 
@@ -37,11 +37,11 @@
 
 ## decodeURI()
 
-  - `decodeURI()` 方法用于整个 URL 的解码。
+  - `decodeURI()` 方法用于整个 URL 的解码
 
-  - 它是 `encodeURI()` 方法的逆运算。
+  - 它是 `encodeURI()` 方法的逆运算
 
-  - 它接受一个参数，就是转码后的 URL。
+  - 它接受一个参数，就是转码后的 URL
 
     ```javascript
     decodeURI('http://www.example.com/q=%E6%98%A5%E8%8A%82')
@@ -52,9 +52,9 @@
 
   - `encodeURIComponent()` 方法用于转码 URL 的组成部分，会转码除了语义字符之外的所有字符，即元字符也会被转码。
 
-  - 所以，它不能用于转码整个 `URL`。
+  - 所以，它不能用于转码整个 `URL`
 
-  - 它接受一个参数，就是 URL 的片段。
+  - 它接受一个参数，就是 URL 的片段
 
     ```javascript
     encodeURIComponent('春节')
@@ -68,9 +68,9 @@
 
   - `decodeURIComponent()` 用于URL 片段的解码。
 
-  - 它是 `encodeURIComponent()` 方法的逆运算。
+  - 它是 `encodeURIComponent()` 方法的逆运算
 
-  - 它接受一个参数，就是转码后的 URL 片段。
+  - 它接受一个参数，就是转码后的 URL 片段
 
     ```javascript
     decodeURIComponent('%E6%98%A5%E8%8A%82')
