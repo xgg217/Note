@@ -1,6 +1,6 @@
-# \$router
+# $router
 
-## \$router.push
+## $router.push
 
   - 想要导航到不同的 URL，则使用 `router.push` 方法
 
@@ -34,11 +34,11 @@
     this.$router.query.params
     ```
 
-## \$router.replace
+## $router.replace
 
   - 跟 `router.push` 很像，唯一的不同就是，它不会向 `history` 添加新记录，而是替换掉当前的 `history` 记录。
 
-## \$router.go(n)
+## $router.go(n)
 
   - 这个方法的参数是一个整数，意思是在 `history` 记录中向前或者后退多少步，类似 `window.history.go(n)`。
 

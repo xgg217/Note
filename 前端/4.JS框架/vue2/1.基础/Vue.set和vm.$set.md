@@ -18,8 +18,7 @@
     })
     // `vm.a` 现在是响应式的
 
-    vm.b = 2
-    // `vm.b` 不是响应式的
+    vm.b = 2 // `vm.b` 不是响应式的
     ```
 
   - 对于已经创建的实例，Vue 不允许动态添加根级别的响应式 property。但是，可以使用 `Vue.set(object, propertyName, value)` 方法向嵌套对象添加响应式 property
@@ -28,9 +27,7 @@
     Vue.set(vm.someObject, 'b', 2)
 
     // 或者还可以使用 vm.$set 实例方法，这也是全局 Vue.set 方法的别名
-
     this.$set(this.someObject, 'b', 2)
-
     ```
 
   - 为已有对象赋值多个新 property
