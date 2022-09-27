@@ -10,9 +10,9 @@
 
       - `options`：可选配置 `<string>` | `<Object>`
 
-          - `flags`: `<string>` 请参阅对文件系统 flags 的支持。 默认值: `r`。
+          - `flags`: `<string>` 请参阅对文件系统 flags 的支持。 默认值: `r`
 
-          - `encoding`： `<string>` 编码方式。默认 `null` 数据返回 `buffer` 格式。
+          - `encoding`： `<string>` 编码方式。默认 `null` 数据返回 `buffer` 格式
 
           - `fd`: `<integer>` | `<FileHandle>` 默认值: `null`
 
@@ -32,7 +32,7 @@
 
               - 如果 `encoding` 被设置成了 `utf-8` 那么每次就读取一个文字。否则就读取一个字节
 
-  - 返回值：Readable 的子类 `ReadStream`。
+  - 返回值：Readable 的子类 `ReadStream`
 
   - 事件 `rs.on(事件名, 处理函数)`
 

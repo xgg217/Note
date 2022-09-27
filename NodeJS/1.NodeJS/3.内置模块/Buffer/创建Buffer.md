@@ -61,7 +61,7 @@
 
   - 该方法用于替代 `new Buffer(size)`，其创建的 `Buffer` 实例默认会使用 0 填充内存，也就是会将内存之前的数据全部覆盖掉
 
-  - 比之前的 `new Buffer(size)` 更加安全，因为要覆盖之前的内存空间，也意味着更低的性能。
+  - 比之前的 `new Buffer(size)` 更加安全，因为要覆盖之前的内存空间，也意味着更低的性能
 
   - 同时，`size` 参数如果不是一个数字，会抛出 `TypeError`
 
@@ -76,7 +76,7 @@
 
 ## Buffer.allocUnsafe(size)
 
-  - 该方法与之前的 `new Buffer(size)` 保持一致，虽然该方法不安全，但是相比起 `alloc` 具有明显的性能优势。
+  - 该方法与之前的 `new Buffer(size)` 保持一致，虽然该方法不安全，但是相比起 `alloc` 具有明显的性能优势
 
 ## toJSON()
 
@@ -91,7 +91,7 @@
 
 ## new Buffer(size) -- 不建议使用
 
-  - 创建大小为 size(number) 的 Buffer。
+  - 创建大小为 size(number) 的 Buffer
 
   - 可以改用 `Buffer.alloc(size[, fill[, encoding]])` 替代
 
@@ -102,7 +102,7 @@
 
 ## new Buffer(array) -- 不建议使用
 
-  - 使用八位字节数组 array 分配一个新的 Buffer。
+  - 使用八位字节数组 array 分配一个新的 Buffer
 
   - 可以改用 `Buffer.from()` 替代
 
@@ -117,7 +117,7 @@
 
 ## new Buffer(buffer) -- 不建议使用
 
-  - 拷贝 buffer 的数据到新建的 Buffer 实例。
+  - 拷贝 buffer 的数据到新建的 Buffer 实例
 
   - 可以改用 `Buffer.from()` 替代
 
@@ -128,7 +128,7 @@
 
 ## new Buffer(string\[, encoding]) -- 不建议使用
 
-  - 创建内容为 string 的 Buffer，指定编码方式为 encoding。
+  - 创建内容为 string 的 Buffer，指定编码方式为 encoding
 
     ```javascript
     const buf = new Buffer('test')

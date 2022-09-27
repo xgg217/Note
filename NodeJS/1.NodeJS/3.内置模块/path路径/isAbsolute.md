@@ -2,7 +2,7 @@
 
 ## path.isAbsolute(path) 判断是否为绝对路径
 
-  - `path.isAbsolute()` 方法确定 path 是否为绝对路径。
+  - `path.isAbsolute()` 方法确定 path 是否为绝对路径
 
   - 参数
 

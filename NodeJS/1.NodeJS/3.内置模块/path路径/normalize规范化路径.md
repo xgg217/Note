@@ -10,7 +10,7 @@
 
   - 返回: `<string>`
 
-  - `path.normalize()` 方法规范化给定的 `path`，解析 `'..'` 和 `'.'` 片段。
+  - `path.normalize()` 方法规范化给定的 `path`，解析 `'..'` 和 `'.'` 片段
 
     ```javascript
     // 在 POSIX 上

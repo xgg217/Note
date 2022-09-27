@@ -2,7 +2,7 @@
 
 ## response.status
 
-  - 获取响应状态。默认情况下，`response.status` 设置为 `404` 而不是像 node 的 `res.statusCode` 那样默认为 `200`。
+  - 获取响应状态。默认情况下，`response.status` 设置为 `404` 而不是像 node 的 `res.statusCode` 那样默认为 `200`
 
     ```javascript
     app.use(function(ctx, next) {
@@ -17,14 +17,14 @@
 
   - 将响应体设置为以下之一：
 
-      - `string` 写入：Content-Type 默认为 `text/html` 或 `text/plain`, 同时默认字符集是 utf-8。Content-Length 字段也是如此。
+      - `string` 写入：Content-Type 默认为 `text/html` 或 `text/plain`, 同时默认字符集是 utf-8。Content-Length 字段也是如此
 
-      - `Buffer` 写入：Content-Type 默认为 `application/octet-stream`, 并且 Content-Length 字段也是如此。
+      - `Buffer` 写入：Content-Type 默认为 `application/octet-stream`, 并且 Content-Length 字段也是如此
 
-      - `Stream` 管道：Content-Type 默认为 `application/octet-stream`。
+      - `Stream` 管道：Content-Type 默认为 `application/octet-stream`
 
       - `Object` || `Array` JSON-字符串化
 
       - `null` 无内容响应
 
-  - 如果 response.status 未被设置, Koa 将会自动设置状态为 200 或 204。
+  - 如果 response.status 未被设置, Koa 将会自动设置状态为 200 或 204

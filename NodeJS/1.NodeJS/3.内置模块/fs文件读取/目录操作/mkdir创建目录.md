@@ -14,4 +14,4 @@
 
   - `recursive` `<boolean>` 默认值: false
 
-  - `mode` `<string>` | `<integer>` Windows 上不支持。 默认值: 0o777。
+  - `mode` `<string>` | `<integer>` Windows 上不支持。 默认值: 0o777

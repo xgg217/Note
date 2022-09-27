@@ -50,7 +50,7 @@
 
     ```javascript
     const file = 'text.txt';
-    // // 检查文件是否可读。
+    // // 检查文件是否可读
     fs.access(file, fs.constants.R_OK, (err) => {
       console.log(`${file} ${err ? '不可读' : '可读'}`);
     });
@@ -62,7 +62,7 @@
 
     ```javascript
     const file = 'text.txt';
-    // // 检查文件是否可读。
+    // // 检查文件是否可读
     fs.access(file, fs.constants.W_OK, (err) => {
       console.log(`${file} ${err ? '不可写' : '可写'}`);
     });
@@ -75,7 +75,7 @@
     ```javascript
     const file = 'text.txt';
 
-    // 检查文件是否存在于当前目录中、以及是否可写。
+    // 检查文件是否存在于当前目录中、以及是否可写
     fs.access(file, fs.constants.F_OK | fs.constants.W_OK, (err) => {
       if (err) {
         console.error(

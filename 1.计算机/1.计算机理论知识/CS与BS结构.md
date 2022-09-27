@@ -8,4 +8,4 @@
 ## B/S (Browser/Server)
 
 + `Browser`: 只负责内容的展示（浏览器）
-+ `Server`: 负责提供内容。
++ `Server`: 负责提供内容

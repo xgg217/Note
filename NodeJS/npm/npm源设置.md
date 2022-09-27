@@ -14,7 +14,7 @@
     npm config get registry
     ```
 
-  - 修改registry地址，比如修改为淘宝镜像源。
+  - 修改registry地址，比如修改为淘宝镜像源
 
     ```bash
     npm set registry https://registry.npm.taobao.org/
