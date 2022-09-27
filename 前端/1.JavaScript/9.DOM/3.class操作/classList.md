@@ -2,9 +2,9 @@
 
 ## 介绍
 
-  - `Element.classList` 是一个只读属性，返回一个元素的类属性的实时 `DOMTokenList` 集合。
+  - `Element.classList` 是一个只读属性，返回一个元素的类属性的实时 `DOMTokenList` 集合
 
-  - 相比将 `Element.className` 作为以空格分隔的字符串来使用，`classList` 是一种更方便的访问元素的类列表的方法。
+  - 相比将 `Element.className` 作为以空格分隔的字符串来使用，`classList` 是一种更方便的访问元素的类列表的方法
 
 ## 语法
 
@@ -16,11 +16,11 @@
 
   - 返回值
 
-      - `elementClasses` 是一个 `DOMTokenList` 表示  `elementNodeReference` 的类属性 。
+      - `elementClasses` 是一个 `DOMTokenList` 表示  `elementNodeReference` 的类属性
 
-      - 如果类属性未设置或为空，那么 `elementClasses.length` 返回 0。
+      - 如果类属性未设置或为空，那么 `elementClasses.length` 返回 0
 
-      - 虽然 `element.classList` 本身是只读的，但是你可以使用 `add()` 和 `remove()` 方法修改它。
+      - 虽然 `element.classList` 本身是只读的，但是你可以使用 `add()` 和 `remove()` 方法修改它
 
 ## add
 
@@ -45,7 +45,7 @@
 
 ## contains
 
-  - `contains(class)` :返回布尔值，判断指定的类名是否存在。
+  - `contains(class)` :返回布尔值，判断指定的类名是否存在
 
       - `true` - 元素包已经包含了该类名;
 
@@ -65,9 +65,9 @@
 
 ## remove
 
-  - `remove(class1, class2, ...)` : 移除元素中一个或多个类名。
+  - `remove(class1, class2, ...)` : 移除元素中一个或多个类名
 
-  - 移除不存在的类名，不会报错。
+  - 移除不存在的类名，不会报错
 
     ```javascript
     div.classList.remove("foo");
@@ -75,13 +75,13 @@
 
 ## toggle
 
-  - `toggle(class, true|false)`:在元素中切换类名。
+  - `toggle(class, true|false)`:在元素中切换类名
 
-  - 第一个参数为要在元素中移除的类名，并返回 `false`。
+  - 第一个参数为要在元素中移除的类名，并返回 `false`
 
-  - 如果该类名不存在则会在元素中添加类名，并返回 `true`。
+  - 如果该类名不存在则会在元素中添加类名，并返回 `true`
 
-  - 第二个是可选参数，是个布尔值用于设置元素是否强制添加或移除类，不管该类名是否存在。
+  - 第二个是可选参数，是个布尔值用于设置元素是否强制添加或移除类，不管该类名是否存在
 
     ```javascript
     div.classList.toggle("visible");

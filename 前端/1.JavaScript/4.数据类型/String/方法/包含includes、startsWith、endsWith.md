@@ -10,9 +10,9 @@
 
   - 语法： `str.includes(searchString[, position])`
 
-      - `searchString` 要在此字符串中搜索的字符串。
+      - `searchString` 要在此字符串中搜索的字符串
 
-      - `position` : 可选。从当前字符串的哪个索引位置开始搜寻子字符串，默认值为0。
+      - `position` : 可选。从当前字符串的哪个索引位置开始搜寻子字符串，默认值为0
 
       - 返回值： 如果当前字符串包含被搜寻的字符串，就返回 true；否则返回 `false`
 
@@ -41,9 +41,9 @@
 
   - 语法： `str.startsWith(searchString[, position])`
 
-      - `searchString` :要搜索的子字符串。
+      - `searchString` :要搜索的子字符串
 
-      - `position`: 在 str 中搜索 searchString 的开始位置，默认值为 0，也就是真正的字符串开头处。
+      - `position`: 在 str 中搜索 searchString 的开始位置，默认值为 0，也就是真正的字符串开头处
 
   - 示例1
 

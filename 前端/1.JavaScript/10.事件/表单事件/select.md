@@ -21,29 +21,29 @@
     </div>
     ```
 
-  - 可以通过 `value` 属性取到用户选择的值。
+  - 可以通过 `value` 属性取到用户选择的值
 
     ```javascript
     var data = document.getElementById('selectMenu').value;
     ```
 
-  - `selectedIndex` 可以设置选中的项目（从0开始）。
+  - `selectedIndex` 可以设置选中的项目（从0开始）
 
-  - 如果用户没有选中任何一项，`selectedIndex` 等于-1。
+  - 如果用户没有选中任何一项，`selectedIndex` 等于-1
 
     ```javascript
     document.getElementById('selectMenu').selectedIndex = 1;
     ```
 
-  - `select` 元素也可以设置为多选。
+  - `select` 元素也可以设置为多选
 
     ```javascript
     <select name="categories" id="categories" multiple>
     ```
 
-  - 设为多选时，`value` 只返回选中的第一个选项。
+  - 设为多选时，`value` 只返回选中的第一个选项
 
-  - 要取出所有选中的值，就必须遍历 `select` 的所有选项，检查每一项的 `selected` 属性。
+  - 要取出所有选中的值，就必须遍历 `select` 的所有选项，检查每一项的 `selected` 属性
 
     ```javascript
     var selected = [];

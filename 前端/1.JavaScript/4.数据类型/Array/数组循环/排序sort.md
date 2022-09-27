@@ -14,9 +14,9 @@
 
   - 排序稳定性
 
-      - 先的 ECMAScript 没有规定，`Array.prototype.sort()` 的默认排序算法是否稳定，留给浏览器自己决定，这导致某些实现是不稳定的。
+      - 先的 ECMAScript 没有规定，`Array.prototype.sort()` 的默认排序算法是否稳定，留给浏览器自己决定，这导致某些实现是不稳定的
 
-      - ES2019 明确规定，`Array.prototype.sort()` 的默认排序算法必须稳定。
+      - ES2019 明确规定，`Array.prototype.sort()` 的默认排序算法必须稳定
 
       - 这个规定已经做到了，现在 JavaScript 各个主要实现的默认排序算法都是稳定的
 

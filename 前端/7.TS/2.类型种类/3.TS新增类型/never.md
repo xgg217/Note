@@ -37,7 +37,7 @@
     }
     ```
 
-  - 注意在 `else` 分⽀⾥⾯，我们把收窄为 `never` 的 foo 赋值给⼀个显示声明的 `never` 变量。
+  - 注意在 `else` 分⽀⾥⾯，我们把收窄为 `never` 的 foo 赋值给⼀个显示声明的 `never` 变量
 
   - 如果⼀切逻辑正确，那么这⾥应该能够编译通过。但是假如后来有⼀天你的同事修改了 Foo 的类型：
 
@@ -45,7 +45,7 @@
     type Foo = string | number | boolean;
     ```
 
-  - 然⽽他忘记同时修改 `controlFlowAnalysisWithNever` ⽅法中的控制流程，这时候 `else` 分⽀的 foo 类型会被收窄为 boolean 类型，导致⽆法赋值给 `never` 类型，这时就会产⽣⼀个编译错误。通过这个⽅式，我们可以确保 `controlFlowAnalysisWithNever` ⽅法总是穷尽了 Foo 的所有可能类型。
+  - 然⽽他忘记同时修改 `controlFlowAnalysisWithNever` ⽅法中的控制流程，这时候 `else` 分⽀的 foo 类型会被收窄为 boolean 类型，导致⽆法赋值给 `never` 类型，这时就会产⽣⼀个编译错误。通过这个⽅式，我们可以确保 `controlFlowAnalysisWithNever` ⽅法总是穷尽了 Foo 的所有可能类型
 
   - 通过这个示例，我们可以得出⼀个结论：使⽤ `never` 避免出现新增了 **联合类型** 没有对应的实现，⽬的就是写出类型绝对安全的代码
 

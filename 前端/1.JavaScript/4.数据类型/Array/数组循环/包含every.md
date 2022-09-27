@@ -24,7 +24,7 @@
 
     ```javascript
     /**
-     * 如果list中的所有元素都通过predicate的真值检测就返回true。
+     * 如果list中的所有元素都通过predicate的真值检测就返回true
      * @param {*} arr
      * @param {*} funCb
      * @param {*} thatThis
@@ -58,7 +58,7 @@
 
     ```javascript
     /**
-     * 如果list中的所有元素都通过predicate的真值检测就返回true。
+     * 如果list中的所有元素都通过predicate的真值检测就返回true
      * @param {*} arr
      * @param {*} funCb
      * @param {*} thatThis

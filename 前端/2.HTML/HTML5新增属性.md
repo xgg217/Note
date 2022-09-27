@@ -4,9 +4,9 @@
 
   - 提供可描述输入字段预期值的提示信息
 
-  - 该提示会在输入字段为空时显示，并会在字段获得焦点时消失。
+  - 该提示会在输入字段为空时显示，并会在字段获得焦点时消失
 
-  - `placeholder` 属性适用于以下的 `<input>` 类型：`text`, `search`, `url`, `telephone`, `email` 以及 `password`。
+  - `placeholder` 属性适用于以下的 `<input>` 类型：`text`, `search`, `url`, `telephone`, `email` 以及 `password`
 
     ```html
     <!-- 带有 placeholder 文本的搜索字段： -->
@@ -20,7 +20,7 @@
 
   - 新的表单控件，比如 `calendar`、`date`、`time`、 `week` 、`email`、`url`、`search` 、
 
-  - `number` ：只能输入数字。兼容性不好，目前只有 chrome 支持。
+  - `number` ：只能输入数字。兼容性不好，目前只有 chrome 支持
 
     ```html
     <form>
@@ -28,9 +28,9 @@
     </form>
     ```
 
-  - `email`: 电子邮件格式。格式不规范提示错误。兼容性不好，目前只有 chrome 和 火狐 支持。
+  - `email`: 电子邮件格式。格式不规范提示错误。兼容性不好，目前只有 chrome 和 火狐 支持
 
-  - `color`：颜色选择器。兼容性不好，目前只有 chrome 支持。
+  - `color`：颜色选择器。兼容性不好，目前只有 chrome 支持
 
   - `range`
 
@@ -50,7 +50,7 @@
 
   - `url`
 
-  - `date`。兼容性不好，目前只有 chrome 支持。
+  - `date`。兼容性不好，目前只有 chrome 支持
 
     ```html
     // 日期选择
@@ -96,7 +96,7 @@
 
 ## draggable 拖拽
 
-  - 火狐不支持。chrome Safari 支持。
+  - 火狐不支持。chrome Safari 支持
 
   - 其他标签默认为 `false`。不能拖拽
 
@@ -122,9 +122,9 @@
 
 ## hidden
 
-  - `hidden` ：隐藏（元素将会消失，而且不占用任何页面空间）。
+  - `hidden` ：隐藏（元素将会消失，而且不占用任何页面空间）
 
-  - 效果如同 `css` 的 `display: none`。**意义**在于语义上更有意义，对代码的可读性有提升。
+  - 效果如同 `css` 的 `display: none`。**意义**在于语义上更有意义，对代码的可读性有提升
 
     ```html
     <p hidden>11</p>

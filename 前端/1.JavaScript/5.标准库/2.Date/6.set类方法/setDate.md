@@ -2,19 +2,19 @@
 
 # Date.prototype.setDate()
 
-  - 根据本地时间来指定一个日期对象的天数。
+  - 根据本地时间来指定一个日期对象的天数
 
   - 语法
 
     ```javascript
     dateObj.setDate(dayValue)
 
-    // 参数： dayValue：一个整数，表示该月的第几天。
+    // 参数： dayValue：一个整数，表示该月的第几天
     ```
 
-  - 如果 `dayValue` 超出了月份的合理范围，setDate 将会相应地更新 Date 对象。
+  - 如果 `dayValue` 超出了月份的合理范围，setDate 将会相应地更新 Date 对象
 
-  - 如果为 `dayValue` 指定0，那么日期就会被设置为上个月的最后一天。
+  - 如果为 `dayValue` 指定0，那么日期就会被设置为上个月的最后一天
 
     ```javascript
     var theBigDay = new Date(1962, 6, 7);

@@ -20,7 +20,7 @@
     }
 
     const memoizedCallback = useCallback(() => {
-      return 。。。
+      return 。。
     }, [a, b])
     ```
 

@@ -2,7 +2,7 @@
 
 ## 作用
 
-  - 来遍历一个对象的全部属性。
+  - 来遍历一个对象的全部属性
 
     ```javascript
     var o = {a: 1, b: 2, c: 3};
@@ -48,7 +48,7 @@ for (const key in obj) {
 
 ## 注意点
 
-1.  它遍历的是对象所有可遍历（enumerable）的属性，会跳过不可遍历的属性。
+1.  它遍历的是对象所有可遍历（enumerable）的属性，会跳过不可遍历的属性
 
 2.  它不仅遍历对象自身的属性，还遍历继承的属性。解决办法：使用 `hasOwnProperty` 方法
 
@@ -76,7 +76,7 @@ for (const key in obj) {
 
 ## hasOwnProperty
 
-  - 如果只想遍历对象本身的属性，可以使用 `hasOwnProperty` 方法，在循环内部判断一下是不是自身的属性。
+  - 如果只想遍历对象本身的属性，可以使用 `hasOwnProperty` 方法，在循环内部判断一下是不是自身的属性
 
     ```javascript
     // name 是 Person 本身的属性

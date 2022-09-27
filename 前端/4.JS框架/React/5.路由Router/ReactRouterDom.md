@@ -2,13 +2,13 @@
 
 ## React Router Dom
 
-  - `react-router-dom` 是应用程序中路由的库。`React`库中没有路由功能，需要单独安装`react-router-dom`。
+  - `react-router-dom` 是应用程序中路由的库。`React`库中没有路由功能，需要单独安装`react-router-dom`
 
     ```javascript
     http://127.0.0.1:3000/article/num1
     ```
 
-  - `react-router-dom` 提供两个路由器 `BrowserRouter` 和 `HashRoauter`。前者基于 `url` 的 `pathname` 段，后者基于 `hash` 段。
+  - `react-router-dom` 提供两个路由器 `BrowserRouter` 和 `HashRoauter`。前者基于 `url` 的 `pathname` 段，后者基于 `hash` 段
 
     ```javascript
     http://127.0.0.1:3000/#/article/num1（不一定是这样，但#是少不了的）
@@ -16,15 +16,15 @@
 
 ## react-router-dom 组件
 
-  - `BrowserRouter` 和 `HashRouter` 是路由器。
+  - `BrowserRouter` 和 `HashRouter` 是路由器
 
-  - `Route` 用于路由匹配。
+  - `Route` 用于路由匹配
 
-  - `Link` 组件用于在应用程序中创建链接。 它将在HTML中渲染为锚标记。
+  - `Link` 组件用于在应用程序中创建链接。 它将在HTML中渲染为锚标记
 
-  - `NavLink`是突出显示当前活动链接的特殊链接。
+  - `NavLink`是突出显示当前活动链接的特殊链接
 
-  - `Switch` 不是必需的，但在组合路由时很有用。
+  - `Switch` 不是必需的，但在组合路由时很有用
 
   - `Redirect` 用于强制路由重定向
 
@@ -108,7 +108,7 @@
     ```javascript
     const isLogin = false;
 
-    // 表示 isLogo 为true时，显示<User /> 组件，负责重定向到 login 页面。
+    // 表示 isLogo 为true时，显示<User /> 组件，负责重定向到 login 页面
     <Route path="/user" render={ () => {  isLogin ? <User /> : <Redirect to="/login"> } } >
     ```
 

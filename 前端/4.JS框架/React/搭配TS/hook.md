@@ -2,7 +2,7 @@
 
 ## useState
 
-  - 大多数情况下，useState 的类型可以从初始化值推断出来。但当我们初始化值为 null、undefined或者对象以及数组的时候，我们需要制定 useState 的类型。
+  - 大多数情况下，useState 的类型可以从初始化值推断出来。但当我们初始化值为 null、undefined或者对象以及数组的时候，我们需要制定 useState 的类型
 
     ```javascript
     // 可以推断 age 是 number类型
@@ -41,7 +41,7 @@
 
 ## useEffect
 
-  - useEffect 用来在组件完成渲染之后增加副作用(side effect)，可以返回一个函数，用来做一些状态还原、移除listener等 clean up的操作。不需要处理返回值，所以可以不指定他的类型。
+  - useEffect 用来在组件完成渲染之后增加副作用(side effect)，可以返回一个函数，用来做一些状态还原、移除listener等 clean up的操作。不需要处理返回值，所以可以不指定他的类型
 
     ```javascript
     useEffect(() => {
@@ -60,7 +60,7 @@
 
 ## useMemo、useCallback
 
-  - 对于 useMemo 和 useCallback 我们可以从函数的返回值中推断出来他们返回的类型，需要显示指定。
+  - 对于 useMemo 和 useCallback 我们可以从函数的返回值中推断出来他们返回的类型，需要显示指定
 
     ```javascript
     const age = 12;
@@ -109,7 +109,7 @@
 
 ## useReducer
 
-  - useReducer 可以认为是简配版的redux，可以让我们把复杂、散落在四处的useState，setState 集中到 reducer中统一处理。
+  - useReducer 可以认为是简配版的redux，可以让我们把复杂、散落在四处的useState，setState 集中到 reducer中统一处理
 
   - 类似我们同样可以从reducer 函数(state逻辑处理函数)中推断出useReducer 返回的 state 和 dispatch 的 action类型，所以无需在显示的声明，参考如下实例：
 

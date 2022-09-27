@@ -2,7 +2,7 @@
 
 ## 作用
 
-  - `Object.entries()` 方法返回一个数组，成员是参数对象自身的（不含继承的）所有可遍历（ `enumerable` ）属性的键值对数组。
+  - `Object.entries()` 方法返回一个数组，成员是参数对象自身的（不含继承的）所有可遍历（ `enumerable` ）属性的键值对数组
 
     ```javascript
     const obj = { foo: 'bar', baz: 42 };
@@ -16,11 +16,11 @@
 
 2.  将对象转为真正的 `Map` 结构
 
-  - 除了返回值不一样，该方法的行为与 `Object.values` 基本一致。
+  - 除了返回值不一样，该方法的行为与 `Object.values` 基本一致
 
 ## 属性名为 Symbol
 
-  - 如果原对象的属性名是一个 `Symbol` 值，该属性会被忽略。
+  - 如果原对象的属性名是一个 `Symbol` 值，该属性会被忽略
 
     ```javascript
     Object.entries({ [Symbol()]: 123, foo: 'abc' });

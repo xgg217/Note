@@ -6,7 +6,7 @@
 
 ## 对象
 
-  - Vue 无法检测到 property 的添加或删除。
+  - Vue 无法检测到 property 的添加或删除
 
   - 由于 Vue 在实例初始化期间执行 getter/setter 转换过程，因此必须在 `data` 对象中存在一个 property，以便 Vue 对其进行转换并使其具有响应式
 

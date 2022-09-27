@@ -2,7 +2,7 @@
 
 ## table()
 
-  - 对于某些复合类型的数据，`console.table` 方法可以将其转为表格显示。
+  - 对于某些复合类型的数据，`console.table` 方法可以将其转为表格显示
 
     ```javascript
     var languages = [

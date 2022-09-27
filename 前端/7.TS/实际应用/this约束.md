@@ -47,7 +47,7 @@
 
   - ts配置文件启用 `--noImplicitThis` 。表示不允许 `this` 隐式的指向 `any`
 
-  - 在 ts 中，允许在书写函数时，手动声明该函数中 `this` 的指向，将 `this` 作为函数的第一个参数，该参数只用于约束 `this` ，并不是真正的参数，也不会出现在编译结果中。
+  - 在 ts 中，允许在书写函数时，手动声明该函数中 `this` 的指向，将 `this` 作为函数的第一个参数，该参数只用于约束 `this` ，并不是真正的参数，也不会出现在编译结果中
 
   - 函数约定
 
@@ -68,7 +68,7 @@
 
     console.log(u.say());
     const s = u.say;
-    console.log(s()); // 报错 类型为“void”的 "this" 上下文不能分配给类型为“IU”的方法的 "this"。
+    console.log(s()); // 报错 类型为“void”的 "this" 上下文不能分配给类型为“IU”的方法的 "this"
     ```
 
   - 类约束
@@ -94,5 +94,5 @@
 
     const u2 = new User('2', 2);
     const say = u2.say;
-    say() // 报错。提示： 类型为“void”的 "this" 上下文不能分配给类型为“User”的方法的 "this"。
+    say() // 报错。提示： 类型为“void”的 "this" 上下文不能分配给类型为“User”的方法的 "this"
     ```

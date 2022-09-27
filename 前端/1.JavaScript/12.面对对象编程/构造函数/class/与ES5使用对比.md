@@ -8,7 +8,7 @@
 
   - 方法之间不需要**逗号**分隔，加了会报错（下面会解释）
 
-  - 使用的时候，也是直接对类使用 `new` 命令，跟构造函数的用法完全一致。
+  - 使用的时候，也是直接对类使用 `new` 命令，跟构造函数的用法完全一致
 
     ```javascript
     class Bar {
@@ -21,7 +21,7 @@
     b.doStuff() // "stuff"
     ```
 
-  - 构造函数的 `prototype` 属性，在 ES6 的“类”上面继续存在。事实上，类的所有方法都定义在类的 `prototype` 属性上面。
+  - 构造函数的 `prototype` 属性，在 ES6 的“类”上面继续存在。事实上，类的所有方法都定义在类的 `prototype` 属性上面
 
     ```javascript
     class Point {
@@ -47,7 +47,7 @@
     };
     ```
 
-  - 在类的实例上面调用方法，其实就是调用原型上的方法。
+  - 在类的实例上面调用方法，其实就是调用原型上的方法
 
     ```javascript
     class B {}
@@ -56,7 +56,7 @@
     b.constructor === B.prototype.constructor // true
     ```
 
-  - 由于类的方法都定义在 `prototype` 对象上面，所以类的新方法可以添加在 `prototype` 对象上面。 `Object.assign` 方法可以很方便地一次向类添加多个方法。
+  - 由于类的方法都定义在 `prototype` 对象上面，所以类的新方法可以添加在 `prototype` 对象上面。 `Object.assign` 方法可以很方便地一次向类添加多个方法
 
     ```javascript
     class Point {
@@ -71,7 +71,7 @@
     });
     ```
 
-  - `prototype` 对象的 `constructor` 属性，直接指向“类”的本身，这与 ES5 的行为是一致的。
+  - `prototype` 对象的 `constructor` 属性，直接指向“类”的本身，这与 ES5 的行为是一致的
 
     ```javascript
     class Point {
@@ -90,13 +90,13 @@
     // ["constructor","toString"]
     ```
 
-  - `prototype` 对象的 `constructor` 属性，直接指向“类”的本身，这与 ES5 的行为是一致的。
+  - `prototype` 对象的 `constructor` 属性，直接指向“类”的本身，这与 ES5 的行为是一致的
 
     ```javascript
     Point.prototype.constructor === Point // true
     ```
 
-  - 类的属性名，可以采用表达式。
+  - 类的属性名，可以采用表达式
 
     ```javascript
     let methodName = 'getArea';
@@ -141,7 +141,7 @@
     ```
 
     ```javascript
-    // ES6 的类，完全可以看作构造函数的另一种写法。
+    // ES6 的类，完全可以看作构造函数的另一种写法
     class Point {
       // ...
     }
@@ -152,7 +152,7 @@
 
 ## 内部定义的方法不可枚举
 
-  - 类的内部所有定义的方法，都是不可枚举的（non-enumerable）。这一点与 ES5 的行为不一致。
+  - 类的内部所有定义的方法，都是不可枚举的（non-enumerable）。这一点与 ES5 的行为不一致
 
     ```javascript
     // ES5

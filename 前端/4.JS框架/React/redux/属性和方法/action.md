@@ -4,9 +4,9 @@
 
   - action 是平面对象。`action.__proto__ === Object.prototype`
 
-  - `action` 是 `store` 数据的唯一来源。
+  - `action` 是 `store` 数据的唯一来源
 
-  - 指的是需要变化的数据，**必须**要有一个 `type` 属性（类型没有要求）和一些需要在 `state` 中修改的属性。（和 `Vuex` 中 `Mutation` 的 `payload` 参数一致，因为我们是在 `Mutation` 手动写好对应关系，所以不需要传递 `type`）。
+  - 指的是需要变化的数据，**必须**要有一个 `type` 属性（类型没有要求）和一些需要在 `state` 中修改的属性。（和 `Vuex` 中 `Mutation` 的 `payload` 参数一致，因为我们是在 `Mutation` 手动写好对应关系，所以不需要传递 `type`）
 
     ```javascript
     const action = {

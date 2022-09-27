@@ -2,7 +2,7 @@
 
 ## 作用
 
-- `Object.fromEntries()` 方法是 `Object.entries()` 的逆操作，用于将一个键值对数组转为对象。
+- `Object.fromEntries()` 方法是 `Object.entries()` 的逆操作，用于将一个键值对数组转为对象
 
     ```javascript
     Object.fromEntries([

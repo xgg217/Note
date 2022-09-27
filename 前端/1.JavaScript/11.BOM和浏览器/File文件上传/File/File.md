@@ -14,15 +14,15 @@
 
 ## File对象的属性值
 
-  - `name`：文件名，该属性只读。
+  - `name`：文件名，该属性只读
 
-  - `size`：文件大小，单位为字节，该属性只读。
+  - `size`：文件大小，单位为字节，该属性只读
 
-  - `type`：文件的MIME类型，如果分辨不出类型，则为空字符串，该属性只读。
+  - `type`：文件的MIME类型，如果分辨不出类型，则为空字符串，该属性只读
 
-  - `lastModified`：文件的上次修改时间，格式为时间戳。
+  - `lastModified`：文件的上次修改时间，格式为时间戳
 
-  - `lastModifiedDate`：文件的上次修改时间，格式为 `Date` 对象实例。
+  - `lastModifiedDate`：文件的上次修改时间，格式为 `Date` 对象实例
 
     ```javascript
     $('#upload-file').files[0]

@@ -12,7 +12,7 @@
 
     ```javascript
     // 报错 Property 'MyNamespace' does not exist on type 'Window & typeof globalThis'.(2339)
-    // Window & typeof globalThis 交叉类型上不存在 MyNamespace 属性。
+    // Window & typeof globalThis 交叉类型上不存在 MyNamespace 属性
     window.MyNamespace = window.MyNamespace || {};
     ```
 

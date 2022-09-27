@@ -4,7 +4,7 @@
 
   - `.then(null, rejection)` 的别名
 
-  - 用于指定发生错误时的回调函数。
+  - 用于指定发生错误时的回调函数
 
     ```javascript
     getJSON('/posts.json').then(function(posts) {
@@ -15,7 +15,7 @@
     });
     ```
 
-  - `Promise` 对象的错误具有**冒泡**性质，会一直向后传递，直到被捕获为止。也就是说，错误总是会被下一个 `catch` 语句捕获。
+  - `Promise` 对象的错误具有**冒泡**性质，会一直向后传递，直到被捕获为止。也就是说，错误总是会被下一个 `catch` 语句捕获
 
     ```javascript
     getJSON('/post/1.json').then(function(post) {
@@ -27,7 +27,7 @@
     });
     ```
 
-  - 一般来说，不要在 `then` 方法里面定义 `Reject` 状态的回调函数（即 `then` 的第二个参数），总是使用 `catch` 方法。
+  - 一般来说，不要在 `then` 方法里面定义 `Reject` 状态的回调函数（即 `then` 的第二个参数），总是使用 `catch` 方法
 
   - `Promise` 内部的错误不会影响到 `Promise` 外部的代码，通俗的说法就是 **Promise 会吃掉错误**
 
@@ -41,12 +41,12 @@
       });
     };
 
-    // 如果没有报错，则会跳过catch方法。
+    // 如果没有报错，则会跳过catch方法
     someAsyncThing()
     .catch(function(error) {
       console.log('oh no', error);
     })
-    // 要是then方法里面报错，就与前面的catch无关了。
+    // 要是then方法里面报错，就与前面的catch无关了
     .then(function() {
       console.log('carry on');
     });

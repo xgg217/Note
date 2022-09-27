@@ -2,7 +2,7 @@
 
 ## 面试答案
 
-  - `vue3` 不再使用 `Object.defineProperty` 的方式定义完成数据响应式，而是使用 `Proxy`。
+  - `vue3` 不再使用 `Object.defineProperty` 的方式定义完成数据响应式，而是使用 `Proxy`
 
   - 除了 `Proxy` 本身效率比 `Object.defineProperty` 更高之外，由于不必递归遍历所有属性，而是直接得到一个 `Proxy`。所以在 `vue3` 中，对数据的访问是动态的，当访问某个属性的时候，再动态的获取和设置，这就极大的提升了在组件初始阶段的效率
 

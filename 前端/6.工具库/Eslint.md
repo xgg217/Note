@@ -6,7 +6,7 @@
 
   - 项目安装 `npm install eslint --save-dev`
 
-  - 如果你想你所有项目都使用eslint，请全局安装；如果你想当前项目使用，请局部安装。
+  - 如果你想你所有项目都使用eslint，请全局安装；如果你想当前项目使用，请局部安装
 
   - 局部安装时请使用 –save-dev，因为 eslint 是适用于开发环境（Software Development Environment，SDE）的插件，请不要添加到生产环境中
 
@@ -116,7 +116,7 @@
 
     ```javascript
     module.exports = {
-      "env": { // Environments，指定代码的运行环境。不同的运行环境，全局变量不一样，指明运行环境这样ESLint就能识别特定的全局变量。同时也会开启对应环境的语法支持，例如：es6。
+      "env": { // Environments，指定代码的运行环境。不同的运行环境，全局变量不一样，指明运行环境这样ESLint就能识别特定的全局变量。同时也会开启对应环境的语法支持，例如：es6
           "browser": true,
           "es6": true,
           "node": true

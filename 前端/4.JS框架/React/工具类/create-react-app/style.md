@@ -61,7 +61,7 @@
     <button class="Button_error_ax7yz">Error Button</button>
     ```
 
-  - CSS模块允许您在不同的文件中使用相同的CSS类名，而无需担心命名冲突。
+  - CSS模块允许您在不同的文件中使用相同的CSS类名，而无需担心命名冲突
 
 ## SCSS
 

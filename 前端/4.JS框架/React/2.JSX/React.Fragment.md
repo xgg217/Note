@@ -2,7 +2,7 @@
 
 ## \<React.Fragment>
 
-  - `Fragments` 与 **Vue.js** 的 `<template>` 功能类似，可做不可见的包裹元素。
+  - `Fragments` 与 **Vue.js** 的 `<template>` 功能类似，可做不可见的包裹元素
 
     ```react&#x20;jsx
     class Columns extends React.Component {
@@ -19,9 +19,9 @@
 
 ## <>\</>
 
-  - 简写形式 `<></>`。
+  - 简写形式 `<></>`
 
-  - `<></>` 是 `<React.Fragment />` 的语法糖。
+  - `<></>` 是 `<React.Fragment />` 的语法糖
 
     ```react&#x20;jsx
     export default function () {
@@ -36,11 +36,11 @@
     }
     ```
 
-  - `<></>` 语法不能接受键值或属性。
+  - `<></>` 语法不能接受键值或属性
 
 ## 带 key 的片段
 
-  - 如果你需要一个带 key 的片段，你可以直接使用 `<React.Fragment />` 。
+  - 如果你需要一个带 key 的片段，你可以直接使用 `<React.Fragment />`
 
     ```react&#x20;jsx
     function Glossary(props) {

@@ -2,7 +2,7 @@
 
 ## Math.trunc()
 
-  - 用于去除一个数的小数部分，返回整数部分。
+  - 用于去除一个数的小数部分，返回整数部分
 
     ```javascript
     Math.trunc(4.1) // 4
@@ -12,7 +12,7 @@
     Math.trunc(-0.1234) // -0
     ```
 
-  - 对于非数值，`Math.trunc` 内部使用 `Number` 方法将其先转为数值。
+  - 对于非数值，`Math.trunc` 内部使用 `Number` 方法将其先转为数值
 
     ```javascript
     Math.trunc('123.456') // 123
@@ -21,7 +21,7 @@
     Math.trunc(null) // 0
     ```
 
-  - 对于空值和无法截取整数的值，返回 `NaN` 。
+  - 对于空值和无法截取整数的值，返回 `NaN`
 
     ```javascript
     Math.trunc(NaN);      // NaN

@@ -8,7 +8,7 @@
     <div v-bind:class="{ red: isRed }"></div>
     ```
 
-  - 上面的语法表示 active 这个 class 存在与否将取决于数据属性 isActive 的 真假。
+  - 上面的语法表示 active 这个 class 存在与否将取决于数据属性 isActive 的 真假
 
 ## 数组语法
 

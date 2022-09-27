@@ -10,4 +10,4 @@
     });
     ```
 
-  - 网页的JavaScript脚本是同步执行的，所以定义 `DOMContentLoaded` 事件的监听函数，应该放在所有脚本的最前面。否则脚本一旦发生堵塞，将推迟触发 ` DOMContentLoaded` 事件。
+  - 网页的JavaScript脚本是同步执行的，所以定义 `DOMContentLoaded` 事件的监听函数，应该放在所有脚本的最前面。否则脚本一旦发生堵塞，将推迟触发 ` DOMContentLoaded` 事件

@@ -10,7 +10,7 @@
 
 ## 类组件 PureComponent
 
-  - PureComponent 是一个组件，如果某个组件继承自该组件，则该组件得 `shouldComponentUpdate` 会进行优化。
+  - PureComponent 是一个组件，如果某个组件继承自该组件，则该组件得 `shouldComponentUpdate` 会进行优化
 
   - 优化：对属性和状态进行**浅**比较，如果相等则不会重新渲染
 
@@ -47,6 +47,6 @@
 
 ## 注意
 
-  - `PureComponent` 是浅比较。所以为了效率应该尽量使用 `PureComponent`。
+  - `PureComponent` 是浅比较。所以为了效率应该尽量使用 `PureComponent`
 
   - 所以在使用时：不要改动之前得状态，永远创建新的状态进行覆盖

@@ -2,7 +2,7 @@
 
 ## 作用
 
-  - `for...of` 循环可以使用的范围包括数组、`Set` 和 `Map` 结构、某些类似数组的对象（比如 `arguments` 对象、`DOM NodeList` 对象）、后文的 `Generator` 对象，以及字符串。
+  - `for...of` 循环可以使用的范围包括数组、`Set` 和 `Map` 结构、某些类似数组的对象（比如 `arguments` 对象、`DOM NodeList` 对象）、后文的 `Generator` 对象，以及字符串
 
 ## 循环数组
 
@@ -47,7 +47,7 @@
 
 ## 终止循环
 
-  - 可以由 `break`、`throw`、`continue` 或 `return` 终止。
+  - 可以由 `break`、`throw`、`continue` 或 `return` 终止
 
   - 在这些情况下，迭代器关闭\\
 

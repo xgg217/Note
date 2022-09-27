@@ -48,7 +48,7 @@
     function foo(input: string | number) {
       //
       if (isString(input)) {
-        // 保存-- 类型“string | number”上不存在属性“replace”。
+        // 保存-- 类型“string | number”上不存在属性“replace”
         (input).replace("linbudu", "linbudu599")
       }
       if (typeof input === 'number') { }

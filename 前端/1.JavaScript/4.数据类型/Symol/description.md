@@ -6,7 +6,7 @@
 
 ## 概述
 
-  - 创建 Symbol 的时候，可以添加一个描述。
+  - 创建 Symbol 的时候，可以添加一个描述
 
     ```javascript
     // sym的描述就是字符串foo

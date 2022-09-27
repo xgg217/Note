@@ -55,7 +55,7 @@
 
 ## 错误处理
 
-  - 任何一个await语句后面的 `Promise` 对象变为 `reject` 状态，那么整个 `async` 函数都会中断执行。
+  - 任何一个await语句后面的 `Promise` 对象变为 `reject` 状态，那么整个 `async` 函数都会中断执行
 
     ```javascript
     async function f() {
@@ -67,7 +67,7 @@
   - `try...catch`
 
     ```javascript
-    // 不管这个异步操作是否成功，第二个await都会执行。
+    // 不管这个异步操作是否成功，第二个await都会执行
     async function f() {
       try {
         await Promise.reject('出错了');

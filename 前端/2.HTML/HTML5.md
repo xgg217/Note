@@ -2,7 +2,7 @@
 
 ## HTML5 规则
 
-  - 新特性应该基于 `HTML`、`CSS`、`DOM` 以及 `JavaScript`。
+  - 新特性应该基于 `HTML`、`CSS`、`DOM` 以及 `JavaScript`
 
   - 减少对外部插件的需求（比如 `Flash`）
 

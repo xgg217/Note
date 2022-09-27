@@ -27,7 +27,7 @@
 
       - `array`（数组类型）：表示任务数组；
 
-      - `iteratorFn`（函数类型）：表示迭代函数，用于实现对每个任务项进行处理，该函数会返回一个 Promise 对象或异步函数。
+      - `iteratorFn`（函数类型）：表示迭代函数，用于实现对每个任务项进行处理，该函数会返回一个 Promise 对象或异步函数
 
   - 在使用了 `asyncPool` 函数之后，对应的执行过程如下所示
 
@@ -50,9 +50,9 @@
 
 #### asyncPool ES7 实现
 
-  - 充分利用了 `Promise.all` 和 `Promise.race` 函数特点，再结合 ES7 中提供的 `async await` 特性，最终实现了并发控制的功能。
+  - 充分利用了 `Promise.all` 和 `Promise.race` 函数特点，再结合 ES7 中提供的 `async await` 特性，最终实现了并发控制的功能
 
-  - 利用 `await Promise.race(executing);` 这行语句，我们会等待 **正在执行任务列表** 中较快的任务执行完成之后，才会继续执行下一次循环。
+  - 利用 `await Promise.race(executing);` 这行语句，我们会等待 **正在执行任务列表** 中较快的任务执行完成之后，才会继续执行下一次循环
 
     ```javascript
     async function asyncPool(poolLimit, array, iteratorFn) {
@@ -79,9 +79,9 @@
 
 ## asyncPool ES6 实现
 
-  - 在 ES6 的实现版本中，通过内部封装的 `enqueue` 函数来实现核心的控制逻辑。
+  - 在 ES6 的实现版本中，通过内部封装的 `enqueue` 函数来实现核心的控制逻辑
 
-  - 当 `Promise.race(executing)` 返回的 `Promise` 对象变成已完成状态时，才会调用 `enqueue` 函数，从 `array` 数组中获取新的待办任务。
+  - 当 `Promise.race(executing)` 返回的 `Promise` 对象变成已完成状态时，才会调用 `enqueue` 函数，从 `array` 数组中获取新的待办任务
 
     ```javascript
     function asyncPool(poolLimit, array, iteratorFn) {

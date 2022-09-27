@@ -8,7 +8,7 @@
 
 ## uniclound 介绍
 
-> uniCloud 是 DCloud 联合阿里云、腾讯云，为开发者提供的基于 serverless 模式和 js 编程的云开发平台。
+> uniCloud 是 DCloud 联合阿里云、腾讯云，为开发者提供的基于 serverless 模式和 js 编程的云开发平台
 
 > 不需要服务器的购买配置即可快速创建一个完整的后端服务
 

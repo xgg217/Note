@@ -54,7 +54,7 @@
     // 0: "ssff" 1: "s" 2: "f" groups: undefined index: 21 input: "aabbsffdddsffssfssdfdssff" length: 3
     ```
 
-  - `matchAll` 内部做了一个 `regexp` 的复制，所以不像 `regexp.exec`, `lastIndex` 在字符串扫描时不会改变。
+  - `matchAll` 内部做了一个 `regexp` 的复制，所以不像 `regexp.exec`, `lastIndex` 在字符串扫描时不会改变
 
     ```javascript
     const regexp = RegExp('[a-c]','g');
@@ -66,7 +66,7 @@
 
 ## 捕获组的更佳途径
 
-  - `matchAll` 的另外一个亮点是更好地获取捕获组。
+  - `matchAll` 的另外一个亮点是更好地获取捕获组
 
   - 因为当使用 `match()` 和 `/g` 标志方式获取匹配信息时，捕获组会 **被忽略**
 

@@ -2,7 +2,7 @@
 
 ## 作用
 
-  - `Promise.reject(reason)` 方法也会返回一个新的 `Promise` 实例，该实例的状态为 `rejected` 。
+  - `Promise.reject(reason)` 方法也会返回一个新的 `Promise` 实例，该实例的状态为 `rejected`
 
     ```javascript
     const p = Promise.reject('出错了');
