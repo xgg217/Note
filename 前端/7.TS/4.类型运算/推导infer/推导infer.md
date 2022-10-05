@@ -18,7 +18,7 @@
 
   - 示例
 
-    ```typescript
+    ```ts
     type UnpackedArray<T> = T extends (infer U)[] ? U : T;
     type T0 = string[];
     type U0 = UnpackedArray<T0>; // string
@@ -34,7 +34,7 @@
 
   - 获取函数类型的返回值类型
 
-    ```typescript
+    ```ts
     type UnpackedFn<T> = T extends () => infer U ? U : T;
 
     type T1 = UnpackedFn<() => string> // string;
@@ -43,13 +43,13 @@
 
   - Promise
 
-    ```typescript
+    ```ts
     type Unpacked<T> = T extends Promise<infer U> ? U : T;
     ```
 
   - 对象类型
 
-    ```typescript
+    ```ts
     type User = {
       id: number;
       name: string;

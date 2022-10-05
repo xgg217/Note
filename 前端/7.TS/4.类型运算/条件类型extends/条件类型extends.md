@@ -10,7 +10,7 @@
 
   - 语法：当类型 T 可以赋值给 U 时（`extends` 在 TypeScript 中可以理解为 Assignable），返回 X 类型，否则返回 Y 类型
 
-    ```typescript
+    ```ts
     // 其中的 T、U、X、Y 都是类型占位符
     T extends U ? X : Y
     ```
@@ -25,7 +25,7 @@
 
   - 例如
 
-    ```typescript
+    ```ts
     // 需要判断一个类型是否为字符串类型
     type IsString<T> = T extends string ? true : false;
 
@@ -54,7 +54,7 @@
 
   - TS
 
-    ```typescript
+    ```ts
     type TypeName<T> =
       T extends string ? 'string' :
       T extends string ? 'number' :
@@ -76,7 +76,7 @@
 
   - 当传入联合类型以后，发现最终返回的结果也变成了联合类型，并且是将传入的联合类型分别判断的结果
 
-    ```typescript
+    ```ts
     type Test<T> = T extends number ? 1 : 2;
 
     // 相当于把 1传入Test求值，把 ‘a’传入Test求值
@@ -84,7 +84,7 @@
     type res = Test<1 | 'a'>; // 1 | 2
     ```
 
-    ```typescript
+    ```ts
     type TypeName<T> =
       T extends string ? 'string' :
       T extends string ? 'number' :
@@ -108,7 +108,7 @@
 
       - 下面的工具类型中，泛型表达式中的 `T` 就是类型参数
 
-        ```typescript
+        ```ts
         type IsString<T> = T extends string ? true : false
         ```
 

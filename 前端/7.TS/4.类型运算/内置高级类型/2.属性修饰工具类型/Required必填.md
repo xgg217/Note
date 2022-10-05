@@ -19,7 +19,7 @@
 
   - 源码
 
-    ```typescript
+    ```ts
     type Required<T> = {
       [P in keyof T]-?: T[P];
     };

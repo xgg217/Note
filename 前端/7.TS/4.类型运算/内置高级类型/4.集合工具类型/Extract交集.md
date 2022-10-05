@@ -8,7 +8,7 @@
 
   - 源码
 
-    ```typescript
+    ```ts
     type Extract<T, U> = T extends U ? T : never;
     ```
 
@@ -16,7 +16,7 @@
 
   - 代码
 
-    ```typescript
+    ```ts
     type AExtractB = Extract<1 | 2 | 3, 1 | 2 | 4>; // 1 | 2
 
     type _AExtractB =

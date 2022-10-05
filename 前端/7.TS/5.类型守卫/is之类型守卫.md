@@ -12,7 +12,7 @@
 
   - 即如果这个函数成功返回为 `true` ，那么 `is` 关键字前这个入参的类型，就会被这个类型守卫调用方后续的类型控制流分析收集到
 
-    ```typescript
+    ```ts
     // 下面两个function 编译后的结果一样
     function isStr(p): p is string{
       return typeof p === 'string';
@@ -40,7 +40,7 @@
 
   - 示例1：因为 isString 这个函数在另外一个地方，内部的判断逻辑并不在函数 foo 中。这里的类型控制流分析做不到跨函数上下文来进行类型的信息收集
 
-    ```typescript
+    ```ts
     function isString(input: unknown): boolean {
       return typeof input === "string";
     }
@@ -56,7 +56,7 @@
     }
     ```
 
-    ```typescript
+    ```ts
     // 解决方案
     function isString(input: unknown): input is string {
       return typeof input === "string";

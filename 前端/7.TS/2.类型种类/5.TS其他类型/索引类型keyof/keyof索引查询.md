@@ -8,7 +8,7 @@
 
   - 代码
 
-    ```typescript
+    ```ts
     let K1: keyof boolean; // let K1: "valueOf"
     let K2: keyof number; // let K2: "toString" | "toFixed" | "toExponential" | ...
     let K3: keyof symbol; // let K1: "valueOf"
@@ -18,7 +18,7 @@
 
   - 代码
 
-    ```typescript
+    ```ts
     type Point = { x: number; y: number };
     type P = keyof Point; // p = 'x' | 'y'
 
@@ -26,13 +26,13 @@
 
   - 如果该类型具有 `string` 或 `number` 索引签名，`keyof` 则将返回这些类型
 
-    ```typescript
+    ```ts
     type Arrayish = { [n: number]: unknown };
     type A = keyof Arrayish; // type A = number
 
     ```
 
-    ```typescript
+    ```ts
     type Mapish = { [k: string]: boolean };
     type M = keyof Mapish; // type M = string | number
 
@@ -51,7 +51,7 @@
 
   - 示例
 
-    ```typescript
+    ```ts
     interface Person {
       name: string;
       age: number;
@@ -63,7 +63,7 @@
     type K3 = keyof { [x: string]: Person };  // string | number
     ```
 
-    ```typescript
+    ```ts
     // ts 定义
     interface Person {
       name: string;
@@ -82,7 +82,7 @@
 
   - 代码
 
-    ```typescript
+    ```ts
     enum HttpMethod {
       GET,
       Post

@@ -10,7 +10,7 @@
 
   - 实际使用
 
-    ```typescript
+    ```ts
     interface Todo {
       title: string;
       description: string;
@@ -52,7 +52,7 @@
 
   - `K extend keyof T` 表示 K 是 T 的子类型，这里是一个类型约束声明
 
-    ```typescript
+    ```ts
     type T = "a" | "b" | "c";
 
     那么 K 可以是 "a"
@@ -62,7 +62,7 @@
 
   - 代码
 
-    ```typescript
+    ```ts
     /**
        * K 是联合类型，可以用 in 来进行遍历
        * k --> 可以理解成 ['title', 'completed']
@@ -76,7 +76,7 @@
 
   - 使用
 
-    ```typescript
+    ```ts
     // 使用
     interface Todo {
       title: string;

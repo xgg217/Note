@@ -10,7 +10,7 @@
 
   - 代码
 
-    ```typescript
+    ```ts
     interface Foo {
       a: number;
       b: string;
@@ -22,7 +22,7 @@
 
     ```
 
-    ```typescript
+    ```ts
     type User = {
       id: string; // 用户ID
       name: string; // 用户名
@@ -42,7 +42,7 @@
 
   - 代码
 
-    ```typescript
+    ```ts
     type User = {
       id: string; // 用户ID
       name: string; // 用户名
@@ -70,6 +70,6 @@
 
   - 代码
 
-    ```typescript
+    ```ts
     type Omit<T, K extends keyof any> = Pick<T, Exclude<keyof T, K>>;
     ```

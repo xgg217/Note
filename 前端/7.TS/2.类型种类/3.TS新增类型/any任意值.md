@@ -26,7 +26,7 @@
 
   - 不进行类型检查
 
-    ```typescript
+    ```ts
     var t:any = 10;
     t = "jspang"
     t = true

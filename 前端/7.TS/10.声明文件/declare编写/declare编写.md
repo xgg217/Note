@@ -30,7 +30,7 @@
 
   - 示例
 
-    ```typescript
+    ```ts
     // 文件位置 typescript/lib/lib.es5.d.ts
     declare function eval(x: string): any;
 

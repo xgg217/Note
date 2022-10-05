@@ -4,7 +4,7 @@
 
   - 示例
 
-    ```typescript
+    ```ts
     const a = document.querySelector('body') as HTMLBodyElement; // 断言成 body 元素
     const b = document.querySelector('body') as HTMLDivElement; // 断言成 div 元素
 

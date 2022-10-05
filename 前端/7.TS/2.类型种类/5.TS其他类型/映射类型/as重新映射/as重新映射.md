@@ -8,7 +8,7 @@
 
   - 语法
 
-    ```typescript
+    ```ts
     type MappedTypeWithNewKeys<T> = {
       [key in keyof T as newKeyType]: T[K]
     }
@@ -20,7 +20,7 @@
 
   - 在 TypeScript 4.1 及以后，你可以在映射类型中使用 `as` 语句实现键名重新映射
 
-    ```typescript
+    ```ts
     type MappedTypeWithNewProperties<Type> = {
         [Properties in keyof Type as NewKeyType]: Type[Properties]
     }
@@ -28,7 +28,7 @@
 
   - 可以利用**模板字面量类型**，基于之前的属性名创建一个新的属性名
 
-    ```typescript
+    ```ts
     type Getters<Type> = {
         [Property in keyof Type as `get${Capitalize<string & Property>}`]: () => Type[Property]
     };
@@ -50,7 +50,7 @@
 
   - 利用条件类型返回一个 `never` 从而过滤掉某些属性
 
-    ```typescript
+    ```ts
     type RemoveKindField<Type> = {
         [Property in keyof Type as Exclude<Property, "kind">]: Type[Property]
     };
@@ -69,7 +69,7 @@
 
   - 遍历任何联合类型，不仅仅是 `string | number | symbol` 这种联合类型，可以是任何类型的联合
 
-    ```typescript
+    ```ts
     type EventConfig<Events extends { kind: string }> = {
         [E in Events as E["kind"]]: (event: E) => void;
     }

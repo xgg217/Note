@@ -12,7 +12,7 @@
 
   - 意味着声明 `never` 的变量只能被 `never` 类型所赋值
 
-    ```typescript
+    ```ts
     // 正确
     function a():never {
       throw new Error('错误');
@@ -53,7 +53,7 @@
 
   - `never` 特殊在，除了自身以外，没有任何类型是它的子类型，或者说可以赋值给它
 
-    ```typescript
+    ```ts
     // null 和 undefined，可以被 never 赋值
     declare const n: never;
 
