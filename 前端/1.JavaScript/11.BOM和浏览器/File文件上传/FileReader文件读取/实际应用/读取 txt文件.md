@@ -8,7 +8,7 @@
     <input type="file" id="input">
     ```
 
-    ```javascript
+    ```js
     const inputElement = document.getElementById("input");
     inputElement.addEventListener("change", handleFiles, false);
     function handleFiles() {

@@ -4,14 +4,14 @@
 
   - 有时需要将现有对象转为 `Promise` 对象，`Promise.resolve` 方法就起到这个作用
 
-    ```javascript
+    ```js
     // 将 jQuery 生成的deferred对象，转为一个新的 Promise 对象
     const jsPromise = Promise.resolve($.ajax('/whatever.json'));
     ```
 
   - `Promise.resolve` 等价于下面的写法
 
-    ```javascript
+    ```js
     Promise.resolve('foo')
     // 等价于
     new Promise(resolve => resolve('foo'))
@@ -27,7 +27,7 @@
 
           - 示例
 
-            ```javascript
+            ```js
             let thenable = {
               then: function(resolve, reject) {
                 resolve(42);
@@ -39,7 +39,7 @@
 
           - 示例：下面代码中，thenable对象的then方法执行后，对象p1的状态就变为resolved，从而立即执行最后那个then方法指定的回调函数，输出 42
 
-            ```javascript
+            ```js
             let thenable = {
               then: function(resolve, reject) {
                 resolve(42);
@@ -58,7 +58,7 @@
 
           - 下面代码生成一个新的 `Promise` 对象的实例 `p` 。由于字符串 `Hello` 不属于异步操作（判断方法是字符串对象不具有 `then` 方法），返回 `Promise` 实例的状态从一生成就是 `resolved` ，所以回调函数会立即执行。`Promise.resolve` 方法的参数，会同时传给回调函数
 
-            ```javascript
+            ```js
             const p = Promise.resolve('Hello');
 
             p.then(function (s){

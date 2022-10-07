@@ -4,7 +4,7 @@
 
   - 声明文件示例
 
-    ```javascript
+    ```js
     // 例如 global.d.ts
     interface Console {
       log(mes?:any):void,
@@ -18,7 +18,7 @@
 
   - 使用
 
-    ```javascript
+    ```js
     console.log(12);
 
     setTimeout(() => {
@@ -43,7 +43,7 @@
 
   - 声明
 
-    ```javascript
+    ```js
     declare module "lodash" {
       export function chunk<T>(arr:T[], len:number):T[][]
     }
@@ -51,7 +51,7 @@
 
   - 使用
 
-    ```javascript
+    ```js
     import _ from "lodash",
     const newArr = _.chunk([3,4,5,6, "1"], 2);
     ```

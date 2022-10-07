@@ -6,7 +6,7 @@
 
   - 作为替代，我们使用 `useRouter` 函数
 
-    ```javascript
+    ```js
     import { useRouter, useRoute } from 'vue-router'
     export default {
       setup() {
@@ -35,7 +35,7 @@
 
   - 路由导航守卫
 
-    ```javascript
+    ```js
     import { onBeforeRouteLeave, onBeforeRouteUpdate } from 'vue-router'
 
     // 添加一个导航守卫，在当前组件将要离开时触发

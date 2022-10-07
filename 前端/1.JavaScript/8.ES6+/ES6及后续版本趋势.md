@@ -4,7 +4,7 @@
 
   - 不再设计全局函数,所以在后续定义新的方法，不在全局定义
 
-    ```javascript
+    ```js
     // 例如
     isNaN();
     ...
@@ -18,7 +18,7 @@
 
   - 示例
 
-    ```javascript
+    ```js
     var Person=function(){};
 
     // 静态方法

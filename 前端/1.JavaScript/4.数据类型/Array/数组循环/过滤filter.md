@@ -12,7 +12,7 @@
 
   - 在对比时使用的是 `==`
 
-    ```javascript
+    ```js
     const dataArr = [1,7,5,7,1,3];
     const res = dataArr.filter((ele, index, array)=>{
       return ele > '3'
@@ -28,7 +28,7 @@
 
   - 代码
 
-    ```javascript
+    ```js
     const filter = function(arr, funCb, thatThis) {
       let newArr = [];
       const len = arr.length;
@@ -46,7 +46,7 @@
 
   - 示例
 
-    ```javascript
+    ```js
     // 筛选排除掉所有的 大于 10 的元素
     function isBigEnough(element) {
       return element >= 10;

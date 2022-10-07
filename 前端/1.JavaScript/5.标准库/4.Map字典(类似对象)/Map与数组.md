@@ -4,7 +4,7 @@
 
   - `Map` 转为数组最方便的方法，就是使用扩展运算符（`...`）
 
-    ```javascript
+    ```js
     const m2 = new Map([[2,2], ['sd', 'sdf'], [1]]);
     console.log([...m2]); // [[2,2], ['sd', 'sdf'], [1]]
     ```
@@ -13,7 +13,7 @@
 
   - 将数组传入 `Map` 构造函数，就可以转为 `Map`
 
-    ```javascript
+    ```js
     new Map([
       [true, 7],
       [{foo: 3}, ['abc']]

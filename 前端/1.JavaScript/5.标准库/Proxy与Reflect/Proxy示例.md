@@ -4,7 +4,7 @@
 
   - 示例1
 
-    ```javascript
+    ```js
     const obj = {
       a: 1,
       b: 2
@@ -46,7 +46,7 @@
 
   - 这时候就可以使用 `proxy` 的 `set` ，在赋值的时候，对数据进行处理
 
-    ```javascript
+    ```js
     const numbers = []
     const proxy = new Proxy(numbers, {
       set(target,key,value) {
@@ -74,7 +74,7 @@
 
   - 示例：一般情况下我们在js中声明私有属性的时候，会将属性的名字以 `_` 开头，对于这些私有属性，是不需要外部调用，所以如果可以隐藏掉是最好的，这时候就可以通过 `has` 在判断某个属性是否在对象时，如果以 `_` 开头，则返回 `false`
 
-    ```javascript
+    ```js
     const obj =  {
       publicMethod() {},
       _privateMethod(){}
@@ -101,7 +101,7 @@
 
   - 示例：现在有一个用户信息的对象，对于某些用户信息，只允许查看，但不能删除或者修改，对此使用 `Proxy` 可以对不能删除或者修改的属性进行拦截并抛出异常，如下
 
-    ```javascript
+    ```js
     const userInfo = {
       name: '子君',
       gzh: '前端有的玩',
@@ -136,7 +136,7 @@
 
   - 示例
 
-    ```javascript
+    ```js
     let user = {
       name: "John",
       age: 30,

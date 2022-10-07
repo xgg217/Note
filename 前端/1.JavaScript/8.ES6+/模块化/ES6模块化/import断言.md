@@ -4,7 +4,7 @@
 
   - 我们经常会用到类似
 
-    ```javascript
+    ```js
     import Component from './component';
     import data from './data.json';
     import styles from './index.module.css';
@@ -16,7 +16,7 @@
 
   - 但不能就这样引入！因为...假如，我们在浏览器中执行
 
-    ```javascript
+    ```js
     import sheet from './styles.css';
 
     // 而后端给我们返回了
@@ -33,12 +33,12 @@
 
   - `Content-Type` 由后端掌控，不够安全，因此，提案中设计了 `import assertion` 的方式
 
-    ```javascript
+    ```js
     // 同步的
     import json from "./foo.json" assert { type: "json" };
     ```
 
-    ```javascript
+    ```js
     // 异步的
     const cssModule = await import('./style.css', {  assert: { type: 'css' }});
     ```

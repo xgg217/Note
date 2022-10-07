@@ -8,7 +8,7 @@
 
   - 本质上 router 中的某些数据可能会更数据仓库中的数据进行联动
 
-    ```javascript
+    ```js
     npm install --save connected-react-router
 
     yarn add connected-react-router
@@ -20,7 +20,7 @@
 
       - `location`：它记录了当前的地址信息
 
-    ```javascript
+    ```js
     // reducers.js
     import { combineReducers } from 'redux'
     import { connectRouter } from 'connected-react-router'

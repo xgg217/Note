@@ -34,7 +34,7 @@
 
   - 加对象数组里的值
 
-    ```javascript
+    ```js
     var initialValue = 0;
     var sum = [{x: 1}, {x:2}, {x:3}].reduce(function (accumulator, currentValue) {
       return accumulator + currentValue.x;
@@ -44,7 +44,7 @@
 
   - 将二维数组转化为一维
 
-    ```javascript
+    ```js
     var flattened = [[0, 1], [2, 3], [4, 5]].reduce(function(a, b) {
       return a.concat(b);
     },[]);
@@ -53,7 +53,7 @@
 
   - 计算数组中每个元素出现的次数
 
-    ```javascript
+    ```js
     var names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice'];
     var countedNames = names.reduce(function (allNames, name) {
       if (name in allNames) {
@@ -70,7 +70,7 @@
 
   - 代码
 
-    ```javascript
+    ```js
     /**
      * @param {*} isRight 从右到左开始计算
      */

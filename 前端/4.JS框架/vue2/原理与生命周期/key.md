@@ -10,7 +10,7 @@
 
   - 预期值：`number` | `string` 有相同父元素的子元素必须有独特的 `key`，重复的 `key` 会造成渲染错误，`key` 应**唯一**
 
-    ```javascript
+    ```js
     <ul id="app">
       <li v-for="(person, index) in persons" :key="person">
         {{ person }}
@@ -18,7 +18,7 @@
     </ul>
     ```
 
-    ```javascript
+    ```js
     data() {
       return {
         persons: ['杉杉', '思彤哥', '成哥', '邓哥']
@@ -28,7 +28,7 @@
 
   - 不建议将数组的索引作为 `key` 值，如：
 
-    ```javascript
+    ```js
     <li v-for="(person, index) in persons" :key="index">
       {{ person }}
     </li>
@@ -50,7 +50,7 @@
     </ul>
     ```
 
-    ```javascript
+    ```js
     data() {
       retrun {
         show: true

@@ -6,7 +6,7 @@
 
   - 放置在函数最开始的地方，被修饰函数的返回结果一定是 `Promise` 对象
 
-    ```javascript
+    ```js
     async function test() {
       console.log(1);
       return 2;
@@ -21,7 +21,7 @@
     }
     ```
 
-    ```javascript
+    ```js
     // 返回 Promise，则 test 得到的 Promise 状态和其一致
     async function test() {
       return Promise.resolve(0);
@@ -31,7 +31,7 @@
 
     ```
 
-    ```javascript
+    ```js
     // 若执行过程报错，则任务状态是 rejected
     async function test() {
       throw new Error('错误')
@@ -44,7 +44,7 @@
 
   - 立即执行
 
-    ```javascript
+    ```js
     (async function() {
       // 执行代码
     })();
@@ -57,13 +57,13 @@
 
   - 函数表达式
 
-    ```javascript
+    ```js
     const foo = async function () {};
     ```
 
   - `Class` 的方法
 
-    ```javascript
+    ```js
     class Storage {
       constructor() {
         this.cachePromise = caches.open('avatars');
@@ -81,6 +81,6 @@
 
   - 箭头函数
 
-    ```javascript
+    ```js
     const foo = async () => {};
     ```

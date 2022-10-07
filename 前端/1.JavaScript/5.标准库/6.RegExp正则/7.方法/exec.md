@@ -24,7 +24,7 @@
 
   - 返回值：返回一个数组（包含额外的属性 `index` 和 `input` ，参见下方表格），并更新正则表达式对象的 `lastIndex` 属性。完全匹配成功的文本将作为返回数组的第一项，从第二项起，后续每项都对应正则表达式内捕获括号里匹配成功的文本
 
-    ```javascript
+    ```js
     var r = /a(b+)a/;
     var arr = r.exec('_abbba_aba_');
 
@@ -42,7 +42,7 @@
 
   - 可读、可写
 
-    ```javascript
+    ```js
     var reg = /a/g;
     var str = 'abc_abc_abc'
 
@@ -70,7 +70,7 @@
 
   - 在使用 `exec` 时，经常需要配合使用 `while` 循环
 
-    ```javascript
+    ```js
     const string = "2017.06.27";
     const regex2 = /\b(\d+)\b/g;
     const result;
@@ -86,7 +86,7 @@
 
   - 示例1
 
-    ```javascript
+    ```js
     const str = 'abababab';
     const reg = /ab/g;
 
@@ -111,7 +111,7 @@
 
   - 示例2：获取中文字符的数量
 
-    ```javascript
+    ```js
     const str = "sfsfs大师傅似的dsfs1564s大水发";
     const reg = /[\u4e00-\u9FA5]/g;
 

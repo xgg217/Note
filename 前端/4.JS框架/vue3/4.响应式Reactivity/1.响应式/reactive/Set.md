@@ -4,7 +4,7 @@
 
   - 示例
 
-    ```javascript
+    ```js
     const set = reactive(new Set(["bss", 12, ref(0)]));
 
     // 查找

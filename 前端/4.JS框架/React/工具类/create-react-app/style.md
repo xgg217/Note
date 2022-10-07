@@ -16,7 +16,7 @@
 
   - css 文件
 
-    ```javascript
+    ```js
     @import 'styles/_colors.css';
 
     .Button {
@@ -26,7 +26,7 @@
 
   - js/jsx 文件
 
-    ```javascript
+    ```js
     import React, { Component } from 'react';
     import './Button.css';
 
@@ -43,7 +43,7 @@
 
   - 引入
 
-    ```javascript
+    ```js
     import React, { Component } from 'react';
     import styles from './Button.module.css';
     import './another-stylesheet.css';
@@ -67,7 +67,7 @@
 
   - 安装
 
-    ```javascript
+    ```js
     npm install node-sass --save
 
     yarn add node-sass
@@ -75,7 +75,7 @@
 
   - 公用 `SCSS` 文件
 
-    ```javascript
+    ```js
     @import 'styles/_colors.scss';
     @import '~nprogress/nprogress';
     ```

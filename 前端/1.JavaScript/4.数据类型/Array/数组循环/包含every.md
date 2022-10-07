@@ -22,7 +22,7 @@
 
   - 代码
 
-    ```javascript
+    ```js
     /**
      * 如果list中的所有元素都通过predicate的真值检测就返回true
      * @param {*} arr
@@ -44,7 +44,7 @@
 
   - 示例1：检测数组中的所有元素是否都大于 10
 
-    ```javascript
+    ```js
     function isBigEnough(element, index, array) {
       return (element >= 10);
     }
@@ -56,7 +56,7 @@
 
   - 代码
 
-    ```javascript
+    ```js
     /**
      * 如果list中的所有元素都通过predicate的真值检测就返回true
      * @param {*} arr

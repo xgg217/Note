@@ -4,7 +4,7 @@
 
   - 代码
 
-    ```javascript
+    ```js
     async function () {
       try {
         for await (const x of createRejectingIterable()) {
@@ -18,7 +18,7 @@
 
   - node 中使用
 
-    ```javascript
+    ```js
     async function main(inputFilePath) {
       const readStream = fs.createReadStream(
         inputFilePath,

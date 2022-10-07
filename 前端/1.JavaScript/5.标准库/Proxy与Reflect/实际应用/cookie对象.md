@@ -10,7 +10,7 @@
     _octo=GH1.2.2591.47507; _ga=GA1.1.62208.4087; has_recent_activity=1
     ```
 
-    ```javascript
+    ```js
     "use strict";
 
     const cookieStr =  '_octo=GH1.2.2591.47507; _ga=GA1.1.62208.4087; has_recent_activity=1';

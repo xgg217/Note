@@ -45,7 +45,7 @@
 
   - `border-top-left-radius: 10px 20px;`&#x20;
 
-    ```javascript
+    ```js
     // x 轴 10px
 
     // Y 轴 20px

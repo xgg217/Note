@@ -10,7 +10,7 @@
 
   - 语法
 
-    ```javascript
+    ```js
     const elementClasses = elementNodeReference.classList;
     ```
 
@@ -28,7 +28,7 @@
 
   - 在元素中添加一个或多个类名。如果指定的类名已存在，则不会添加
 
-    ```javascript
+    ```js
     div.classList.add("foo","bar");
     div.classList.remove("foo", "bar");
     div.classList.add("anotherclass");
@@ -36,7 +36,7 @@
 
   - 使用
 
-    ```javascript
+    ```js
     // 初始状态：<div class="a"></div>
     div.classList.add("b");
 
@@ -51,7 +51,7 @@
 
       - `false` - 元素中不存在该类名
 
-    ```javascript
+    ```js
     // 初始状态：<div class="a"></div>
 
     // 存在：返回 true
@@ -69,7 +69,7 @@
 
   - 移除不存在的类名，不会报错
 
-    ```javascript
+    ```js
     div.classList.remove("foo");
     ```
 
@@ -83,7 +83,7 @@
 
   - 第二个是可选参数，是个布尔值用于设置元素是否强制添加或移除类，不管该类名是否存在
 
-    ```javascript
+    ```js
     div.classList.toggle("visible");
     ```
 
@@ -91,7 +91,7 @@
 
   - 代码
 
-    ```javascript
+    ```js
     const div = document.createElement('div');
     div.className = 'foo';
 

@@ -30,7 +30,7 @@
 
   - 参数1：匹配的字符（捕捉到的内容）
 
-    ```javascript
+    ```js
     const myString = "hello word";
     const splits = myString.replace(/\b[A-z]/g, function(res) {
       console.log(res); // h w
@@ -47,7 +47,7 @@
 
   - 回调函数的参数
 
-    ```javascript
+    ```js
     "1234 2345 3456".replace(/(\d)\d{2}(\d)/g, function (match, $1, $2, index, input) {
       console.log([match, $1, $2, index, input]);
     });

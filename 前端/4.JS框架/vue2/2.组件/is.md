@@ -33,7 +33,7 @@
 
   - `<component>` + `is` 的骚操作
 
-    ```javascript
+    ```js
     // 组件会在 `件名` 改变时改变
     <component :is="组件名变量"></component>
     ```

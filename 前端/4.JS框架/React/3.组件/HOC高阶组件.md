@@ -4,7 +4,7 @@
 
   - 高阶函数：以函数作为参数，并返回一个函数
 
-    ```javascript
+    ```js
     function name(func) {
       return function() {
       }

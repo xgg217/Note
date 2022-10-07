@@ -4,7 +4,7 @@
 
   - `NaN` 是一个全局对象的属性
 
-    ```javascript
+    ```js
     5 - 'x'  // NaN
 
     Math.acos(2) // NaN
@@ -24,7 +24,7 @@
 
   - `NaN` 不等于任何值，包括它本身
 
-    ```javascript
+    ```js
     NaN == NaN // false
 
     NaN === NaN // false
@@ -32,19 +32,19 @@
 
   - 数组的 `indexOf` 方法内部使用的是 **严格相等** 运算符，所以该方法对 `NaN` 不成立
 
-    ```javascript
+    ```js
     [NaN].indexOf(NaN) // -1
     ```
 
   - `NaN` 在布尔运算时被当作 `false`
 
-    ```javascript
+    ```js
     Boolean(NaN) // false
     ```
 
   - `NaN` 与任何数（包括它自己）的运算，得到的都是 `NaN`
 
-    ```javascript
+    ```js
     NaN + 32 // NaN
     NaN - 32 // NaN
     NaN * 32 // NaN
@@ -55,7 +55,7 @@
 
   - 需要注意的是，`NaN` 不是独立的数据类型，而是一个特殊数值，它的数据类型依然属于 `Number`，使用 `typeof` 运算符可以看得很清楚
 
-    ```javascript
+    ```js
     typeof NaN // 'number'
     ```
 
@@ -67,7 +67,7 @@
 
   - 在执行自比较之中：`NaN`，也只有 `NaN`，比较之中不等于它自己
 
-    ```javascript
+    ```js
     NaN === NaN;        // false
     Number.NaN === NaN; // false
     isNaN(NaN);         // true
@@ -85,7 +85,7 @@
 
   - 而 `Number.isNaN()` 仅当值当前为 `NaN` 时才为 `true`&#x20;
 
-    ```javascript
+    ```js
     isNaN('hello world');        // true
     Number.isNaN('hello world'); // false
     ```

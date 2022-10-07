@@ -8,7 +8,7 @@
 
     2.  通过拖放文件，查看 `DataTransfer.files` 属性，返回一个 `FileList` 实例
 
-```javascript
+```js
 // <input id="fileItem" type="file">
 const files = document.getElementById('fileItem').files;
 files instanceof FileList // true
@@ -29,13 +29,13 @@ const firstFile = files[0];
 
   - 当用户选取文件后，就可以读取该文件
 
-    ```javascript
+    ```js
     var selected_file = document.getElementById('input').files[0];
     ```
 
   - 采用拖放方式，也可以得到FileList对象
 
-    ```javascript
+    ```js
     var dropZone = document.getElementById('drop_zone');
     dropZone.addEventListener('drop', handleFileSelect, false);
 

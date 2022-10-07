@@ -12,7 +12,7 @@
 
   - 传入**普通对象**
 
-    ```javascript
+    ```js
     import { readonly } from "vue";
 
     const imState = readonly({a:1, b:2, c: { d: 3}})
@@ -26,7 +26,7 @@
 
   - 传入 `Proxy` 代理对象
 
-    ```javascript
+    ```js
     import { reactive, readonly } from "vue";
 
     const state = reactive({a:1, b:2, c: { d: 3}});

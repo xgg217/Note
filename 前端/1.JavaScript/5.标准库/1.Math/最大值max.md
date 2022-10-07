@@ -6,7 +6,7 @@
 
   - 如果给定的参数中**至少**有一个参数**无法**被转换成数字，则会返回 `NaN`
 
-    ```javascript
+    ```js
     const a1 = Math.max(10, 20,30); // 30
     const a2 = Math.max.call(null,100, 20,30); // 100
     const a3 = Math.max.apply(null,[101, 200,30]); // 200

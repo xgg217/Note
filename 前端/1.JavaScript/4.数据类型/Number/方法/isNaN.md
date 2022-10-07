@@ -4,7 +4,7 @@
 
   - 用来检查一个值是否为 `NaN`
 
-    ```javascript
+    ```js
     // ES5
     isNaN(NaN) // true
     isNaN("NaN") // true
@@ -12,7 +12,7 @@
 
   - 如果参数类型不是 `NaN`， `Number.isNaN` 一律返回 `false`
 
-    ```javascript
+    ```js
     Number.isNaN(NaN) // true
     Number.isNaN("NaN") // false
     Number.isNaN(15) // false

@@ -6,7 +6,7 @@
 
   - 用于指定发生错误时的回调函数
 
-    ```javascript
+    ```js
     getJSON('/posts.json').then(function(posts) {
       // ...
     }).catch(function(error) {
@@ -17,7 +17,7 @@
 
   - `Promise` 对象的错误具有**冒泡**性质，会一直向后传递，直到被捕获为止。也就是说，错误总是会被下一个 `catch` 语句捕获
 
-    ```javascript
+    ```js
     getJSON('/post/1.json').then(function(post) {
       return getJSON(post.commentURL);
     }).then(function(comments) {
@@ -33,7 +33,7 @@
 
   - 一般总是建议，`Promise` 对象后面要跟 `catch` 方法，这样可以处理 `Promise` 内部发生的错误。`catch` 方法返回的还是一个 `Promise` 对象，因此后面还可以接着调用 `then` 方法
 
-    ```javascript
+    ```js
     const someAsyncThing = function() {
       return new Promise(function(resolve, reject) {
         // 下面一行会报错，因为x没有声明

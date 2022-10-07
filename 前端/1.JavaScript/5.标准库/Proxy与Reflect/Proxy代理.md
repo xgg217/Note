@@ -64,7 +64,7 @@
 
       - 解决办法
 
-        ```javascript
+        ```js
         let map = new Map();
 
         let proxy = new Proxy(map, {
@@ -88,7 +88,7 @@
 
   - 示例1
 
-    ```javascript
+    ```js
     const obj = {
       a: 1,
       b: 2

@@ -6,7 +6,7 @@
 
   - 只有等到所有这些参数实例都返回结果，不管是 `fulfilled` 还是 `rejected`，包装实例才会结束
 
-    ```javascript
+    ```js
     const promises = [
       fetch('/api-1'),
       fetch('/api-2'),
@@ -27,7 +27,7 @@
 
   - `fulfilled` 时，对象有 `value` 属性，`rejected` 时有 `reason` 属性，对应两种状态的返回值
 
-    ```javascript
+    ```js
     const resolved = Promise.resolve(42);
     const rejected = Promise.reject(-1);
 
@@ -44,7 +44,7 @@
 
   - 过滤返回值
 
-    ```javascript
+    ```js
     const promises = [ fetch('index.html'), fetch('https://does-not-exist/') ];
     const results = await Promise.allSettled(promises);
 
@@ -67,7 +67,7 @@
 
   - `Promise.all()` 方法无法做到这一点
 
-    ```javascript
+    ```js
     const urls = [ /* ... */ ];
     const requests = urls.map(x => fetch(x));
 
@@ -82,7 +82,7 @@
 
   - 过滤成功或失败
 
-    ```javascript
+    ```js
     const promises = [ fetch('index.html'), fetch('https://does-not-exist/') ];
     const results = await Promise.allSettled(promises);
 

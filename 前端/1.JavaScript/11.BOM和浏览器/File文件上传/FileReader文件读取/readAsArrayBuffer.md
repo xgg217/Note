@@ -6,7 +6,7 @@
 
   - 在文件操作时（比如将JPEG图像转为PNG图像），这个方法非常方便
 
-    ```javascript
+    ```js
     var reader = new FileReader();
     reader.onload = function(e) {
       var arrayBuffer = reader.result;

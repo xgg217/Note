@@ -10,7 +10,7 @@
 
   - 功能：返回 Boolean 对象的原始值
 
-    ```javascript
+    ```js
     const isA = Boolean(1);
     console.log(isA);  // true
     console.log(isA.valueOf());  // true

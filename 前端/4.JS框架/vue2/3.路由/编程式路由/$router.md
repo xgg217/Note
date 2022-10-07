@@ -10,7 +10,7 @@
 
   - 该方法的参数可以是一个字符串路径，或者一个描述地址的对象
 
-    ```javascript
+    ```js
     // 字符串
     this.$router.push('home')
 
@@ -42,7 +42,7 @@
 
   - 这个方法的参数是一个整数，意思是在 `history` 记录中向前或者后退多少步，类似 `window.history.go(n)`
 
-    ```javascript
+    ```js
     // 在浏览器记录中前进一步，等同于 history.forward()
     this.$router.go(1)
 

@@ -4,7 +4,7 @@
 
   - 示例
 
-    ```javascript
+    ```js
     async function read(url) {
       try{
         const val1 = await readFile(url);

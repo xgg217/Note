@@ -20,7 +20,7 @@
 
   - 在下面的代码中，变量x是未定义的，`if` 语句的求值结果将是 `true`
 
-    ```javascript
+    ```js
     var x;
 
     if (x === undefined) {
@@ -40,7 +40,7 @@
 
   - `typeof`
 
-    ```javascript
+    ```js
     var x;
     if(typeof x === 'undefined') {
       // 执行这些语句
@@ -49,7 +49,7 @@
 
   - 使用 `typeof` 的原因是它不会在一个变量没有被声明的时候抛出一个错误
 
-    ```javascript
+    ```js
     // 这里没有声明y
     if(typeof y === 'undefined') {  // 没有错误，执行结果为true
       console.log("y is " + typeof y )  // y is undefined

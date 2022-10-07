@@ -16,28 +16,28 @@
 
   - 示例
 
-    ```javascript
+    ```js
     const count = ref(0);
     console.log(isProxy(count)); // false
 
     ```
 
-    ```javascript
+    ```js
     const obj1 = reactive({ a:' 张三' });
     console.log(isProxy(obj1)); // true
     ```
 
-    ```javascript
+    ```js
     const obj2 = readonly({ a:' 张三' });
     console.log(isProxy(obj2)); // true
     ```
 
-    ```javascript
+    ```js
     const obj3 = { a:' 张三' };
     console.log(isProxy(obj3)); // false
     ```
 
-    ```javascript
+    ```js
     const obj4 = new Proxy({
       name: 1,
     }, {});

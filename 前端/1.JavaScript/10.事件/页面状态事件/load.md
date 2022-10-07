@@ -6,7 +6,7 @@
 
   - 图片的 `load` 事件：图片资源加载完毕的事件
 
-    ```javascript
+    ```js
     window.onload = function() {
       console.log("加载完成")
     }

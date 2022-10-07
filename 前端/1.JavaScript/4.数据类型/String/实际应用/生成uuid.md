@@ -4,7 +4,7 @@
 
   - 代码
 
-    ```javascript
+    ```js
     /**
     * 生成uuid
     * @param {number} len 生成指定长度的uuid

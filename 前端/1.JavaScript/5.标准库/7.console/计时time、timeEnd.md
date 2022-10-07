@@ -4,7 +4,7 @@
 
   - 这两个方法用于计时，可以算出一个操作所花费的准确时间
 
-    ```javascript
+    ```js
     console.time('Array initialize');
 
     var array= new Array(1000000);

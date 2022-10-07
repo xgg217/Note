@@ -4,7 +4,7 @@
 
   - 代码
 
-    ```javascript
+    ```js
     const myAjax = (url, method = 'get') => {
       return new Promise((res, rej) => {
         $.ajax({

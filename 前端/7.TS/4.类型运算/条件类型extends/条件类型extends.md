@@ -38,7 +38,7 @@
 
   - JS 的三元表达式的条件链
 
-    ```javascript
+    ```js
     condition1 ? value1
     : condition2 ? value3
     : condition3 ? value3

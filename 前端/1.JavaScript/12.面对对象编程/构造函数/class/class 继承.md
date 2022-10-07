@@ -4,7 +4,7 @@
 
   - `Class` 可以通过 `extends` 关键字实现继承，这比 **ES5** 的通过修改原型链实现继承，要清晰和方便很多
 
-    ```javascript
+    ```js
     // 父类：可以理解成 原型对象 prototype
     class Person {
       constructor(name, age) {
@@ -31,7 +31,7 @@
 
   - 第一种情况 `super` 作为函数调用时，代表父类的构造函数。**ES6**  要求，子类的构造函数必须执行一次 `super`函数
 
-    ```javascript
+    ```js
     lass A {}
 
     class B extends A {
@@ -43,7 +43,7 @@
 
   - 作为函数时，`super()` 只能用在子类的构造函数之中，用在其他地方就会报错
 
-    ```javascript
+    ```js
     class A {}
 
     class B extends A {
@@ -55,7 +55,7 @@
 
   - `super` 作为对象时，在普通方法中，指向父类的原型对象；在静态方法中，指向父类
 
-    ```javascript
+    ```js
     class A {
       p() {
         return 2;

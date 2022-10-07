@@ -4,7 +4,7 @@
 
   - 常规
 
-    ```javascript
+    ```js
     function test(fruit, quantity) {
       const redFruits = ['apple', 'strawberry', 'cherry', 'cranberries'];
 
@@ -32,7 +32,7 @@
 
   - 当发现无效语句时，尽早 `return`
 
-    ```javascript
+    ```js
     function test(fruit, quantity) {
       const redFruits = ['apple', 'strawberry', 'cherry', 'cranberries'];
 

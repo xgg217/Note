@@ -14,7 +14,7 @@
 
   - `methods`：组件的方法，包括事件的相应方法和响应函数的使用
 
-    ```javascript
+    ```js
     Component({
       properties: {
         myProperty: { // 属性名

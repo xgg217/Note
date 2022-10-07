@@ -6,7 +6,7 @@
 
   - CSS属性名可以用驼峰式(camelCase)或者短横线分隔(kebab-case)来命名 但是使用短横线分隔时，要用引号括起来
 
-    ```javascript
+    ```js
     <div v-bind:style="{ fontSize: size + 'px' }"></div>
 
     data() {
@@ -16,7 +16,7 @@
     }
     ```
 
-    ```javascript
+    ```js
     <div class="bar" :style="{background: item.color, width: item.size + px}"></div>
 
     data() {
@@ -31,7 +31,7 @@
 
   - 也可以直接绑定一个样式对象，这样模板会更清晰：
 
-    ```javascript
+    ```js
     <div v-bind:style="styleObject"></div>
 
     data() {
@@ -48,7 +48,7 @@
 
   - 数组语法可以将多个样式对象应用到同一个元素
 
-    ```javascript
+    ```js
     <div v-bind:style="[styleObjectA, styleObjectB]"></div>
     ```
 
@@ -58,7 +58,7 @@
 
   - 多重值 从 2.3.0 起你可以为 style 绑定中的属性提供一个包含多个值的数组，常用于提供多个带前缀的值
 
-    ```javascript
+    ```js
     <div v-bind:style="{ display: ['-webkit-box', '-ms-flexbox', 'flex'] }"></div>
     ```
 

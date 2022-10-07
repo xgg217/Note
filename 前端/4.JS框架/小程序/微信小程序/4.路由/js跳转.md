@@ -6,7 +6,7 @@
 
   - 路径后不能带参数
 
-    ```javascript
+    ```js
     // 需在 app.json 的 tabBar 字段定义的页面
     {
       "tabBar": {
@@ -21,7 +21,7 @@
     }
     ```
 
-    ```javascript
+    ```js
     wx.switchTab({
       url: '/index'
     })
@@ -31,13 +31,13 @@
 
   - 关闭所有页面，打开到应用内的某个页面
 
-    ```javascript
+    ```js
     wx.reLaunch({
       url: 'test?id=1&key2=value2'
     })
     ```
 
-    ```javascript
+    ```js
     // 获取参数
     // test 页面
     Page({
@@ -53,7 +53,7 @@
 
   - 但是不允许跳转到 `tabbar` 页面
 
-    ```javascript
+    ```js
     wx.redirectTo({
       url: 'test?id=1'
     })
@@ -69,7 +69,7 @@
 
   - 小程序中页面栈最多十层
 
-    ```javascript
+    ```js
     wx.navigateTo({
       url: 'test?id=1'
     })
@@ -81,7 +81,7 @@
 
   - 可通过 `getCurrentPages` 获取当前的页面栈，决定需要返回几层
 
-    ```javascript
+    ```js
     // 注意：调用 navigateTo 跳转时，调用该方法的页面会被加入堆栈，而 redirectTo 方法则不会。见下方示例代码
 
     // 此处是A页面

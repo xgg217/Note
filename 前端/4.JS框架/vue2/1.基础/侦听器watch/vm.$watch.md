@@ -10,7 +10,7 @@
 
   - 三个参数，一参为被侦听的数据；二参为数据改变时执行的回调函数；三参可选，为设置的选项对象
 
-    ```javascript
+    ```js
     vm.$watch(
       'msg',
       function () {
@@ -25,7 +25,7 @@
 
   - 二个参数，一参为被侦听的数据；二参为选项对象，其中handler属性为必需，是数据改变时执行的回调函数，其他属性可选
 
-    ```javascript
+    ```js
     vm.$watch(
     'msg',
       {
@@ -46,7 +46,7 @@
 
   - 当监听的数据的在初始不确定，由多个数据得到时，此时可以将第一个参数写成函数类型
 
-    ```javascript
+    ```js
     vm.$watch(function () {
       // 表达式`this.a + this.b`每次得出一个不同的结果时该函数都会被调用
       // 这就像监听一个未被定义的计算属性
@@ -58,14 +58,14 @@
 
   - 侦听器函数执行后，会返回一个取消侦听函数，用来停止触发回调：
 
-    ```javascript
+    ```js
     const unwatch = vm.$watch('msg', function () {});
     unwatch(); // 执行后会取消侦听msg数据
     ```
 
   - 使用 `unwatch` 时，需要注意的是，在带有 `immediate` 选项时，不能在第一次回调时取消侦听数据
 
-    ```javascript
+    ```js
     const unwatch = vm.$watch('msg', function () {
       // 干了点儿事
       unwatch();  // 此时会报错
@@ -77,7 +77,7 @@
 
   - 如果仍然希望在回调内部用一个取消侦听的函数，那么可以先检查该函数的可用性：
 
-    ```javascript
+    ```js
     var unwatch = vm.$watch('msg', function () {
         // 干了点儿事
         if(unwatch) {

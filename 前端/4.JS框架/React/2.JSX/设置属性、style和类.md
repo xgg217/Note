@@ -79,7 +79,7 @@
 
   - 传递一个字符串作为 className 属性
 
-    ```javascript
+    ```js
     // 传递一个字符串作为 className 属性
     render() {
       return <span className="menu navigation-menu">Menu</span>
@@ -88,7 +88,7 @@
 
   - CSS 的 class 依赖组件的 `props` 或 `state`
 
-    ```javascript
+    ```js
     render() {
       let className = 'menu';
       if (this.props.isActive) {
@@ -100,7 +100,7 @@
 
   - 如果标签本身有其他class，又要动态添加一个.active的className，来显示内容是否被选中状态
 
-    ```javascript
+    ```js
     <div className={`container tab ${index === this.state.currentIndex ? "active" : null}`}>此标签是否选中</div>
     ```
 

@@ -4,7 +4,7 @@
 
   - 问题：在开发中，为了系统健壮性，亦或者是为了捕获异步的错误，而频繁的在 `async` 函数中写 `try/catch` 的逻辑
 
-    ```javascript
+    ```js
     asyncfunction func() {
       try {
           let res = await asyncFunc()
@@ -18,7 +18,7 @@
 
   - 优雅处理 `async/await`
 
-    ```javascript
+    ```js
     async function errorCaptured(asyncFunc) {
       try {
         const res = await asyncFunc();
@@ -31,7 +31,7 @@
 
   - 实际使用
 
-    ```javascript
+    ```js
     async ffunction func() {
       const [err, res] = await errorCaptured(asyncFunc);
       if(err) {

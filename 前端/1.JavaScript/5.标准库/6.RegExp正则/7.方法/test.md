@@ -12,7 +12,7 @@
 
   - 返回值：如果正则表达式与指定的字符串匹配，返回 `true`；否则 `false`
 
-    ```javascript
+    ```js
     var r = /x/g;
     var s = '_x_x';
 
@@ -28,7 +28,7 @@
 
   - 可以通过正则对象的`lastIndex`属性指定开始搜索的位置
 
-    ```javascript
+    ```js
     var r = /x/g;
     var s = '_x_x';
 
@@ -43,7 +43,7 @@
 
   - 如果，要整体匹配，正则前后需要添加开头和结尾
 
-    ```javascript
+    ```js
     console.log( /123/.test("a123b") );
     // => true
 
@@ -56,7 +56,7 @@
 
   - 如果正则模式是一个空字符串(`''`)，则匹配所有字符串.
 
-    ```javascript
+    ```js
     new RegExp('').test('abc')
     // true
     ```
@@ -65,7 +65,7 @@
 
   - 示例
 
-    ```javascript
+    ```js
     // 2012-12-12 12:12:12
     var regex = /\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}/g;
     console.log(regex.lastIndex); // 0
@@ -77,7 +77,7 @@
 
   - 解决办法
 
-    ```javascript
+    ```js
     // 2012-12-12 12:12:12
     var regex = /\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}/g;
 
@@ -93,7 +93,7 @@
 
   - 示例1
 
-    ```javascript
+    ```js
     let str = 'hello world!';
     let result = /^hello/.test(str);
     console.log(result); // true

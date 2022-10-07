@@ -4,13 +4,13 @@
 
   - `While` 语句包括一个循环条件和一段代码块，只要条件为真，就不断循环执行代码块
 
-    ```javascript
+    ```js
     while (expression) {
       statement;
     }
     ```
 
-    ```javascript
+    ```js
     var i = 0;
 
     while (i < 100) {
@@ -23,7 +23,7 @@
 
   - 条件总是为真
 
-    ```javascript
+    ```js
     while (true) {
       console.log('Hello, world');
     }

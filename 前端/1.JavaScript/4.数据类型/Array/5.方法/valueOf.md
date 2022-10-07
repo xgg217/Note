@@ -4,7 +4,7 @@
 
   - 方法返回数组本身
 
-    ```javascript
+    ```js
     var a = [1, 2, 3];
     a.valueOf() // [1, 2, 3]
     ```

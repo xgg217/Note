@@ -4,7 +4,7 @@
 
   - 示例
 
-    ```javascript
+    ```js
     const map = reactive(new Map([["bss", 12], ["a", ref(0)]]));
 
     // 获取普通值

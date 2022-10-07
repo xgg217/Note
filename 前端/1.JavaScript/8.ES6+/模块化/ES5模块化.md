@@ -10,7 +10,7 @@
 
   - 只要把不同的函数（以及记录状态的变量）简单地放在一起，就算是一个模块
 
-    ```javascript
+    ```js
     function m1() {
       //...
     }
@@ -24,7 +24,7 @@
 
   - 为了解决上面的缺点，可以把模块写成一个对象，所有的模块成员都放到这个对象里面
 
-    ```javascript
+    ```js
     var module1 = new Object({
     　_count : 0,
     　m1 : function (){
@@ -36,14 +36,14 @@
     });
     ```
 
-    ```javascript
+    ```js
     // 使用
     module1.m1();
     ```
 
   - 缺点：这样的写法会暴露所有模块成员，内部状态可以被外部改写。比如，外部代码可以直接改变内部计数器的值
 
-    ```javascript
+    ```js
     module1._count = 5;
     ```
 
@@ -51,7 +51,7 @@
 
   - 利用构造函数，封装私有变量
 
-    ```javascript
+    ```js
     function StringBuilder() {
       var buffer = [];
 
@@ -68,7 +68,7 @@
 
   - 这种方法将私有变量封装在构造函数中，违反了构造函数与实例对象相分离的原则。并且，非常耗费内存
 
-    ```javascript
+    ```js
     function StringBuilder() {
       this._buffer = [];
     }
@@ -90,7 +90,7 @@
 
   - 使用“立即执行函数”（Immediately-Invoked Function Expression，IIFE），将相关的属性和方法封装在一个函数作用域里面，可以达到不暴露私有成员的目的
 
-    ```javascript
+    ```js
     var module1 = (function () {
     　var _count = 0;
     　var m1 = function () {
@@ -112,7 +112,7 @@
 
   - 如果一个模块很大，必须分成几个部分，或者一个模块需要继承另一个模块，这时就有必要采用“放大模式”（augmentation）
 
-    ```javascript
+    ```js
     var module1 = (function (mod){
     　mod.m3 = function () {
     　　//...
@@ -125,7 +125,7 @@
 
   - 在浏览器环境中，模块的各个部分通常都是从网上获取的，有时无法知道哪个部分会先加载。如果采用上面的写法，第一个执行的部分有可能加载一个不存在空对象，这时就要采用”宽放大模式”（Loose augmentation）
 
-    ```javascript
+    ```js
     var module1 = ( function (mod){
     　//...
     　return mod;
@@ -138,7 +138,7 @@
 
   - 为了在模块内部调用全局变量，必须显式地将其他变量输入模块
 
-    ```javascript
+    ```js
     var module1 = (function ($, YAHOO) {
     　//...
     })(jQuery, YAHOO);
@@ -146,7 +146,7 @@
 
   - 立即执行函数还可以起到命名空间的作用
 
-    ```javascript
+    ```js
     (function($, window, document) {
 
       function go(num) {

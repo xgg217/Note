@@ -4,7 +4,7 @@
 
   - 使用 `export` 命令定义了模块的对外接口以后，其他 JS 文件就可以通过 `import` 命令加载这个模块
 
-    ```javascript
+    ```js
     // main.js
     import {firstName, lastName, year} from './profile.js';
     function setName(element) {
@@ -16,13 +16,13 @@
 
   - 如果想为输入的变量重新取一个名字，`import` 命令要使用 `as` 关键字，将输入的变量重命名
 
-    ```javascript
+    ```js
     import { lastName as surname } from './profile.js';
     ```
 
   - `import` 命令输入的变量都是只读的，因为它的本质是输入接口。也就是说，不允许在加载模块的脚本里面，改写接口
 
-    ```javascript
+    ```js
     import {a} from './xxx.js'
     a = {}; // Syntax Error : 'a' is read-only;
     ```
@@ -31,7 +31,7 @@
 
   - 不过，这种写法很难查错，建议凡是输入的变量，都当作完全只读，轻易不要改变它的属性
 
-    ```javascript
+    ```js
     import {a} from './xxx.js'
     a.foo = 'hello'; // 合法操作
     ```
@@ -40,7 +40,7 @@
 
   - 注意，`import` 命令具有提升效果，会提升到整个模块的头部，首先执行
 
-    ```javascript
+    ```js
     // 本质是，import命令是编译阶段执行的，在代码运行之前
     foo();
     import { foo } from 'my_module';
@@ -50,18 +50,18 @@
 
   - 下面三种写法都会报错，因为它们用到了表达式、变量和if结构。在静态分析阶段，这些语法都是没法得到值的
 
-    ```javascript
+    ```js
     // 报错
     import { 'f' + 'oo' } from 'my_module';
     ```
 
-    ```javascript
+    ```js
     // 报错
     let module = 'my_module';
     import { foo } from module;
     ```
 
-    ```javascript
+    ```js
     // 报错
     if (x === 1) {
       import { foo } from 'module1';
@@ -72,13 +72,13 @@
 
   - 如果多次重复执行同一句import语句，那么只会执行一次，而不会执行多次
 
-    ```javascript
+    ```js
     // 代码加载了两次lodash，但是只会执行一次
     import 'lodash';
     import 'lodash';
     ```
 
-    ```javascript
+    ```js
     import { foo } from 'my_module';
     import { bar } from 'my_module';
 
@@ -94,7 +94,7 @@
 
   - `export default` 匿名函数 时，对应的 `import` 语句**不需要**使用**大括号**；
 
-    ```javascript
+    ```js
     // 默认输出
     // export-default.js
     export default function() {
@@ -102,7 +102,7 @@
     }
     ```
 
-    ```javascript
+    ```js
     // import命令可以为该匿名函数指定任意名字
     import customName from './export-default';
     customName(); // 'foo'
@@ -110,7 +110,7 @@
 
   - `export default` 命令用在非匿名函数前，也是可以的
 
-    ```javascript
+    ```js
     // export-default.js
     export default function foo() {
         console.log('foo');
@@ -128,7 +128,7 @@
 
   - 本质上，`export default` 就是输出一个叫做 `default` 的变量或方法，然后系统允许你为它取任意名字。所以，下面的写法是有效的
 
-    ```javascript
+    ```js
     // modules.js
     function add(x, y) {
       return x * y;
@@ -145,7 +145,7 @@
 
   - 正是因为 `export default` 命令其实只是输出一个叫做 `default` 的变量，所以它后面不能跟变量声明语句
 
-    ```javascript
+    ```js
     // 正确
     export var a = 1;
 
@@ -159,7 +159,7 @@
 
   - `export default` 也可以用来输出类
 
-    ```javascript
+    ```js
     // MyClass.js
     export default class { ... }
 

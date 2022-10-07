@@ -4,7 +4,7 @@
 
   - 代码
 
-    ```javascript
+    ```js
     <view class="{{orderStatusIndex === item.value ? 'active' : ''}}">{{ item.key }}</view>
     ```
 
@@ -12,12 +12,12 @@
 
   - 设置1
 
-    ```javascript
+    ```js
     <view class="boxs" style="display:{{ isBool ? 'block' : 'none' }};"></view>
     ```
 
   - 设置2
 
-    ```javascript
+    ```js
     <scroll-view style="height:{{scrollHei}}%;" ></scroll-view>
     ```

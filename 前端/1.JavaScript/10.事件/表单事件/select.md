@@ -23,7 +23,7 @@
 
   - 可以通过 `value` 属性取到用户选择的值
 
-    ```javascript
+    ```js
     var data = document.getElementById('selectMenu').value;
     ```
 
@@ -31,13 +31,13 @@
 
   - 如果用户没有选中任何一项，`selectedIndex` 等于-1
 
-    ```javascript
+    ```js
     document.getElementById('selectMenu').selectedIndex = 1;
     ```
 
   - `select` 元素也可以设置为多选
 
-    ```javascript
+    ```js
     <select name="categories" id="categories" multiple>
     ```
 
@@ -45,7 +45,7 @@
 
   - 要取出所有选中的值，就必须遍历 `select` 的所有选项，检查每一项的 `selected` 属性
 
-    ```javascript
+    ```js
     var selected = [];
     for (var i = 0, count = elem.options.length; i < count; i++) {
       if (elem.options[i].selected) {

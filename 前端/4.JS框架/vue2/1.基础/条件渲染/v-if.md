@@ -8,12 +8,12 @@
 
   - 条件为**真**时，显示
 
-    ```javascript
+    ```js
     // 显示
     <p v-if="true">小刚刚</p>
     ```
 
-    ```javascript
+    ```js
     // 不显示
     <p v-if="isBool">小刚刚</p>
 
@@ -28,7 +28,7 @@
 
   - 表示 `v-if` 的 `v-else-if` 块
 
-    ```javascript
+    ```js
     <div v-if="tyoe === 'a'">12</div>
     <div v-else-if="tyoe === 'b'">23</div>
     <div v-else-if="tyoe === 'c'">34</div>  <!-- 显示 -->
@@ -42,7 +42,7 @@
 
   - 注意：一起使用，不能打断
 
-    ```javascript
+    ```js
     <div v-if="tyoe === 'a'">12</div>
     <div v-else-if="tyoe === 'b'">23</div>
     <span>v-else-if 指令失效</span>

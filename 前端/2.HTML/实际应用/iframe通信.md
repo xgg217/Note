@@ -10,7 +10,7 @@
 
   - 父窗口通过 以下方式发消息即可
 
-    ```javascript
+    ```js
     document.getElementById('iframe').contentWindow.postMessage('来自父窗口的消息', 'c.aaa.com')
     ```
 
@@ -22,7 +22,7 @@
 
   - 方法2：父窗口首先 `postMessage` 给子窗口，子窗口在接受到消息后，存储 全局/局部 变量 `evevt`
 
-    ```javascript
+    ```js
     // 子页面
     let parentEvent = null
 

@@ -10,7 +10,7 @@
 
   - Action 函数接受一个与 `store` 实例具有相同方法和属性的 `context` 对象，因此你可以调用 `context.commit` 提交一个 `mutation`，或者通过 `context.state` 和 `context.getters` 来获取 `state` 和 `getters`:
 
-    ```javascript
+    ```js
     const store = new Vuex.Store({
       state: {
         count: 0
@@ -41,13 +41,13 @@
 
   - 使用
 
-    ```javascript
+    ```js
     store.dispatch('increment')
     ```
 
   - 虽然和 `mutation` 差不多，但是在 `action` 中，可以执行**异步操作**，但是mutation中不行！！！
 
-    ```javascript
+    ```js
     actions: {
       incrementAsync ({ commit }) {
         setTimeout(() => {
@@ -61,7 +61,7 @@
 
   - Action 通常是异步的，那么如何知道 `action` 什么时候结束呢？
 
-    ```javascript
+    ```js
     actions: {
       actionA ({ commit }) {
         return new Promise((resolve, reject) => {
@@ -74,7 +74,7 @@
     }
     ```
 
-    ```javascript
+    ```js
     store.dispatch('actionA').then(() => {
       // ...
     })

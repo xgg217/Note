@@ -4,7 +4,7 @@
 
   - 代码
 
-    ```javascript
+    ```js
     // 点击获取 ref
     butClick = () => {
       console.log(this.refs.test);

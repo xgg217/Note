@@ -10,7 +10,7 @@
 
   - 由于 Vue 在实例初始化期间执行 getter/setter 转换过程，因此必须在 `data` 对象中存在一个 property，以便 Vue 对其进行转换并使其具有响应式
 
-    ```javascript
+    ```js
     var vm = new Vue({
       data: {
         a: 1
@@ -24,7 +24,7 @@
 
   - 对于已经创建的实例，Vue 不允许动态添加根级别的响应式 property。但是，可以使用 `Vue.set(object, propertyName, value)` 方法向嵌套对象添加响应式 property
 
-    ```javascript
+    ```js
     Vue.set(vm.someObject, 'b', 2)
 
     // 或者还可以使用 vm.$set 实例方法，这也是全局 Vue.set 方法的别名
@@ -33,7 +33,7 @@
 
   - 为已有对象赋值多个新 property
 
-    ```javascript
+    ```js
     // 而不是 `Object.assign(this.someObject, { a: 1, b: 2 })`
     this.someObject = Object.assign({}, this.someObject, { a: 1, b: 2 })
     ```
@@ -46,7 +46,7 @@
 
     2.  问题2：当你修改数组的长度时，例如：`vm.items.length = newLength`
 
-        ```javascript
+        ```js
         var vm = new Vue({
           data: {
             items: ['a', 'b', 'c']
@@ -60,7 +60,7 @@
 
     1.  方式1
 
-        ```javascript
+        ```js
         // Vue.set
         Vue.set(vm.items, indexOfItem, newValue)
 
@@ -71,13 +71,13 @@
 
     2.  方式2
 
-        ```javascript
+        ```js
         // Array.prototype.splice
         vm.items.splice(indexOfItem, 1, newValue)
         ```
 
   - 问题2解决方案(使用 `splice`)
 
-    ```javascript
+    ```js
     vm.items.splice(newLength)
     ```

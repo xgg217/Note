@@ -4,7 +4,7 @@
 
   - `dir` 方法用来对一个对象进行检查（inspect），并以易于阅读和打印的格式显示
 
-    ```javascript
+    ```js
     console.log({f1: 'foo', f2: 'bar'})
     // Object {f1: "foo", f2: "bar"}
 

@@ -10,7 +10,7 @@
 
   - vite.config.ts
 
-    ```javascript
+    ```js
     // https://blog.csdn.net/u010059669/article/details/121808645
     css: {
       postcss: {

@@ -4,7 +4,7 @@
 
   - `for` 语句是循环命令的另一种形式，可以指定循环的起点、终点和终止条件
 
-    ```javascript
+    ```js
     for (initialize; test; increment) {
       statement
     }
@@ -20,7 +20,7 @@
 
       - 测试表达式（test）：检查循环条件，只要为真就进行后续操作
 
-    ```javascript
+    ```js
     var x = 3;
     for (var i = 0; i < x; i++) {
       console.log(i);
@@ -34,7 +34,7 @@
 
   - 所有 `for` 循环，都可以改写成 `while` 循环
 
-    ```javascript
+    ```js
     var x = 3;
     var i = 0;
 

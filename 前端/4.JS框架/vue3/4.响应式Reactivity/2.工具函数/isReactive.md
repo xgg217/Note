@@ -16,18 +16,18 @@
 
   - 示例
 
-    ```javascript
+    ```js
     const obj1 = reactive({ a:' 张三' });
     console.log(isReactive(obj1)); // true
 
     ```
 
-    ```javascript
+    ```js
     const obj2 = readonly({ a:' 张三' });
     console.log(isReactive(obj2)); // false
     ```
 
-    ```javascript
+    ```js
     const obj1 = reactive({ a:' 张三' });
     const obj6 = readonly(obj1);
     console.log(isReactive(obj6)); // false

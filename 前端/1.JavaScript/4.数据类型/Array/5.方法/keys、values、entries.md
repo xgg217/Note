@@ -4,7 +4,7 @@
 
   - `keys()` 方法返回一个包含数组中每个索引键的Array Iterator对象
 
-    ```javascript
+    ```js
     const array1 = ['a', 'b', 'c'];
     const iterator = array1.keys();
 
@@ -17,7 +17,7 @@
     // 2
     ```
 
-    ```javascript
+    ```js
     // 索引迭代器会包含那些没有对应元素的索引
     var arr = ["a", , "c"];
     var sparseKeys = Object.keys(arr);
@@ -30,7 +30,7 @@
 
   - `values()` 方法返回一个新的 Array Iterator 对象，该对象包含数组每个索引的值
 
-    ```javascript
+    ```js
     let arr = ['w', 'y', 'k', 'o', 'p'];
     let eArr = arr.values();
 
@@ -43,7 +43,7 @@
 
   - `entries()` 方法返回一个新的 Array Iterator对象，该对象包含数组中每个索引的键/值对
 
-    ```javascript
+    ```js
     const arr = ["a", "b", "c"];
     for(const [index, value] of arr.entries()) {
       console.log(index, value)

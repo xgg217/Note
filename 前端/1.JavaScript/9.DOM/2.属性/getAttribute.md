@@ -10,11 +10,11 @@
 
   - 使用 `getAttribute` 和 `dataset` 对象都能获取 `data-author` 属性值
 
-    ```javascript
+    ```js
     button.getAttribute('data-author'); // 结果是：zhangxinxu
     ```
 
-    ```javascript
+    ```js
     button.dataset.author; // 结果也是：zhangxinxu
     ```
 
@@ -26,11 +26,11 @@
     <button id="button" data-AUTHOR="zhangxinxu">作者是谁？</button>
     ```
 
-    ```javascript
+    ```js
     button.getAttribute('DATA-author'); // 结果是：zhangxinxu
     ```
 
-    ```javascript
+    ```js
     button.dataset.AUTHOR; // 结果是：undefined
 
     // 要想dataset对象正确获取data-AUTHOR属性值，需要使用小写
@@ -43,7 +43,7 @@
     <button id="button" data-article-author="zhangxinxu">感谢阅读！</button>
     ```
 
-    ```javascript
+    ```js
     // 结果都是：zhangxinxu
     button.getAttribute('data-article-author');
     button.dataset.articleAuthor;
@@ -51,6 +51,6 @@
 
   - 且只能使用驼峰命名方法，例如下面的语句还是返回 `undefined`
 
-    ```javascript
+    ```js
     button.dataset['article-author']; // 结果是：undefined
     ```

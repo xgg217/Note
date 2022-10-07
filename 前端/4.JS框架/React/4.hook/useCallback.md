@@ -18,7 +18,7 @@
 
   - 示例
 
-    ```javascript
+    ```js
     const callback = () => {
       doSomething(a, b);
     }

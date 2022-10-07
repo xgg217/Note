@@ -4,7 +4,7 @@
 
   - 一种情况是，`Map` 的键名都是字符串，这时可以选择转为对象 `JSON`
 
-    ```javascript
+    ```js
     function strMapToJson(strMap) {
       return JSON.stringify(strMapToObj(strMap));
     }
@@ -16,7 +16,7 @@
 
   - 另一种情况是，`Map` 的键名有非字符串，这时可以选择转为数组 `JSON`
 
-    ```javascript
+    ```js
     function mapToArrayJson(map) {
       return JSON.stringify([...map]);
     }
@@ -30,7 +30,7 @@
 
   - JSON 转为 Map，正常情况下，所有键名都是字符串
 
-    ```javascript
+    ```js
     function jsonToStrMap(jsonStr) {
       return objToStrMap(JSON.parse(jsonStr));
     }
@@ -43,7 +43,7 @@
 
   - 这时，它可以一一对应地转为 `Map`。这往往是 `Map` 转为数组 `JSON` 的逆操作
 
-    ```javascript
+    ```js
     function jsonToMap(jsonStr) {
       return new Map(JSON.parse(jsonStr));
     }

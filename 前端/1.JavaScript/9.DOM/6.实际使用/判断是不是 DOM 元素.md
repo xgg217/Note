@@ -4,7 +4,7 @@
 
   - 代码
 
-    ```javascript
+    ```js
     isElement = function(obj) {
       return !!(obj && obj.nodeType === 1);
     };

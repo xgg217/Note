@@ -16,7 +16,7 @@
     <input type="text" />
     ```
 
-    ```javascript
+    ```js
     inp.addEventListener("input", function(e) {
       // 输入 12
       console.log(e.target.value);
@@ -30,7 +30,7 @@
     <input type="number" />
     ```
 
-    ```javascript
+    ```js
     inp.addEventListener("input", function(e) {
       // 输入 12.2
       console.log(e.target.value); // '12.2'

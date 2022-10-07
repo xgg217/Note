@@ -6,7 +6,7 @@
 
   - 它将新数组的成员，添加到原数组的尾部，然后返回一个新数组，原数组不变
 
-    ```javascript
+    ```js
     ['hello'].concat(['world'])
     // ["hello", "world"]
 
@@ -14,7 +14,7 @@
     // ["hello", "world", "!"]
     ```
 
-    ```javascript
+    ```js
     [1, 2, 3].concat(4, 5, 6)
     // [1, 2, 3, 4, 5, 6]
     ```

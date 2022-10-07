@@ -4,7 +4,7 @@
 
   - `concat` 方法用于连接两个字符串，返回一个新字符串，不改变原字符串
 
-    ```javascript
+    ```js
     var s1 = 'abc';
     var s2 = 'def';
 
@@ -14,13 +14,13 @@
 
   - 多个参数
 
-    ```javascript
+    ```js
     'a'.concat('b', 'c') // "abc"
     ```
 
   - 如果参数不是字符串，`concat` 方法会将其先转为字符串，然后再连接
 
-    ```javascript
+    ```js
     var one = 1;
     var two = 2;
     var three = '3';

@@ -12,14 +12,14 @@
 
   - 使用方式
 
-    ```javascript
+    ```js
     const timeout = i => new Promise(resolve => setTimeout(() => resolve(i), i));
     await asyncPool(2, [1000, 5000, 3000, 2000], timeout);
     ```
 
   - `asyncPool` 函数 语法
 
-    ```javascript
+    ```js
     function asyncPool(poolLimit, array, iteratorFn){ ... }
     ```
 
@@ -31,7 +31,7 @@
 
   - 在使用了 `asyncPool` 函数之后，对应的执行过程如下所示
 
-    ```javascript
+    ```js
     const timeout = i => new Promise(resolve => setTimeout(() => resolve(i), i));
     await asyncPool(2, [1000, 5000, 3000, 2000], timeout);
     // Call iterator (i = 1000)
@@ -54,7 +54,7 @@
 
   - 利用 `await Promise.race(executing);` 这行语句，我们会等待 **正在执行任务列表** 中较快的任务执行完成之后，才会继续执行下一次循环
 
-    ```javascript
+    ```js
     async function asyncPool(poolLimit, array, iteratorFn) {
       const ret = []; // 存储所有的异步任务
       const executing = []; // 存储正在执行的异步任务
@@ -83,7 +83,7 @@
 
   - 当 `Promise.race(executing)` 返回的 `Promise` 对象变成已完成状态时，才会调用 `enqueue` 函数，从 `array` 数组中获取新的待办任务
 
-    ```javascript
+    ```js
     function asyncPool(poolLimit, array, iteratorFn) {
       let i = 0;
       const ret = []; // 存储所有的异步任务

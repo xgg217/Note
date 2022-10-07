@@ -4,7 +4,7 @@
 
   - 来遍历一个对象的全部属性
 
-    ```javascript
+    ```js
     var o = {a: 1, b: 2, c: 3};
 
     for (var i in o) {
@@ -29,7 +29,7 @@
 
   - Symbol：过滤，不返回
 
-```javascript
+```js
 const obj = {
   5: '5',
   b: 'b',
@@ -52,7 +52,7 @@ for (const key in obj) {
 
 2.  它不仅遍历对象自身的属性，还遍历继承的属性。解决办法：使用 `hasOwnProperty` 方法
 
-    ```javascript
+    ```js
     // name 是 Person 本身的属性
     function Person(name) {
       this.name = name;
@@ -78,7 +78,7 @@ for (const key in obj) {
 
   - 如果只想遍历对象本身的属性，可以使用 `hasOwnProperty` 方法，在循环内部判断一下是不是自身的属性
 
-    ```javascript
+    ```js
     // name 是 Person 本身的属性
     function Person(name) {
       this.name = name;

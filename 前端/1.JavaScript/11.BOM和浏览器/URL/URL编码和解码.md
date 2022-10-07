@@ -30,7 +30,7 @@
 
   - 它会将元字符和语义字符之外的字符，都进行转义
 
-    ```javascript
+    ```js
     encodeURI('http://www.example.com/q=春节')
     // "http://www.example.com/q=%E6%98%A5%E8%8A%82"
     ```
@@ -43,7 +43,7 @@
 
   - 它接受一个参数，就是转码后的 URL
 
-    ```javascript
+    ```js
     decodeURI('http://www.example.com/q=%E6%98%A5%E8%8A%82')
     // "http://www.example.com/q=春节"
     ```
@@ -56,7 +56,7 @@
 
   - 它接受一个参数，就是 URL 的片段
 
-    ```javascript
+    ```js
     encodeURIComponent('春节')
     // "%E6%98%A5%E8%8A%82"
 
@@ -72,7 +72,7 @@
 
   - 它接受一个参数，就是转码后的 URL 片段
 
-    ```javascript
+    ```js
     decodeURIComponent('%E6%98%A5%E8%8A%82')
     // "春节"
     ```

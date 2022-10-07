@@ -8,7 +8,7 @@
 
   - `<keep-alive>` 包裹动态组件时，会缓存不活动的组件实例，而不是销毁它们
 
-    ```javascript
+    ```js
     <!-- 失活的组件将会被缓存！-->
     <keep-alive>
       <component is="pageCmp"></component>

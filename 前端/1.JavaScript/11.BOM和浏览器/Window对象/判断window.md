@@ -4,7 +4,7 @@
 
   - 代码
 
-    ```javascript
+    ```js
     function isWindow( obj ) {
       return obj != null && obj === obj.window;
     }

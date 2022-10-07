@@ -4,7 +4,7 @@
 
   - 将类型 T 中的成员变成 **可选**
 
-    ```javascript
+    ```js
     interface User {
       age: number
       name: string

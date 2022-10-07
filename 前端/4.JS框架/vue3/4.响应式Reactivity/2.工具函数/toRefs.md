@@ -10,7 +10,7 @@
 
   - 把一个响应式对象的所有属性转换为 `ref` 格式，然后包装到一个 `plain-object` 中返回
 
-    ```javascript
+    ```js
     const state = reactive({
       foo: 1,
       bar: 2

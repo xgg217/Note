@@ -12,12 +12,12 @@
 
   - 使用
 
-    ```javascript
+    ```js
     <!-- 单个元素 -->
     <span v-once>This will never change: {{msg}}</span>
     ```
 
-    ```javascript
+    ```js
     <!-- 有子元素 -->
     <div v-once>
       <h1>comment</h1>
@@ -25,12 +25,12 @@
     </div>
     ```
 
-    ```javascript
+    ```js
     <!-- 组件 -->
     <my-component v-once :comment="msg"></my-component>
     ```
 
-    ```javascript
+    ```js
     <!-- `v-for` 指令-->
     <ul>
       <li v-for="i in list" v-once>{{i}}</li>

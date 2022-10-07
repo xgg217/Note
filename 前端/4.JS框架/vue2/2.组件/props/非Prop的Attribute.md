@@ -10,13 +10,13 @@
 
   - 想象一下 `<my-cmp>` 的模板是这样的：
 
-    ```javascript
+    ```js
     <input type="date" class="b">
     ```
 
   - 为了给我们的日期选择器插件定制一个主题，我们可能需要像这样添加一个特别的类名：
 
-    ```javascript
+    ```js
     <my-cmp
       class="my-cmp"
     ></my-cmp>
@@ -38,7 +38,7 @@
 
   - 如果不希望组件的根元素继承特性，那么可以在组件选项中设置 `inheritAttrs: false`。如：
 
-    ```javascript
+    ```js
     Vue.component('my-cmp', {
       inheritAttrs: false,
       // ...
@@ -47,7 +47,7 @@
 
   - 在这种情况下，非常适合去配合实例的 `$attrs` 属性使用，这个属性是一个对象，键名为传递的特性名，键值为传递特性值
 
-    ```javascript
+    ```js
     {
       required: true,
       placeholder: 'Enter your username'
@@ -56,7 +56,7 @@
 
   - 用 `inheritAttrs: false` 和 `$attrs` 相互配合，我们就可以手动决定这些特性会被赋予哪个元素
 
-    ```javascript
+    ```js
     Vue.component('base-input', {
       inheritAttrs: false,
       props: ['label', 'value'],

@@ -23,7 +23,7 @@
 
   - 以利⽤ never 类型的特性来实现全⾯性检查
 
-    ```javascript
+    ```js
     type Foo = string | number;
     function controlFlowAnalysisWithNever(foo: Foo) {
       if (typeof foo === "string") {
@@ -41,7 +41,7 @@
 
   - 如果⼀切逻辑正确，那么这⾥应该能够编译通过。但是假如后来有⼀天你的同事修改了 Foo 的类型：
 
-    ```javascript
+    ```js
     type Foo = string | number | boolean;
     ```
 

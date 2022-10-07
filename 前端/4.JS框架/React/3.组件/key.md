@@ -6,7 +6,7 @@
 
   - 因此你应当给数组中的每一个元素赋予一个确定的标识
 
-    ```javascript
+    ```js
     const numbers = [1, 2, 3, 4, 5];
     const listItems = numbers.map((number) =>
       <li key={number.toString()}>
@@ -19,7 +19,7 @@
 
   - 通常，我们使用来自数据的 `id` 作为元素的 `key`:
 
-    ```javascript
+    ```js
     const todoItems = todos.map((todo) =>
       <li key={todo.id}>
         {todo.text}
@@ -29,7 +29,7 @@
 
   - 当元素没有确定的 `id` 时，你可以使用他的序列号索引 `index` 作为 `key`
 
-    ```javascript
+    ```js
     const todoItems = todos.map((todo, index) =>
       <li key={index}>
         {todo.text}
@@ -47,7 +47,7 @@
 
   - 错误的示范
 
-    ```javascript
+    ```js
     function ListItem(props) {
       const value = props.value;
       return (
@@ -81,7 +81,7 @@
 
   - `key` 的正确使用方式
 
-    ```javascript
+    ```js
     function ListItem(props) {
     // 对啦！这里不需要指定key:
       return <li>{props.value}</li>;
@@ -124,7 +124,7 @@
 
   - 如果您的组件中需要使用和 `key` 相同的值，请将其作为属性传递：
 
-    ```javascript
+    ```js
     // Post组件可以读出props.id，但是不能读出props.key
     const content = posts.map((post) =>
       <Post
@@ -144,7 +144,7 @@
 
   - 方法1
 
-    ```javascript
+    ```js
     function NumberList(props) {
       const numbers = props.numbers;
       const listItems = numbers.map((number) =>
@@ -162,7 +162,7 @@
 
   - 方法2
 
-    ```javascript
+    ```js
     function NumberList(props) {
       const numbers = props.numbers;
       return (

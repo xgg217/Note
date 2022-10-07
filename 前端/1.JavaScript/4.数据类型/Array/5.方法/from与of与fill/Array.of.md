@@ -6,7 +6,7 @@
 
   - 基本上可以用来替代 `Array()` 或 `new Array()`
 
-        ```javascript
+        ```js
         Array.of(3, 11, 8) // [3,11,8]
         Array.of(3) // [3]
         Array.of(3).length // 1
@@ -21,7 +21,7 @@
 
 - 是弥补数组构造函数 `Array()` 的不足。因为参数个数的不同，会导致 `Array()` 的行为有差异
 
-    ```javascript
+    ```js
     Array() // []
     Array(3) // [, , ,]
     Array(3, 11, 8) // [3, 11, 8]

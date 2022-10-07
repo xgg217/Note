@@ -10,7 +10,7 @@
 
   - `RegExp` **必须** 是设置了全局模式 `g` 的形式，否则会抛出异常 `TypeError`
 
-    ```javascript
+    ```js
     const regexp = RegExp('[a-c]','');
     const str = 'abc';
     Array.from(str.matchAll(regexp), m => m[0]);
@@ -23,7 +23,7 @@
 
   - 在 `matchAll` 出现之前，通过在循环中调用 `regexp.exec()` 来获取所有匹配项信息（需使用 `/g` 标志）
 
-    ```javascript
+    ```js
     // 不是使用 matchAll
     const regexp = /(\w)\1(\w)\2/g;
     const str = 'aabbsffdddsffssfssdfdssff';
@@ -39,7 +39,7 @@
     // 0: "ssff" 1: "s" 2: "f" groups: undefined index: 21 input: "aabbsffdddsffssfssdfdssff" length: 3
     ```
 
-    ```javascript
+    ```js
     // 使用
     const matches = str.matchAll(reg);
     console.log(matches);
@@ -56,7 +56,7 @@
 
   - `matchAll` 内部做了一个 `regexp` 的复制，所以不像 `regexp.exec`, `lastIndex` 在字符串扫描时不会改变
 
-    ```javascript
+    ```js
     const regexp = RegExp('[a-c]','g');
     regexp.lastIndex = 1;
     const str = 'abc';
@@ -70,7 +70,7 @@
 
   - 因为当使用 `match()` 和 `/g` 标志方式获取匹配信息时，捕获组会 **被忽略**
 
-    ```javascript
+    ```js
     var regexp = /t(e)(st(\d?))/g;
     var str = 'test1test2';
 
@@ -80,7 +80,7 @@
 
   - 使用 `matchAll` 可以通过如下方式获取分组捕获:
 
-    ```javascript
+    ```js
     let array = [...str.matchAll(regexp)];
 
     array[0];

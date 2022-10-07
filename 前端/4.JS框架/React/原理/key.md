@@ -12,7 +12,7 @@
 
   - 并且应该保持
 
-    ```javascript
+    ```js
     render() {
       return (
         <div>

@@ -10,7 +10,7 @@
 
       - `complete`：触发 window 的 load 事件
 
-    ```javascript
+    ```js
     document.onreadystatechange = function () {
       if (document.readyState == "interactive") {
         // ...

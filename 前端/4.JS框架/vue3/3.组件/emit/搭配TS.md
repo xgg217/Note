@@ -22,7 +22,7 @@
     </script>
     ```
 
-    ```javascript
+    ```js
     // 父组件
     <Comp @update="handleClick"/>
 

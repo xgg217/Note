@@ -6,7 +6,7 @@
 
   - 返回值 : 一个新数组，每个元素都是回调函数的结果
 
-    ```javascript
+    ```js
     // 求数组中每个元素的平方根
     var numbers = [1, 4, 9];
     var roots = numbers.map(Math.sqrt); // roots的值为[1, 2, 3], numbers的值仍为[1, 4, 9]
@@ -28,7 +28,7 @@
 
   - 代码
 
-    ```javascript
+    ```js
     ["1", "2", "3"].map(parseInt); // [1, NaN, NaN]
 
     // map方法在调用callback函数时,会给它传递三个参数:当前正在遍历的元素,元素索引, 原数组本身。第三个参数parseInt会忽视, 但第二个参数不会,也就是说,parseInt把传过来的索引值当成进制数来使用.从而返回了NaN
@@ -41,7 +41,7 @@
 
   - 代码
 
-    ```javascript
+    ```js
     /**
      * 模拟数组 map ，同时增加循环对象的遍历
      * @param {*} list 数组、类数组

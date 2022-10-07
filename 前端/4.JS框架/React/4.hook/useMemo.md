@@ -14,7 +14,7 @@
 
   - 示例
 
-    ```javascript
+    ```js
     const callback = () => {
       doSomething(a, b);
     }
@@ -26,7 +26,7 @@
 
   - 实际代码
 
-    ```javascript
+    ```js
     import React,{ useState, useMemo } from 'react';
 
     function Item(props) {

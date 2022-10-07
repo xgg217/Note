@@ -4,7 +4,7 @@
 
   - String 转 Set
 
-    ```javascript
+    ```js
     let text = 'India';
     let mySet = new Set(text);  // Set {'I', 'n', 'd', 'i', 'a'}
     mySet.size;  // 5
@@ -14,7 +14,7 @@
 
   - 示例
 
-    ```javascript
+    ```js
     const str = 'dfsdfsdsdsfgs';
     const newStr = [...new Set(str)].join('');
     console.log(newStr) // dfsg

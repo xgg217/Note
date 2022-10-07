@@ -10,7 +10,7 @@
 
   - 通过在根实例中注册 `store` 选项，该 `store` 实例会注入到根组件下的所有子组件中，且子组件能通过 `this.$store` 访问
 
-    ```javascript
+    ```js
     <div class="home">
       {{ $store.state.count }}
     </div>
@@ -22,7 +22,7 @@
 
   - 为了解决这个问题，我们可以使用 `mapState` 辅助函数帮助我们生成计算属性：
 
-    ```javascript
+    ```js
     import { mapState } from 'vuex';
 
     computed: {
@@ -32,7 +32,7 @@
 
   - 使用不同的名字：
 
-    ```javascript
+    ```js
     computed: {
       ...mapState({
         storeCount: state => state.count,

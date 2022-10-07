@@ -2,7 +2,7 @@
 
 ## 代码
 
-```javascript
+```js
  /**
  * 获取 URL 中的查询参数，并返回一个对象
    - 例如 获取 /index.html?id=10 的 id

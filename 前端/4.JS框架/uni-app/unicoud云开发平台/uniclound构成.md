@@ -4,7 +4,7 @@
 
   - 云函数
 
-    ```javascript
+    ```js
     'use strict'
     exports.main = async (event, context) => {
       // event 为客户端上传的参数
@@ -15,7 +15,7 @@
 
   - 云数据库
 
-    ```javascript
+    ```js
     'use strict'
 
     // 获取数据库引用
@@ -59,7 +59,7 @@
 
   - 创建云函数工程
 
-    ```javascript
+    ```js
     'use strict'
     exports.main = async (event, context) => {
       // event 为客户端上传的参数

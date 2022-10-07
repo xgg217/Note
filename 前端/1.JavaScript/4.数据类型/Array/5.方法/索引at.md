@@ -4,7 +4,7 @@
 
   - `at(index)`
 
-    ```javascript
+    ```js
     const cart = ['apple', 'banana', 'pear'];
     arr.at(-1); // pear'
     arr.at(-2); // banana'

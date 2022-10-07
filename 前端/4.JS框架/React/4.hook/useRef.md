@@ -20,7 +20,7 @@
 
   - 未使用之前
 
-    ```javascript
+    ```js
     import React,{ useState } from 'react';
 
     function App() {
@@ -41,7 +41,7 @@
 
   - 使用 useRef
 
-    ```javascript
+    ```js
     import React,{ useState, useRef } from 'react';
 
     function App() {

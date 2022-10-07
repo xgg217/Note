@@ -18,7 +18,7 @@
 
       - 其他值，返回 `NaN`
 
-    ```javascript
+    ```js
     Math.sign(-5) // -1
     Math.sign(5) // +1
     Math.sign(0) // +0
@@ -28,7 +28,7 @@
 
   - 如果参数是非数值，会自动转为数值。对于那些无法转为数值的值，会返回 `NaN`
 
-    ```javascript
+    ```js
     Math.sign('')  // 0
     Math.sign(true)  // +1
     Math.sign(false)  // 0

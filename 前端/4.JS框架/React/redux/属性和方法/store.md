@@ -4,7 +4,7 @@
 
   - 通过 `createStore` 方法创建的对象
 
-    ```javascript
+    ```js
     import reducer from './reducer/index';
 
     const stort = createStore(reducer);
@@ -24,7 +24,7 @@
 
       - 监听器会返回一个函数，用于取消监听
 
-    ```javascript
+    ```js
     const stort = createStore(reducer);
     console.log(stort)；
 

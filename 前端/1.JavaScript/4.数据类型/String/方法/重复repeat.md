@@ -10,7 +10,7 @@
 
   - 示例
 
-    ```javascript
+    ```js
     "abc".repeat(0)      // ""
     "abc".repeat(1)      // "abc"
     "abc".repeat(2)      // "abcabc"

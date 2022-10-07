@@ -6,7 +6,7 @@
 
   - 在 `input` 元素上使用 `v-mode` 指令时，相当于绑定了`value` 特性以及监听了 `input` 事件：
 
-    ```javascript
+    ```js
     <input v-model="searchText" />
 
     // 等价于：
@@ -20,7 +20,7 @@
 
   - 当把 `v-model` 指令用在组件上时：
 
-    ```javascript
+    ```js
     <base-input v-model="searchText" />
 
     // 等价于：
@@ -38,7 +38,7 @@
 
       - 在其 `input` 事件被触发时，将新的值通过自定义的 `input` 事件抛出 如：
 
-    ```javascript
+    ```js
     Vue.component('base-input', {
       props: ['value'],
       template: `
@@ -54,7 +54,7 @@
 
   - 一个组件上的 `v-model` 默认会利用名为 `value` 的 `prop` 和名为 `input` 的事件，但是像单选框、复选框等类型的输入控件可能会将 `value` 特性用于不同的目的。碰到这样的情况，我们可以利用 `model` 选项来避免冲突：
 
-    ```javascript
+    ```js
     Vue.component('base-checkbox', {
       model: {
         prop: 'checked',
@@ -75,7 +75,7 @@
 
   - 使用组件：
 
-    ```javascript
+    ```js
     <base-checkbox v-model="lovingVue"></base-checkbox>
     ```
 

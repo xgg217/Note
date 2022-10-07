@@ -4,7 +4,7 @@
 
   - `Object.entries()` 方法返回一个数组，成员是参数对象自身的（不含继承的）所有可遍历（ `enumerable` ）属性的键值对数组
 
-    ```javascript
+    ```js
     const obj = { foo: 'bar', baz: 42 };
     Object.entries(obj)
     // [ ["foo", "bar"], ["baz", 42] ]
@@ -22,7 +22,7 @@
 
   - 如果原对象的属性名是一个 `Symbol` 值，该属性会被忽略
 
-    ```javascript
+    ```js
     Object.entries({ [Symbol()]: 123, foo: 'abc' });
     // [ [ 'foo', 'abc' ] ]
     ```
@@ -31,7 +31,7 @@
 
   - 遍历对象的属性
 
-    ```javascript
+    ```js
     let obj = { one: 1, two: 2 };
     for (let [k, v] of Object.entries(obj)) {
       console.log(
@@ -46,7 +46,7 @@
 
   - 转为 `Map`
 
-    ```javascript
+    ```js
     const obj = { foo: 'bar', baz: 42 };
     const map = new Map(Object.entries(obj));
     map // Map { foo: "bar", baz: 42 }

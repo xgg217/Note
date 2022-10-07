@@ -4,7 +4,7 @@
 
   - `resize` 事件在改变浏览器窗口大小时触发，发生在 `window` 、`body`、`frameset` 对象上面
 
-    ```javascript
+    ```js
     var resizeMethod = function(){
       if (document.body.clientWidth < 768) {
         console.log('移动设备');

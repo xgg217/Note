@@ -8,7 +8,7 @@
 
   - 其实我们可以简单的理解为 `script` 包括的内容就是`setup` 中的，并做了 `return`
 
-    ```javascript
+    ```js
     <script lang="ts" setup>
       import { ref } from "vue";
       const count = ref(0);

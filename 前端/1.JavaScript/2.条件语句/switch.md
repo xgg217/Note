@@ -8,7 +8,7 @@
 
   - 如果所有 `case` 都不符合，则执行最后的 `default` 部分
 
-    ```javascript
+    ```js
     switch (fruit) {
       case "banana":
         // ...
@@ -27,7 +27,7 @@
 
 2.  在比较运行结果时，采用的是**严格相等运算符**（ `===`），而不是相等运算符（`==`），这意味着比较时不会发生类型转换
 
-    ```javascript
+    ```js
     var x = 1;
 
     switch (x) {
@@ -49,7 +49,7 @@
 
   - 此外，这种结构类似于 `goto` 语句，容易造成程序流程的混乱，使得代码结构混乱不堪，不符合面向对象编程的原则
 
-    ```javascript
+    ```js
     // 原始
     function doAction(action) {
       switch (action) {
@@ -68,7 +68,7 @@
     }
     ```
 
-    ```javascript
+    ```js
     // 改进
     function doAction(action) {
       var actions = {

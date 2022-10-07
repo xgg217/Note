@@ -4,7 +4,7 @@
 
   - 当储存的数据发生变化时，会触发 `storage` 事件
 
-    ```javascript
+    ```js
     function onStorageChange(e) {
      console.log(e.key);
     }

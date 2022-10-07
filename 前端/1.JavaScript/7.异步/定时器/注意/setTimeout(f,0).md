@@ -14,7 +14,7 @@
 
   - 而并不是会立刻就执行这个任务
 
-    ```javascript
+    ```js
     setTimeout(function () {
       console.log('你好！');
     }, 0);
@@ -22,7 +22,7 @@
 
   - `setTimeout(f, 0)` 指定的任务，最早也要到下一次 `Event Loop` 才会执行
 
-    ```javascript
+    ```js
     setTimeout(function() {
       console.log("Timeout");
     }, 0);

@@ -18,7 +18,7 @@
 
   - 示例
 
-    ```javascript
+    ```js
     <ul>
       <li v-for="item in items" :key="item.id">...</li>
     </ul>

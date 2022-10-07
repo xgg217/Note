@@ -16,7 +16,7 @@
 
       - 当文本框或 `textarea` 元素的值发生改变，并且丧失焦点时触发
 
-    ```javascript
+    ```js
     // HTML代码为
     // <select size="1" onchange="changeEventHandler(event);">
     //   <option>chocolate</option>
@@ -37,7 +37,7 @@
     <input type="checkbox" @change="qh">
     ```
 
-    ```javascript
+    ```js
     const cheDom = document.querySelector("input");
 
     cheDom.addEventListener("change", function(e) {

@@ -16,7 +16,7 @@
 
   - 在节点上设置 `textContent` 属性的话，会删除它的所有子节点，并替换为一个具有给定值的文本节点
 
-    ```javascript
+    ```js
     <div id="divA">This is <span>some</span> text</div>
 
     // 获得文本内容:

@@ -8,7 +8,7 @@
 
   - 指的是需要变化的数据，**必须**要有一个 `type` 属性（类型没有要求）和一些需要在 `state` 中修改的属性。（和 `Vuex` 中 `Mutation` 的 `payload` 参数一致，因为我们是在 `Mutation` 手动写好对应关系，所以不需要传递 `type`）
 
-    ```javascript
+    ```js
     const action = {
       type: 'add', // 描述操作类型
       payload: '' // 附件数据
@@ -17,7 +17,7 @@
 
   - 在大型项目中，由于操作类型非常多，为了避免硬编码（hard code），会将 `action` 的类型存放到一个或一些单独文件中
 
-    ```javascript
+    ```js
     // 避免硬编码
     export const ADD = Symbol('add');
     export const DECEASE = Symbol('decease');
@@ -25,7 +25,7 @@
 
   - 为了方便传递 `action` ，通常会使用 `action` 创建函数来创建 `action`
 
-    ```javascript
+    ```js
     import * as actionType from './action-type';
     export const getAddAction = () => {
       return {
@@ -48,14 +48,14 @@
 
   - `binActionCreators` :该函数用于增强 `action` 创建函数的功能，使它不仅仅可以创建 `action` ，并且创建后自动完成分发
 
-    ```javascript
+    ```js
     // action-type.js
     export const ADD = Symbol('add');
     export const DEL = Symbol('del');
     export const SET = Symbol('set');
     ```
 
-    ```javascript
+    ```js
     // number-action
     import * as actionType from './action-type';
 
@@ -79,7 +79,7 @@
     }
     ```
 
-    ```javascript
+    ```js
     // 设置 使用
     import { createStore, bindActionCreators } from 'redux'
     import * as actionType from './action/action-type';

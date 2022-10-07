@@ -6,7 +6,7 @@
 
   - 但是你应该使用 `className` 而不是 `class` 来为 `React` 元素应用样式, 这里有一个例子
 
-    ```javascript
+    ```js
     import React from 'react';
     import './App.css';
     import { Header } from './header/header';
@@ -34,7 +34,7 @@
 
   - 这里有一个例子。这里需要注意的重要一点是，我们将 `javascript` 对象传递给 `style`，这就是为什么我们使用 `backgroundColor` 而不是CSS方法 `backbackground-color`
 
-    ```javascript
+    ```js
     import React from 'react';
     export const Header = () => {
       const heading = 'TODO App'
@@ -50,7 +50,7 @@
 
   - 因为我们将javascript对象传递给style属性，所以我们可以在组件中定义一个style对象并使用它。下面是一个示例，你也可以将此对象作为 props 传递到组件树中
 
-    ```javascript
+    ```js
     import React from 'react';
 
     const footerStyle = {

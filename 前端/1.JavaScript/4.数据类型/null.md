@@ -20,7 +20,7 @@
 
   - 当检测 `null` 或 `undefined` 时，注意相等（`==`）与全等（`===`）两个操作符的区别 ，前者会执行类型转换：
 
-    ```javascript
+    ```js
     typeof null           // "object" (因为一些以前的原因而不是'null')
     typeof undefined      // "undefined"
     null === undefined    // false
@@ -36,7 +36,7 @@
 
   - 对于 `null` 来说，虽然它是基本类型，但是使用 `typeof` 检测显示 `'object'`，这是一个存在很久了的 Bug
 
-    ```javascript
+    ```js
     typeof null // 'object'
     ```
 
@@ -48,7 +48,7 @@
 
   - 使用 `===` 或者 `!==`
 
-    ```javascript
+    ```js
     const ele = document.getElementById('ele');
     if(ele !== null) {
       // ....

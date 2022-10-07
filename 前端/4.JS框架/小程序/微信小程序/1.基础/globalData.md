@@ -4,7 +4,7 @@
 
   - globalData 在 app.js 文件中的 app() 全局应用实例中
 
-    ```javascript
+    ```js
     // app.js
     App({
       globalData: {
@@ -18,7 +18,7 @@
 
   - 获取数据：直接使用 `this`
 
-    ```javascript
+    ```js
     App({
       globalData: {
         name: '小刚刚',
@@ -32,7 +32,7 @@
 
   - 修改数据
 
-    ```javascript
+    ```js
     App({
       globalData: {
         name: '小刚刚',

@@ -4,11 +4,11 @@
 
   - 代码
 
-    ```javascript
+    ```js
     Vue.prototype.$bus = new Vue();
     ```
 
-    ```javascript
+    ```js
     Vue.component('cmp-a', {
       data () {
         return {
@@ -28,7 +28,7 @@
     })
     ```
 
-    ```javascript
+    ```js
     Vue.component('cmp-a', {
       mounted () {
         this.$bus.$on('click', data => {

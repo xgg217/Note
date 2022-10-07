@@ -8,7 +8,7 @@
 
   - 使用
 
-    ```javascript
+    ```js
     <span v-text="msg"></span>
     <!-- 和下面的一样 -->
     <span>{{msg}}</span>
@@ -20,7 +20,7 @@
 
   - Mustache只替换自己，不清空元素内容
 
-    ```javascript
+    ```js
     <!-- 渲染为：<span>杉杉最美</span> -->
     <span v-text="msg">----</span>
 
@@ -48,7 +48,7 @@
 
   - html
 
-    ```javascript
+    ```js
     <ul class="list">
       <li>1</li>
       <!-- 此处省略998个 -->
@@ -58,7 +58,7 @@
 
   - js
 
-    ```javascript
+    ```js
     const oList = document.getElementById("list");
 
     console.time("innerText");

@@ -4,7 +4,7 @@
 
   - 将多个 `Promise` 实例，包装成一个新的 `Promise` 实例
 
-    ```javascript
+    ```js
     const p = Promise.race([p1, p2, p3]);
     ```
 

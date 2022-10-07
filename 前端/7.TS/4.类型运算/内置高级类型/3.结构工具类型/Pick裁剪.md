@@ -33,7 +33,7 @@
 
   - 代码
 
-    ```javascript
+    ```js
     function myPick(todo: object, keys: []) {
       const obj = {};
       keys.forEach(key => {

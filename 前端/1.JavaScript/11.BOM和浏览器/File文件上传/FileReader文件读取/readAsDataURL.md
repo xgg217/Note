@@ -6,7 +6,7 @@
 
   - 你可以将返回值设为图像的 `src` 属性
 
-    ```javascript
+    ```js
     var file = document.getElementById('destination').files[0];
     if(file.type.indexOf('image') !== -1) {
       var reader = new FileReader();

@@ -38,7 +38,7 @@
 
   - 监听原始值（`ref`）数据的变化
 
-    ```javascript
+    ```js
     import { ref, watch } from "vue";
 
     const num = ref(0);
@@ -56,7 +56,7 @@
 
   - 监听对象的某个值的变化（侦听一个 getter 函数）
 
-    ```javascript
+    ```js
     import { reactive, watch } from "vue";
 
     const state = reactive({ a: 1, b: 2 });
@@ -74,7 +74,7 @@
 
       - 在深层级模式时，如果回调函数由于深层级的变更而被触发，那么新值和旧值将是同一个对象
 
-    ```javascript
+    ```js
     const state = reactive({ count: 0 })
     watch(
       () => state,
@@ -87,7 +87,7 @@
 
   - 当直接侦听一个响应式对象时（`reactive`），侦听器自动处于深层级模式
 
-    ```javascript
+    ```js
     const state = reactive({ count: 0 })
     watch(state, () => {
       /* 深层级变更状态所触发的回调 */
@@ -96,7 +96,7 @@
 
   - 监听多个数据的变化
 
-    ```javascript
+    ```js
     import { reactive, ref, watch } from "vue";
 
 

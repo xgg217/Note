@@ -6,7 +6,7 @@
 
   - 如果在一个方法前，加上 `static` 关键字，就表示该方法不会被实例继承，而是直接通过类来调用，这就称为“静态方法”
 
-    ```javascript
+    ```js
     class Foo {
       static classMethod() {
         return 'hello';
@@ -22,7 +22,7 @@
 
   - 注意，如果静态方法包含 `this` 关键字，这个 `this` 指的是类，而不是实例
 
-    ```javascript
+    ```js
     class Foo {
       static bar() {
         this.baz();
@@ -40,7 +40,7 @@
 
   - 父类的静态方法，可以被子类继承
 
-    ```javascript
+    ```js
     class Foo {
       static classMethod() {
         return 'hello';
@@ -55,7 +55,7 @@
 
   - 静态方法也是可以从 `super` 对象上调用的
 
-    ```javascript
+    ```js
     class Foo {
       static classMethod() {
         return 'hello';
@@ -77,7 +77,7 @@
 
   - 通过构造函数直接访问的属性
 
-    ```javascript
+    ```js
     // 老写法
     class Foo {
       // ...

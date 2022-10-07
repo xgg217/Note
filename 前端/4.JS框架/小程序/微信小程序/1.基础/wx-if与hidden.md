@@ -4,13 +4,13 @@
 
   - 在框架中，使用 `wx:if=""` 来判断是否需要渲染该代码块：
 
-    ```javascript
+    ```js
     <view wx:if="{{condition}}"> True </view>
     ```
 
   - 也可以用 `wx:elif` 和 `wx:else` 来添加一个 `else` 块：
 
-    ```javascript
+    ```js
     <view wx:if="{{length > 5}}"> 1 </view>
     <view wx:elif="{{length > 2}}"> 2 </view>
     <view wx:else> 3 </view>
@@ -20,7 +20,7 @@
 
   - 因为 `wx:if` 是一个控制属性，需要将它添加到一个标签上。如果要一次性判断多个组件标签，可以使用一个 `<block/>` 标签将多个组件包装起来，并在上边使用 `wx:if` 控制属性
 
-    ```javascript
+    ```js
     <block wx:if="{{true}}">
       <view> view1 </view>
       <view> view2 </view>

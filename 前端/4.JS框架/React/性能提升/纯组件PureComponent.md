@@ -14,7 +14,7 @@
 
   - 优化：对属性和状态进行**浅**比较，如果相等则不会重新渲染
 
-    ```javascript
+    ```js
     // 比较函数
     const ObjectEqual = (obj1, obj2) => {
       for(let prop in obj1) {

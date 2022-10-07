@@ -12,13 +12,13 @@
 
   - 代码
 
-    ```javascript
+    ```js
     data: {
       isBool: false
     }
     ```
 
-    ```javascript
+    ```js
     <loading hudden="{{ isBool }}">
     </loading>
     ```

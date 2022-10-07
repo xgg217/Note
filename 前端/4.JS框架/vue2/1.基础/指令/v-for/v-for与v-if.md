@@ -10,7 +10,7 @@
 
   - 例如
 
-    ```javascript
+    ```js
     <ul>
       <li
         v-for="user in users"
@@ -24,7 +24,7 @@
 
   - 将会经过如下运算：
 
-    ```javascript
+    ```js
     this.users.map(function (user) {
       if (user.isActive) {
         return user.name

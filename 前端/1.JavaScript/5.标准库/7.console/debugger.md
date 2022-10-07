@@ -10,7 +10,7 @@
 
   - 在Chrome浏览器中，当代码运行到 `debugger` 语句时，就会暂停运行，自动打开控制台界面
 
-    ```javascript
+    ```js
     for(var i = 0; i < 5; i++){
       console.log(i);
       if (i === 2) debugger;

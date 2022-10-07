@@ -4,13 +4,13 @@
 
   - 使用
 
-    ```javascript
+    ```js
     <my-cmp>
       写在组件标签结构中的内容
     </my-cmp>
     ```
 
-    ```javascript
+    ```js
     <div>
       <slot></slot>
     </div>
@@ -26,7 +26,7 @@
 
   - 当在插槽中使用数据时：
 
-    ```javascript
+    ```js
     <my-cmp>
       这是插槽中使用的数据：{{ user }}
     </my-cmp>
@@ -40,7 +40,7 @@
 
   - 它会在没有提供内容时被渲染，如，在 `<my-cmp>` 组件中：
 
-    ```javascript
+    ```js
     Vue.compopnent('my-cmp', {
       template: `
         <button type="submit">
@@ -52,7 +52,7 @@
 
   - 我们希望这个 `<button>` 内绝大多数情况下都渲染文本“Submit”，此时就可以将“Submit”作为后备内容，如：
 
-    ```javascript
+    ```js
     Vue.compopnent('my-cmp', {
       template: `
         <button type="submit">
@@ -70,7 +70,7 @@
 
   - 有时我们需要多个插槽，如 `<my-cmp>` 组件：
 
-    ```javascript
+    ```js
     Vue.compopnent('my-cmp', {
       template: `
         <div class="container">
@@ -92,7 +92,7 @@
 
   - 利用这个特性定义额外的插槽：
 
-    ```javascript
+    ```js
     Vue.compopnent('my-cmp', {
       template: `
         <div class="container">
@@ -114,7 +114,7 @@
 
   - 在向具名插槽提供内容的时候，我们可以在一个 `<template>` 元素上使用 `v-slot` 指令，并以 `v-slot` 的参数的形式提供其名称：
 
-    ```javascript
+    ```js
     <my-cmp>
       <template v-slot:header>
         <h1>头部</h1>
@@ -135,7 +135,7 @@
 
   - 为了模板更清晰，也可以写成以下这样：
 
-    ```javascript
+    ```js
     <my-cmp>
       <template v-slot:header>
         <h1>头部</h1>
@@ -158,7 +158,7 @@
 
   - 为了能够让插槽内容访问子组件的数据，我们可以将子组件的数据作为 `<slot>` 元素的一个特性绑定上去：
 
-    ```javascript
+    ```js
     Vue.component('my-cmp', {
       data () {
         return {
@@ -180,7 +180,7 @@
 
   - 那么在父级作用域中，我们可以给 `v-slot` 带一个值来定义我们提供的插槽 `prop` 的名字
 
-    ```javascript
+    ```js
     <div id="app">
       <my-cmp>
         <template v-slot:default="slotProps">
@@ -194,7 +194,7 @@
 
   - 当被提供的内容只有默认插槽时，组件的标签可以被当作插槽的模板来使用，此时，可以将 `v-slot` 直接用在组件上：
 
-    ```javascript
+    ```js
     <my-cmp v-slot:default="slotProps">
       {{ slotProps.user.name }}
     </my-cmp>
@@ -202,7 +202,7 @@
 
   - 也可以更简单：
 
-    ```javascript
+    ```js
     <my-cmp v-slot="slotProps">
       {{ slotProps.user.name }}
     </my-cmp>
@@ -210,7 +210,7 @@
 
   - 注意：**默认插槽的缩写语法不能和具名插槽混用，因为它会导致作用域不明确。**
 
-    ```javascript
+    ```js
     <!-- 无效，会导致警告 -->
     <my-cmp v-slot="slotProps">
       {{ slotProps.user.name }}
@@ -226,7 +226,7 @@
 
   - 我们可以使用解构传入具体的插槽 `prop`，如：
 
-    ```javascript
+    ```js
     <my-cmp v-slot="{ user }">
       {{ user.name }}
     </my-cmp>
@@ -234,7 +234,7 @@
 
   - 这样模板会更简洁，尤其是在为插槽提供了多个 `prop` 时。 此外还可以有其他可能，如 `prop` 重命名：
 
-    ```javascript
+    ```js
     <my-cmp v-slot="{ user: person }">
       {{ person.name }}
     </my-cmp>
@@ -242,7 +242,7 @@
 
   - 以及自定义后备内容，当插槽 `prop` 是 `undefined` 时生效：
 
-    ```javascript
+    ```js
     <my-cmp v-slot="{ user = { name: 'Guest' } }">
       {{ user.name }}
     </my-cmp>
@@ -252,7 +252,7 @@
 
   - Vue 2.6.0新增
 
-    ```javascript
+    ```js
     <my-cmp>
       <template v-slot:[dynamicSlotName]>
         ...
@@ -264,7 +264,7 @@
 
   - 跟 `v-on` 和 `v-bind` 一样，`v-slot` 也有缩写，将 `v-slot:` 替换为 `#`
 
-    ```javascript
+    ```js
     <my-cmp>
       <template #header>
         <h1>头部</h1>

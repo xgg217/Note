@@ -4,7 +4,7 @@
 
   - 如果所有 `Map` 的键都是字符串，它可以无损地转为对象
 
-    ```javascript
+    ```js
     function strMapToObj(strMap) {
       let obj = Object.create(null);
       for (let [k,v] of strMap) {
@@ -26,7 +26,7 @@
 
   - 对象转Map
 
-    ```javascript
+    ```js
     function objToStrMap(obj) {
       let strMap = new Map();
       for (let k of Object.keys(obj)) {

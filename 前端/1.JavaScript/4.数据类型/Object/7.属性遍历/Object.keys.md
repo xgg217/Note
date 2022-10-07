@@ -4,7 +4,7 @@
 
   - ES5 引入了 `Object.keys` 方法，返回一个数组，成员是参数对象自身的（不含继承的）所有可遍历（ `enumerable` ）属性的键名
 
-    ```javascript
+    ```js
     var obj = { foo: 'bar', baz: 42 };
     Object.keys(obj)
     // ["foo", "baz"]
@@ -20,7 +20,7 @@
 
   - ES2017 引入了跟 `Object.keys` 配套的 `Object.values` 和 `Object.entries`，作为遍历一个对象的补充手段，供 `for...of` 循环使用
 
-    ```javascript
+    ```js
     let {keys, values, entries} = Object;
     let obj = { a: 1, b: 2, c: 3 };
 

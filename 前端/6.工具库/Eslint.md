@@ -114,7 +114,7 @@
 
   - 内容1
 
-    ```javascript
+    ```js
     module.exports = {
       "env": { // Environments，指定代码的运行环境。不同的运行环境，全局变量不一样，指明运行环境这样ESLint就能识别特定的全局变量。同时也会开启对应环境的语法支持，例如：es6
           "browser": true,
@@ -226,7 +226,7 @@
 
   - 内容2
 
-    ```javascript
+    ```js
     "rules": {
       "no-ternary": 0,//禁止使用三目运算符
       "no-trailing-spaces": 1,//一行结束后面不要有空格

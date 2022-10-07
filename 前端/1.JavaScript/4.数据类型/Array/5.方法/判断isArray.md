@@ -8,18 +8,18 @@
 
 - 它可以弥补 `typeof` 运算符的不足
 
-    ```javascript
+    ```js
     var a = [1, 2, 3];
 
     typeof a // "object"
     Array.isArray(a) // true
     ```
 
-    ```javascript
+    ```js
     Array.isArray([]);   // true
     ```
 
-    ```javascript
+    ```js
     Array.isArray([1, 2, 3]); // true
 
     Array.isArray({foo: 123}); // false

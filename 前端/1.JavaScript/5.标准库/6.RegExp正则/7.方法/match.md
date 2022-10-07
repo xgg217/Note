@@ -22,7 +22,7 @@
 
       - input: 搜索的字符串
 
-    ```javascript
+    ```js
     const regex = /(\d{4})-(\d{2})-(\d{2})/;
     const string = "2017-06-12";
     console.log( string.match(regex) );
@@ -37,7 +37,7 @@
 
   - 示例1
 
-    ```javascript
+    ```js
     var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
     var regexp = /[A-E]/gi;
     var matches_array = str.match(regexp);

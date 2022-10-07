@@ -4,7 +4,7 @@
 
   - 只读，路由信息对象
 
-    ```javascript
+    ```js
     $route = {
       fullPath: "",
       hash: "",
@@ -43,7 +43,7 @@
 
   - 一个数组，包含当前路由的所有嵌套路径片段的路由记录 。路由记录就是 `routes` 配置数组中的对象副本 (还有在 `children` 数组)
 
-    ```javascript
+    ```js
     const router = new VueRouter({
       routes: [
         // 下面的对象就是路由记录

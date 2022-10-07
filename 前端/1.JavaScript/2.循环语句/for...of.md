@@ -8,7 +8,7 @@
 
   - 如果你不想修改语句块中的变量 , 也可以使用 `const` 代替 `let`
 
-    ```javascript
+    ```js
     let iterable = [10, 20, 30];
 
     for (let value of iterable) {
@@ -22,7 +22,7 @@
 
   - 获取数组的索引，可以借助数组实例的 `entries` 方法和 `keys` 方法
 
-    ```javascript
+    ```js
     var arr = ['a', 'b', 'c', 'd'];
     for (let [index, item] of arr.entries()) {
       console.log(index); // 0 1 2 3
@@ -34,7 +34,7 @@
 
   - 迭代
 
-    ```javascript
+    ```js
     let iterable = "boo";
 
     for (let value of iterable) {
@@ -51,7 +51,7 @@
 
   - 在这些情况下，迭代器关闭\\
 
-    ```javascript
+    ```js
     function* foo(){
       yield 1;
       yield 2;

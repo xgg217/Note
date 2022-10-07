@@ -8,7 +8,7 @@
 
   - 每个模块拥有自己的 `state`、`mutation`、`action`、`getter`
 
-    ```javascript
+    ```js
     modules: {
       a,
       b
@@ -41,7 +41,7 @@
 
       - 可以通过mapXXX的方式获取到 `state`、`getters`、`mutations`、`actions`
 
-        ```javascript
+        ```js
         computed: {
           ...mapState('moduleName', {
           a: state => state.count,
@@ -67,7 +67,7 @@
 
   - 你可以通过使用 createNamespacedHelpers 创建基于某个命名空间辅助函数。它返回一个对象，对象里有新的绑定在给定命名空间值上的组件绑定辅助函数：
 
-    ```javascript
+    ```js
     import { createNamespacedHelpers } from 'vuex'
 
     const { mapState, mapActions } = createNamespacedHelpers('some/nested/module')
@@ -94,7 +94,7 @@
 
   - 模块(`stroe/modules/a.js`)
 
-    ```javascript
+    ```js
     // a.js
     export default {
       namespaced: true,  // 命名空间
@@ -118,7 +118,7 @@
 
   - 引入（`stroe/index.js`）
 
-    ```javascript
+    ```js
     import Vue from 'vue';
     import Vuex from 'vuex';
 

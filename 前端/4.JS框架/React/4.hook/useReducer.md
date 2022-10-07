@@ -4,7 +4,7 @@
 
   - 代码
 
-    ```javascript
+    ```js
     import React,{ useState, useReducer } from 'react'
 
     function nReducer(state, {type, payload}) {
@@ -42,7 +42,7 @@
 
   - `useReducer` 第三个参数的使用。会将第**二**个参数传入第三个函数的**参数**中，然后第三个函数的返回值作为默认值
 
-    ```javascript
+    ```js
     const [n, dispatch] = useReducer(nReducer, 10, (asg) => {
       return 100
     });
@@ -52,7 +52,7 @@
 
   - 代码
 
-    ```javascript
+    ```js
     import React, { useState } from 'react'
     /**
      * @param {function} reduccer reducer 函数，标准格式 {type: '...', payload: '...'}

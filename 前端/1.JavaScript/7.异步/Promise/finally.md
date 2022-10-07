@@ -5,7 +5,7 @@
   - 用于指定不管 `Promise` 对象最后状态如何，都会执行的操作
   - 该方法是 **ES2018** 引入标准的
 
-    ```javascript
+    ```js
     // 不管promise最后的状态，在执行完then或catch指定的回调函数以后，都会执行finally方法指定的回调函数
     promise
       .then(result => {···})
@@ -19,7 +19,7 @@
 
   - `finally` 本质上是 `then` 方法的特例
 
-    ```javascript
+    ```js
     // 上面代码中，如果不使用finally方法，同样的语句需要为成功和失败两种情况各写一次。有了finally方法，则只需要写一次
     promise
     .finally(() => {
@@ -42,7 +42,7 @@
 
   - 实现 `finally`
 
-    ```javascript
+    ```js
     Promise.prototype.finally = function (callback) {
       let P = this.constructor;
       return this.then(

@@ -12,7 +12,7 @@
 
   - 函数调用中的 new\.target
 
-    ```javascript
+    ```js
     function Foo() {
       if (!new.target) throw "Foo() must be called with new";
       console.log("Foo instantiated with new");
@@ -24,7 +24,7 @@
 
   - 构造方法中的 `new.target`
 
-    ```javascript
+    ```js
     class A {
       constructor() {
         console.log(new.target.name);

@@ -12,7 +12,7 @@
 
   - 在控制台中查看元素类型
 
-    ```javascript
+    ```js
     const a = document.createElement('div')
     console.dir(a); // 查看 [[Prototype]]: HTMLElement
 

@@ -4,7 +4,7 @@
 
   - `shift` 方法用于删除数组的第一个元素，并返回该元素
 
-    ```javascript
+    ```js
     var a = ['a', 'b', 'c'];
 
     a.shift() // 'a'
@@ -13,7 +13,7 @@
 
   - `shift` 方法可以遍历并清空一个数组
 
-    ```javascript
+    ```js
     var list = [1, 2, 3, 4, 5, 6];
     var item;
 

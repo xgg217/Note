@@ -24,7 +24,7 @@
 
   - 示例
 
-    ```javascript
+    ```js
     var numbers = [4, 2, 5, 1, 3];
     numbers.sort(function(a, b) {
       return a - b;
@@ -34,7 +34,7 @@
 
   - 对象可以按照某个属性排序
 
-    ```javascript
+    ```js
     var items = [
       { name: 'Edward', value: 21 },
       { name: 'Sharpe', value: 37 },
@@ -64,7 +64,7 @@
 
   - 给有序数组乱序
 
-    ```javascript
+    ```js
     var arr =[1,2,3,4,5,6,7,8,9];
     arr.sort(function(a,b) {
       return (Math.random()-0.5);

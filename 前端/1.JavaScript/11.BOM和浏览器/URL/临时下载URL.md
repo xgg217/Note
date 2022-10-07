@@ -6,7 +6,7 @@
 
   - 这个字符串代表了 `File` 对象或 `Blob` 对象的 URL
 
-    ```javascript
+    ```js
     // HTML 代码如下
     // <div id="display"/>
     // <input
@@ -27,7 +27,7 @@
     }
     ```
 
-    ```javascript
+    ```js
     // 该方法生成的 URL 就像下面的样子
     blob:http://localhost/c745ef73-ece9-46da-8f66-ebes574789b1
     ```
@@ -42,7 +42,7 @@
 
   - 它的参数就是 `URL.createObjectURL()` 方法返回的 URL 字符串
 
-    ```javascript
+    ```js
     var div = document.getElementById('display');
 
     // 一旦图片加载成功以后，为本地文件生成的 URL 字符串就没用了，于是可以在img.onload回调函数里面，通过URL.revokeObjectURL()方法卸载这个 URL 实例

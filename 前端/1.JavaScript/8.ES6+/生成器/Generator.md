@@ -12,7 +12,7 @@
 
   - 创建方式1
 
-    ```javascript
+    ```js
     // 这是一个生成器函数，该函数一定返回生成器
     function* method() {
 
@@ -21,7 +21,7 @@
 
   - 创建方式2
 
-    ```javascript
+    ```js
     // 这是一个生成器函数，该函数一定返回生成器
     function *method() {
 

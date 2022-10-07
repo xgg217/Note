@@ -4,7 +4,7 @@
 
   - `pop` 方法用于删除数组的最后一个元素，并返回该元素
 
-    ```javascript
+    ```js
     var a = ['a', 'b', 'c'];
 
     a.pop() // 'c'
@@ -17,6 +17,6 @@
 
   - 对空数组使用 `pop` 方法，不会报错，而是返回 `undefined`
 
-    ```javascript
+    ```js
     [].pop() // undefined
     ```

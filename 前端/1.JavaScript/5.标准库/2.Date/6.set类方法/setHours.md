@@ -6,7 +6,7 @@
 
   - 语法
 
-    ```javascript
+    ```js
     dateObj.setHours(hoursValue[, minutesValue[, secondsValue[, msValue]]]);
 
     // 参数 hoursValue: 一个 0 到 23 的整数，表示小时
@@ -22,7 +22,7 @@
 
   - 如果有一个参数超出了合理范围，`setHours` 会相应地更新日期对象中的日期信息。例如，如果为 `secondsValue` 指定了 100，则分钟会加 1，然后秒数使用 40
 
-    ```javascript
+    ```js
     var theBigDay = new Date();
     theBigDay.setHours(7);
     ```

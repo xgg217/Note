@@ -4,7 +4,7 @@
 
   - `scroll` 事件在文档或文档元素滚动时触发，主要出现在用户拖动滚动条
 
-    ```javascript
+    ```js
     window.addEventListener('scroll', callback);
     ```
 
@@ -14,7 +14,7 @@
 
   - 推荐的做法是使用 `requestAnimationFrame` 或 `setTimeout` 控制该事件的触发频率，然后可以结合 `customEvent` 抛出一个新事件
 
-    ```javascript
+    ```js
     // requestAnimationFrame 版本
     (function() {
       var throttle = function(type, name, obj) {
@@ -40,7 +40,7 @@
     });
     ```
 
-    ```javascript
+    ```js
     // setTimeout 版本 可以放置更大的时间间隔
     (function() {
       window.addEventListener('scroll', scrollThrottler, false);

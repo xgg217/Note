@@ -4,7 +4,7 @@
 
   - `indexOf` 方法返回给定元素在数组中第一次出现的位置，如果没有出现则返回 `-1`
 
-    ```javascript
+    ```js
     var a = ['a', 'b', 'c'];
 
     a.indexOf('b') // 1
@@ -13,7 +13,7 @@
 
   - indexOf 方法还可以接受第二个参数，表示搜索的开始位置
 
-    ```javascript
+    ```js
     ['a', 'b', 'c'].indexOf('a', 1) // -1
     ```
 
@@ -21,7 +21,7 @@
 
   - `lastIndexOf` 方法返回给定元素在数组中最后一次出现的位置，如果没有出现则返回 `-1`
 
-    ```javascript
+    ```js
     var a = [2, 5, 9, 2];
     a.lastIndexOf(2) // 3
     a.lastIndexOf(7) // -1
@@ -31,7 +31,7 @@
 
   - 如果数组中包含 `NaN`，这两个方法不适用，即无法确定数组成员是否包含 `NaN`
 
-    ```javascript
+    ```js
     [NaN].indexOf(NaN) // -1
     [NaN].lastIndexOf(NaN) // -1
     ```

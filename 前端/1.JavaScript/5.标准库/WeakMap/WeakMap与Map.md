@@ -4,7 +4,7 @@
 
   - WeakMap只接受对象作为键名（null除外），不接受其他类型的值作为键名
 
-    ```javascript
+    ```js
     const map = new WeakMap();
     map.set(1, 2)
     // TypeError: 1 is not an object!

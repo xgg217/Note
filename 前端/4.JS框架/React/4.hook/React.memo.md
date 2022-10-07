@@ -10,7 +10,7 @@
 
   - 基本使用
 
-    ```javascript
+    ```js
     import React,{ useMemo } from "react";
     function Component(props) {
       /* 使用 props 渲染 */
@@ -20,7 +20,7 @@
 
   - 通过 `React.memo` 包裹的组件在 `props` 不变的情况下，这个被包裹的组件是不会重新渲染的，也就是说上面那个例子，在我点击改名字之后，仅仅是 `title` 会变，但是 `Child` 组件不会重新渲染（表现出来的效果就是 `Child` 里面的 `log` 不会在控制台打印出来），会直接复用最近一次渲染的结果
 
-    ```javascript
+    ```js
     import React from "react";
 
     function Child(props) {
@@ -37,7 +37,7 @@
 
   - 如果你想要控制对比过程，那么请将自定义的比较函数通过第二个参数传入来实现
 
-    ```javascript
+    ```js
     function MyComponent(props) {
       /* 使用 props 渲染 */
     }

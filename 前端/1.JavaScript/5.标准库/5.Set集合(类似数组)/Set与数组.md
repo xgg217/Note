@@ -4,7 +4,7 @@
 
   - `Set` --> `Array`
 
-    ```javascript
+    ```js
     const s = new Set([5,64,5,46]);
 
     const arr = [...s]; // 转成数组
@@ -14,7 +14,7 @@
 
   - `Array` --> `Set`
 
-    ```javascript
+    ```js
     let myArray = ["value1", "value2", "value3"];
     let mySet = new Set(myArray);
     ```
@@ -23,7 +23,7 @@
 
   - 示例
 
-    ```javascript
+    ```js
     const arr = [12, 2, 23, 12, 2]);
     const newArr = [...new Set(arr)];
     console.log(newArr)

@@ -8,13 +8,13 @@
 
   - 因为你使用 `new Object()` 的方式创建对象需要通过作用域链一层层找到 `Object`，但是你使用字面量的方式就没这个问题
 
-    ```javascript
+    ```js
     function Foo() {}
     // function 就是个语法糖
     // 内部等同于 new Function()
     ```
 
-    ```javascript
+    ```js
     let a = { b: 1 }
     // 这个字面量内部也是使用了 new Object()
     ```
@@ -33,7 +33,7 @@
 
   - 代码
 
-    ```javascript
+    ```js
     function create() {
       // 创建一个空的对象
       let obj = new Object()
@@ -54,7 +54,7 @@
 
   - 如果当前函数是 `new` 命令调用，`new.target` 指向当前函数，否则为 `undefined`
 
-    ```javascript
+    ```js
     function f() {
       console.log(new.target === f);
     }

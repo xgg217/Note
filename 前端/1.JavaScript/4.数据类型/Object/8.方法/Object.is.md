@@ -6,7 +6,7 @@
 
   - `Object.is` 不会做类型转换
 
-    ```javascript
+    ```js
     Object.is(value1, value2);
 
     // 返回值: 表示两个参数是否相同的布尔值
@@ -14,7 +14,7 @@
 
   - 示例
 
-    ```javascript
+    ```js
     Object.is('foo', 'foo');     // true
     Object.is(window, window);   // true
 
@@ -37,7 +37,7 @@
 
   - Object在严格等于的基础上修复了一些特殊情况下的失误，具体来说就是 `+0` 和 `-0`，`NaN` 和 `NaN`。源码如下：
 
-    ```javascript
+    ```js
     if (!Object.is) {
       Object.is = function(x, y) {
         if (x === y) {
@@ -56,14 +56,14 @@
 
   - `===`
 
-    ```javascript
+    ```js
     console.log(+0 === -0); // true
     console.log(NaN === NaN) // false
     ```
 
   - `Object.is()`
 
-    ```javascript
+    ```js
     console.log(Object.is(0, -0)); // flse
     console.log(Object.is(0, +0)); // flse
     console.log(Object.is(+0, -0)); // flse

@@ -10,7 +10,7 @@
 
       - `item1, item2, ...`（可选）
 
-    ```javascript
+    ```js
     var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
     myFish.splice(2, 0, 'drum'); // 在索引为2的位置插入'drum'
     // myFish 变为 ["angel", "clown", "drum", "mandarin", "sturgeon"]

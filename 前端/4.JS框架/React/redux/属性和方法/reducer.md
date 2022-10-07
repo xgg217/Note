@@ -24,7 +24,7 @@
 
 5.  将 `reducer` 的参数 `state` 设置一个默认值
 
-```javascript
+```js
 import { ADD, DEL, SET } from "redux/action/action-type";
 
  export default function reducer(state = 10, { type, payload = {} }) {
@@ -71,7 +71,7 @@ import { ADD, DEL, SET } from "redux/action/action-type";
 
   - `reducer` 内部通常使用 `switch` 来判断 `type` 的值
 
-```javascript
+```js
 /**
 
  * @param {*} state 之前的数据
@@ -132,7 +132,7 @@ import { ADD, DEL, SET } from "redux/action/action-type";
 
   - `combineReducers`：合并 `reducer` 得到一个新的 `reducer`，该新的 `reducer` 管理一个对象，该对象中的每一个属性交给对应的 `reducer` 管理
 
-```javascript
+```js
 import { createStore, bindActionCreators } from 'redux'
 
  import reducer from './reducer/reducer';
@@ -141,7 +141,7 @@ import { createStore, bindActionCreators } from 'redux'
 
 ```
 
-```javascript
+```js
 // reducer.js
 
  import { combineReducers } from 'redux'
@@ -186,7 +186,7 @@ import { createStore, bindActionCreators } from 'redux'
 
   - action 设置
 
-```javascript
+```js
 // usersAction.js
 
  export const ADD_USER = Symbol('add-user')
@@ -255,7 +255,7 @@ import { createStore, bindActionCreators } from 'redux'
 
 ```
 
-```javascript
+```js
 // users.js
 
  import * as usersAction from './../action/usersAction'
@@ -330,7 +330,7 @@ import { createStore, bindActionCreators } from 'redux'
 
 ```
 
-```javascript
+```js
 // reducer/index.js
 
  import { combineReducers } from 'redux' // 方法2 需要的函数
@@ -373,7 +373,7 @@ import { createStore, bindActionCreators } from 'redux'
 
 ```
 
-```javascript
+```js
 import { createStore } from 'redux'
 
  import reducer from './reducer/index'

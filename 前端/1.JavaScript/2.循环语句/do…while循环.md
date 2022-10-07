@@ -6,7 +6,7 @@
 
   - 唯一的区别就是先运行一次循环体，然后判断循环条件
 
-    ```javascript
+    ```js
     do {
       statement
     } while (expression);
@@ -16,7 +16,7 @@
 
   - `while`语句后面的**分号不能省略**
 
-    ```javascript
+    ```js
     var x = 3;
     var i = 0;
 

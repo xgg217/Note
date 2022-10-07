@@ -14,7 +14,7 @@
 
   - 使用选项式 API，引用将被注册在组件的 `this.$refs` 对象里
 
-    ```javascript
+    ```js
     <!-- 存储为 this.$refs.p -->
     <p ref="p">hello</p>
     ```

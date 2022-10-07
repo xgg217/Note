@@ -18,7 +18,7 @@
 
   - 示例
 
-    ```javascript
+    ```js
     const object1 = {
       a: 1,
       b: 2,
@@ -28,7 +28,7 @@
     console.log(object2); //{ c: 3, d: 5, a: 1, b: 2 }
     ```
 
-    ```javascript
+    ```js
     // 合并对象
     var o1 = { a: 1 };
     var o2 = { b: 2 };
@@ -39,7 +39,7 @@
     console.log(o1);  // { a: 1, b: 2, c: 3 }, 注意目标对象自身也会改变
     ```
 
-    ```javascript
+    ```js
     // 合并具有相同属性的对象
     var o1 = { a: 1, b: 1, c: 1 };
     var o2 = { b: 2, c: 2 };

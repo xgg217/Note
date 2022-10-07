@@ -4,7 +4,7 @@
 
   - 用于将多个 `Promise` 实例，包装成一个新的 `Promise` 实例
 
-    ```javascript
+    ```js
     const p = Promise.all([p1, p2, p3]);
     ```
 
@@ -18,7 +18,7 @@
 
     2.  只要 `p1` 、 `p2` 、 `p3` 之中**有一个**被 `rejected`， `p` 的状态就变成 `rejected`，此时第一个被 `reject` 的实例的返回值，会传递给 `p` 的回调函数
 
-        ```javascript
+        ```js
         // 生成一个Promise对象的数组
         const promises = [2, 3, 5, 7, 11, 13].map(function (id) {
           return getJSON('/post/' + id + ".json");
@@ -31,7 +31,7 @@
         });
         ```
 
-        ```javascript
+        ```js
         // 谁在前面谁就先执行
         const p1 = new Promise( (res, err) => {
           res(1);
@@ -53,7 +53,7 @@
         });
         ```
 
-        ```javascript
+        ```js
         // 有一个被 `rejected` 就被返回
         const p6 = new Promise( (res, err) => {
           res(6);

@@ -6,7 +6,7 @@
 
   - 如果不提供参数，**默认用逗号**分隔
 
-    ```javascript
+    ```js
     var a = [1, 2, 3, 4];
 
     a.join(' ') // '1 2 3 4'
@@ -24,7 +24,7 @@
 
   - join方法也可以用于类似数组的对象
 
-    ```javascript
+    ```js
     var obj = { 0: 'a', 1: 'b', length: 2 };
     Array.prototype.join.call(obj, '-')
     // 'a-b'

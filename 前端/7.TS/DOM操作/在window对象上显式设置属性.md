@@ -4,13 +4,13 @@
 
   - JS
 
-    ```javascript
+    ```js
     indow.MyNamespace = window.MyNamespace || {};
     ```
 
   - TS
 
-    ```javascript
+    ```js
     // 报错 Property 'MyNamespace' does not exist on type 'Window & typeof globalThis'.(2339)
     // Window & typeof globalThis 交叉类型上不存在 MyNamespace 属性
     window.MyNamespace = window.MyNamespace || {};
@@ -18,12 +18,12 @@
 
   - 解决办法
 
-    ```javascript
+    ```js
     // 方法1
     (window as any).MyNamespace = {};
     ```
 
-    ```javascript
+    ```js
     // 方法2 推荐使用
     declare interface Window {
       MyNamespace: any;

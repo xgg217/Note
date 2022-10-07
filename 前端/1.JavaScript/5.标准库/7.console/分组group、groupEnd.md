@@ -4,7 +4,7 @@
 
   - 用于将显示的信息分组，可以把信息进行折叠和展开
 
-    ```javascript
+    ```js
     console.group('第一层');
     console.group('第二层');
 

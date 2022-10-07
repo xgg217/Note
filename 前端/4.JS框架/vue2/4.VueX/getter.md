@@ -8,7 +8,7 @@
 
   - `Getter` 接收 `state` 作为其第一个参数、`getters` 作为其第二个参数
 
-    ```javascript
+    ```js
     getters: {
       doubleCount (state) {
         return state.count * 2;

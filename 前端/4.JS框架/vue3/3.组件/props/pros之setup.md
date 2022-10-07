@@ -6,7 +6,7 @@
 
   - 基础用法
 
-    ```javascript
+    ```js
     <script lang="ts" setup>
     // 不需要引用
     // import { defineProps } from "vue";
@@ -16,7 +16,7 @@
 
   - 构造函数进行检查 给props定义类型：
 
-    ```javascript
+    ```js
     const props = defineProps({
       gameId: Number,
       userInfo: {
@@ -28,7 +28,7 @@
 
   - 使用类型注解进行检查
 
-    ```javascript
+    ```js
     defineProps<{
       name: string
       phoneNumber: number
@@ -37,7 +37,7 @@
     }>()
     ```
 
-    ```javascript
+    ```js
     // 可以先定义好类型：
     interface UserInfo {
       id: number,
@@ -53,7 +53,7 @@
 
   - 使用类型声明时的默认 props 值
 
-    ```javascript
+    ```js
     interface Props {
       msg?: string
       labels?: string[]

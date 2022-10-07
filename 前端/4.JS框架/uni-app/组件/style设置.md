@@ -4,11 +4,11 @@
 
   - `uni.scss`
 
-    ```javascript
+    ```js
     $uni-color-primary: #007aff;
     ```
 
-    ```javascript
+    ```js
     // 使用
     <style scoped>
       @import url("@/static/style/index.css");
@@ -41,11 +41,11 @@
 
   - class
 
-    ```javascript
+    ```js
     <view class="normal_view" />
     ```
 
-    ```javascript
+    ```js
     <view :class="{ active: isActive }">111</view>
     <view class="static" v-bind:class="{ active: isActive, 'text-danger': hasError }">222</view>
     <view class="static" :class="[activeClass, errorClass]">333</view>
@@ -57,7 +57,7 @@
 
   - style
 
-    ```javascript
+    ```js
     <view :style="{color:color}"></view>
     <view v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }">666</view>
     <view v-bind:style="[{ color: activeColor, fontSize: fontSize + 'px' }]">777</view>

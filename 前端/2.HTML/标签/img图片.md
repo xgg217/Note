@@ -6,7 +6,7 @@
 
   - 浏览器提供一个原生构造函数 `Image` ，用于生成 `HTMLImageElement` 实例
 
-    ```javascript
+    ```js
     var img = new Image();
     img instanceof Image // true
     img instanceof HTMLImageElement // true
@@ -14,7 +14,7 @@
 
   - `Image` 构造函数可以接受两个整数作为参数，分别表示 `<img>` 元素的宽度和高度
 
-    ```javascript
+    ```js
     // 语法
     Image(width, height)
 
@@ -24,7 +24,7 @@
 
   - `<img>` 实例的 `src` 属性可以定义图像的网址
 
-    ```javascript
+    ```js
     var img = new Image();
     img.src = 'picture.jpg';
     ```
@@ -33,7 +33,7 @@
 
   - 如果想让它显示在文档中，必须手动插入文档
 
-    ```javascript
+    ```js
     var img = new Image();
     img.src = 'image1.png';
     document.body.appendChild(img);
@@ -75,7 +75,7 @@
 
   - 图像加载完成，会触发 `onload` 属性指定的回调函数
 
-    ```javascript
+    ```js
     // HTML 代码为 <img src="example.jpg" onload="loadImage()">
     function loadImage() {
       console.log('Image is loaded');
@@ -84,7 +84,7 @@
 
   - 图像加载过程中发生错误，会触发 `onerror` 属性指定的回调函数
 
-    ```javascript
+    ```js
     // HTML 代码为 <img src="image.gif" onerror="myFunction()">
     function myFunction() {
       console.log('There is something wrong');

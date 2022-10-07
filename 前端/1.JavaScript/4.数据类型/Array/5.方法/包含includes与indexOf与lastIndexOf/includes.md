@@ -10,7 +10,7 @@
 
     - 如果为负值，则按升序从 `array.length + fromIndex` 的索引开始搜 （即使从末尾开始往前跳 `fromIndex` 的绝对值个索引，然后往后搜寻）
 
-        ```javascript
+        ```js
         // array length is 3
         // fromIndex is -100
         // computed index is 3 + (-100) = -97
@@ -27,7 +27,7 @@
 
     - 如果 `fromIndex` 大于等于数组的长度，则会返回 `false`，且该数组不会被搜索
 
-        ```javascript
+        ```js
         var arr = ['a', 'b', 'c'];
 
         arr.includes('c', 3);   // false
@@ -42,7 +42,7 @@
 
   - `includes()` 方法有意设计为通用方法。它不要求 `this` 值是数组对象，所以它可以被用于其他类型的对象 (比如类数组对象)
 
-    ```javascript
+    ```js
     (function() {
       console.log([].includes.call(arguments, 'a')); // true
       console.log([].includes.call(arguments, 'd')); // false
@@ -53,7 +53,7 @@
 
   - `includes`方法返回一个布尔值，表示某个数组是否包含给定的值，与字符串的 `includes` 方法类似
 
-    ```javascript
+    ```js
     [1, 2, 3].includes(2)     // true
     [1, 2, 3].includes(4)     // false
     [1, 2, NaN].includes(NaN) // true

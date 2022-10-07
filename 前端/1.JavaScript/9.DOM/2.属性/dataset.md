@@ -20,7 +20,7 @@
 
   - 代码
 
-    ```javascript
+    ```js
     var n = document.getElementById('mydiv');
     n.dataset.foo // bar
     n.dataset.foo = 'baz'
@@ -30,6 +30,6 @@
 
   - 代码
 
-    ```javascript
+    ```js
     delete document.getElementById('myDiv').dataset.foo;
     ```

@@ -8,7 +8,7 @@
 
     2.  大于或等于2的1024次方的数值，JavaScript 无法表示，会返回 `Infinity`
 
-        ```javascript
+        ```js
         // 超过 53 个二进制位的数值，无法保持精度
         Math.pow(2, 53) === Math.pow(2, 53) + 1 // true
 
@@ -24,14 +24,14 @@
 
 1.  可以用在一个整数字面量后面加 `n` 的方式定义一个 `BigInt`
 
-    ```javascript
+    ```js
     const theBiggestInt = 9007199254740991n;
 
     ```
 
 2.  调用函数 `BigInt()`（但不包含 `new` 运算符）并传递一个整数值或字符串值
 
-    ```javascript
+    ```js
     const alsoHuge = BigInt(9007199254740991);
     // 9007199254740991n
 
@@ -43,7 +43,7 @@
 
   - 使用 `typeof` 测试时， `BigInt` 对象返回 "bigint"
 
-    ```javascript
+    ```js
     typeof 1n === 'bigint'; // true
     typeof BigInt('1') === 'bigint'; // true
     ```
@@ -62,7 +62,7 @@
 
 3.  使用 `BigInt` 时，带小数的运算会被取整
 
-    ```javascript
+    ```js
     const expected = 4n / 2n;
     // 2n
 

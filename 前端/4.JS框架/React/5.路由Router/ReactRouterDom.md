@@ -4,13 +4,13 @@
 
   - `react-router-dom` 是应用程序中路由的库。`React`库中没有路由功能，需要单独安装`react-router-dom`
 
-    ```javascript
+    ```js
     http://127.0.0.1:3000/article/num1
     ```
 
   - `react-router-dom` 提供两个路由器 `BrowserRouter` 和 `HashRoauter`。前者基于 `url` 的 `pathname` 段，后者基于 `hash` 段
 
-    ```javascript
+    ```js
     http://127.0.0.1:3000/#/article/num1（不一定是这样，但#是少不了的）
     ```
 
@@ -32,13 +32,13 @@
 
   - 安装
 
-    ```javascript
+    ```js
     npm install react-router-dom -S
     ```
 
   - 引入
 
-    ```javascript
+    ```js
     import {BrowserRouter as Router} from 'react-router-dom'
     // 或者
     import {HashHistory as Router} from 'react-router-dom'
@@ -50,7 +50,7 @@
 
   - `BrowserRouter` 浏览器路由。URL 形式 `example.com/some/path`
 
-    ```javascript
+    ```js
     import { HashRouter, Route } from "react-router-dom";
 
     <BrowserRouter>
@@ -65,7 +65,7 @@
 
   - `HashHistory` 哈希路由。形式 `example.com/#/some/path`
 
-    ```javascript
+    ```js
     import { HashRouter, Route } from "react-router-dom";
 
     <HashRouter>
@@ -77,7 +77,7 @@
 
   - 示例 ：`/test` 同时匹配到了 `/test` 和 `/`
 
-    ```javascript
+    ```js
     <BrowserRouter>
       <div>
         <Route  path='/' component={Test} />
@@ -90,7 +90,7 @@
 
   - 代码
 
-    ```javascript
+    ```js
     import { BrowserRouter, Route, Switch } from "react-router-dom";
 
     <BrowserRouter>
@@ -105,7 +105,7 @@
 
   - render 判断
 
-    ```javascript
+    ```js
     const isLogin = false;
 
     // 表示 isLogo 为true时，显示<User /> 组件，负责重定向到 login 页面

@@ -24,7 +24,7 @@
 
   - 代码
 
-    ```javascript
+    ```js
     // 对象的属性或方法
     wx.canIUse('console.log')
     wx.canIUse('CameraContext.onCameraFrame')

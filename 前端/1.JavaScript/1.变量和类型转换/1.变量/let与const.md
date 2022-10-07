@@ -14,7 +14,7 @@
 
   - 不存在变量提升，所以必须先声明后使用
 
-    ```javascript
+    ```js
     a =2;
     let a; // 报错
     ```
@@ -25,12 +25,12 @@
 
     - 如果用 `let a = 1` `const` 声明时，把 **变量**放进 **TDZ** 中
 
-      ```javascript
+      ```js
       // ES5
       typeof(name); // 虽然没有声明，不会报错
       ```
 
-      ```javascript
+      ```js
       // ES6
       typeof(name); // 报错 name is not defined
       let name = '小刚刚';
@@ -43,7 +43,7 @@
 
   - 不允许重复声明
 
-    ```javascript
+    ```js
     // 3 个 i 不在同一个作用域
     let i = 10; // 报错
     for(let i = 0; i < 10;i++) {

@@ -16,13 +16,13 @@
 
   - 示例
 
-    ```javascript
+    ```js
     const obj2 = readonly({ a:' 张三' });
     console.log(isReadonly(obj2)); // false
 
     ```
 
-    ```javascript
+    ```js
     const obj1 = reactive({ a:' 张三' });
     const obj7 = readonly(obj1);
     console.log(isReadonly(obj7)); // true

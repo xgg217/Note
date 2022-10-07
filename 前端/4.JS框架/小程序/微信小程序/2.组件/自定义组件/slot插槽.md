@@ -41,7 +41,7 @@
     </view>
     ```
 
-    ```javascript
+    ```js
     // 自定义组件 js 文件
     // 开启多 slot
     Component({

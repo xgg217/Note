@@ -4,7 +4,7 @@
 
   - `Object.values` 方法返回一个数组，成员是参数对象自身的（不含继承的）所有可遍历（enumerable）属性的键值
 
-    ```javascript
+    ```js
     const obj = { foo: 'bar', baz: 42 };
     Object.values(obj)
     // ["bar", 42]
@@ -18,7 +18,7 @@
 
   - `Object.values` 只返回对象自身的可遍历属性
 
-    ```javascript
+    ```js
     const obj = Object.create({}, {p: {value: 42}});
     Object.values(obj) // []
     ```
@@ -27,7 +27,7 @@
 
   - 只要把 `enumerable` 改成 `true` ，`Object.values` 就会返回属性 `p` 的值
 
-    ```javascript
+    ```js
     const obj = Object.create({}, {p:
       {
         value: 42,
@@ -41,7 +41,7 @@
 
   - `Object.values` 会过滤属性名为 `Symbol` 值的属性
 
-    ```javascript
+    ```js
     Object.values({ [Symbol()]: 123, foo: 'abc' });
     // ['abc']
     ```

@@ -4,7 +4,7 @@
 
   - `File` API提供 `File` 对象，它是 `FileList` 对象的成员，包含了文件的一些元信息，比如文件名、上次改动时间、文件大小和文件类型
 
-    ```javascript
+    ```js
     var selected_file = document.getElementById('input').files[0];
 
     var fileName = selected_file.name;
@@ -24,7 +24,7 @@
 
   - `lastModifiedDate`：文件的上次修改时间，格式为 `Date` 对象实例
 
-    ```javascript
+    ```js
     $('#upload-file').files[0]
     // {
     //   lastModified: 1449370355682,

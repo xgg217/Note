@@ -4,7 +4,7 @@
 
   - ES6 模块也允许内嵌在网页中，语法行为与加载外部脚本完全一致
 
-    ```javascript
+    ```js
     <script type="module">
       import utils from "./utils.js";
 
@@ -16,13 +16,13 @@
 
   - 浏览器加载 ES6 模块，也使用 `<script>` 标签，但是要加入 `type="module"` 属性
 
-    ```javascript
+    ```js
     <script type="module" src="./foo.js"></script>
     ```
 
   - 浏览器对于带有 `type="module"` 的 `<script>` ，都是异步加载，不会造成堵塞浏览器，即等到整个页面渲染完，再执行模块脚本，等同于打开了 `<script>` 标签的 `defer` 属性
 
-    ```javascript
+    ```js
     <script type="module" src="./foo.js"></script>
     // 等同于
     <script type="module" src="./foo.js" defer></script>
@@ -32,7 +32,7 @@
 
   - `<script>` 标签的 `async` 属性也可以打开，这时只要加载完成，渲染引擎就会中断渲染立即执行。执行完成后，再恢复渲染
 
-    ```javascript
+    ```js
     <script type="module" src="./foo.js" async></script>
     ```
 
@@ -50,7 +50,7 @@
 
   - 同一个模块如果加载多次，将只执行一次
 
-    ```javascript
+    ```js
     import utils from 'https://example.com/js/utils.js';
 
     const x = 1;
@@ -61,6 +61,6 @@
 
   - 利用顶层的 `this` 等于 `undefined` 这个语法点，可以侦测当前代码是否在 ES6 模块之中
 
-    ```javascript
+    ```js
     const isNotModuleScript = this !== undefined;
     ```

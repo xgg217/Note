@@ -6,13 +6,13 @@
 
   - 默认数组的当前项的下标变量名默认为 `index`，数组当前项的变量名默认为 `item`
 
-    ```javascript
+    ```js
     <view wx:for="{{array}}">
       {{index}}: {{item.message}}
     </view>
     ```
 
-    ```javascript
+    ```js
     Page({
       data: {
         array: [{
@@ -26,7 +26,7 @@
 
   - 使用 `key`&#x20;
 
-    ```javascript
+    ```js
     <block wx:for="{{arr}}" wx:key="index">
       <text >{{ item.name }}</text>
     </block>
@@ -38,7 +38,7 @@
 
   - 使用 `wx:for-index` 可以指定数组当前下标的变量名：
 
-    ```javascript
+    ```js
     <view wx:for="{{array}}" wx:for-index="idx" wx:for-item="itemName">
       {{idx}}: {{itemName.message}}
     </view>
@@ -48,7 +48,7 @@
 
   - 代码
 
-    ```javascript
+    ```js
     // 九九乘法表
     <view wx:for="{{[1, 2, 3, 4, 5, 6, 7, 8, 9]}}" wx:for-item="i">
       <view wx:for="{{[1, 2, 3, 4, 5, 6, 7, 8, 9]}}" wx:for-item="j">
@@ -63,7 +63,7 @@
 
   - 类似 `block wx:if`，也可以将 `wx:for` 用在 `<block/>` 标签上，以渲染一个包含多节点的结构块
 
-    ```javascript
+    ```js
     <block wx:for="{{[1, 2, 3]}}">
       <view> {{index}}: </view>
       <view> {{item}} </view>

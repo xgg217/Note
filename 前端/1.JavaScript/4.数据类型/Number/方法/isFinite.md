@@ -4,7 +4,7 @@
 
   - `isFinite`方法返回一个布尔值，表示某个值是否为正常的数值
 
-        ```javascript
+        ```js
         isFinite(Infinity) // false
         isFinite(-Infinity) // false
         isFinite(NaN) // false

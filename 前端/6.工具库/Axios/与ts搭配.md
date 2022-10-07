@@ -4,11 +4,11 @@
 
   - axios 的安装使用和vue2上没有什么大的区别，如果需要做一些扩展属性，还是需要声明一个新的类型
 
-    ```javascript
+    ```js
     type Config = AxiosRequestConfig & {successNotice? : boolean, errorNotice? : boolean}
     ```
 
-    ```javascript
+    ```js
     import axios, { AxiosResponse, AxiosRequestConfig } from 'axios';
     import { ElMessage } from 'element-plus';
     const instance = axios.create({

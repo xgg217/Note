@@ -6,7 +6,7 @@
 
   - `Object.keys` 方法的参数是一个对象，返回一个数组。该数组的成员都是该对象自身的（而不是继承的）所有属性名
 
-    ```javascript
+    ```js
     // Object.keys
     var obj = {
       p1: 123,
@@ -16,7 +16,7 @@
     Object.keys(obj) // ["p1", "p2"]
     ```
 
-    ```javascript
+    ```js
     // Object.getOwnPropertyNames
     var obj = {
       p1: 123,

@@ -8,7 +8,7 @@
 
   - 返回值是一个用来停止该副作用的函数
 
-    ```javascript
+    ```js
     const count = ref(0)
 
     watchEffect(() => console.log(count.value))
@@ -22,7 +22,7 @@
 
   - 副作用清除
 
-    ```javascript
+    ```js
     watchEffect(async (onCleanup) => {
       const { response, cancel } = doAsyncWork(id.value)
       // `cancel` 会在 `id` 更改时调用
@@ -37,7 +37,7 @@
 
   - 停止侦听器
 
-    ```javascript
+    ```js
     const stop = watchEffect(() => {})
 
     // 当不再需要此侦听器时:

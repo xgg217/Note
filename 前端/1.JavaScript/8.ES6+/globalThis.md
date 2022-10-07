@@ -28,7 +28,7 @@
 
   - 未使用 `globalThis`
 
-    ```javascript
+    ```js
     var getGlobal = function () {
       if (typeof self !== 'undefined') { return self; }
       if (typeof window !== 'undefined') { return window; }
@@ -45,7 +45,7 @@
 
   - 有了 `globalThis` 之后，只需要
 
-    ```javascript
+    ```js
     if (typeof globalThis.setTimeout !== 'function') {
       //  此环境中没有 setTimeout 方法！
     }

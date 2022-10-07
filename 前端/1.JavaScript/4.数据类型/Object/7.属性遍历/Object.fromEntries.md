@@ -4,7 +4,7 @@
 
 - `Object.fromEntries()` 方法是 `Object.entries()` 的逆操作，用于将一个键值对数组转为对象
 
-    ```javascript
+    ```js
     Object.fromEntries([
       ['foo', 'bar'],
       ['baz', 42]
@@ -22,7 +22,7 @@
 
 - 示例1
 
-    ```javascript
+    ```js
     // 例一
     const entries = new Map([
       ['foo', 'bar'],
@@ -35,7 +35,7 @@
 
 - 示例2
 
-    ```javascript
+    ```js
     // 例二
     const map = new Map().set('foo', true).set('bar', false);
     Object.fromEntries(map)
@@ -46,7 +46,7 @@
 
 - 代码
 
-    ```javascript
+    ```js
     Object.fromEntries(new URLSearchParams('foo=bar&baz=qux'))
     // { foo: "bar", baz: "qux" }
     ```

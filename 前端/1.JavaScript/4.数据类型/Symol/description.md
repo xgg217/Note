@@ -8,7 +8,7 @@
 
   - 创建 Symbol 的时候，可以添加一个描述
 
-    ```javascript
+    ```js
     // sym的描述就是字符串foo
     const sym = Symbol('foo');
     ```
@@ -17,7 +17,7 @@
 
   - 代码
 
-    ```javascript
+    ```js
     // const sym = Symbol('foo');
     sym.description // "foo"
 

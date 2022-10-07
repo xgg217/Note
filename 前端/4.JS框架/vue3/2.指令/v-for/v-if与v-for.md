@@ -41,7 +41,7 @@
 
     ```
 
-    ```javascript
+    ```js
     <script>
     import { ref, computed } from "vue";
 

@@ -24,7 +24,7 @@
 
   - 用户的语言
 
-    ```javascript
+    ```js
     <open-data type="groupName"></open-data>
     <open-data type="userAvatarUrl"></open-data>
     <open-data type="userGender" lang="zh_CN"></open-data>

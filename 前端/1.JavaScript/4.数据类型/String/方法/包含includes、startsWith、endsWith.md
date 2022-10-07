@@ -18,14 +18,14 @@
 
   - 示例1
 
-    ```javascript
+    ```js
     // 区分大小写
     'Blue Whale'.includes('blue'); // returns false
     ```
 
   - 示例2
 
-    ```javascript
+    ```js
     var str = 'To be, or not to be, that is the question.';
 
     console.log(str.includes('To be'));       // true
@@ -47,7 +47,7 @@
 
   - 示例1
 
-    ```javascript
+    ```js
     var str = "To be, or not to be, that is the question.";
 
     alert(str.startsWith("To be"));         // true
@@ -61,7 +61,7 @@
 
   - 示例
 
-    ```javascript
+    ```js
     var str = "To be, or not to be, that is the question.";
 
     alert( str.endsWith("question.") );  // true

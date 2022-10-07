@@ -9,7 +9,7 @@
     <button type="button" class="import_but">导入系统</button>
     ```
 
-    ```javascript
+    ```js
     // 上传文件
     fileInput.addEventListener('change', function(e) {
       console.log(this.files[0]);

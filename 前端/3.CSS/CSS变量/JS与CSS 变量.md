@@ -10,13 +10,13 @@
     </div>
     ```
 
-    ```javascript
+    ```js
     ele.style.setProperty('--color', '#cd0000');
     ```
 
   - 设置
 
-    ```javascript
+    ```js
     // 在行内样式中设置变量
     element.style.setProperty("--my-var", jsVar + 4);
     ```
@@ -25,7 +25,7 @@
 
   - JS中获取CSS变量可以使用 `getPropertyValue()` 方法
 
-    ```javascript
+    ```js
     // 获取 --color CSS 变量值
     var cssVarColor = getComputedStyle(box).getPropertyValue('--color');
 

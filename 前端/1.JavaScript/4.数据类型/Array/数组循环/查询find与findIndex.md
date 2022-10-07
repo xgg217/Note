@@ -8,20 +8,20 @@
 
   - 如果没有符合条件的成员，则返回 `undefined`
 
-    ```javascript
+    ```js
     [1, 4, -5, 10].find((n) => n < 0)
     // -5
     ```
 
   - 上面代码中，`find` 方法的回调函数可以接受三个参数，依次为当前的值、当前的位置和原数组
 
-    ```javascript
+    ```js
     [1, 5, 10, 15].find(function(value, index, arr) {
       return value > 9;
     }) // 10
     ```
 
-    ```javascript
+    ```js
     const arr = [
       { loginId: "xmt", pwd: "123" },
       { loginId: "xh", pwd: "123" },
@@ -43,7 +43,7 @@
 
   - 数组实例的 `findIndex` 方法的用法与 `find` 方法非常类似，返回第一个符合条件的数组成员的位置，如果所有成员都不符合条件，则返回 `-1`
 
-    ```javascript
+    ```js
     [1, 5, 10, 15].findIndex(function(value, index, arr) {
       return value > 9;
     }) // 2
@@ -53,7 +53,7 @@
 
   - 代码
 
-    ```javascript
+    ```js
     /**
      * 在list中逐项查找，返回第一个通过predicate迭代函数真值检测的元素值，
       -  如果没有元素通过检测则返回 undefined

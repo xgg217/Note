@@ -6,7 +6,7 @@
 
       - **targetLength** （可选）`targetLength`指目标字符串长度。如果果`targetLength`设置的长度比字符串本身还要小，则原本的字符串原封不动返回
 
-        ```javascript
+        ```js
         'zhangxinxu'.padStart(5);
         // 结果还是'zhangxinxu'
 

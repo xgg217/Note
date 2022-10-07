@@ -48,7 +48,7 @@
 
   - 代码
 
-    ```javascript
+    ```js
     const readonly = function readonly(obj:object) {
       const newObj = {};
       for (const key in obj) {
