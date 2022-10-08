@@ -71,3 +71,25 @@
       // ...
     }
     ```
+
+    ```ts
+    type Rect = {
+      hegiht: number
+      width: number
+    }
+
+    type Circle = {
+      center: [number, number]
+      radius: number
+    }
+
+    function isRect(a: Rect | Circle): a is Rect {
+      return 'height' in a && 'width' in a
+    }
+
+    const f = (a: Rect | Circle) => {
+      if(isRect(a)) {
+        a.hegiht
+      }
+    }
+    ```
