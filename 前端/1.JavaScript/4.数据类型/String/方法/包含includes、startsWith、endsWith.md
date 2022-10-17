@@ -2,28 +2,28 @@
 
 ## includes()
 
-  - 用于判断一个字符串是否包含在另一个字符串中，根据情况返回 `true` 或 `false`
+- 用于判断一个字符串是否包含在另一个字符串中，根据情况返回 `true` 或 `false`
 
-  - 升级版 `String.indexOf`
+- 升级版 `String.indexOf`
 
-  - 区分大小写
+- 区分大小写
 
-  - 语法： `str.includes(searchString[, position])`
+- 语法： `str.includes(searchString[, position])`
 
-      - `searchString` 要在此字符串中搜索的字符串
+  - `searchString` 要在此字符串中搜索的字符串
 
-      - `position` : 可选。从当前字符串的哪个索引位置开始搜寻子字符串，默认值为0
+  - `position` : 可选。从当前字符串的哪个索引位置开始搜寻子字符串，默认值为0
 
-      - 返回值： 如果当前字符串包含被搜寻的字符串，就返回 true；否则返回 `false`
+  - 返回值： 如果当前字符串包含被搜寻的字符串，就返回 true；否则返回 `false`
 
-  - 示例1
+- 示例1
 
     ```js
     // 区分大小写
     'Blue Whale'.includes('blue'); // returns false
     ```
 
-  - 示例2
+- 示例2
 
     ```js
     var str = 'To be, or not to be, that is the question.';
@@ -37,15 +37,15 @@
 
 ## startsWith()
 
-  - 用来判断当前字符串是否是以另外一个给定的子字符串“开头”的，根据判断结果返回 `true` 或 `false`
+- 用来判断当前字符串是否是以另外一个给定的子字符串“开头”的，根据判断结果返回 `true` 或 `false`
 
-  - 语法： `str.startsWith(searchString[, position])`
+- 语法： `str.startsWith(searchString[, position])`
 
-      - `searchString` :要搜索的子字符串
+  - `searchString` :要搜索的子字符串
 
-      - `position`: 在 str 中搜索 searchString 的开始位置，默认值为 0，也就是真正的字符串开头处
+  - `position`: 在 str 中搜索 searchString 的开始位置，默认值为 0，也就是真正的字符串开头处
 
-  - 示例1
+- 示例1
 
     ```js
     var str = "To be, or not to be, that is the question.";
@@ -57,9 +57,9 @@
 
 ## endsWith()
 
-  - 方法用来判断当前字符串是否是以另外一个给定的子字符串“结尾”的，根据判断结果返回 `true` 或 `false`
+- 方法用来判断当前字符串是否是以另外一个给定的子字符串“结尾”的，根据判断结果返回 `true` 或 `false`
 
-  - 示例
+- 示例
 
     ```js
     var str = "To be, or not to be, that is the question.";

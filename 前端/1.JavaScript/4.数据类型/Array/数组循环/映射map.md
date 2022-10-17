@@ -2,9 +2,9 @@
 
 ## 语法
 
-  - `var new_array = arr.map(function callback(currentValue[, index[, array]])[,thisArg])`
+- `var new_array = arr.map(function callback(currentValue[, index[, array]])[,thisArg])`
 
-  - 返回值 : 一个新数组，每个元素都是回调函数的结果
+- 返回值 : 一个新数组，每个元素都是回调函数的结果
 
     ```js
     // 求数组中每个元素的平方根
@@ -26,7 +26,7 @@
 
 ## 面试题
 
-  - 代码
+- 代码
 
     ```js
     ["1", "2", "3"].map(parseInt); // [1, NaN, NaN]
@@ -39,7 +39,7 @@
 
 ## 源码
 
-  - 代码
+- 代码
 
     ```js
     /**

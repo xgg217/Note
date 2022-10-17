@@ -2,37 +2,37 @@
 
 ## 语法
 
-  - `arr.reduce(callback(accumulator, element[, index[, array]])[, initialValue])`
+- `arr.reduce(callback(accumulator, element[, index[, array]])[, initialValue])`
 
-      - `accumulator` ：累计器累计回调的返回值; 它是上一次调用回调时返回的累积值，或 `initialValue`（见于下方）
+  - `accumulator` ：累计器累计回调的返回值; 它是上一次调用回调时返回的累积值，或 `initialValue`（见于下方）
 
-      - `element`：数组中正在处理的元素
+  - `element`：数组中正在处理的元素
 
-      - `index`(可选)
+  - `index`(可选)
 
-      - `array`(可选)
+  - `array`(可选)
 
-      - `initialValue`(可选):作为第一次调用 `callback` 函数时的第一个参数的值。 如果没有提供初始值，则将使用数组中的第一个元素。 在没有初始值的空数组上调用 `reduce` 将报错
+  - `initialValue`(可选):作为第一次调用 `callback` 函数时的第一个参数的值。 如果没有提供初始值，则将使用数组中的第一个元素。 在没有初始值的空数组上调用 `reduce` 将报错
 
-  - 返回值:函数累计处理的结果
+- 返回值:函数累计处理的结果
 
 ## 注意
 
-  - 方法对累计器和数组中的每个元素（从左到右）应用一个函数，将其简化为单个值
+- 方法对累计器和数组中的每个元素（从左到右）应用一个函数，将其简化为单个值
 
-  - 回调函数第一次执行时，`accumulator` 和 `element` 的取值有两种情况：
+- 回调函数第一次执行时，`accumulator` 和 `element` 的取值有两种情况：
 
-      - 如果调用 `reduce()` 时提供了 `initialValue`，`accumulator` 取值为`initialValue`，`element` 取数组中的第一个值；
+  - 如果调用 `reduce()` 时提供了 `initialValue`，`accumulator` 取值为`initialValue`，`element` 取数组中的第一个值；
 
-      - 如果没有提供 `initialValue`，那么`accumulator`取数组中的第一个值， `element`取数组中的第二个值
+  - 如果没有提供 `initialValue`，那么`accumulator`取数组中的第一个值， `element`取数组中的第二个值
 
-      - **注意**：如果没有提供 `initialValue`，`reduce` 会从索引1的地方开始执行 `callback` 方法，跳过第一个索引。如果提供`initialValue`，从索引0开始
+  - **注意**：如果没有提供 `initialValue`，`reduce` 会从索引1的地方开始执行 `callback` 方法，跳过第一个索引。如果提供`initialValue`，从索引0开始
 
-      - **提供初始值通常更安全**
+  - **提供初始值通常更安全**
 
 ## 示例
 
-  - 加对象数组里的值
+- 加对象数组里的值
 
     ```js
     var initialValue = 0;
@@ -42,7 +42,7 @@
     console.log(sum) // 6
     ```
 
-  - 将二维数组转化为一维
+- 将二维数组转化为一维
 
     ```js
     var flattened = [[0, 1], [2, 3], [4, 5]].reduce(function(a, b) {
@@ -51,7 +51,7 @@
     // flattened is [0, 1, 2, 3, 4, 5]
     ```
 
-  - 计算数组中每个元素出现的次数
+- 计算数组中每个元素出现的次数
 
     ```js
     var names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice'];
@@ -68,7 +68,7 @@
 
 ## 源码
 
-  - 代码
+- 代码
 
     ```js
     /**
