@@ -16,7 +16,7 @@
 
   - `overflow` 不等于 `visible` 的块盒
 
-![](image/格式化上下文_B9SKExAa3q.png)
+  ![格式化上下文](image/格式化上下文_B9SKExAa3q.png)
 
 - 不同的 BFC 区域,他进行渲染时互不干扰
 
