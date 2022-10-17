@@ -2,7 +2,7 @@
 
 ## 更少的嵌套，尽早 Return
 
-  - 常规
+- 常规
 
     ```js
     function test(fruit, quantity) {
@@ -30,7 +30,7 @@
     test('apple', 20); // print: red, big quantity
     ```
 
-  - 当发现无效语句时，尽早 `return`
+- 当发现无效语句时，尽早 `return`
 
     ```js
     function test(fruit, quantity) {
