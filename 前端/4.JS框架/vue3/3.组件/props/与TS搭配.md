@@ -2,11 +2,11 @@
 
 ## 概述
 
-  - 为了在声明 `props` 选项时获得完整的类型推断支持，我们可以使用 `defineProps` API，它将自动地在 `script setup` 中使用
+- 为了在声明 `props` 选项时获得完整的类型推断支持，我们可以使用 `defineProps` API，它将自动地在 `script setup` 中使用
 
 ## Props标注类型
 
-  - 从它的参数中推导类型
+- 从它的参数中推导类型
 
     ```typescript
     <script setup lang="ts">
@@ -20,7 +20,7 @@
     </script>
     ```
 
-  - 通过泛型参数来定义 `prop` 的类型通常更直接
+- 通过泛型参数来定义 `prop` 的类型通常更直接
 
     ```typescript
     <script setup lang="ts">
@@ -45,7 +45,7 @@
 
 ## 语法限制
 
-  - 接口或对象字面类型可以包含从其他文件导入的类型引用，但是，传递给 `defineProps` 的泛型参数本身**不能**是一个导入的类型：
+- 接口或对象字面类型可以包含从其他文件导入的类型引用，但是，传递给 `defineProps` 的泛型参数本身**不能**是一个导入的类型：
 
     ```typescript
     import type { Props } from './other-file'

@@ -2,27 +2,27 @@
 
 ## Reducer 基本使用
 
-  - 是用于改变数据的函数
+- 是用于改变数据的函数
 
-  - 因为 `store` 在收到我们传递过去的 `action` 之后需要对 `state` 进行更新，这个计算过程就叫做 `reducer`
+- 因为 `store` 在收到我们传递过去的 `action` 之后需要对 `state` 进行更新，这个计算过程就叫做 `reducer`
 
-  - 一个数据仓库，有且仅有一个 ` reducer`，并且通常情况下，一个工程有且仅有一个仓库
+- 一个数据仓库，有且仅有一个 `reducer`，并且通常情况下，一个工程有且仅有一个仓库
 
-  - `reducer`是一个函数，接受 `state` 和 `action` 作为参数，返回一个新的 `state`。（和Vuex中的 `Mutation` 一致）
+- `reducer`是一个函数，接受 `state` 和 `action` 作为参数，返回一个新的 `state`。（和Vuex中的 `Mutation` 一致）
 
-  - 为了方便管理，通常会将 `reducer` 放到单独的文件中
+- 为了方便管理，通常会将 `reducer` 放到单独的文件中
 
 ## reducer 被调用的时机
 
-1.  通过 `store.dispatch()` 分发一个 `action`
+1. 通过 `store.dispatch()` 分发一个 `action`
 
-2.  当创建一个 `store` 的时候，会调用一次
+2. 当创建一个 `store` 的时候，会调用一次
 
-3.  可以利用这点用于 `reducer` 初始化状态
+3. 可以利用这点用于 `reducer` 初始化状态
 
-4.  创建仓库时，不传递任何默认值
+4. 创建仓库时，不传递任何默认值
 
-5.  将 `reducer` 的参数 `state` 设置一个默认值
+5. 将 `reducer` 的参数 `state` 设置一个默认值
 
 ```js
 import { ADD, DEL, SET } from "redux/action/action-type";
@@ -69,7 +69,7 @@ import { ADD, DEL, SET } from "redux/action/action-type";
 
 ## reducer 设置
 
-  - `reducer` 内部通常使用 `switch` 来判断 `type` 的值
+- `reducer` 内部通常使用 `switch` 来判断 `type` 的值
 
 ```js
 /**
@@ -110,27 +110,27 @@ import { ADD, DEL, SET } from "redux/action/action-type";
 
 ## reducer 要求
 
-  - `reducer` **必须**是一个没有副作用的**纯函数**
+- `reducer` **必须**是一个没有副作用的**纯函数**
 
-  - 有利于测试和调试
+- 有利于测试和调试
 
-  - 有利于还原数据
+- 有利于还原数据
 
-  - 有利于将来和 `react` 结合时的优化
+- 有利于将来和 `react` 结合时的优化
 
-  - 不能改变参数，一次因此若要让状态变化，必须得到一个新的状态
+- 不能改变参数，一次因此若要让状态变化，必须得到一个新的状态
 
-  - 不能有异步
+- 不能有异步
 
-  - 不能对外部环境（`cookie` `localStorge`）造成影响
+- 不能对外部环境（`cookie` `localStorge`）造成影响
 
 ## combineReducers
 
-  - 由于在大中型项目中，操作比较复杂，数据结构也比较复杂，因此需要对 `reducer` 进行细化
+- 由于在大中型项目中，操作比较复杂，数据结构也比较复杂，因此需要对 `reducer` 进行细化
 
-  - `redux` 提供了方法（`combineReducers`），可以帮助我们更加方便的合并 `reducer`
+- `redux` 提供了方法（`combineReducers`），可以帮助我们更加方便的合并 `reducer`
 
-  - `combineReducers`：合并 `reducer` 得到一个新的 `reducer`，该新的 `reducer` 管理一个对象，该对象中的每一个属性交给对应的 `reducer` 管理
+- `combineReducers`：合并 `reducer` 得到一个新的 `reducer`，该新的 `reducer` 管理一个对象，该对象中的每一个属性交给对应的 `reducer` 管理
 
 ```js
 import { createStore, bindActionCreators } from 'redux'
@@ -184,7 +184,7 @@ import { createStore, bindActionCreators } from 'redux'
 
 ## 示例代码
 
-  - action 设置
+- action 设置
 
 ```js
 // usersAction.js
@@ -398,8 +398,8 @@ import { createStore } from 'redux'
 
 ```
 
-  - 使用
+- 使用
 
-  - 合并 reducer
+- 合并 reducer
 
-  - 细分 reducer
+- 细分 reducer

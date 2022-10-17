@@ -2,19 +2,19 @@
 
 ## 作用
 
-  - `router-link` 通过一个作用域插槽暴露底层的定制能力
+- `router-link` 通过一个作用域插槽暴露底层的定制能力
 
 ## 插槽 prop
 
-  - `href`：解析后的 URL。将会作为一个 a 元素的 `href attribute`
+- `href`：解析后的 URL。将会作为一个 a 元素的 `href attribute`
 
-  - `route`：解析后的规范化的地址
+- `route`：解析后的规范化的地址
 
-  - `navigate`：触发导航的函数。会在必要时自动阻止事件，和 `router-link` 同理
+- `navigate`：触发导航的函数。会在必要时自动阻止事件，和 `router-link` 同理
 
-  - `isActive`：如果需要应用激活的 `class` 则为 `true`。允许应用一个任意的 `class`
+- `isActive`：如果需要应用激活的 `class` 则为 `true`。允许应用一个任意的 `class`
 
-  - `isExactActive`：如果需要应用精确激活的 `class` 则为 `true`。允许应用一个任意的 `class`
+- `isExactActive`：如果需要应用精确激活的 `class` 则为 `true`。允许应用一个任意的 `class`
 
     ```html
     <router-link

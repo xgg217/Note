@@ -2,7 +2,7 @@
 
 ## useReducer 使用
 
-  - 代码
+- 代码
 
     ```js
     import React,{ useState, useReducer } from 'react'
@@ -40,7 +40,7 @@
     export default Reducer
     ```
 
-  - `useReducer` 第三个参数的使用。会将第**二**个参数传入第三个函数的**参数**中，然后第三个函数的返回值作为默认值
+- `useReducer` 第三个参数的使用。会将第**二**个参数传入第三个函数的**参数**中，然后第三个函数的返回值作为默认值
 
     ```js
     const [n, dispatch] = useReducer(nReducer, 10, (asg) => {
@@ -50,7 +50,7 @@
 
 ## 源码
 
-  - 代码
+- 代码
 
     ```js
     import React, { useState } from 'react'

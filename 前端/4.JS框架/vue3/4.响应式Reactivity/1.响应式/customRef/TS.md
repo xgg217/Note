@@ -2,7 +2,7 @@
 
 ## TS类型
 
-  - 类型
+- 类型
 
     ```typescript
     function customRef<T>(factory: CustomRefFactory<T>): Ref<T>

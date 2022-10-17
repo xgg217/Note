@@ -2,9 +2,9 @@
 
 ## 文档
 
-  - \<a href="[https://uniapp.dcloud.io/uniCloud/README](https://uniapp.dcloud.io/uniCloud/README "https://uniapp.dcloud.io/uniCloud/README")">参考文档\</a>
+- \<a href="[https://uniapp.dcloud.io/uniCloud/README](https://uniapp.dcloud.io/uniCloud/README "https://uniapp.dcloud.io/uniCloud/README")">参考文档\</a>
 
-  - \<a href="[https://unicloud.dcloud.net.cn](https://unicloud.dcloud.net.cn "https://unicloud.dcloud.net.cn")">web控制台文档\</a>
+- \<a href="[https://unicloud.dcloud.net.cn](https://unicloud.dcloud.net.cn "https://unicloud.dcloud.net.cn")">web控制台文档\</a>
 
 ## uniclound 介绍
 
@@ -14,22 +14,22 @@
 
 ## 优点
 
-  - 用 JS 开发前后台整体业务
+- 用 JS 开发前后台整体业务
 
-  - 非 H5 项目免域名使用服务器
+- 非 H5 项目免域名使用服务器
 
-  - 敏捷性业务处理，不需要前后端分离开发
+- 敏捷性业务处理，不需要前后端分离开发
 
 ## uniclound 开发流程
 
-1.  项目
+1. 项目
 
-2.  云环境
+2. 云环境
 
-3.  编写代码
+3. 编写代码
 
-4.  云函数
+4. 云函数
 
-5.  serverless
+5. serverless
 
-6.  调用
+6. 调用

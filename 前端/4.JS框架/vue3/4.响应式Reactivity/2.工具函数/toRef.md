@@ -2,13 +2,13 @@
 
 ## 概述
 
-  - 可用于为响应式对象 (`reactive`)上的 `property` 创建 `ref`
+- 可用于为响应式对象 (`reactive`)上的 `property` 创建 `ref`
 
-  - 这样创建的 `ref` 与其源 `property` 保持同步：改变源 `property` 将更新 ref，反之亦然
+- 这样创建的 `ref` 与其源 `property` 保持同步：改变源 `property` 将更新 ref，反之亦然
 
 ## toRef
 
-  - 得到一个响应式对象某个属性的 `ref` 格式
+- 得到一个响应式对象某个属性的 `ref` 格式
 
     ```typescript
     const info = reactive({
@@ -32,7 +32,7 @@
 
 ## 注意点
 
-  - 这不同于
+- 这不同于
 
     ```typescript
     const state = reactive({
@@ -43,11 +43,11 @@
 
     ```
 
-  - 上面这个 ref **不会**和 `state.foo` 保持同步，因为这个 `ref()` 接收到的是一个纯数值
+- 上面这个 ref **不会**和 `state.foo` 保持同步，因为这个 `ref()` 接收到的是一个纯数值
 
 ## TS类型
 
-  - 类型
+- 类型
 
     ```typescript
     function toRef<T extends object, K extends keyof T>(
@@ -61,7 +61,7 @@
 
 ## 使用场景
 
-1.  想把一个 `prop` 的 `ref` 传递给一个组合式函数时会很有用
+1. 想把一个 `prop` 的 `ref` 传递给一个组合式函数时会很有用
 
     ```typescript
     <script setup>

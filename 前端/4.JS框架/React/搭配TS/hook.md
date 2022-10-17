@@ -2,7 +2,7 @@
 
 ## useState
 
-  - 大多数情况下，useState 的类型可以从初始化值推断出来。但当我们初始化值为 null、undefined或者对象以及数组的时候，我们需要制定 useState 的类型
+- 大多数情况下，useState 的类型可以从初始化值推断出来。但当我们初始化值为 null、undefined或者对象以及数组的时候，我们需要制定 useState 的类型
 
     ```js
     // 可以推断 age 是 number类型
@@ -41,7 +41,7 @@
 
 ## useEffect
 
-  - useEffect 用来在组件完成渲染之后增加副作用(side effect)，可以返回一个函数，用来做一些状态还原、移除listener等 clean up的操作。不需要处理返回值，所以可以不指定他的类型
+- useEffect 用来在组件完成渲染之后增加副作用(side effect)，可以返回一个函数，用来做一些状态还原、移除listener等 clean up的操作。不需要处理返回值，所以可以不指定他的类型
 
     ```js
     useEffect(() => {
@@ -60,7 +60,7 @@
 
 ## useMemo、useCallback
 
-  - 对于 useMemo 和 useCallback 我们可以从函数的返回值中推断出来他们返回的类型，需要显示指定
+- 对于 useMemo 和 useCallback 我们可以从函数的返回值中推断出来他们返回的类型，需要显示指定
 
     ```js
     const age = 12;
@@ -87,7 +87,7 @@
 
 ## useRef
 
-  - 场景一： 和 hook 之前的 ref 类似，用来关联一个 Dom节点或者 class component 实例，从而可以直接操作 Dom节点 或者class component 的方法。 常会给 ref 的 readonly 属性 current 初始化为 null，直到 ref 关联到组件上。 通常我们需要指定 useRef 的类型，参考如下:
+- 场景一： 和 hook 之前的 ref 类似，用来关联一个 Dom节点或者 class component 实例，从而可以直接操作 Dom节点 或者class component 的方法。 常会给 ref 的 readonly 属性 current 初始化为 null，直到 ref 关联到组件上。 通常我们需要指定 useRef 的类型，参考如下:
 
     ```js
     const RRDTextInput = () => {
@@ -100,7 +100,7 @@
 
     ```
 
-  - 场景二：使用 ref 替代 class component 中的实例属性，这种场景我们可以从初始化值中推断出类型，current 也是可修改的
+- 场景二：使用 ref 替代 class component 中的实例属性，这种场景我们可以从初始化值中推断出类型，current 也是可修改的
 
     ```js
     // 推断 current 是 number 类型
@@ -109,9 +109,9 @@
 
 ## useReducer
 
-  - useReducer 可以认为是简配版的redux，可以让我们把复杂、散落在四处的useState，setState 集中到 reducer中统一处理
+- useReducer 可以认为是简配版的redux，可以让我们把复杂、散落在四处的useState，setState 集中到 reducer中统一处理
 
-  - 类似我们同样可以从reducer 函数(state逻辑处理函数)中推断出useReducer 返回的 state 和 dispatch 的 action类型，所以无需在显示的声明，参考如下实例：
+- 类似我们同样可以从reducer 函数(state逻辑处理函数)中推断出useReducer 返回的 state 和 dispatch 的 action类型，所以无需在显示的声明，参考如下实例：
 
     ```js
     type ReducerAction =
@@ -175,7 +175,7 @@
 
 ## useImperativeHandle
 
-  - useImperativeHandle 是 hook 中提供的允许我们 ref 一个function component 的方案，也是 Hook 在 TypeScript 中使用最复杂的场景。 我们先来看下面的Demo，一个RN转盘组件：
+- useImperativeHandle 是 hook 中提供的允许我们 ref 一个function component 的方案，也是 Hook 在 TypeScript 中使用最复杂的场景。 我们先来看下面的Demo，一个RN转盘组件：
 
     ```js
     // 第一步：定义转盘抽奖组件对外暴露的接口 start、stop

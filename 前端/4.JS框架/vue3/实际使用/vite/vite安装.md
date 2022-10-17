@@ -2,7 +2,7 @@
 
 ## 安装
 
-  - npm
+- npm
 
     ```bash
     # npm 7+，需要加上额外的双短横线
@@ -12,16 +12,16 @@
     $ npm run dev
     ```
 
-  - yarn
+- yarn
 
     ```bash
-    $ yarn create vite-app <project-name>
-    $ cd <project-name>
-    $ yarn
-    $ yarn dev
+    yarn create vite-app <project-name>
+    cd <project-name>
+    yarn
+    yarn dev
     ```
 
-  - vue3 + ts
+- vue3 + ts
 
     ```bash
     npm init @vitejs/app

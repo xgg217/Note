@@ -2,7 +2,7 @@
 
 ## 无须指定key
 
-  - 当使用 `v-if` `v-else-if` `v-else` 分支的时候，不再需要指定 `key` 值，因为 vue3 会自动给予每个分支一个唯一的 `key`
+- 当使用 `v-if` `v-else-if` `v-else` 分支的时候，不再需要指定 `key` 值，因为 vue3 会自动给予每个分支一个唯一的 `key`
 
     ```html
     <!-- vue 2 需要添加 key值 -->

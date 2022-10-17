@@ -2,11 +2,11 @@
 
 ## action 基本使用
 
-  - action 是平面对象。`action.__proto__ === Object.prototype`
+- action 是平面对象。`action.__proto__ === Object.prototype`
 
-  - `action` 是 `store` 数据的唯一来源
+- `action` 是 `store` 数据的唯一来源
 
-  - 指的是需要变化的数据，**必须**要有一个 `type` 属性（类型没有要求）和一些需要在 `state` 中修改的属性。（和 `Vuex` 中 `Mutation` 的 `payload` 参数一致，因为我们是在 `Mutation` 手动写好对应关系，所以不需要传递 `type`）
+- 指的是需要变化的数据，**必须**要有一个 `type` 属性（类型没有要求）和一些需要在 `state` 中修改的属性。（和 `Vuex` 中 `Mutation` 的 `payload` 参数一致，因为我们是在 `Mutation` 手动写好对应关系，所以不需要传递 `type`）
 
     ```js
     const action = {
@@ -15,7 +15,7 @@
     };
     ```
 
-  - 在大型项目中，由于操作类型非常多，为了避免硬编码（hard code），会将 `action` 的类型存放到一个或一些单独文件中
+- 在大型项目中，由于操作类型非常多，为了避免硬编码（hard code），会将 `action` 的类型存放到一个或一些单独文件中
 
     ```js
     // 避免硬编码
@@ -23,7 +23,7 @@
     export const DECEASE = Symbol('decease');
     ```
 
-  - 为了方便传递 `action` ，通常会使用 `action` 创建函数来创建 `action`
+- 为了方便传递 `action` ，通常会使用 `action` 创建函数来创建 `action`
 
     ```js
     import * as actionType from './action-type';
@@ -34,19 +34,19 @@
     }
     ```
 
-  - `action` 创建函数应为无副作用的纯函数
+- `action` 创建函数应为无副作用的纯函数
 
-    1.  不能以任何形式修改参数；
+    1. 不能以任何形式修改参数；
 
-    2.  不可以有异步；
+    2. 不可以有异步；
 
-    3.  不可以对外部环境中的数据造成影响
+    3. 不可以对外部环境中的数据造成影响
 
 ## binActionCreators
 
-  - 为了方便利用 `action` 创建函数来分发（触发）`action` ，`redux` 提供了一个函数 `binActionCreators`
+- 为了方便利用 `action` 创建函数来分发（触发）`action` ，`redux` 提供了一个函数 `binActionCreators`
 
-  - `binActionCreators` :该函数用于增强 `action` 创建函数的功能，使它不仅仅可以创建 `action` ，并且创建后自动完成分发
+- `binActionCreators` :该函数用于增强 `action` 创建函数的功能，使它不仅仅可以创建 `action` ，并且创建后自动完成分发
 
     ```js
     // action-type.js

@@ -2,7 +2,7 @@
 
 ## 类型定义
 
-  - 定义
+- 定义
 
     ```typescript
     interface Ref<T> {
@@ -15,7 +15,7 @@
 
 ## 标注类型TS 默认推导其类型
 
-  - ref 会根据初始化时的值推导其类型
+- ref 会根据初始化时的值推导其类型
 
     ```typescript
     import { ref } from 'vue'
@@ -77,7 +77,7 @@
 
 ## 注意
 
-  - 如果你指定了一个泛型参数但没有给出初始值，那么最后得到的就将是一个包含 `undefined` 的联合类型
+- 如果你指定了一个泛型参数但没有给出初始值，那么最后得到的就将是一个包含 `undefined` 的联合类型
 
     ```typescript
     // 推导得到的类型：Ref<number | undefined>

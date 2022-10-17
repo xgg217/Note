@@ -2,9 +2,9 @@
 
 ## useRef 函数
 
-1.  一个参数：默认值
+1. 一个参数：默认值
 
-2.  返回一个固定的对象
+2. 返回一个固定的对象
 
     \`\`\`js
 
@@ -18,7 +18,7 @@
 
 ## 实际应用
 
-  - 未使用之前
+- 未使用之前
 
     ```js
     import React,{ useState } from 'react';
@@ -39,7 +39,7 @@
     export default App;
     ```
 
-  - 使用 useRef
+- 使用 useRef
 
     ```js
     import React,{ useState, useRef } from 'react';

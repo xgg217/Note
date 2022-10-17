@@ -2,7 +2,7 @@
 
 ## 类型定义
 
-  - 类型定义
+- 类型定义
 
     ```typescript
     function reactive<T extends object>(target: T): UnwrapNestedRefs<T>
@@ -10,7 +10,7 @@
 
 ## 标注类型TS 默认推导
 
-  - `reactive()` 也会隐式地从它的参数中推导类型
+- `reactive()` 也会隐式地从它的参数中推导类型
 
     ```typescript
     import { reactive } from 'vue'

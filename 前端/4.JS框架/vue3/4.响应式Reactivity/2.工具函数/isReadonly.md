@@ -2,11 +2,11 @@
 
 ## 概述
 
-  - 判断某个数据是否是通过`readonly()` 或 `shallowReadonly()` 创建的
+- 判断某个数据是否是通过`readonly()` 或 `shallowReadonly()` 创建的
 
 ## TS类型
 
-  - 类型
+- 类型
 
     ```typescript
     function isReadonly(value: unknown): boolean
@@ -14,7 +14,7 @@
 
 ## 示例
 
-  - 示例
+- 示例
 
     ```js
     const obj2 = readonly({ a:' 张三' });

@@ -2,7 +2,7 @@
 
 ## 概述
 
-  - 为了在声明 `emits` 选项时获得完整的类型推断支持，我们可以使用 `defineEmits` API，它将自动地在 `script setup` 中使用
+- 为了在声明 `emits` 选项时获得完整的类型推断支持，我们可以使用 `defineEmits` API，它将自动地在 `script setup` 中使用
 
 ## 标注类型
 

@@ -2,9 +2,9 @@
 
 ## props
 
-  - 使用 `props` 需要用到 `defineProps` 来定义，具体用法跟之前的 `props` 写法类似
+- 使用 `props` 需要用到 `defineProps` 来定义，具体用法跟之前的 `props` 写法类似
 
-  - 基础用法
+- 基础用法
 
     ```js
     <script lang="ts" setup>
@@ -14,7 +14,7 @@
     </script>
     ```
 
-  - 构造函数进行检查 给props定义类型：
+- 构造函数进行检查 给props定义类型：
 
     ```js
     const props = defineProps({
@@ -26,7 +26,7 @@
     });
     ```
 
-  - 使用类型注解进行检查
+- 使用类型注解进行检查
 
     ```js
     defineProps<{
@@ -51,7 +51,7 @@
     }>()
     ```
 
-  - 使用类型声明时的默认 props 值
+- 使用类型声明时的默认 props 值
 
     ```js
     interface Props {
