@@ -2,7 +2,7 @@
 
 ## try-catch 错误捕获
 
-  - 示例
+- 示例
 
     ```js
     async function read(url) {

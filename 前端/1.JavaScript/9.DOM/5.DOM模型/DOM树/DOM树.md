@@ -2,6 +2,6 @@
 
 ## 继承关系
 
-  - 继承关闭
+- 继承关闭
 
-    ![](image/DOM树_gi9-ZmJ-E1.png)
+    ![DOM树](image/DOM树.png)
