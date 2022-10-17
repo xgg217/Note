@@ -2,7 +2,7 @@
 
 ## Map 转为 JSON
 
-  - 一种情况是，`Map` 的键名都是字符串，这时可以选择转为对象 `JSON`
+- 一种情况是，`Map` 的键名都是字符串，这时可以选择转为对象 `JSON`
 
     ```js
     function strMapToJson(strMap) {
@@ -14,7 +14,7 @@
     // '{"yes":true,"no":false}'
     ```
 
-  - 另一种情况是，`Map` 的键名有非字符串，这时可以选择转为数组 `JSON`
+- 另一种情况是，`Map` 的键名有非字符串，这时可以选择转为数组 `JSON`
 
     ```js
     function mapToArrayJson(map) {
@@ -28,7 +28,7 @@
 
 ## JSON 转为 Map
 
-  - JSON 转为 Map，正常情况下，所有键名都是字符串
+- JSON 转为 Map，正常情况下，所有键名都是字符串
 
     ```js
     function jsonToStrMap(jsonStr) {
@@ -39,9 +39,9 @@
     // Map {'yes' => true, 'no' => false}
     ```
 
-  - 有一种特殊情况，整个 `JSON` 就是一个数组，且每个数组成员本身，又是一个有两个成员的数组
+- 有一种特殊情况，整个 `JSON` 就是一个数组，且每个数组成员本身，又是一个有两个成员的数组
 
-  - 这时，它可以一一对应地转为 `Map`。这往往是 `Map` 转为数组 `JSON` 的逆操作
+- 这时，它可以一一对应地转为 `Map`。这往往是 `Map` 转为数组 `JSON` 的逆操作
 
     ```js
     function jsonToMap(jsonStr) {

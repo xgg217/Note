@@ -2,7 +2,7 @@
 
 ## Set 转 数组
 
-  - `Set` --> `Array`
+- `Set` --> `Array`
 
     ```js
     const s = new Set([5,64,5,46]);
@@ -12,7 +12,7 @@
 
 ## 数组 转 Set
 
-  - `Array` --> `Set`
+- `Array` --> `Set`
 
     ```js
     let myArray = ["value1", "value2", "value3"];
@@ -21,7 +21,7 @@
 
 ## 数组去重
 
-  - 示例
+- 示例
 
     ```js
     const arr = [12, 2, 23, 12, 2]);
