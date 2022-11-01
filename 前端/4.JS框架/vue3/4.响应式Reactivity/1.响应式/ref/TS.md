@@ -31,7 +31,7 @@
 
   1. 指定类型：通过泛型参数的形式来给 `ref()` 增加类型 **推荐**
 
-    ```typescript
+    ```ts
     import { ref } from 'vue'
     import type { Ref } from 'vue'
 
@@ -40,7 +40,7 @@
     year.value = 2020 // 成功！
     ```
 
-    ```typescript
+    ```ts
     // 或者使用泛型
     // 得到的类型：Ref<string | number>
     const year = ref<string | number>('2020')
@@ -50,7 +50,7 @@
 
   2. 指定类型：使用 `interface` **推荐**
 
-    ```typescript
+    ```ts
     import { ref } from 'vue'
 
     interface User {
