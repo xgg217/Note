@@ -118,7 +118,7 @@
 
   - 参数2：回调函数。调用该函数，同时传递 `true` 则表示进入到新页面。传递 `false` 或者 不调用 则不做任何操作
 
-    ```react&#x20;jsx
+    ```jsx
     // 子组件
     componentDidMount() {
       // 设置阻塞，同时向根组件传递的消息
@@ -126,7 +126,7 @@
     }
     ```
 
-    ```react&#x20;jsx
+    ```jsx
     // 根组件
     function App() {
       return (

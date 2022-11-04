@@ -27,7 +27,7 @@
 
   - 因为如果更新 `state`，就会触发 render 函数，每次又要重新 创建新的组件 和 销毁上次创建的组件。浪费性能
 
-    ```react&#x20;jsx
+    ```jsx
     import withTest from './HOC/withTest.jsx';
 
     function A() {
@@ -56,7 +56,7 @@
 
 - 建议一般以 `with` 开头，后面接功能。例如：`withTest.jsx`
 
-    ```react&#x20;jsx
+    ```jsx
     import React, { Component } from 'react'
 
     export default function withTest(Comp) {
@@ -68,7 +68,7 @@
     }
     ```
 
-    ```react&#x20;jsx
+    ```jsx
     import withTest from './HOC/withTest.jsx';
 
     function A() {
@@ -93,7 +93,7 @@
 
 - 代码
 
-    ```react&#x20;jsx
+    ```jsx
     import withTest from './HOC/withTest.jsx';
     import withLogin from './HOC/withLogin.jsx';
 

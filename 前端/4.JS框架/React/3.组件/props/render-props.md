@@ -20,7 +20,7 @@
 
 - 示例代码： 提供 x y 坐标
 
-    ```react&#x20;jsx
+    ```jsx
     // 父元素
     import React, { PureComponent } from 'react'
 
@@ -63,7 +63,7 @@
     }
     ```
 
-    ```react&#x20;jsx
+    ```jsx
     // 使用
     import DomeCon from './component/DomeCon.jsx' // 父元素
 

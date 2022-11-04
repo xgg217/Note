@@ -4,7 +4,7 @@
 
 - 代码
 
-    ```react&#x20;jsx
+    ```jsx
     // class 是在 css 中定义好的
     render() {
       return (
@@ -19,7 +19,7 @@
 
 - 基础
 
-    ```react&#x20;jsx
+    ```jsx
     // 错误
     <div class="App"></div>
 
@@ -32,7 +32,7 @@
 
 - 根据 `state` 设置 类名
 
-    ```react&#x20;jsx
+    ```jsx
     class Home extends Component {
       constructor (props) {
         super(props);
@@ -54,7 +54,7 @@
 
 - 动态设置类
 
-    ```react&#x20;jsx
+    ```jsx
     // 根据 item.id 的数据带入 setBackgroundColor 函数中，求返回值
     const setBackgroundColor = (id) => {
       let color = '';
@@ -108,7 +108,7 @@
 
 - 自定义: `{{}}` : 表示在 js 代码中 写了一个 对象
 
-    ```react&#x20;jsx
+    ```jsx
     render() {
       return (
         <>
@@ -120,7 +120,7 @@
 
 - `this.state` 中定义的
 
-    ```react&#x20;jsx
+    ```jsx
     class Home extends Component {
       constructor (props) {
         super(props);

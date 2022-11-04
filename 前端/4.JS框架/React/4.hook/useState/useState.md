@@ -14,7 +14,7 @@
 
 - 使用
 
-    ```react&#x20;jsx
+    ```jsx
     import React, { useState } from 'react'
 
     export default function Dome1() {
@@ -93,7 +93,7 @@
 
     2. 函数组件：使用一个空对象的 `useState`
 
-        ```react&#x20;jsx
+        ```jsx
         const [n, setN] = useState({});
 
         <button onClick={ () => {
@@ -105,7 +105,7 @@
 
 8. 和类组件的状态一样，函数组件中改变状态可能是异步的（在 DOM 事件中），多个状态状态变化会合并，以提高效率。此时，不能信任之前
 
-    ```react&#x20;jsx
+    ```jsx
     const [n, setN] = useState(1);
 
 

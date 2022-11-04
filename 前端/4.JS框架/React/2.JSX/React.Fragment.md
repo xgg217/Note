@@ -4,7 +4,7 @@
 
 - `Fragments` 与 **Vue.js** 的 `<template>` 功能类似，可做不可见的包裹元素
 
-    ```react&#x20;jsx
+    ```jsx
     class Columns extends React.Component {
       render() {
         return (
@@ -23,7 +23,7 @@
 
 - `<></>` 是 `<React.Fragment />` 的语法糖
 
-    ```react&#x20;jsx
+    ```jsx
     export default function () {
       return (
         <>
@@ -42,7 +42,7 @@
 
 - 如果你需要一个带 key 的片段，你可以直接使用 `<React.Fragment />`
 
-    ```react&#x20;jsx
+    ```jsx
     function Glossary(props) {
       return (
         <dl>
