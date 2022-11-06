@@ -4,7 +4,7 @@
 
 - 模板 ref 需要通过一个显式指定的泛型参数和一个初始值 `null` 来创建
 
-    ```typescript
+    ```ts
     <script setup lang="ts">
     import { ref, onMounted } from 'vue'
 

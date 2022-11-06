@@ -10,7 +10,7 @@
 
 - 得到一个响应式对象某个属性的 `ref` 格式
 
-    ```typescript
+    ```ts
     const info = reactive({
       name: '小刚刚',
       age: 12,
@@ -34,7 +34,7 @@
 
 - 这不同于
 
-    ```typescript
+    ```ts
     const state = reactive({
       foo: 1,
       bar: 2
@@ -49,7 +49,7 @@
 
 - 类型
 
-    ```typescript
+    ```ts
     function toRef<T extends object, K extends keyof T>(
       object: T,
       key: K,
@@ -63,7 +63,7 @@
 
 1. 想把一个 `prop` 的 `ref` 传递给一个组合式函数时会很有用
 
-    ```typescript
+    ```ts
     <script setup>
     import { toRef } from 'vue'
 

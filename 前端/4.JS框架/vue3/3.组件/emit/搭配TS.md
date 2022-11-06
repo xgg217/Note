@@ -8,7 +8,7 @@
 
   1. `defineEmits()` 标注类型直接推荐泛型形式
 
-    ```typescript
+    ```ts
     // 子组件
     <script setup lang="ts">
     // 运行时

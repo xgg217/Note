@@ -56,7 +56,7 @@
 
 - 类型
 
-    ```typescript
+    ```ts
     function watchEffect(
       effect: (onCleanup: OnCleanup) => void,
       options?: WatchEffectOptions

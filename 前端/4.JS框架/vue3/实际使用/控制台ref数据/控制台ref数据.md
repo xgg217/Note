@@ -4,7 +4,7 @@
 
 - 当我们在控制台输出 `ref`声明的变量时
 
-    ```typescript
+    ```ts
     const count = ref<numer>(0);
 
     console.log('[测试 ref]', count)
@@ -18,7 +18,7 @@
 
 1. 方法1:通过 `.value`来获取
 
-    ```typescript
+    ```ts
     console.log('[测试 ref]', count.value);
     ```
 

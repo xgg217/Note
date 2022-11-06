@@ -122,7 +122,7 @@
 
 - 类型
 
-    ```typescript
+    ```ts
     // 侦听单个来源
     function watch<T>(
       source: WatchSource<T>,

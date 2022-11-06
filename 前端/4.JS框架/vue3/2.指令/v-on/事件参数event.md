@@ -30,7 +30,7 @@
 
 - 在处理原生 DOM 事件时，应该为我们传递给事件处理器的参数正确地标注类型
 
-    ```typescript
+    ```ts
     <script setup lang="ts">
     // 没有标注
     function handleChange(event) {
@@ -53,7 +53,7 @@
 
 - 此，建议显式地为事件处理器的参数标注类型。此外，你可能需要显式地强制转换 `event` 上的 property：
 
-    ```typescript
+    ```ts
     function handleChange(event: Event) {
       console.log((event.target as HTMLInputElement).value)
     }

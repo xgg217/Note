@@ -8,7 +8,7 @@
 
   - 类型
 
-    ```typescript
+    ```ts
     function isProxy(value: unknown): boolean
     ```
 

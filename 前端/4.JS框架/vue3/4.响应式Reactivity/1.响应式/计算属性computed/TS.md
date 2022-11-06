@@ -9,7 +9,7 @@
 
 - 定义
 
-    ```typescript
+    ```ts
     // 只读
     function computed<T>(
       getter: () => T,
@@ -30,7 +30,7 @@
 
   1. 方式1：从其计算函数的返回值上推导出类型
 
-    ```typescript
+    ```ts
     import { ref, computed } from 'vue'
 
     const count = ref(0)
@@ -44,7 +44,7 @@
 
   2. 方式2：可以通过泛型参数显式指定类型 **推荐**
 
-    ```typescript
+    ```ts
     const double = computed<number>(() => {
       // 若返回值不是 number 类型则会报错
     })

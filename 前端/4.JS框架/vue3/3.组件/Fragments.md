@@ -4,7 +4,7 @@
 
   - vue3 中组件可以拥有多个根
 
-    ```typescript
+    ```ts
     <template>
       <header></header>
       <main></main>

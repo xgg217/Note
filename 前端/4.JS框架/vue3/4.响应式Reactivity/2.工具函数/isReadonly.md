@@ -8,7 +8,7 @@
 
 - 类型
 
-    ```typescript
+    ```ts
     function isReadonly(value: unknown): boolean
     ```
 

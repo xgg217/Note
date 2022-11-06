@@ -4,7 +4,7 @@
 
 - 原生的 DOM 事件标注类型
 
-    ```typescript
+    ```ts
     <template>
       <input type="text" @change="handleChange" />
     </template>

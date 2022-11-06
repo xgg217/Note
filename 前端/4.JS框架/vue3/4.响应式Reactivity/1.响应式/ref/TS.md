@@ -4,7 +4,7 @@
 
 - 定义
 
-    ```typescript
+    ```ts
     interface Ref<T> {
       value: T
     }
@@ -17,7 +17,7 @@
 
 - ref 会根据初始化时的值推导其类型
 
-    ```typescript
+    ```ts
     import { ref } from 'vue'
 
     // 推导出的类型：Ref<number>
@@ -68,7 +68,7 @@
 
     - 不推荐使用：因为需要额外的引入（少写一行是一行原则）
 
-    ```typescript
+    ```ts
     import { ref } from 'vue'
     import type { Ref } from 'vue'
 
@@ -79,7 +79,7 @@
 
 - 如果你指定了一个泛型参数但没有给出初始值，那么最后得到的就将是一个包含 `undefined` 的联合类型
 
-    ```typescript
+    ```ts
     // 推导得到的类型：Ref<number | undefined>
     const n = ref<number>()
     ```

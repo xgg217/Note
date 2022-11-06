@@ -4,7 +4,7 @@
 
 - 等同于：`isRef(val) ? val.value : val`
 
-    ```typescript
+    ```ts
     import type { Ref } from 'vue';
 
     function useFoo(x : number | Ref<todos>){

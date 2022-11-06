@@ -4,7 +4,7 @@
 
 - 类型定义
 
-    ```typescript
+    ```ts
     function reactive<T extends object>(target: T): UnwrapNestedRefs<T>
     ```
 
@@ -12,7 +12,7 @@
 
 - `reactive()` 也会隐式地从它的参数中推导类型
 
-    ```typescript
+    ```ts
     import { reactive } from 'vue'
 
     // 推导得到的类型：{ title: string }
@@ -23,7 +23,7 @@
 
   1. 直接给声明的变量添加类型 **推荐**
 
-    ```typescript
+    ```ts
     import { reactive } from 'vue'
 
     interface User {
@@ -37,7 +37,7 @@
     })
     ```
 
-      ```typescript
+      ```ts
       // 不推荐使用
       const book = reactive<Book>({ title: 'Vue 3 指引' });
 
@@ -47,7 +47,7 @@
 
     - 不推荐使用 `reactive()` 的泛型参数，因为处理了深层次 ref 解包的返回值与泛型参数的类型不同
 
-    ```typescript
+    ```ts
     import { reactive } from 'vue'
 
     interface User {
