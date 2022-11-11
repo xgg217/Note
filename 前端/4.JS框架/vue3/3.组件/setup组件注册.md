@@ -7,9 +7,9 @@
     ```ts
     // 组件 testCom.vue
     <template>
-        <div>
-            <h2> 你好-我是肖鹤云</h2>
-        </div>
+      <div>
+        <h2> 你好-我是肖鹤云</h2>
+      </div>
     </template>
 
     ```
@@ -26,5 +26,4 @@
     //在使用的使用直接是小写和横杠的方式连接 test-com
     import TestCom from "../components/TestCom.vue"
     </script>
-
     ```

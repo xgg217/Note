@@ -2,4 +2,4 @@
 
 ## 示意图
 
-![](image/组合API_ZFIy5Kwk2z.png)
+![生命周期](image/组合API_ZFIy5Kwk2z.png)
