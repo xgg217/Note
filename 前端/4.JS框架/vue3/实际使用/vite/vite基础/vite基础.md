@@ -20,8 +20,8 @@
 
 ## webpack 原理图
 
-![](image/20200929144416_f00ADj-cEf.png)
+![webpack 原理图](image/webpack原理.png)
 
 ## vite 原理图
 
-![](image/20200929144957_AkODRCHDIM.png)
+![vite 原理图](image/vite原理.png)

@@ -8,7 +8,7 @@
 
   - `mediatype` 是个 MIME 类型的字符串。例如 `image/jpeg` 表示 JPEG图像文件。如果被省略则默认值为 `text/plain;charset=US-ASCII`
 
-![](image/v2-a822247b894bde03fbf0e42ad336f3ed_720w_3H91a3mCs.jpg)
+![示意](image/示意.jpg)
 
 ## 长度不同
 

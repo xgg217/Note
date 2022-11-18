@@ -37,8 +37,8 @@
 
 ## 单文件上传
 
-![](image/单文件上传_9U2NKYsRzg.png)
+![单文件上传](image/单文件上传.png)
 
 ## 多文件上传
 
-![](image/多文件上传_6Z_iEBDi92.png)
+![多文件上传](image/多文件上传.png)
