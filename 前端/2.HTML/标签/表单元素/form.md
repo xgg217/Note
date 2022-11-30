@@ -6,10 +6,10 @@
 
 - `form` 元素对开发静态页面没有什么意义
 
-    ```html
-    <form>
-      <label for="nan">
-        <input type="radio" name="x" >
-      </label>
-    </form>
-    ```
+  ```html
+  <form>
+    <label for="nan">
+      <input type="radio" name="x" >
+    </label>
+  </form>
+  ```

@@ -4,19 +4,19 @@
 
 - 样式
 
-    ```html
-    <a>淘宝网</a>
-    ```
+  ```html
+  <a>淘宝网</a>
+  ```
 
-    ```css
-    a{
-      display:inline-block;
-      text-decoration:none;
-      width:190px;
-      height:0;
-      padding-top:90px;
-      overflow:hidden;
-      background-image:url();
-      background-size:190px 90px;
-    }
-    ```
+  ```css
+  a{
+    display:inline-block;
+    text-decoration:none;
+    width:190px;
+    height:0;
+    padding-top:90px;
+    overflow:hidden;
+    background-image:url();
+    background-size:190px 90px;
+  }
+  ```

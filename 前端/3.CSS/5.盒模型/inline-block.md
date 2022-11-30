@@ -4,11 +4,11 @@
 
 - 代码
 
-    ```css
-    div {
-      display: inline-block;
-    }
-    ```
+  ```css
+  div {
+    display: inline-block;
+  }
+  ```
 
 ## 特点
 
