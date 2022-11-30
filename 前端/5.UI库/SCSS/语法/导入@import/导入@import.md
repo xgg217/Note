@@ -8,27 +8,27 @@
 
 - 被导入的文件将合并编译到同一个 `css`文件中，被导入的文件中所包含的变量或者混合指令 (`mixin`) 都可以在导入的文件中使用
 
-```sass&#x20;(scss)&#x20;
-/* common.scss */
-$color:red;
-```
+    ```sass
+    /* common.scss */
+    $color:red;
+    ```
 
-```sass&#x20;(scss)&#x20;
-/* index.scss */
-@import "common.scss";
-.container {
-    border-color: $color;
-}
+    ```sass&
+    /* index.scss */
+    @import "common.scss";
+    .container {
+        border-color: $color;
+    }
 
-```
+    ```
 
-```css
-/* 编译成css */
-.container {
-  border-color: red;
-}
+    ```css
+    /* 编译成css */
+    .container {
+    border-color: red;
+    }
 
-```
+    ```
 
 ## 导入规则
 
@@ -57,13 +57,13 @@ $color:red;
 
     2. 不可以同时存在添加下划线与未添加下划线的同名文件，添加下划线的文件将会被忽略
 
-    ```sass&#x20;(scss)&#x20;
+    ```sass
     /* _common.scss */
     $color:red;
 
     ```
 
-    ```sass&#x20;(scss)&#x20;
+    ```sass
     /* index.scss */
     @import "common.scss";
     .container {
@@ -82,6 +82,6 @@ $color:red;
 
 - `_common.scss`文件不会编译成`_common.css` 文件
 
-    ![](image/image_5wWNbmZQzi.png)
+    ![导入](image/导入.png)
 
 - 作用：主要是用来定义公共样式的，专门用于被其他的 `scss`文件 `import`进行使用的

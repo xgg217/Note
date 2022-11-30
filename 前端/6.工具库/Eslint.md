@@ -2,21 +2,21 @@
 
 ## 安装
 
-  - 全局安装 `npm install -g eslint`
+- 全局安装 `npm install -g eslint`
 
-  - 项目安装 `npm install eslint --save-dev`
+- 项目安装 `npm install eslint --save-dev`
 
-  - 如果你想你所有项目都使用eslint，请全局安装；如果你想当前项目使用，请局部安装
+- 如果你想你所有项目都使用eslint，请全局安装；如果你想当前项目使用，请局部安装
 
-  - 局部安装时请使用 –save-dev，因为 eslint 是适用于开发环境（Software Development Environment，SDE）的插件，请不要添加到生产环境中
+- 局部安装时请使用 –save-dev，因为 eslint 是适用于开发环境（Software Development Environment，SDE）的插件，请不要添加到生产环境中
 
 ## 初始化
 
-  - 初始化  `npx eslint --init`
+- 初始化  `npx eslint --init`
 
 ## 设置
 
-1.  你想怎样使用eslint
+1. 你想怎样使用eslint
 
     ```bash
     ? How would you like to use ESLint? (Use arrow keys) // 你想怎样使用eslint
@@ -25,7 +25,7 @@
       To check syntax, find problems, and enforce code style//检查语法、发现问题并执行代码样式
     ```
 
-2.  您的项目使用什么类型的模块
+2. 您的项目使用什么类型的模块
 
     ```bash
     ? What type of modules does your project use? (Use arrow keys) // 您的项目使用什么类型的模块?
@@ -34,7 +34,7 @@
       None of these
     ```
 
-3.  项目中使用的什么框架？
+3. 项目中使用的什么框架？
 
     ```bash
     ? Which framework does your project use? (Use arrow keys) // 项目中使用的什么框架？
@@ -43,7 +43,7 @@
       None of these
     ```
 
-4.  开发环境
+4. 开发环境
 
     ```bash
     ? Where does your code run? (Press <space> to select, <a> to toggle all, <i> to invert selection) // 你的代码运行在什么地方？(多选)
@@ -51,7 +51,7 @@
       ( ) Node // node
     ```
 
-5.  您想如何为您的项目定义一个样式?
+5. 您想如何为您的项目定义一个样式?
 
     ```bash
     ? How would you like to define a style for your project? (Use arrow keys) // 您想如何为您的项目定义一个样式?
@@ -60,7 +60,7 @@
       Inspect your JavaScript file(s) // 检查JavaScript文件
     ```
 
-6.  您希望配置文件的格式是什么?
+6. 您希望配置文件的格式是什么?
 
     ```bash
     ? What format do you want your config file to be in? // 您希望配置文件的格式是什么?
@@ -69,7 +69,7 @@
       JSON
     ```
 
-7.  你用什么来进行缩进?
+7. 你用什么来进行缩进?
 
     ```bash
     ? What style of indentation do you use? (Use arrow keys) // 你用什么来进行缩进
@@ -77,7 +77,7 @@
       Spaces
     ```
 
-8.  字符串用什么引号？
+8. 字符串用什么引号？
 
     ```bash
     ? What quotes do you use for strings? (Use arrow keys) // 字符串用什么引号？
@@ -85,7 +85,7 @@
       Single // 单引号
     ```
 
-9.  你使用什么线条结尾?
+9. 你使用什么线条结尾?
 
     ```bash
     ? What line endings do you use? (Use arrow keys) // 你使用什么线条结尾
@@ -112,7 +112,7 @@
 
 ## .eslintrc.js
 
-  - 内容1
+- 内容1
 
     ```js
     module.exports = {
@@ -224,7 +224,7 @@
     }
     ```
 
-  - 内容2
+- 内容2
 
     ```js
     "rules": {

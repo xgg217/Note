@@ -10,7 +10,7 @@
 
 - 类型
 
-    ```js
+    ```html
     <web-view src="https://www.baidu.com/"></web-view>
     ```
 

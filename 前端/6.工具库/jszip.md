@@ -2,4 +2,4 @@
 
 ## jszip
 
-  + `npm i jszip`
++ `npm i jszip`
