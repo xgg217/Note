@@ -121,7 +121,6 @@
       </template>
 
       <p>内容</p>
-      <p>内容</p>
 
       <template v-slot:footer>
         <p>底部</p>
