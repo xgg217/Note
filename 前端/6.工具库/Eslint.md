@@ -2,7 +2,7 @@
 
 ## 安装
 
-- 全局安装 `npm install -g eslint`
++ 全局安装 `npm install -g eslint`
 
 - 项目安装 `npm install eslint --save-dev`
 
