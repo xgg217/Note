@@ -2,17 +2,24 @@
 
 ## 代码
 
-```js
- /**
- * 获取 URL 中的查询参数，并返回一个对象
-   - 例如 获取 /index.html?id=10 的 id
- * @param {String} url
- * @returns {string} 返回一个字符串
- */
-const getUrlParam = (key) => {
-  const url = new URL(window.location.href);
-  const value = url.searchParams.get(key);
-  return value;
-};
++ 方法1
 
-```
+  ```js
+  /**
+   * 获取 URL 中的查询参数，并返回一个对象
+     - 例如 获取 /index.html?id=10 的 id
+  * @param {String} url
+  * @returns {string} 返回一个字符串
+  */
+  const getUrlParam = (key) => {
+    const url = new URL(window.location.href);
+    const value = url.searchParams.get(key);
+    return value;
+  };
+  ```
+
++ 方法2
+
+  ```js
+  new URLSearchParams(location.search).get("xxx")
+  ```
