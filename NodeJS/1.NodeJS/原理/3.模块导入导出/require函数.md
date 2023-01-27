@@ -2,7 +2,7 @@
 
 ## 模拟 require
 
-  - 代码
++ 代码
 
     ```javascript
     function require(modlePath) {

@@ -2,29 +2,29 @@
 
 ## 概述
 
-  - 作用：返回给出路径的最后一个，不管是文件还是目录
++ 作用：返回给出路径的最后一个，不管是文件还是目录
 
 ## basename(path\[, ext])
 
-  - 参数
++ 参数
 
-      - path `<string>`
+  + path `<string>`
 
-      - ext `<string>` 可选的文件扩展名
+  + ext `<string>` 可选的文件扩展名
 
-  - 返回值: `<string>`
++ 返回值: `<string>`
 
-  - `path.basename()` 方法返回 `path` 的最后一部分
++ `path.basename()` 方法返回 `path` 的最后一部分
 
-    ```javascript
-    path.basename('/foo/bar/baz/asdf/quux.html'); // 返回: 'quux.html'
+  ```javascript
+  path.basename('/foo/bar/baz/asdf/quux.html'); // 返回: 'quux.html'
 
-    // 目录
-    path.basename('/foo/bar/baz/asdf/quux'); // 返回: 'quux'
+  // 目录
+  path.basename('/foo/bar/baz/asdf/quux'); // 返回: 'quux'
 
-    path.basename('/foo/bar/baz/asdf/quux/'); // 返回 quux
+  path.basename('/foo/bar/baz/asdf/quux/'); // 返回 quux
 
-    path.basename('/foo/bar/baz/asdf/quux.html', '.html'); // 返回: 'quux'
+  path.basename('/foo/bar/baz/asdf/quux.html', '.html'); // 返回: 'quux'
 
-    path.basename('/foo/bar/baz/asdf/quux.adc', '.html'); // 返回: 'quux.abc'
-    ```
+  path.basename('/foo/bar/baz/asdf/quux.adc', '.html'); // 返回: 'quux.abc'
+  ```

@@ -2,7 +2,7 @@
 
 ## 示例
 
-  - 示例
++ 示例
 
     ```javascript
     const fs = require('fs');

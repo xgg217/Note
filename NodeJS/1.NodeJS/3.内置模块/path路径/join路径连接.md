@@ -2,20 +2,20 @@
 
 ## path.join(\[...paths])
 
-  - 参数
++ 参数
 
-      - `...paths` `<string>` 路径片段的序列
+    + `...paths` `<string>` 路径片段的序列
 
-  - 返回值 `<string>`
++ 返回值 `<string>`
 
-  - `path.join()` 方法使用平台特定的分隔符作为定界符将所有给定的 `path` 片段连接在一起，然后规范化生成的路径
++ `path.join()` 方法使用平台特定的分隔符作为定界符将所有给定的 `path` 片段连接在一起，然后规范化生成的路径
 
     ```javascript
     path.join('/foo', 'bar', 'baz/asdf', 'quux', '..');
     // 返回: '/foo/bar/baz/asdf'
     ```
 
-  - 如果任何路径片段不是字符串，则抛出 `TypeError`
++ 如果任何路径片段不是字符串，则抛出 `TypeError`
 
     ```javascript
     path.join('foo', {}, 'bar');

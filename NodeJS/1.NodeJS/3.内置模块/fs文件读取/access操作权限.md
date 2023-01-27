@@ -2,21 +2,21 @@
 
 ## 概述
 
-  - 测试用户对 `path` 指定的文件或目录的权限
++ 测试用户对 `path` 指定的文件或目录的权限
 
 ## fsPromises.access(path\[, mode])
 
-  - 参数
++ 参数
 
-      - path
+    + path
 
-      - mode
+    + mode
 
-          - `fs.constants.F_OK` 默认值
+        + `fs.constants.F_OK` 默认值
 
         *
 
-  - 返回值 成功时返回 `undefined`
++ 返回值 成功时返回 `undefined`
 
     ```javascript
     // 成功
@@ -46,7 +46,7 @@
 
 ## 检查文件是否可读
 
-  - 检查文件是否可读
++ 检查文件是否可读
 
     ```javascript
     const file = 'text.txt';
@@ -58,7 +58,7 @@
 
 ## 检查文件是否可写
 
-  - 检查文件是否可写
++ 检查文件是否可写
 
     ```javascript
     const file = 'text.txt';
@@ -70,7 +70,7 @@
 
 ## 检查文件是否存在于当前目录中、以及是否可写
 
-  - 检查文件是否存在于当前目录中、以及是否可写
++ 检查文件是否存在于当前目录中、以及是否可写
 
     ```javascript
     const file = 'text.txt';
