@@ -6,9 +6,9 @@
 
 + 参数
 
-    + path
+  + path
 
-    + options
+  + options
 
 + 返回: `<Promise>` 成功时将使用 `undefined` 履行
 
@@ -33,10 +33,10 @@
 
 + 参数
 
-    + path
+  + path
 
-    + options `options`
+  + options `options`
 
-        + `recursive` `<boolean>` 如果为 `true`，则执行递归目录删除。 在递归模式下，操作将在失败时重试。 默认值: `false`
+    + `recursive` `<boolean>` 如果为 `true`，则执行递归目录删除。 在递归模式下，操作将在失败时重试。 默认值: `false`
 
 + 返回值 `<Promise>` 成功时将使用 `undefined` 履行

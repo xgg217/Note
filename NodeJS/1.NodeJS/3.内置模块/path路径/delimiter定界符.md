@@ -6,9 +6,9 @@
 
 + 作用：提供平台特定的路径定界符
 
-    + `;` 用于 Windows
+  + `;` 用于 Windows
 
-    + `:` 用于 POSIX
+  + `:` 用于 POSIX
 
     ```javascript
     // 在 POSIX 上：

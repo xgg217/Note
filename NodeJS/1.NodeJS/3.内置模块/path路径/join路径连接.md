@@ -4,7 +4,7 @@
 
 + 参数
 
-    + `...paths` `<string>` 路径片段的序列
+  + `...paths` `<string>` 路径片段的序列
 
 + 返回值 `<string>`
 

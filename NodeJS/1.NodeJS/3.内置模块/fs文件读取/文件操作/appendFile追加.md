@@ -8,17 +8,17 @@
 
 + 参数
 
-    + `path`
+  + `path`
 
-    + `data` 字符串或 `<Buffer>`
+  + `data` 字符串或 `<Buffer>`
 
-    + `options`
+  + `options`
 
-        + `encoding` 默认值: `'utf8'`
+    + `encoding` 默认值: `'utf8'`
 
-        + `mode` 默认值: `0o666`
+    + `mode` 默认值: `0o666`
 
-        + `flag` 默认值: `'a'`
+    + `flag` 默认值: `'a'`
 
 + 异步地将数据追加到文件
 

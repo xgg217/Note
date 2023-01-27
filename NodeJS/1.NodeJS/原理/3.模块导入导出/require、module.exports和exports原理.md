@@ -24,11 +24,11 @@
     /*
     * 打印结果（因为打印出来的内容太多，所以省略的很多）
     * {
-    + '0': {},
-    + '1': {...}, //Function: require
-    + '2': Module,
-    + '3': 'C:\\Users\\Dell\\Desktop\\新建文件夹 (2)\\index.js', // 当前文件详细地址 + 文件名 + 后缀
-    + '4': 'C:\\Users\\Dell\\Desktop\\新建文件夹 (2)' // 当前文件详细地址(文件夹)
+  + '0': {},
+  + '1': {...}, //Function: require
+  + '2': Module,
+  + '3': 'C:\\Users\\Dell\\Desktop\\新建文件夹 (2)\\index.js', // 当前文件详细地址  + 文件名  + 后缀
+  + '4': 'C:\\Users\\Dell\\Desktop\\新建文件夹 (2)' // 当前文件详细地址(文件夹)
     * }
     */
     ```

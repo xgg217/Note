@@ -8,13 +8,11 @@
 
 + 参数
 
-    + path
+  + path
 
-    + mode
+  + mode
 
-        + `fs.constants.F_OK` 默认值
-
-        *
+    + `fs.constants.F_OK` 默认值
 
 + 返回值 成功时返回 `undefined`
 

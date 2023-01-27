@@ -6,7 +6,7 @@
 
 + 参数
 
-    + path `<string>`
+  + path `<string>`
 
 + 返回值 `<boolean>`
 

@@ -10,9 +10,9 @@
 
 + options `<Object>` | `<string>`
 
-    + encoding `<string>` | `<null>` 默认值: `null`
+  + encoding `<string>` | `<null>` 默认值: `null`
 
-    + flag `<string>` 参见文件系统 flag 的支持。默认值: `'r'`
+  + flag `<string>` 参见文件系统 flag 的支持。默认值: `'r'`
 
     ```javascript
     fs.readFile('文件名', (err, data) => {

@@ -22,9 +22,9 @@
 
 + 返回值 `<string>`
 
-    + 在 POSIX 上是 `\n`
+  + 在 POSIX 上是 `\n`
 
-    + 在 Windows 上是 `\r\n`
+  + 在 Windows 上是 `\r\n`
 
     ```javascript
     const os = require("os")
