@@ -1,6 +1,6 @@
 # resolve 绝对路径
 
-## resolve(\[...paths])
+## resolve([...paths])
 
 + ...paths `<string>` 路径或路径片段的序列
 

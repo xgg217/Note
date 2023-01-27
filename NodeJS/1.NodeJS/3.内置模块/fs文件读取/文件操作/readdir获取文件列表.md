@@ -1,0 +1,73 @@
+# 获取文件列表
+
+## API
+
++ `fs.readdir()` 方法用于异步读取给定目录的内容
++ `fs.readdirSync()`方法用于同步读取给定目录的内容
+
+## fs.readdir()
+
++ 此方法的回调返回目录中所有文件名的数组
++ options参数可用于更改从方法返回文件的格式
+
++ `fs.readdir( path, options, callback )`
+
+  + `path` :它保存必须从中读取内容的目录路径。它可以是字符串，缓冲区或URL
+  + `options` :它是一个对象，可用于指定将影响方法的可选参数。它具有两个可选参数：
+
+    + `encoding` :它是一个字符串值，该字符串值指定给回调参数指定的文件名使用哪种编码。默认值为 `utf8`
+    + `withFileTypes` :这是一个布尔值，它指定是否将文件作为 `fs.Dirent` 对象返回。默认值为 `false`
+
+  + callback:执行该方法时将调用该函数
+
+  ```js
+  const fs = require('fs');
+  fs.readdir(__dirname, (err, files) => {
+    if (err)
+      console.log(err);
+    else {
+      console.log("\nCurrent directory filenames:");
+      files.forEach(file => {
+        console.log(file);
+      })
+    }
+  })
+  ```
+
+  ```js
+  fs.readdir(__dirname, { withFileTypes:true }, (err, files) => {
+    console.log("\nCurrent directory files:");
+    if (err)
+      console.log(err);
+    else {
+      files.forEach(file => {
+        console.log(file);
+      })
+    }
+  })
+  ```
+
+## 示例
+
++ 使用fs.readdir()方法仅返回扩展名为“.txt”的文件名
+
+  ```js
+  const fs = require('fs');
+  const path = require('path');
+
+  fs.readdir(__dirname, (err, files) => {
+    if (err)
+      console.log(err);
+    else {
+      console.log("\Filenames with the .txt extension:");
+      files.forEach(file => {
+        if (path.extname(file) == ".txt")
+          console.log(file);
+      })
+    }
+  })
+
+  // 输出
+  text_file_a.txt
+  text_file_b.txt
+  ```
