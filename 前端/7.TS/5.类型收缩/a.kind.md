@@ -4,35 +4,35 @@
 
 + 定义
 
-    ```ts
-    type Rect = {
-      hegiht: number
-      width: number
-      kind: 'Rect'
+  ```js
+  type Rect = {
+    hegiht: number
+    width: number
+    kind: 'Rect'
+  }
+
+  type Circle = {
+    center: [number, number]
+    radius: number
+    kind: 'Circle'
+  }
+
+  type Shape = Rect | Circle
+
+  const f1 = (a: Shape | string | number) => {
+    if(typeof(a) === 'string') {
+
+      return
     }
 
-    type Circle = {
-      center: [number, number]
-      radius: number
-      kind: 'Circle'
+    if(typeof(a) === 'number') {
+
+      return
     }
+    if(a.kind === 'Circle') {
 
-    type Shape = Rect | Circle
-
-    const f1 = (a: Shape | string | number) => {
-      if(typeof(a) === 'string') {
-
-        return
-      }
-
-      if(typeof(a) === 'number') {
-
-        return
-      }
-      if(a.kind === 'Circle') {
-
-      } else {
-        a
-      }
+    } else {
+      a
     }
-    ```
+  }
+  ```

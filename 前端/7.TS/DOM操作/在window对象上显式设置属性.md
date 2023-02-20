@@ -2,13 +2,13 @@
 
 ## 显式设置属性
 
-- JS
++ JS
 
     ```js
     indow.MyNamespace = window.MyNamespace || {};
     ```
 
-- TS
++ TS
 
     ```js
     // 报错 Property 'MyNamespace' does not exist on type 'Window & typeof globalThis'.(2339)
@@ -16,7 +16,7 @@
     window.MyNamespace = window.MyNamespace || {};
     ```
 
-- 解决办法
++ 解决办法
 
     ```js
     // 方法1

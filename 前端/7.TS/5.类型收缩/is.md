@@ -2,17 +2,17 @@
 
 ## 概述
 
-- `typeof`、`instanceof`、`in`、`==`、 `===`、 `!=`、 `!==` 不能满足
++ `typeof`、`instanceof`、`in`、`==`、 `===`、 `!=`、 `!==` 不能满足
 
-- 使用 `is` 关键字自定义 `类型守卫`
++ 使用 `is` 关键字自定义 `类型守卫`
 
 ## 语法
 
-- `is` 关键字 + 预期类型
++ `is` 关键字 + 预期类型
 
-- 即如果这个函数成功返回为 `true` ，那么 `is` 关键字前这个入参的类型，就会被这个类型守卫调用方后续的类型控制流分析收集到
++ 即如果这个函数成功返回为 `true` ，那么 `is` 关键字前这个入参的类型，就会被这个类型守卫调用方后续的类型控制流分析收集到
 
-    ```ts
+    ```js
     // 下面两个function 编译后的结果一样
     function isStr(p): p is string{
       return typeof p === 'string';
@@ -38,9 +38,9 @@
 
 ## 示例
 
-- 示例1：因为 isString 这个函数在另外一个地方，内部的判断逻辑并不在函数 foo 中。这里的类型控制流分析做不到跨函数上下文来进行类型的信息收集
++ 示例1：因为 isString 这个函数在另外一个地方，内部的判断逻辑并不在函数 foo 中。这里的类型控制流分析做不到跨函数上下文来进行类型的信息收集
 
-    ```ts
+    ```js
     function isString(input: unknown): boolean {
       return typeof input === "string";
     }
@@ -48,7 +48,7 @@
     function foo(input: string | number) {
       //
       if (isString(input)) {
-        // 保存-- 类型“string | number”上不存在属性“replace”
+        // 保存-+ 类型“string | number”上不存在属性“replace”
         (input).replace("linbudu", "linbudu599")
       }
       if (typeof input === 'number') { }
@@ -56,7 +56,7 @@
     }
     ```
 
-    ```ts
+    ```js
     // 解决方案
     function isString(input: unknown): input is string {
       return typeof input === "string";
@@ -72,7 +72,7 @@
     }
     ```
 
-    ```ts
+    ```js
     type Rect = {
       hegiht: number
       width: number
