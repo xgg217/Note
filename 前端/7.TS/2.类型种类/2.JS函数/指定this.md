@@ -25,7 +25,7 @@
 
 + 示例1
 
-  ```ts
+  ```js
   type FnWithThis = (this:Person, name:string) => void
   type Person = {
     us: string,
