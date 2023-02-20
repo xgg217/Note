@@ -27,21 +27,20 @@
     // 更改源属性也会更新该 ref
     info.age = 18;
     console.log(ageRef.value); // 18
-
     ```
 
 ## 注意点
 
 + 这不同于
 
-    ```ts
-    const state = reactive({
-      foo: 1,
-      bar: 2
-    });
-    const fooRef = ref(state.foo);
+  ```ts
+  const state = reactive({
+    foo: 1,
+    bar: 2
+  });
+  const fooRef = ref(state.foo);
 
-    ```
+  ```
 
 + 上面这个 ref **不会**和 `state.foo` 保持同步，因为这个 `ref()` 接收到的是一个纯数值
 
@@ -49,28 +48,28 @@
 
 + 类型
 
-    ```ts
-    function toRef<T extends object, K extends keyof T>(
-      object: T,
-      key: K,
-      defaultValue?: T[K]
-    ): ToRef<T[K]>
+  ```ts
+  function toRef<T extends object, K extends keyof T>(
+    object: T,
+    key: K,
+    defaultValue?: T[K]
+  ): ToRef<T[K]>
 
-    type ToRef<T> = T extends Ref ? T : Ref<T>
-    ```
+  type ToRef<T> = T extends Ref ? T : Ref<T>
+  ```
 
 ## 使用场景
 
 1. 想把一个 `prop` 的 `ref` 传递给一个组合式函数时会很有用
 
-    ```ts
-    <script setup>
-    import { toRef } from 'vue'
+  ```ts
+  <script setup>
+  import { toRef } from 'vue'
 
-    const props = defineProps(/* ... */)
+  const props = defineProps(/* ... */)
 
-    // 将 `props.foo` 转换为 ref，然后传入
-    // 一个组合式函数
-    useSomeFeature(toRef(props, 'foo'))
-    </script>
-    ```
+  // 将 `props.foo` 转换为 ref，然后传入
+  // 一个组合式函数
+  useSomeFeature(toRef(props, 'foo'))
+  </script>
+  ```

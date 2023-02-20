@@ -25,7 +25,7 @@
 
 ## 实现
 
-- 等同于：`isRef(val) ? val.value : val`
++ 等同于：`isRef(val) ? val.value : val`
 
   ```ts
   function unref<T>(r: Ref<T> | T): T {
