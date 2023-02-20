@@ -1,0 +1,93 @@
+# sync修饰符
+
+## 概述
+
++ 和 `v-model` 作用类似，用于双向绑定
+
++ 不同的点在于 `v-model` 只能针对一个数据进行双向绑定，而 `.sync` 修饰符没有限制
+
+## 未使用 .sync
+
++ 父组件
+
+  ```html
+  <template>
+    <div id="app">
+      <Numbers
+        :num1="num1"
+        :num2="num2"
+        @updete:num1="num1 = $event"
+        @updete:num2="num2 = $event"
+      />
+    </div>
+  </template>
+  ```
+
++ 子组件
+
+  ```js
+  <p>
+    <button @click="$emit('update:num1', num1 - 1)">-</button>
+    <span>{{ num1 }}</span>
+    <button @click="$emit('update:num1', num1 + 1)">+</button>
+  </p>
+  <p>
+    <button @click="$emit('update:num2', num2 - 1)">-</button>
+    <span>{{ num2 }}</span>
+    <button @click="$emit('update:num2', num2 + 1)">+</button>
+  </p>
+  ```
+
+## 使用.sync修饰符
+
++ 父组件
+
+  ```html
+  <template>
+    <div id="app">
+      <Numbers
+        :num1.sync="num1"
+        :num2.sync="num2"
+      />
+    </div>
+  </template>
+  ```
+
++ 子组件（不需要做改变）
+
+## 使用.sync修饰符批量更新对象
+
++ 父组件
+
+  ```html
+  <h1>{{ title }}</h1>
+  <child
+    v-bind.sync="doc"
+  ></child >
+
+  <script>
+  export default {
+
+    data() {
+      return {
+        doc: {
+          title: '',
+          content: ''
+        }
+      }
+    },
+
+  }
+  </script>
+  ```
+
+  ```html
+  // 相当于
+  <h1>{{ title }}</h1>
+  <child
+    :title="doc.title"
+    :content="doc.content"
+    @update:title="doc.title= $event"
+    @update:content="doc.content= $event"
+  ></child >
+  ```
