@@ -2,7 +2,7 @@
 
 ## 作用
 
-- `Object.fromEntries()` 方法是 `Object.entries()` 的逆操作，用于将一个键值对数组转为对象
++ `Object.fromEntries()` 方法是 `Object.entries()` 的逆操作，用于将一个键值对数组转为对象
 
     ```js
     Object.fromEntries([
@@ -20,7 +20,7 @@
 
 ## 将 Map 结构转为对象
 
-- 示例1
++ 示例1
 
     ```js
     // 例一
@@ -33,7 +33,7 @@
     // { foo: "bar", baz: 42 }
     ```
 
-- 示例2
++ 示例2
 
     ```js
     // 例二
@@ -44,7 +44,7 @@
 
 ## 将查询字符串转为对象
 
-- 代码
++ 代码
 
     ```js
     Object.fromEntries(new URLSearchParams('foo=bar&baz=qux'))

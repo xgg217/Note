@@ -2,9 +2,9 @@
 
 ## 作用
 
-  - `Object.is()` 方法判断两个值是否是相同的值
+  + `Object.is()` 方法判断两个值是否是相同的值
 
-  - `Object.is` 不会做类型转换
+  + `Object.is` 不会做类型转换
 
     ```js
     Object.is(value1, value2);
@@ -12,7 +12,7 @@
     // 返回值: 表示两个参数是否相同的布尔值
     ```
 
-  - 示例
+  + 示例
 
     ```js
     Object.is('foo', 'foo');     // true
@@ -35,7 +35,7 @@
     Object.is(NaN, 0/0);         // true
     ```
 
-  - Object在严格等于的基础上修复了一些特殊情况下的失误，具体来说就是 `+0` 和 `-0`，`NaN` 和 `NaN`。源码如下：
+  + Object在严格等于的基础上修复了一些特殊情况下的失误，具体来说就是 `+0` 和 `-0`，`NaN` 和 `NaN`。源码如下：
 
     ```js
     if (!Object.is) {
@@ -54,14 +54,14 @@
 
 ## Object.is 与 ===&#x20;
 
-  - `===`
+  + `===`
 
     ```js
     console.log(+0 === -0); // true
     console.log(NaN === NaN) // false
     ```
 
-  - `Object.is()`
+  + `Object.is()`
 
     ```js
     console.log(Object.is(0, -0)); // flse

@@ -2,15 +2,15 @@
 
 ## 语法
 
-  - `arr.filter(callback(element[, index[, array]])[, thisArg])`
+  + `arr.filter(callback(element[, index[, array]])[, thisArg])`
 
-  - 返回值: 一个新的通过测试的元素的集合的数组，如果全部没有通过则返回空数组
+  + 返回值: 一个新的通过测试的元素的集合的数组，如果全部没有通过则返回空数组
 
 ## 注意
 
-  - 不改变原数组，**返回新数组——浅拷贝**
+  + 不改变原数组，**返回新数组——浅拷贝**
 
-  - 在对比时使用的是 `==`
+  + 在对比时使用的是 `==`
 
     ```js
     const dataArr = [1,7,5,7,1,3];
@@ -26,7 +26,7 @@
 
 ## 源码
 
-  - 代码
+  + 代码
 
     ```js
     const filter = function(arr, funCb, thatThis) {
@@ -44,7 +44,7 @@
 
 ## 示例
 
-  - 示例
+  + 示例
 
     ```js
     // 筛选排除掉所有的 大于 10 的元素
