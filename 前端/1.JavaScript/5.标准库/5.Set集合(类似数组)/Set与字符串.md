@@ -2,7 +2,7 @@
 
 ## String 转 Set
 
-- String 转 Set
++ String 转 Set
 
     ```js
     let text = 'India';
@@ -12,7 +12,7 @@
 
 ## 字符串去重
 
-- 示例
++ 示例
 
     ```js
     const str = 'dfsdfsdsdsfgs';

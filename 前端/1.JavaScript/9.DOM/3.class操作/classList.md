@@ -2,19 +2,19 @@
 
 ## 介绍
 
-- `Element.classList` 是一个只读属性，返回一个元素的类属性的实时 `DOMTokenList` 集合
++ `Element.classList` 是一个只读属性，返回一个元素的类属性的实时 `DOMTokenList` 集合
 
-- 相比将 `Element.className` 作为以空格分隔的字符串来使用，`classList` 是一种更方便的访问元素的类列表的方法
++ 相比将 `Element.className` 作为以空格分隔的字符串来使用，`classList` 是一种更方便的访问元素的类列表的方法
 
 ## 语法
 
-- 语法
++ 语法
 
     ```js
     const elementClasses = elementNodeReference.classList;
     ```
 
-- 返回值
++ 返回值
 
   - `elementClasses` 是一个 `DOMTokenList` 表示  `elementNodeReference` 的类属性
 
@@ -24,9 +24,9 @@
 
 ## add
 
-- 添加或删除多个类: `add(class1, class2, ...)`
++ 添加或删除多个类: `add(class1, class2, ...)`
 
-- 在元素中添加一个或多个类名。如果指定的类名已存在，则不会添加
++ 在元素中添加一个或多个类名。如果指定的类名已存在，则不会添加
 
     ```js
     div.classList.add("foo","bar");
@@ -34,7 +34,7 @@
     div.classList.add("anotherclass");
     ```
 
-- 使用
++ 使用
 
     ```js
     // 初始状态：<div class="a"></div>
@@ -45,7 +45,7 @@
 
 ## contains
 
-- `contains(class)` :返回布尔值，判断指定的类名是否存在
++ `contains(class)` :返回布尔值，判断指定的类名是否存在
 
   - `true` - 元素包已经包含了该类名;
 
@@ -65,9 +65,9 @@
 
 ## remove
 
-- `remove(class1, class2, ...)` : 移除元素中一个或多个类名
++ `remove(class1, class2, ...)` : 移除元素中一个或多个类名
 
-- 移除不存在的类名，不会报错
++ 移除不存在的类名，不会报错
 
     ```js
     div.classList.remove("foo");
@@ -75,13 +75,13 @@
 
 ## toggle
 
-- `toggle(class, true|false)`:在元素中切换类名
++ `toggle(class, true|false)`:在元素中切换类名
 
-- 第一个参数为要在元素中移除的类名，并返回 `false`
++ 第一个参数为要在元素中移除的类名，并返回 `false`
 
-- 如果该类名不存在则会在元素中添加类名，并返回 `true`
++ 如果该类名不存在则会在元素中添加类名，并返回 `true`
 
-- 第二个是可选参数，是个布尔值用于设置元素是否强制添加或移除类，不管该类名是否存在
++ 第二个是可选参数，是个布尔值用于设置元素是否强制添加或移除类，不管该类名是否存在
 
     ```js
     div.classList.toggle("visible");
@@ -89,7 +89,7 @@
 
 ## 实际使用
 
-- 代码
++ 代码
 
     ```js
     const div = document.createElement('div');

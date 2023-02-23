@@ -2,7 +2,7 @@
 
 ## log
 
-- `console.log` 方法用于在 `console` 窗口输出信息
++ `console.log` 方法用于在 `console` 窗口输出信息
 
     ```js
     console.log('Hello World')

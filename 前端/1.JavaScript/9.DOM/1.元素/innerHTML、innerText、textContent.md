@@ -2,19 +2,19 @@
 
 ## innerHTML
 
-- 获取和设置元素内部 HTML 文本
++ 获取和设置元素内部 HTML 文本
 
 ## innerText
 
-- 获取和设置元素内部 纯 文本
++ 获取和设置元素内部 纯 文本
 
 ## Node.textContent
 
-- 属性表示一个节点及其后代的文本内容
++ 属性表示一个节点及其后代的文本内容
 
-- 与`innerText`功能类似
++ 与`innerText`功能类似
 
-- 在节点上设置 `textContent` 属性的话，会删除它的所有子节点，并替换为一个具有给定值的文本节点
++ 在节点上设置 `textContent` 属性的话，会删除它的所有子节点，并替换为一个具有给定值的文本节点
 
     ```js
     <div id="divA">This is <span>some</span> text</div>
@@ -29,7 +29,7 @@
     <div id="divA">This is some text</div>
     ```
 
-- 与 `innerText` 的区别
++ 与 `innerText` 的区别
 
   - `textContent` 会获取所有元素的内容，包括 `<script>` 和 `<style>` 元素，然而 `innerText` 不会
 

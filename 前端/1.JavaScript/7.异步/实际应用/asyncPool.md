@@ -2,22 +2,22 @@
 
 ## 概述
 
-- npm `async-pool` 库
++ npm `async-pool` 库
 
-- 作用：异步任务的并发控制
++ 作用：异步任务的并发控制
 
-- 参考 [https://mp.weixin.qq.com/s?\_\_biz=MzI2MjcxNTQ0Nw==\&mid=2247490704\&idx=1\&sn=18976b9c9fe2456172c394f1d9cae88b\&scene=21#wechat\_redirect](https://mp.weixin.qq.com/s?__biz=MzI2MjcxNTQ0Nw==\&mid=2247490704\&idx=1\&sn=18976b9c9fe2456172c394f1d9cae88b\&scene=21#wechat_redirect "https://mp.weixin.qq.com/s?__biz=MzI2MjcxNTQ0Nw==\&mid=2247490704\&idx=1\&sn=18976b9c9fe2456172c394f1d9cae88b\&scene=21#wechat_redirect")
++ 参考 [https://mp.weixin.qq.com/s?\_\_biz=MzI2MjcxNTQ0Nw==\&mid=2247490704\&idx=1\&sn=18976b9c9fe2456172c394f1d9cae88b\&scene=21#wechat\_redirect](https://mp.weixin.qq.com/s?__biz=MzI2MjcxNTQ0Nw==\&mid=2247490704\&idx=1\&sn=18976b9c9fe2456172c394f1d9cae88b\&scene=21#wechat_redirect "https://mp.weixin.qq.com/s?__biz=MzI2MjcxNTQ0Nw==\&mid=2247490704\&idx=1\&sn=18976b9c9fe2456172c394f1d9cae88b\&scene=21#wechat_redirect")
 
 ## asyncPool 的使用
 
-- 使用方式
++ 使用方式
 
     ```js
     const timeout = i => new Promise(resolve => setTimeout(() => resolve(i), i));
     await asyncPool(2, [1000, 5000, 3000, 2000], timeout);
     ```
 
-- `asyncPool` 函数 语法
++ `asyncPool` 函数 语法
 
     ```js
     function asyncPool(poolLimit, array, iteratorFn){ ... }
@@ -29,7 +29,7 @@
 
   - `iteratorFn`（函数类型）：表示迭代函数，用于实现对每个任务项进行处理，该函数会返回一个 Promise 对象或异步函数
 
-- 在使用了 `asyncPool` 函数之后，对应的执行过程如下所示
++ 在使用了 `asyncPool` 函数之后，对应的执行过程如下所示
 
     ```js
     const timeout = i => new Promise(resolve => setTimeout(() => resolve(i), i));
@@ -50,9 +50,9 @@
 
 #### asyncPool ES7 实现
 
-- 充分利用了 `Promise.all` 和 `Promise.race` 函数特点，再结合 ES7 中提供的 `async await` 特性，最终实现了并发控制的功能
++ 充分利用了 `Promise.all` 和 `Promise.race` 函数特点，再结合 ES7 中提供的 `async await` 特性，最终实现了并发控制的功能
 
-- 利用 `await Promise.race(executing);` 这行语句，我们会等待 **正在执行任务列表** 中较快的任务执行完成之后，才会继续执行下一次循环
++ 利用 `await Promise.race(executing);` 这行语句，我们会等待 **正在执行任务列表** 中较快的任务执行完成之后，才会继续执行下一次循环
 
     ```js
     async function asyncPool(poolLimit, array, iteratorFn) {
@@ -79,9 +79,9 @@
 
 ## asyncPool ES6 实现
 
-- 在 ES6 的实现版本中，通过内部封装的 `enqueue` 函数来实现核心的控制逻辑
++ 在 ES6 的实现版本中，通过内部封装的 `enqueue` 函数来实现核心的控制逻辑
 
-- 当 `Promise.race(executing)` 返回的 `Promise` 对象变成已完成状态时，才会调用 `enqueue` 函数，从 `array` 数组中获取新的待办任务
++ 当 `Promise.race(executing)` 返回的 `Promise` 对象变成已完成状态时，才会调用 `enqueue` 函数，从 `array` 数组中获取新的待办任务
 
     ```js
     function asyncPool(poolLimit, array, iteratorFn) {
