@@ -2,27 +2,27 @@
 
 ## 作用
 
-- 判断小程序的API，回调，参数，组件等是否在当前版本可用
++ 判断小程序的API，回调，参数，组件等是否在当前版本可用
 
 ## 语法
 
-- `${API}` 代表 API 名字
++ `${API}` 代表 API 名字
 
-- `${method}` 代表调用方式，有效值为return, success, object,callback
++ `${method}` 代表调用方式，有效值为return, success, object,callback
 
-- `${param}` 代表参数或者返回值
++ `${param}` 代表参数或者返回值
 
-- `${option}` 代表参数的可选值或者返回值的属性
++ `${option}` 代表参数的可选值或者返回值的属性
 
-- `${component}` 代表组件名字
++ `${component}` 代表组件名字
 
-- `${attribute}` 代表组件属性
++ `${attribute}` 代表组件属性
 
-- `${option}` 代表组件属性的可选值
++ `${option}` 代表组件属性的可选值
 
 ## 使用
 
-- 代码
++ 代码
 
     ```js
     // 对象的属性或方法

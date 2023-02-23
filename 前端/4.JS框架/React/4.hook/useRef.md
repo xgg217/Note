@@ -18,7 +18,7 @@
 
 ## 实际应用
 
-- 未使用之前
++ 未使用之前
 
     ```js
     import React,{ useState } from 'react';
@@ -39,7 +39,7 @@
     export default App;
     ```
 
-- 使用 useRef
++ 使用 useRef
 
     ```js
     import React,{ useState, useRef } from 'react';

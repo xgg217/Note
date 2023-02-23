@@ -2,11 +2,11 @@
 
 ## 作用
 
-- 更新元素的 textContent
++ 更新元素的 textContent
 
 ## 使用
 
-- 使用
++ 使用
 
     ```js
     <span v-text="msg"></span>
@@ -16,9 +16,9 @@
 
 ## v-text VS Mustache
 
-- `v-text` 替换元素中所有的文本，
++ `v-text` 替换元素中所有的文本，
 
-- Mustache只替换自己，不清空元素内容
++ Mustache只替换自己，不清空元素内容
 
     ```js
     <!-- 渲染为：<span>杉杉最美</span> -->
@@ -28,7 +28,7 @@
     <span>----{{msg}}----</span>
     ```
 
-- `v-text` 优先级高于 `{{ }}`
++ `v-text` 优先级高于 `{{ }}`
 
 ## textContent VS innerText
 
@@ -46,7 +46,7 @@
 
 ## 测试一下innerText & textContent两者性能
 
-- html
++ html
 
     ```js
     <ul class="list">
@@ -56,7 +56,7 @@
     </ul>
     ```
 
-- js
++ js
 
     ```js
     const oList = document.getElementById("list");

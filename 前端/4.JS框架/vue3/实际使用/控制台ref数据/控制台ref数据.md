@@ -2,7 +2,7 @@
 
 ## 概述
 
-- 当我们在控制台输出 `ref`声明的变量时
++ 当我们在控制台输出 `ref`声明的变量时
 
     ```ts
     const count = ref<numer>(0);
@@ -10,7 +10,7 @@
     console.log('[测试 ref]', count)
     ```
 
-- 会看到控制台输出了一个 `RefImpl`对象
++ 会看到控制台输出了一个 `RefImpl`对象
 
     ![](image/image__5YJQKeSpM.png)
 

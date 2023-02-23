@@ -6,13 +6,13 @@
 
 ## 定义
 
-- `State Hook` 是一个在函数组件中使用的函数（ `useState` ）
++ `State Hook` 是一个在函数组件中使用的函数（ `useState` ）
 
-- 用于在函数中使用状态
++ 用于在函数中使用状态
 
 ## useState 函数
 
-- 使用
++ 使用
 
     ```jsx
     import React, { useState } from 'react'
@@ -126,4 +126,4 @@
 
 ## State Hook 原理
 
-- 当运行一个函数组件时（调用该函数）
++ 当运行一个函数组件时（调用该函数）

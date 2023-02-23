@@ -2,13 +2,13 @@
 
 ## 原理
 
-- 通过 `postMessages` 实现跨域通讯
++ 通过 `postMessages` 实现跨域通讯
 
 ## 父 发消息给 子
 
-- 子窗口注册 以下事件接收
++ 子窗口注册 以下事件接收
 
-- 父窗口通过 以下方式发消息即可
++ 父窗口通过 以下方式发消息即可
 
     ```js
     document.getElementById('iframe').contentWindow.postMessage('来自父窗口的消息', 'c.aaa.com')
@@ -16,11 +16,11 @@
 
 ## 子 发消息给 父
 
-- 因为跨域，子窗口拿不到父窗口的 `window.parent` / `top`
++ 因为跨域，子窗口拿不到父窗口的 `window.parent` / `top`
 
-- 方法1：可以通过 “页面代理” 的方式解决
++ 方法1：可以通过 “页面代理” 的方式解决
 
-- 方法2：父窗口首先 `postMessage` 给子窗口，子窗口在接受到消息后，存储 全局/局部 变量 `evevt`
++ 方法2：父窗口首先 `postMessage` 给子窗口，子窗口在接受到消息后，存储 全局/局部 变量 `evevt`
 
     ```js
     // 子页面

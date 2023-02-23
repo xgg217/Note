@@ -2,13 +2,13 @@
 
 ## React Router Dom
 
-- `react-router-dom` 是应用程序中路由的库。`React`库中没有路由功能，需要单独安装`react-router-dom`
++ `react-router-dom` 是应用程序中路由的库。`React`库中没有路由功能，需要单独安装`react-router-dom`
 
     ```js
     http://127.0.0.1:3000/article/num1
     ```
 
-- `react-router-dom` 提供两个路由器 `BrowserRouter` 和 `HashRoauter`。前者基于 `url` 的 `pathname` 段，后者基于 `hash` 段
++ `react-router-dom` 提供两个路由器 `BrowserRouter` 和 `HashRoauter`。前者基于 `url` 的 `pathname` 段，后者基于 `hash` 段
 
     ```js
     http://127.0.0.1:3000/#/article/num1（不一定是这样，但#是少不了的）
@@ -16,27 +16,27 @@
 
 ## react-router-dom 组件
 
-- `BrowserRouter` 和 `HashRouter` 是路由器
++ `BrowserRouter` 和 `HashRouter` 是路由器
 
-- `Route` 用于路由匹配
++ `Route` 用于路由匹配
 
-- `Link` 组件用于在应用程序中创建链接。 它将在HTML中渲染为锚标记
++ `Link` 组件用于在应用程序中创建链接。 它将在HTML中渲染为锚标记
 
-- `NavLink`是突出显示当前活动链接的特殊链接
++ `NavLink`是突出显示当前活动链接的特殊链接
 
-- `Switch` 不是必需的，但在组合路由时很有用
++ `Switch` 不是必需的，但在组合路由时很有用
 
-- `Redirect` 用于强制路由重定向
++ `Redirect` 用于强制路由重定向
 
 ## 安装和使用
 
-- 安装
++ 安装
 
     ```js
     npm install react-router-dom -S
     ```
 
-- 引入
++ 引入
 
     ```js
     import {BrowserRouter as Router} from 'react-router-dom'
@@ -44,11 +44,11 @@
     import {HashHistory as Router} from 'react-router-dom'
     ```
 
-- 使用
++ 使用
 
 ## BrowserRouter 和 HashRouter 路由形式
 
-- `BrowserRouter` 浏览器路由。URL 形式 `example.com/some/path`
++ `BrowserRouter` 浏览器路由。URL 形式 `example.com/some/path`
 
     ```js
     import { HashRouter, Route } from "react-router-dom";
@@ -63,7 +63,7 @@
     </BrowserRouter>
     ```
 
-- `HashHistory` 哈希路由。形式 `example.com/#/some/path`
++ `HashHistory` 哈希路由。形式 `example.com/#/some/path`
 
     ```js
     import { HashRouter, Route } from "react-router-dom";
@@ -75,7 +75,7 @@
 
 ## inclusive router 广义匹配
 
-- 示例 ：`/test` 同时匹配到了 `/test` 和 `/`
++ 示例 ：`/test` 同时匹配到了 `/test` 和 `/`
 
     ```js
     <BrowserRouter>
@@ -88,7 +88,7 @@
 
 ## exclusive router 精确陪匹配
 
-- 代码
++ 代码
 
     ```js
     import { BrowserRouter, Route, Switch } from "react-router-dom";
@@ -103,7 +103,7 @@
 
 ## \<Route>
 
-- render 判断
++ render 判断
 
     ```js
     const isLogin = false;
@@ -112,7 +112,7 @@
     <Route path="/user" render={ () => {  isLogin ? <User /> : <Redirect to="/login"> } } >
     ```
 
-- `getUserConfirmation` 函数
++ `getUserConfirmation` 函数
 
   - 参数1：阻塞消息
 

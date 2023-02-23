@@ -2,7 +2,7 @@
 
 ## store 用于保存数据
 
-- 通过 `createStore` 方法创建的对象
++ 通过 `createStore` 方法创建的对象
 
     ```js
     import reducer from './reducer/index';
@@ -12,13 +12,13 @@
 
 ## store 方法
 
-- `dispatch` ： 分发一个 `action`
++ `dispatch` ： 分发一个 `action`
 
-- `getState` ： 得到当前仓库保存的数据
++ `getState` ： 得到当前仓库保存的数据
 
-- `replaceReducer` ： 替换 `reducer`
++ `replaceReducer` ： 替换 `reducer`
 
-- `subscribe` : 注册一个监听器
++ `subscribe` : 注册一个监听器
 
   - 监听器：是一个无参函数，当分发一个 `action` 后，会运行注册的监听器
 

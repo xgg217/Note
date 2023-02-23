@@ -2,7 +2,7 @@
 
 ## 全局对象
 
-- 声明文件示例
++ 声明文件示例
 
     ```js
     // 例如 global.d.ts
@@ -16,7 +16,7 @@
     declare function setTimeout(handler:()=> void, times:number):number
     ```
 
-- 使用
++ 使用
 
     ```js
     console.log(12);
@@ -28,7 +28,7 @@
 
 ## 声明全局函数
 
-- 示例
++ 示例
 
     ```ts
     // 文件位置 typescript/lib/lib.es5.d.ts
@@ -41,7 +41,7 @@
 
 ## 模块声明
 
-- 声明
++ 声明
 
     ```js
     declare module "lodash" {
@@ -49,7 +49,7 @@
     }
     ```
 
-- 使用
++ 使用
 
     ```js
     import _ from "lodash",
@@ -58,20 +58,20 @@
 
 ## 扩张已有的类型
 
-- declare module
++ declare module
 
     ![](image/image_OXYsSu37ER.png)
 
 ## 自定义
 
-- 使用 wx js-SDK
++ 使用 wx js-SDK
 
     ![](image/image_s1Gt_eb4ZV.png)
 
-- 解决方案
++ 解决方案
 
     ![](image/image_FHrHlC2imW.png)
 
-- 更好的方案
++ 更好的方案
 
   - 定义一个wx.d.ts 文件
