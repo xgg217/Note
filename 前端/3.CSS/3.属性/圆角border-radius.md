@@ -4,13 +4,13 @@
 
 + `border-radius` 是一个 简写属性
 
-  - `border-top-left-radius` 左上
+  + `border-top-left-radius` 左上
 
-  - `border-top-right-radius` 右上
+  + `border-top-right-radius` 右上
 
-  - `border-bottom-right-radius` 右下
+  + `border-bottom-right-radius` 右下
 
-  - `border-bottom-left-radius` 左下
+  + `border-bottom-left-radius` 左下
 
 ## 使用
 

@@ -16,9 +16,9 @@
 
 + 该组件会将下面的路由数据和仓库保持同步
 
-  - `action`：他不是 `redux` 的 `action` ，它表示当前路由跳转的方式(`PUSH` 、 `POP` 、 `PEPLCE`)
+  + `action`：他不是 `redux` 的 `action` ，它表示当前路由跳转的方式(`PUSH` 、 `POP` 、 `PEPLCE`)
 
-  - `location`：它记录了当前的地址信息
+  + `location`：它记录了当前的地址信息
 
     ```js
     // reducers.js

@@ -1,6 +1,6 @@
 # 读取 txt文件
 
-## 读取 txt文件
+## 概述
 
 + html:通过 File API，我们可以访问 [FileList](https://developer.mozilla.org/zh-CN/docs/Web/API/FileList "FileList")，它包含了表示用户所选文件的 [File](https://developer.mozilla.org/zh-CN/docs/Web/API/File "File") 对象
 

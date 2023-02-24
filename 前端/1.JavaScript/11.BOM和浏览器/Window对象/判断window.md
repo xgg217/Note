@@ -4,8 +4,8 @@
 
 + 代码
 
-    ```js
-    function isWindow( obj ) {
-      return obj != null && obj === obj.window;
-    }
-    ```
+  ```js
+  function isWindow( obj ) {
+    return obj != null && obj === obj.window;
+  }
+  ```

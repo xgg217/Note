@@ -1,6 +1,6 @@
 # readAsArrayBuffer
 
-## readAsArrayBuffer
+## 概述
 
 + `readAsArrayBuffer` 方法读取文件，返回一个类型化数组（`ArrayBuffer`），即固定长度的二进制缓存数据
 

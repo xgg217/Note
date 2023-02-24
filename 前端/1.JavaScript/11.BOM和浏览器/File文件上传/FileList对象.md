@@ -8,14 +8,14 @@
 
     2. 通过拖放文件，查看 `DataTransfer.files` 属性，返回一个 `FileList` 实例
 
-```js
-// <input id="fileItem" type="file">
-const files = document.getElementById('fileItem').files;
-files instanceof FileList // true
+    ```js
+    // <input id="fileItem" type="file">
+    const files = document.getElementById('fileItem').files;
+    files instanceof FileList // true
 
-const firstFile = files[0];
+    const firstFile = files[0];
 
-```
+    ```
 
 ## 介绍
 

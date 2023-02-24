@@ -6,7 +6,7 @@
 
 + Data URL 格式如 `data:[<mediatype>][;base64],<data>`
 
-  - `mediatype` 是个 MIME 类型的字符串。例如 `image/jpeg` 表示 JPEG图像文件。如果被省略则默认值为 `text/plain;charset=US-ASCII`
+  + `mediatype` 是个 MIME 类型的字符串。例如 `image/jpeg` 表示 JPEG图像文件。如果被省略则默认值为 `text/plain;charset=US-ASCII`
 
 ![示意](image/示意.jpg)
 

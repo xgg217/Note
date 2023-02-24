@@ -32,14 +32,14 @@
 
 + 取值
 
-  - `linear` 匀速 相当于 `cubic-bezier(0, 0, 1, 1)`
+  + `linear` 匀速 相当于 `cubic-bezier(0, 0, 1, 1)`
 
-  - `ease`
+  + `ease`
 
-  - `ease-in`
+  + `ease-in`
 
-  - `ease-out`
+  + `ease-out`
 
-  - `ease-in-out`
+  + `ease-in-out`
 
-  - `cubic-bezier(n, n, n, n)`
+  + `cubic-bezier(n, n, n, n)`

@@ -1,6 +1,6 @@
 # readAsDataURL
 
-## readAsDataURL
+## 概述
 
 + `readAsDataURL` 方法返回一个 `data URL` ，它的作用基本上是将文件数据进行Base64编码
 

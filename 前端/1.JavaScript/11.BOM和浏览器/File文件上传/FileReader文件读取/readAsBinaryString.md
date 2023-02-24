@@ -1,6 +1,6 @@
 # readAsBinaryString
 
-## readAsBinaryString
+## 概述
 
 + `readAsBinaryString` 方法可以读取任意类型的文件，而不仅仅是文本文件，返回文件的原始的二进制内容
 
