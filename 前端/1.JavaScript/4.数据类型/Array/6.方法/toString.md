@@ -1,6 +1,6 @@
 # toString
 
-## toString()
+## 概述
 
 + 返回数组的字符串形式
 
