@@ -16,11 +16,11 @@
 
 + 返回值
 
-  - `elementClasses` 是一个 `DOMTokenList` 表示  `elementNodeReference` 的类属性
+  + `elementClasses` 是一个 `DOMTokenList` 表示  `elementNodeReference` 的类属性
 
-  - 如果类属性未设置或为空，那么 `elementClasses.length` 返回 0
+  + 如果类属性未设置或为空，那么 `elementClasses.length` 返回 0
 
-  - 虽然 `element.classList` 本身是只读的，但是你可以使用 `add()` 和 `remove()` 方法修改它
+  + 虽然 `element.classList` 本身是只读的，但是你可以使用 `add()` 和 `remove()` 方法修改它
 
 ## add
 
@@ -47,9 +47,9 @@
 
 + `contains(class)` :返回布尔值，判断指定的类名是否存在
 
-  - `true` - 元素包已经包含了该类名;
+  + `true` - 元素包已经包含了该类名;
 
-  - `false` - 元素中不存在该类名
+  + `false` - 元素中不存在该类名
 
     ```js
     // 初始状态：<div class="a"></div>
