@@ -1,6 +1,6 @@
 # setDate
 
-# Date.prototype.setDate()
+## Date.prototype.setDate()
 
 + 根据本地时间来指定一个日期对象的天数
 

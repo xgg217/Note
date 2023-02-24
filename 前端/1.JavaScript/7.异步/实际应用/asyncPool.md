@@ -23,11 +23,11 @@
     function asyncPool(poolLimit, array, iteratorFn){ ... }
     ```
 
-  - `poolLimit`（数字类型）：表示限制的并发数；
+  + `poolLimit`（数字类型）：表示限制的并发数；
 
-  - `array`（数组类型）：表示任务数组；
+  + `array`（数组类型）：表示任务数组；
 
-  - `iteratorFn`（函数类型）：表示迭代函数，用于实现对每个任务项进行处理，该函数会返回一个 Promise 对象或异步函数
+  + `iteratorFn`（函数类型）：表示迭代函数，用于实现对每个任务项进行处理，该函数会返回一个 Promise 对象或异步函数
 
 + 在使用了 `asyncPool` 函数之后，对应的执行过程如下所示
 
@@ -48,7 +48,7 @@
     // Resolves, results are passed in given array order `[1000, 5000, 3000, 2000]`.
     ```
 
-#### asyncPool ES7 实现
+## asyncPool ES7 实现
 
 + 充分利用了 `Promise.all` 和 `Promise.race` 函数特点，再结合 ES7 中提供的 `async await` 特性，最终实现了并发控制的功能
 
