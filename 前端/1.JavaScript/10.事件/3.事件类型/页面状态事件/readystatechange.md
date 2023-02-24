@@ -1,6 +1,6 @@
 # readystatechange
 
-## readystatechange
+## 概述
 
 + `readystatechange` 事件发生在 `Document` 对象和 `XMLHttpRequest` 对象，当它们的 `readyState` 属性发生变化时触发
 

@@ -1,6 +1,6 @@
 # DOMContentLoaded
 
-## DOMContentLoaded
+## 概述
 
 + 当HTML文档下载并解析完成以后，就会在 `document` 对象上触发 `DOMContentLoaded` 事件
 

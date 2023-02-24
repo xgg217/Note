@@ -1,6 +1,6 @@
 # radio
 
-## radio
+## 概述
 
 + `radio` 是单选框控件，同一组选择框同时只能选中一个，选中元素的 `checked` 属性为 `true`
 

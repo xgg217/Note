@@ -1,6 +1,6 @@
 # resize事件
 
-## resize事件
+## 概述
 
 + `resize` 事件在改变浏览器窗口大小时触发，发生在 `window` 、`body`、`frameset` 对象上面
 
