@@ -16,36 +16,38 @@
 
   + 源对象 `sources`
 
+## 示例
+
 + 示例
 
-    ```js
-    const object1 = {
-      a: 1,
-      b: 2,
-      c: 3
-    };
-    const object2 = Object.assign({c: 4, d: 5}, object1);
-    console.log(object2); //{ c: 3, d: 5, a: 1, b: 2 }
-    ```
+  ```js
+  const object1 = {
+    a: 1,
+    b: 2,
+    c: 3
+  };
+  const object2 = Object.assign({c: 4, d: 5}, object1);
+  console.log(object2); //{ c: 3, d: 5, a: 1, b: 2 }
+  ```
 
-    ```js
-    // 合并对象
-    var o1 = { a: 1 };
-    var o2 = { b: 2 };
-    var o3 = { c: 3 };
+  ```js
+  // 合并对象
+  var o1 = { a: 1 };
+  var o2 = { b: 2 };
+  var o3 = { c: 3 };
 
-    var obj = Object.assign(o1, o2, o3);
-    console.log(obj); // { a: 1, b: 2, c: 3 }
-    console.log(o1);  // { a: 1, b: 2, c: 3 }, 注意目标对象自身也会改变
-    ```
+  var obj = Object.assign(o1, o2, o3);
+  console.log(obj); // { a: 1, b: 2, c: 3 }
+  console.log(o1);  // { a: 1, b: 2, c: 3 }, 注意目标对象自身也会改变
+  ```
 
-    ```js
-    // 合并具有相同属性的对象
-    var o1 = { a: 1, b: 1, c: 1 };
-    var o2 = { b: 2, c: 2 };
-    var o3 = { c: 3 };
+  ```js
+  // 合并具有相同属性的对象
+  var o1 = { a: 1, b: 1, c: 1 };
+  var o2 = { b: 2, c: 2 };
+  var o3 = { c: 3 };
 
-    // 属性被后续参数中具有相同属性的其他对象覆盖
-    var obj = Object.assign({}, o1, o2, o3);
-    console.log(obj); // { a: 1, b: 2, c: 3 }
-    ```
+  // 属性被后续参数中具有相同属性的其他对象覆盖
+  var obj = Object.assign({}, o1, o2, o3);
+  console.log(obj); // { a: 1, b: 2, c: 3 }
+  ```

@@ -6,25 +6,25 @@
 
 + `Object.keys` 方法的参数是一个对象，返回一个数组。该数组的成员都是该对象自身的（而不是继承的）所有属性名
 
-    ```js
-    // Object.keys
-    var obj = {
-      p1: 123,
-      p2: 456
-    };
+  ```js
+  // Object.keys
+  var obj = {
+    p1: 123,
+    p2: 456
+  };
 
-    Object.keys(obj) // ["p1", "p2"]
-    ```
+  Object.keys(obj) // ["p1", "p2"]
+  ```
 
-    ```js
-    // Object.getOwnPropertyNames
-    var obj = {
-      p1: 123,
-      p2: 456
-    };
+  ```js
+  // Object.getOwnPropertyNames
+  var obj = {
+    p1: 123,
+    p2: 456
+  };
 
-    Object.getOwnPropertyNames(obj) // ["p1", "p2"]
-    ```
+  Object.getOwnPropertyNames(obj) // ["p1", "p2"]
+  ```
 
 ## 与 Object.keys() 区别
 
