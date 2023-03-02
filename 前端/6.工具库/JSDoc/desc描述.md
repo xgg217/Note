@@ -1,0 +1,37 @@
+# @description 或 @desc
+
+## 概述
+
++ `@description` 别名 `@desc`
+
++ 语法 `@description <some description>`
+
+## 示例
+
++ 如果在注释开始的地方添加描述，那么可省略 @description 标签
+
+  ```js
+  /**
+   * Add two numbers.
+   * @param {number} a
+   * @param {number} b
+   * @returns {number}
+   */
+  function add(a, b) {
+    return a + b;
+  }
+  ```
+
++ 通过使用 `@description` 标签添加的描述可放在 JSDoc 的任意地方
+
+  ```js
+  /**
+   * @param {number} a
+   * @param {number} b
+   * @returns {number}
+   * @description Add two numbers.
+   */
+  function add(a, b) {
+    return a + b;
+  }
+  ```
