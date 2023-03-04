@@ -44,15 +44,15 @@
 
 + 注意，该方法只是取消事件对当前元素的默认影响，不会阻止事件的传播
 
-    ```js
-    // HTML 代码为
-    // <input type="checkbox" id="my-checkbox" />
-    var cb = document.getElementById('my-checkbox');
+  ```js
+  // HTML 代码为
+  // <input type="checkbox" id="my-checkbox" />
+  var cb = document.getElementById('my-checkbox');
 
-    cb.addEventListener('click', function (e){
-      e.preventDefault();
-    }, false);
-    ```
+  cb.addEventListener('click', function (e){
+    e.preventDefault();
+  }, false);
+  ```
 
 ## stopPropagetion
 
@@ -73,3 +73,29 @@
   + 2：事件到达目标节点，即 `Event.target` 属性指向的那个节点
 
   + 3：事件处于冒泡阶段，即处于从目标节点向祖先节点的反向传播过程中
+
+## evt.target 与 evt.currentTarget 区别
+
++ `evt.target` : 当前触发事件的 dom
+
++ `evt.currentTarget` : 绑定事件的元素，而不是当前触发事件的元素
+
+  ```html
+  <div id="parentDom">
+    父节点
+    <div id="childDom">子节点</div>
+  </div>
+
+  <script>
+    const parentDom = document.getElementById('parentDom')
+    parentDom.addEventListener('click', e => {
+      /*
+      当点击`子节点`三个字时，此时的target为 childDom,
+      当点击`父节点`三个字时，此时的target为 parentDom
+       */
+      console.log(e.target)
+      // 无论是点击`子节点`还是`父节点`, 这个值一直都是 parentDom
+      console.log(e.currentTarget)
+    })
+  </script>
+  ```
