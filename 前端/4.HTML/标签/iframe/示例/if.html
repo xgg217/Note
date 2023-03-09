@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <textarea name="" id="" cols="30" rows="10"></textarea>
+
+  <button>保存</button>
+
+  <script>
+    // document.domain = "http://192.168.0.106"
+
+    (function() {
+      "use strict";
+      const textareaDom = document.querySelector("textarea");
+      const buttonDom = document.querySelector("button");
+      let selectionStartIndex = 0; // 光标开始位置
+
+      window.addEventListener("message", (e) => {
+        console.log(e.origin);
+        console.log(e.data);
+        const { type, text } = e.data
+
+        // 插入信息
+        if(type === "insertText") {
+          textareaDom.value = textareaDom.value.slice(0, selectionStartIndex) + text + textareaDom.value.slice(selectionStartIndex)
+        }
+      })
+
+      // 在失去焦点的时候获取光标的位置
+      textareaDom.addEventListener("blur", () => {
+        const { selectionStart, selectionEnd } = textareaDom
+        selectionStartIndex = selectionStart;
+      })
+
+      buttonDom.addEventListener("click", () => {
+        window.parent.postMessage({
+          type: "save",
+          text: textareaDom.value
+        }, "http://192.168.0.106:5173")
+      })
+    })();
+  </script>
+</body>
+
+</html>
