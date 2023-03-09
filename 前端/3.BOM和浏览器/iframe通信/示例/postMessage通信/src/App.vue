@@ -8,7 +8,7 @@ import { ref, onMounted } from 'vue';
  * 方法：postMesage
  */
 
-const iframeSrc = "http://192.168.0.106:5500/if.html"
+const iframeSrc = "http://192.168.0.106:5500/iframe.html"
 
 const iframeRef = ref<HTMLIFrameElement | null>(null);
 
