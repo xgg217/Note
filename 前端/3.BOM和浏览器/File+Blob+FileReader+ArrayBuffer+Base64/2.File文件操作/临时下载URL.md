@@ -6,16 +6,17 @@
 
 + 这个字符串代表了 `File` 对象或 `Blob` 对象的 URL
 
-    ```js
-    // HTML 代码如下
-    // <div id="display"/>
-    // <input
-    //   type="file"
-    //   id="fileElem"
-    //   multiple
-    //   accept="image/*"
-    //   onchange="handleFiles(this.files)"
-    //  >
+  ```html
+  <div id="display"/>
+  <input
+    type="file"
+    id="fileElem"
+    multiple
+    accept="image/*"
+    onchange="handleFiles(this.files)"
+   >
+
+  <script>
     var div = document.getElementById('display');
 
     function handleFiles(files) {
@@ -25,12 +26,13 @@
         div.appendChild(img);
       }
     }
-    ```
+  </script>
+  ```
 
-    ```js
-    // 该方法生成的 URL 就像下面的样子
-    blob:http://localhost/c745ef73-ece9-46da-8f66-ebes574789b1
-    ```
+  ```js
+  // 该方法生成的 URL 就像下面的样子
+  blob:http://localhost/c745ef73-ece9-46da-8f66-ebes574789b1
+  ```
 
 + 注意，每次使用 `URL.createObjectURL()` 方法，都会在内存里面生成一个 URL 实例
 

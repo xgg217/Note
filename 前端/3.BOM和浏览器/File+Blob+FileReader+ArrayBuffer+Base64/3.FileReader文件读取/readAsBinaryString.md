@@ -6,10 +6,10 @@
 
 + 这个方法与 `XMLHttpRequest.sendAsBinary` 方法结合使用，就可以使用JavaScript上传任意文件到服务器
 
-    ```js
-    var reader = new FileReader();
-    reader.onload = function(e) {
-      var rawData = reader.result;
-    }
-    reader.readAsBinaryString(file);
-    ```
+  ```js
+  var reader = new FileReader();
+  reader.onload = function(e) {
+    var rawData = reader.result;
+  }
+  reader.readAsBinaryString(file);
+  ```
