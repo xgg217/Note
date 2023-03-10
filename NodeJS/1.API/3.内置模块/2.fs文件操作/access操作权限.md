@@ -4,7 +4,9 @@
 
 + 测试用户对 `path` 指定的文件或目录的权限
 
-## fsPromises.access(path\[, mode])
++ 判断一个文件是否存在、是否可读、是否可写
+
+## fsPromises.access(path[, mode])
 
 + 参数
 
@@ -16,7 +18,7 @@
 
 + 返回值 成功时返回 `undefined`
 
-    ```javascript
+    ```js
     // 成功
     const fsPromises = require('fs/promises');
 
@@ -29,7 +31,7 @@
     });
     ```
 
-    ```javascript
+    ```js
     // 失败
     const fsPromises = require('fs/promises');
 
@@ -46,7 +48,7 @@
 
 + 检查文件是否可读
 
-    ```javascript
+    ```js
     const file = 'text.txt';
     // // 检查文件是否可读
     fs.access(file, fs.constants.R_OK, (err) => {
@@ -58,7 +60,7 @@
 
 + 检查文件是否可写
 
-    ```javascript
+    ```js
     const file = 'text.txt';
     // // 检查文件是否可读
     fs.access(file, fs.constants.W_OK, (err) => {
@@ -70,7 +72,7 @@
 
 + 检查文件是否存在于当前目录中、以及是否可写
 
-    ```javascript
+    ```js
     const file = 'text.txt';
 
     // 检查文件是否存在于当前目录中、以及是否可写
