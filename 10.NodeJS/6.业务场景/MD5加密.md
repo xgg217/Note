@@ -18,13 +18,13 @@
 
 + 安装
 
-  ```javascript
+  ```js
   npm i md5
   ```
 
 + 使用
 
-  ```javascript
+  ```js
   var md5 = require('md5');
 
   console.log(md5('小刚刚'));

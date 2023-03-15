@@ -4,7 +4,7 @@
 
 + 返回结果不是 数字，而是 **对象**
 
-    ```javascript
+    ```js
     const ind = setTimeout(() => {
 
     },0);

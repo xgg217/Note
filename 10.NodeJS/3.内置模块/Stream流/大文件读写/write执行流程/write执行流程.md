@@ -20,7 +20,7 @@
 
 + 生产速度和消费速度不一致，一般情况下生产速度要比消费速度快很多
 
-    ```javascript
+    ```js
     const fs = require('fs');
 
     const ws = fs.createWriteStream('test.txt', {

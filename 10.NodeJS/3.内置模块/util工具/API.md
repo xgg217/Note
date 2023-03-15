@@ -6,7 +6,7 @@
 
 + 将 `async` 异步函数（或者一个返回值为 `Promise` 的函数）转换成遵循异常优先的回调风格的函数
 
-    ```javascript
+    ```js
     const util = require('util');
 
     async function fn() {
@@ -22,7 +22,7 @@
     // hello world
     ```
 
-    ```javascript
+    ```js
     async function delay(time = 1000) {
       return new Promise((res, rej) => {
         setTimeout(() => {
@@ -44,7 +44,7 @@
 
 + 传入一个遵循常见的错误优先的回调风格的函数（即以 `(err, value) => ...` 回调作为最后一个参数），并返回一个返回 `promise` 的版本
 
-    ```javascript
+    ```js
     const util = require('util');
     const fs = require('fs');
 
@@ -56,7 +56,7 @@
     });
     ```
 
-    ```javascript
+    ```js
     // async
     const util = require('util');
     const fs = require('fs');
@@ -73,7 +73,7 @@
 
 + 深度严格比较两个对象是否相等
 
-    ```javascript
+    ```js
     const obj1 = {
       a:1,
       b:{
@@ -98,7 +98,7 @@
     console.log(isBool); // true
     ```
 
-    ```javascript
+    ```js
     const obj1 = {
       a:1,
       b:{

@@ -4,7 +4,7 @@
 
 + 示例
 
-  ```javascript
+  ```js
   const arr = Mock.mock({
     "datas|16": [
       {
@@ -20,7 +20,7 @@
 
 + 示例
 
-  ```javascript
+  ```js
   const arr = Mock.mock({
     'datas|500-700': [
       {

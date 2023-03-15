@@ -4,7 +4,7 @@
 
 + `node.js`的模块是运行在一个函数中
 
-    ```javascript
+    ```js
     // 函数(函数名 xyz是表示不知道运行函数的名字，随便取的)
     function xyz(exports, require, module, __filename, __dirname){
       /**
@@ -18,7 +18,7 @@
 
 + 验证1
 
-    ```javascript
+    ```js
     // 验证 1
     console.log(arguments);
     /*
@@ -35,7 +35,7 @@
 
 + 验证 2
 
-    ```javascript
+    ```js
     console.log(arguments[0] === exports); // true
     console.log(arguments[1] === require); // true
     console.log(arguments[2] ===  module); // true

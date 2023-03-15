@@ -8,7 +8,7 @@
 
 + 代码
 
-  ```javascript
+  ```js
   import { logger } from './logger'
   import { Context, Next } from 'koa'
 

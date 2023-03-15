@@ -16,7 +16,7 @@
 
 + `Buffer.from(array)` 数组中尽量只有 **数字** 或 进制数据，不要往数组中添加中文(如果需要中文，就是用 `Buffer.from(string[, encoding])`)，不然无法显示
 
-    ```javascript
+    ```js
     // 只填充 数字
     const b1 = Buffer.from([1,2,3]);
 
@@ -31,7 +31,7 @@
 
 + `Buffer.from(buffer)` 与原 buffer 数据是拷贝关系，非共享关系
 
-    ```javascript
+    ```js
     const b1 = Buffer.alloc(3);
     const b2 = Buffer.from(b1);
     console.log(b1); // <Buffer 00 00 00>
@@ -48,7 +48,7 @@
 
 + `Buffer.from(string[, encoding])` encoding: 默认 `utf-8`
 
-    ```javascript
+    ```js
     import { Buffer } from 'buffer';
 
     const buf1 = Buffer.from('this is a tést');
@@ -65,7 +65,7 @@
 
 + 同时，`size` 参数如果不是一个数字，会抛出 `TypeError`
 
-    ```javascript
+    ```js
     import { Buffer } from 'buffer';
 
     const buf = Buffer.alloc(5);
@@ -82,7 +82,7 @@
 
 + `toJSON()` 方法可以将数据进行Unicode编码并展示
 
-    ```javascript
+    ```js
     const buf2 = Buffer.from('hello buffer');
 
     buf2.toJSON();
@@ -95,7 +95,7 @@
 
 + 可以改用 `Buffer.alloc(size[, fill[, encoding]])` 替代
 
-    ```javascript
+    ```js
     new Buffer(5)
     // <Buffer 00 00 00 00 00>
     ```
@@ -106,7 +106,7 @@
 
 + 可以改用 `Buffer.from()` 替代
 
-    ```javascript
+    ```js
     const buf = new Buffer([0x74, 0x65, 0x73, 0x74])
     // <Buffer 74 65 73 74>
     // 对应 ASCII 码，这几个16进制数分别对应 t e s t
@@ -121,7 +121,7 @@
 
 + 可以改用 `Buffer.from()` 替代
 
-    ```javascript
+    ```js
     const buf1 = new Buffer('test')
     const buf2 = new Buffer(buf1)
     ```
@@ -130,7 +130,7 @@
 
 + 创建内容为 string 的 Buffer，指定编码方式为 encoding
 
-    ```javascript
+    ```js
     const buf = new Buffer('test')
     // <Buffer 74 65 73 74>
     // 可以看到结果与 new Buffer([0x74, 0x65, 0x73, 0x74]) 一致

@@ -6,7 +6,7 @@
 
 + 类似于 setTimeout 0
 
-    ```javascript
+    ```js
     setImmediate(() => {
 
     }, 0);

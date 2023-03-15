@@ -4,7 +4,7 @@
 
 + 代码
 
-    ```javascript
+    ```js
     function require(modlePath) {
       // 1. 将 modlePath 转换为绝对路径
       // 2. 判断是否该模块已有缓存

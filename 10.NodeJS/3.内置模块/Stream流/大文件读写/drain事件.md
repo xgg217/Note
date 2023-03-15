@@ -4,7 +4,7 @@
 
 + 示例
 
-    ```javascript
+    ```js
     const fs = require('fs');
 
     const ws = fs.createWriteStream('test2.txt', {

@@ -10,7 +10,7 @@
 
   + POSIX 上是 `/`
 
-    ```javascript
+    ```js
     const path = require("path");
     console.log(path.sep); // "\"
     ```

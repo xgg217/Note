@@ -4,7 +4,7 @@
 
 + 代码
 
-  ```javascript
+  ```js
   const URL = require("url");
 
   const urls = new URL.URL("https://3w.huanqiu.com:8080/a/b/c?agt=8&e=5#abc");
@@ -40,7 +40,7 @@
 
 + 代码
 
-  ```javascript
+  ```js
   const urls = URL.parse("https://3w.huanqiu.com:8080/a/b/c?agt=8&e=5#abc");
   console.log(urls);
 
@@ -64,7 +64,7 @@
 
 + 对象转换成字符串
 
-  ```javascript
+  ```js
   const obj = {
     href: 'https://3w.huanqiu.com:8080/a/b/c?agt=8&e=5#abc',
     origin: 'https://3w.huanqiu.com:8080',

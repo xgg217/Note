@@ -10,7 +10,7 @@
 
 + 代码
 
-  ```javascript
+  ```js
   import jsonwebtoken from 'jsonwebtoken'
   const { jwtSecret } = require('../../config/index')
 

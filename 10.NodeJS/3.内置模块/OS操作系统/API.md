@@ -12,7 +12,7 @@
 
 + 返回: `<string>`
 
-    ```javascript
+    ```js
     console.log(os.tmpdir()); // C:\Users\小刚刚\AppData\Local\Temp
     ```
 
@@ -26,7 +26,7 @@
 
   + 在 Windows 上是 `\r\n`
 
-    ```javascript
+    ```js
     const os = require("os")
     console.log(os.EOL);
     ```
@@ -37,7 +37,7 @@
 
 + 返回: `<string>`
 
-    ```javascript
+    ```js
     const os = require("os")
     console.log(os.arch()); // x64
     ```
@@ -48,7 +48,7 @@
 
 + 返回: `<integer>`
 
-    ```javascript
+    ```js
     const os = require("os")
     console.log(os.freemem()); // 10604224512
     ```
@@ -59,7 +59,7 @@
 
 + 返回: `<string>`
 
-    ```javascript
+    ```js
     console.log(os.homedir()); // C:\Users\小刚刚
     ```
 
@@ -71,6 +71,6 @@
 
 + 相当于桌面--> 右键 --> 属性 --> 计算机名
 
-    ```javascript
+    ```js
     console.log(os.hostname()); // DESKTOP-KIV8P4P
     ```

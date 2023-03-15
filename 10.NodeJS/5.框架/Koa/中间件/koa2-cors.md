@@ -8,11 +8,11 @@
 
 + 后台设置
 
-  ```javascript
+  ```js
   app.use(Cors(corsHandler))
   ```
 
-  ```javascript
+  ```js
   // corsHandler.ts
   import { Context } from 'koa'
 
@@ -30,7 +30,7 @@
 
 + 浏览器：设置 `withCredentials: true` 时， `Access-Control-Allow-Origin` 不能设置为 `*`
 
-  ```javascript
+  ```js
   const instance = axios.create({
     baseURL: baseURL,
     timeout: 30000,

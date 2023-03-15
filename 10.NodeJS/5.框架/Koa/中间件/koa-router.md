@@ -11,7 +11,7 @@
   yarn add @koa/router
   ```
 
-  ```javascript
+  ```js
   // ts
   npm i --save-dev @types/koa__router
   ```
@@ -20,7 +20,7 @@
 
 + 使用
 
-  ```javascript
+  ```js
   // index.ts
   import Koa from 'koa';
   import http from 'http';
@@ -39,7 +39,7 @@
 
   ```
 
-  ```javascript
+  ```js
   // adminRouter.ts
   import Router from '@koa/router';
   const router = new Router({

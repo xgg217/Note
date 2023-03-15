@@ -10,7 +10,7 @@
 
   + `:` 用于 POSIX
 
-    ```javascript
+    ```js
     // 在 POSIX 上：
     console.log(process.env.PATH);
     // 打印: '/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin'
@@ -19,7 +19,7 @@
     // 返回: ['/usr/bin', '/bin', '/usr/sbin', '/sbin', '/usr/local/bin']
     ```
 
-    ```javascript
+    ```js
     // 在 Windows 上
     console.log(process.env.PATH);
     // 打印: 'C:\Windows\system32;C:\Windows;C:\Program Files\node\'

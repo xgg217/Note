@@ -60,12 +60,12 @@
 
 + 切换版本
 
-  ```javascript
+  ```js
   nvm use 8.5.4
   ```
 
 + 卸载 node
 
-  ```javascript
+  ```js
   nvm uninstall 8.5.4
   ```

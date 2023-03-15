@@ -70,7 +70,7 @@
 
 + 示例1
 
-    ```javascript
+    ```js
     const filend = path.resolve(__dirname, "./files/1.txt");
     const str = fs.createReadStream(filend, {
       encoding: "utf-8",
@@ -115,7 +115,7 @@
 
 + 示例2
 
-    ```javascript
+    ```js
     const fs = require('fs');
 
     const rs = fs.createReadStream('./test.txt', {

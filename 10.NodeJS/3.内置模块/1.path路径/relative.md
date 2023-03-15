@@ -16,7 +16,7 @@
 
 + 如果 `from` 或 `to` 不是字符串，则抛出 `TypeError`
 
-  ```javascript
+  ```js
   // 在 Windows 上
   path.relative('C:\\orandea\\test\\aaa', 'C:\\orandea\\impl\\bbb');
   // 返回: '..\\..\\impl\\bbb'

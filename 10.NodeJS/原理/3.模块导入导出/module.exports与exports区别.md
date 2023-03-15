@@ -4,7 +4,7 @@
 
 + 代码
 
-    ```javascript
+    ```js
     console.log(exports == module.exports); // true
     console.log(exports === module.exports); // true
     ```
@@ -15,7 +15,7 @@
 
 + 当 `module.exports` 与  `exports`冲突时，导出的是 `module.exports`
 
-    ```javascript
+    ```js
     // test.js
     const a = 123;
     const b = 'abc';
@@ -23,7 +23,7 @@
     module.exports = b;
     ```
 
-    ```javascript
+    ```js
     // index.js
     const test = require('./test.js'); // 导入本地文件
     console.log(test); // abc

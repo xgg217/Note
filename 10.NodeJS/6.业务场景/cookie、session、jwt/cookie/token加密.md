@@ -6,7 +6,7 @@
 
 + 加密
 
-  ```javascript
+  ```js
   const express = require("express");
   const cookieParser = require('cookie-parser');
 
