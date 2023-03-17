@@ -4,7 +4,7 @@
 
 + 对象
 
-    ```js
+   ```ts
     const u =  {
       name: 1,
       age: 33,
@@ -20,7 +20,7 @@
 
 + 类
 
-    ```js
+   ```ts
     class User {
       names: string;
       age:number;
@@ -51,7 +51,7 @@
 
 + 函数约定
 
-    ```js
+   ```ts
     interface IU {
       name:string
       age: number;
@@ -73,7 +73,7 @@
 
 + 类约束
 
-    ```js
+   ```ts
     class User {
       names: string;
       age:number;

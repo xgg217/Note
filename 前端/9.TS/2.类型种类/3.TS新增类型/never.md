@@ -12,7 +12,7 @@
 
 + 意味着声明 `never` 的变量只能被 `never` 类型所赋值
 
-  ```js
+ ```ts
   // 正确
   function a():never {
     throw new Error('错误');
@@ -23,7 +23,7 @@
 
 + 以利⽤ never 类型的特性来实现全⾯性检查
 
-  ```js
+ ```ts
   type Foo = string | number;
   function controlFlowAnalysisWithNever(foo: Foo) {
     if (typeof foo === "string") {
@@ -41,7 +41,7 @@
 
 + 如果⼀切逻辑正确，那么这⾥应该能够编译通过。但是假如后来有⼀天你的同事修改了 Foo 的类型：
 
-  ```js
+ ```ts
   type Foo = string | number | boolean;
   ```
 
@@ -53,7 +53,7 @@
 
 + `never` 特殊在，除了自身以外，没有任何类型是它的子类型，或者说可以赋值给它
 
-  ```js
+ ```ts
   // null 和 undefined，可以被 never 赋值
   declare const n: never;
 
