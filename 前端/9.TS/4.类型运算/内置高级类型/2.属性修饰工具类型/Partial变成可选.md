@@ -1,6 +1,6 @@
 # Partial 可选
 
-## Partial<T>
+## `Partial<T>`
 
 + 将类型 T 中的成员变成 **可选**
 

@@ -14,7 +14,7 @@
   }
   ```
 
-  ![](image/image_y5IF4w_c5M.png)
+  ![as重新映射](image/as重新映射.png)
 
 ## 通过as实现键名重新映射
 

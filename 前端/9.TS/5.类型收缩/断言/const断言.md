@@ -8,17 +8,17 @@
 
 ## 语法
 
-1.  `as const`
+1. `as const`
 
- ```ts
-  let y = [10, 'xgg'] as const;
-  ```
+    ```ts
+    let y = [10, 'xgg'] as const;
+    ```
 
-2.  `<const>`
+2. `<const>`
 
- ```ts
-  let y = <const>[10, 20];
-  ```
+    ```ts
+    let y = <const>[10, 20];
+    ```
 
 ## 字面量类型
 

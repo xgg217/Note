@@ -1,6 +1,6 @@
 # Readonly
 
-## Readonly<T>
+## `Readonly<T>`
 
 + 将类型 T 中的成员变成 **只读**
 
