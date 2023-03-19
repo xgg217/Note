@@ -12,13 +12,13 @@
 
 + 错误使用
 
-  ![](image/image_5Tz2mHktsi.png)
+  ![推导1](image/推导1.png)
 
 ## 示例-获取数组类型中元素的类型
 
 + 示例
 
-  ```js
+ ```ts
   type UnpackedArray<T> = T extends (infer U)[] ? U : T;
   type T0 = string[];
   type U0 = UnpackedArray<T0>; // string
@@ -28,13 +28,13 @@
 
 + 执行流程
 
-  ![](image/image_67o9LlRNXY.png)
+  ![推导2](image/推导2.png)
 
 ## 示例
 
 + 获取函数类型的返回值类型
 
-  ```js
+ ```ts
   type UnpackedFn<T> = T extends () => infer U ? U : T;
 
   type T1 = UnpackedFn<() => string> // string;
@@ -43,13 +43,13 @@
 
 + Promise
 
-  ```js
+ ```ts
   type Unpacked<T> = T extends Promise<infer U> ? U : T;
   ```
 
 + 对象类型
 
-  ```js
+ ```ts
   type User = {
     id: number;
     name: string;

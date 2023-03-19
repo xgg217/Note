@@ -111,7 +111,7 @@
 
 + 解释
 
-    ```javascript
+    ```js
     // 原始 markdown 语法
     ![图片描述](https://resource.muyiy.cn/image/20201209093632.png)
 

@@ -4,7 +4,7 @@
 
 + 代码
 
-  ```js
+ ```ts
   const tuple = ['tesla', 'model 3', 'model X', 'model Y'] as const
 
   type result = TupleToObject<typeof tuple> // expected { tesla: 'tesla', 'model 3': 'model 3', 'model X': 'model X', 'model Y': 'model Y'}
@@ -12,7 +12,7 @@
 
 + 实现
 
-  ```js
+ ```ts
   // 只能传入 内容为 string 、 number 、symbol 类型的只读数组
   type TupleToObject<T extends readonly (string | number | symbol)[]> = {
     [P in T[number]]: P // key 值是 数组的值
@@ -30,7 +30,7 @@
 
 + 代码
 
-  ```js
+ ```ts
   const tuple = ['xgg', '1'];
 
   interface IObj {
@@ -53,7 +53,7 @@
 
 + 代码
 
-  ```js
+ ```ts
   // 只能传入 内容为 string 、 number 、symbol 类型的只读数组
   type TupleToObject<T extends readonly (string | number | symbol)[]> = {
     [P in keyof T]: P // key 值是 数组的索引
@@ -68,7 +68,7 @@
 
 + 代码
 
-  ```js
+ ```ts
   // 只能传入 内容为 string 、 number 、symbol 类型的只读数组
   type TupleToObject<T extends readonly (string | number | symbol)[]> = {
     [P in T[number]]: P // key 值是 数组的值

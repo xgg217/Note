@@ -6,7 +6,7 @@
 
 + 当一个函数没有返回值时，你通常会见到其返回值类型是 `void`
 
-  ```js
+ ```ts
   function warnUser(): void {
     console.log("This is my warning message");
   }

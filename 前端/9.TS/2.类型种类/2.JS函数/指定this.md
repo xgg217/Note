@@ -4,7 +4,7 @@
 
 + 定义函数的时候不能使用 箭头函数(`() => {}`)，解决办法就是使用普通函数定义方式 `function() {}`
 
-  ```js
+ ```ts
   type Person = {
     us: string,
     age: number
@@ -25,7 +25,7 @@
 
 + 示例1
 
-  ```js
+ ```ts
   type FnWithThis = (this:Person, name:string) => void
   type Person = {
     us: string,

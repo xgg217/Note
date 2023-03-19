@@ -1,10 +1,10 @@
 # Readonly
 
-## Readonly<T>
+## `Readonly<T>`
 
 + 将类型 T 中的成员变成 **只读**
 
-  ```js
+ ```ts
   type Readonly<T> = {
     readonly [P in keyof T]: T[P]
   }
@@ -12,13 +12,13 @@
 
 + `Readonly` 中也可以使用 `+readonly` `-readonly`
 
-  ```js
+ ```ts
   type Readonly<T> = {
     +readonly [P in keyof T]: T[P];
   };
   ```
 
-  ```js
+ ```ts
   type Mutable<T> = {
     -readonly [P in keyof T]: T[P];
   };
@@ -28,7 +28,7 @@
 
 + 代码
 
-  ```js
+ ```ts
   // 使用
   interface Todo {
     title: string
@@ -48,7 +48,7 @@
 
 + 代码
 
-  ```js
+ ```ts
   const readonly = function readonly(obj:object) {
     const newObj = {};
     for (const key in obj) {

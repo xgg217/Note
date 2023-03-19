@@ -1,10 +1,10 @@
 # Partial 可选
 
-## Partial<T>
+## `Partial<T>`
 
 + 将类型 T 中的成员变成 **可选**
 
-  ```js
+ ```ts
   interface User {
     age: number
     name: string
@@ -19,7 +19,7 @@
 
 + 源码
 
-  ```js
+ ```ts
   type Partial<T> = {
     [P in keyof T]?: T[P];
   };
