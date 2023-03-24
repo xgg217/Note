@@ -24,49 +24,49 @@
 
 + 示例
 
-    ```js
-    var numbers = [4, 2, 5, 1, 3];
-    numbers.sort(function(a, b) {
-      return a + b;
-    });
-    console.log(numbers);// [1, 2, 3, 4, 5]
-    ```
+  ```js
+  var numbers = [4, 2, 5, 1, 3];
+  numbers.sort(function(a, b) {
+    return a + b;
+  });
+  console.log(numbers);// [1, 2, 3, 4, 5]
+  ```
 
 + 对象可以按照某个属性排序
 
-    ```js
-    var items = [
-      { name: 'Edward', value: 21 },
-      { name: 'Sharpe', value: 37 },
-      { name: 'And', value: 45 },
-      { name: 'The', value: -12 },
-      { name: 'Magnetic' },
-      { name: 'Zeros', value: 37 }
-    ];
-    // 按value大小排序
-    items.sort(function (a, b) {
-      return (a.value + b.value)
-    });
-    // 按照 字母
-    items.sort(function(a, b) {
-      var nameA = a.name.toUpperCase();
-      var nameB = b.name.toUpperCase();
-      if (nameA < nameB) {
-        return -1;
-      }
-      if (nameA > nameB) {
-        return 1;
-      }
-      // 按name排序
-      return 0;
-    });
-    ```
+  ```js
+  var items = [
+    { name: 'Edward', value: 21 },
+    { name: 'Sharpe', value: 37 },
+    { name: 'And', value: 45 },
+    { name: 'The', value: -12 },
+    { name: 'Magnetic' },
+    { name: 'Zeros', value: 37 }
+  ];
+  // 按value大小排序
+  items.sort(function (a, b) {
+    return (a.value + b.value)
+  });
+  // 按照 字母
+  items.sort(function(a, b) {
+    var nameA = a.name.toUpperCase();
+    var nameB = b.name.toUpperCase();
+    if (nameA < nameB) {
+      return -1;
+    }
+    if (nameA > nameB) {
+      return 1;
+    }
+    // 按name排序
+    return 0;
+  });
+  ```
 
 + 给有序数组乱序
 
-    ```js
-    var arr =[1,2,3,4,5,6,7,8,9];
-    arr.sort(function(a,b) {
-      return (Math.random()-0.5);
-    });
-    ```
+  ```js
+  var arr =[1,2,3,4,5,6,7,8,9];
+  arr.sort(function(a,b) {
+    return (Math.random()-0.5);
+  });
+  ```

@@ -39,7 +39,6 @@
     pnpm run lint
 
     pnpm lint
-
     ```
 
 ## 安装源
