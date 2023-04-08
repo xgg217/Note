@@ -26,9 +26,23 @@
 
 + `setInterval` 对自己调用的代码是否报错漠不关心。即使调用的代码报错了，它依然会持续的调用下去（可以用 `setTimeout` 解决）
 
-## requestAnimationFrame
+## requestAnimationFrame 的优势
 
-+ 使用 `requestAnimationFrame` 执行动画，最大优势是能保证回调函数在屏幕每一次刷新间隔中只被执行一次，这样就不会引起丢帧，动画也就不会卡顿
+## 优势
+
++ 从实现的功能和使用方法上，`requestAnimationFrame` 与定时器 `setTimeout` 都相似，所以说其优势是同 `setTimeout` 实现的动画相比
+
+1. 提升性能，防止掉帧
+
+   + 浏览器 UI 线程：浏览器让执行 JavaScript 和更新用户界面（包括重绘和回流）共用同一个单线程，称为“浏览器 UI 线程”
+
+   + 浏览器 UI 线程的工作基于一个简单的队列系统，任务会被保存到队列中直到进程空闲。一旦空闲，队列中的下一个任务就被重新提取出来并运行。这些任务要么是运行 JavaScript 代码，要么执行 UI 更新
+
+2. 节约资源，节省电源
+
+   + 使用 `setTimeout` 实现的动画，当页面被隐藏或最小化时，定时器 `setTimeout` 仍在后台执行动画任务，此时刷新动画是完全没有意义的（实际上 FireFox/Chrome浏览器对定时器做了优化：页面闲置时，如果时间间隔小于 1000ms，则停止定时器，与 `requestAnimationFrame` 行为类似。如果时间间隔>=1000ms，定时器依然在后台执行）
+
+   + 使用 `requestAnimationFrame`，当页面处于未激活的状态下，该页面的屏幕刷新任务会被系统暂停，由于 `requestAnimationFrame` 保持和屏幕刷新同步执行，所以也会被暂停。当页面被激活时，动画从上次停留的地方继续执行，节约 CPU 开销
 
 ## 区别
 
