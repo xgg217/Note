@@ -10,7 +10,7 @@
 
 ## 注意
 
-+ 需要注意的是，`NaN`不是独立的数据类型，而是一个特殊数值，它的数据类型依然属于`Number`，使用`typeof`运算符可以看得很清楚
++ 需要注意的是，`NaN` 不是独立的数据类型，而是一个特殊数值，它的数据类型依然属于`Number`，使用`typeof`运算符可以看得很清楚
 
     ```js
     typeof NaN // 'number'
@@ -30,7 +30,7 @@
     [NaN].indexOf(NaN) // -1
     ```
 
-+ `NaN`在布尔运算时被当作`false`
++ `NaN` 在布尔运算时被当作`false`
 
     ```js
     Boolean(NaN) // false
