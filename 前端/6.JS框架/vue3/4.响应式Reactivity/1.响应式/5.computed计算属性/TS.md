@@ -9,7 +9,7 @@
 
 + 定义
 
-    ```ts
+    ```js
     // 只读
     function computed<T>(
       getter: () => T,
@@ -30,22 +30,22 @@
 
 1. 方式1：从其计算函数的返回值上推导出类型
 
-  ```ts
-  import { ref, computed } from 'vue'
+    ```js
+    import { ref, computed } from 'vue'
 
-  const count = ref(0)
+    const count = ref(0)
 
-  // 推导得到的类型：ComputedRef<number>
-  const double = computed(() => count.value * 2)
+    // 推导得到的类型：ComputedRef<number>
+    const double = computed(() => count.value * 2)
 
-  // => TS Error: Property 'split' does not exist on type 'number'
-  const result = double.value.split('')
-  ```
+    // => TS Error: Property 'split' does not exist on type 'number'
+    const result = double.value.split('')
+    ```
 
 2. 方式2：可以通过泛型参数显式指定类型 **推荐**
 
-  ```ts
-  const double = computed<number>(() => {
-    // 若返回值不是 number 类型则会报错
-  })
-  ```
+    ```js
+    const double = computed<number>(() => {
+      // 若返回值不是 number 类型则会报错
+    })
+    ```

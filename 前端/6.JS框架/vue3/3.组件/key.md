@@ -18,11 +18,11 @@
 
 + 示例
 
-    ```js
-    <ul>
-      <li v-for="item in items" :key="item.id">...</li>
-    </ul>
-    ```
+  ```html
+  <ul>
+    <li v-for="item in items" :key="item.id">...</li>
+  </ul>
+  ```
 
 + 当使用 `<template>` 进行 `v-for` 循环时，需要把 `key` 值放到 `<template>` 中，而不是它的子元素中
 
@@ -34,16 +34,16 @@
 
 + 也可以用于强制替换一个元素/组件而不是复用它。当你想这么做时它可能会很有用：
 
-  - 在适当的时候触发组件的生命周期钩子
+  + 在适当的时候触发组件的生命周期钩子
 
-  - 触发过渡
+  + 触发过渡
 
-        ```ts
-        // 当 text 变化时，<span> 总是会被替换而不是更新，因此 transition 将会被触发
-        <transition>
-          <span :key="text">{{ text }}</span>
-        </transition>
-        ```
+      ```html
+      <!-- 当 text 变化时，<span> 总是会被替换而不是更新，因此 transition 将会被触发 -->
+      <transition>
+        <span :key="text">{{ text }}</span>
+      </transition>
+      ```
 
 ## 注意点
 
