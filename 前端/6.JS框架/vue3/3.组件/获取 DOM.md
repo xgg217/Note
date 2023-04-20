@@ -10,16 +10,20 @@
 
 + **预期**：`string | Function`
 
-## 选项式 API
+## 方式1
 
-+ 使用选项式 API，引用将被注册在组件的 `this.$refs` 对象里
++ 这个变量名和 DOM 上的 ref 属性必须同名，会自动形成绑定
 
     ```html
-    <!-- 存储为 this.$refs.p -->
-    <p ref="p">hello</p>
+    <el-form ref="formRef"></el-form>
+
+    <script setup lang="ts">
+      const formRef = ref(null)
+      console.log(formRef.value) // 这就获取到 DOM 了
+    </script>
     ```
 
-## 模板引用类型
+## 方式2
 
 + 模板引用需要通过一个显式指定的泛型参数和一个初始值 `null` 来创建
 
@@ -42,13 +46,23 @@
   </template>
   ```
 
-## 作用位置
+## 方式3 ts + 组件
 
-1. 用于普通 DOM 元素，引用将是元素本身
++ 可以这样获取子组件
 
-2. 用于子组件，引用将是子组件的实例
+  ```html
+  <el-form ref="formRef"></el-form>
 
-3. `ref` 可以接收一个函数值，用于对存储引用位置的完全控制
+  <script setup lang="ts">
+    import { ElForm } from 'element-plus'
+
+    const formRef = ref<InstanceType<typeof ElForm>>()
+  </script>
+  ```
+
+## 方式4
+
++ `ref` 可以接收一个函数值，用于对存储引用位置的完全控制
 
     ```js
     <ChildComponent :ref="(el) => child = el" />
