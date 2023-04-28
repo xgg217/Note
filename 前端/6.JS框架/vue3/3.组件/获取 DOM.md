@@ -14,14 +14,14 @@
 
 + 这个变量名和 DOM 上的 ref 属性必须同名，会自动形成绑定
 
-    ```html
-    <el-form ref="formRef"></el-form>
+  ```html
+  <el-form ref="formRef"></el-form>
 
-    <script setup lang="ts">
-      const formRef = ref(null)
-      console.log(formRef.value) // 这就获取到 DOM 了
-    </script>
-    ```
+  <script setup lang="ts">
+    const formRef = ref(null)
+    console.log(formRef.value) // 这就获取到 DOM 了
+  </script>
+  ```
 
 ## 方式2
 
