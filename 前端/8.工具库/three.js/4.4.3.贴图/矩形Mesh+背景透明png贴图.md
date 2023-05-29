@@ -1,0 +1,59 @@
+# 矩形Mesh+背景透明png贴图
+
+## 概述
+
++ three.js项目开发中，把一个背景透明的 `.png` 图像作为平面矩形网格模型Mesh的颜色贴图是一个非常有用的功能，通过这样一个功能，可以对three.js三维场景进行标注
+
++ 整体思路：创建一个矩形平面，设置颜色贴图 `.map` ,注意选择背景透明的 `.png` 图像作为颜色贴图，同时材质设置 `transparent: true` ，这样png图片背景完全透明的部分不显示
+
+  ```js
+  // 矩形平面网格模型设置背景透明的png贴图
+  const geometry = new THREE.PlaneGeometry(60, 60); //默认在XOY平面上
+  const textureLoader = new THREE.TextureLoader();
+  const material = new THREE.MeshBasicMaterial({
+      map: textureLoader.load('./指南针.png'),
+      transparent: true, //使用背景透明的png贴图，注意开启透明计算
+  });
+  const mesh = new THREE.Mesh(geometry, material);
+  mesh.rotateX(-Math.PI / 2);
+  ```
+
+## 矩形平面PlaneGeometry设置颜色贴图
+
++ 矩形平面PlaneGeometry设置颜色贴图
+
+  ```js
+  const geometry = new THREE.PlaneGeometry(60, 60);
+
+  const textureLoader = new THREE.TextureLoader();
+  const material = new THREE.MeshBasicMaterial({
+      map: textureLoader.load('./指南针.png'),
+  });
+  const mesh = new THREE.Mesh(geometry, material);
+  ```
+
+## 开启透明
+
++ transparent: true
+
+  ```js
+  const material = new THREE.MeshBasicMaterial({
+    map: textureLoader.load('./指南针.png'),
+    //transparent: true：使用背景透明的png贴图，注意允许透明
+    transparent: true,
+  });
+  ```
+
+## 旋转平移矩形平面
+
++ `PlaneGeometry` 矩形平面默认是在XOY平面上，如果你想平行于XOZ平面，就需要手动旋转
+
+  ```js
+  mesh.rotateX(-Math.PI/2);//平行地面：矩形Mesh默认单面可见，注意旋转-Math.PI / 2
+  ```
+
++ 如果你不想矩形平面Mesh与地面网格线重合，可以通过位置属性.position偏移
+
+  ```js
+  mesh.position.y = 1;//适当偏移，不与地面重合
+  ```
