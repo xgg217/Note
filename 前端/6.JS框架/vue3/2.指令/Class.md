@@ -4,28 +4,27 @@
 
 + 对象
 
-    ```ts
+    ```html
     // active 是否存在取决于数据属性 isActive 的真假值
     <div :class="{ active: isActive }"></div>
     ```
 
 + 多个对象
 
-    ```ts
+    ```js
     const classObject = reactive({
       active: true,
       'text-danger': false
     })
 
     <div :class="classObject"></div>
-
     ```
 
 ## 数组
 
 + 数组
 
-    ```ts
+    ```js
     const activeClass = ref('active')
     const errorClass = ref('text-danger')
 
@@ -33,28 +32,26 @@
 
     // 渲染的结果
     <div class="active text-danger"></div>
-
     ```
 
 ## 三元表达式
 
 + 三元表达式
 
-    ```ts
+    ```js
     const activeClass = ref('active');
 
     <div :class="[isActive ? activeClass : '']"></div>
 
     // 优化
     <div :class="[{ active: isActive }, errorClass]"></div>
-
     ```
 
 ## :class与class
 
 + `:class` 指令和一般的 `class` 共存
 
-    ```ts
+    ```js
     const isActive = ref(true)
     const hasError = ref(false)
 
@@ -63,17 +60,15 @@
       :class="{ active: isActive, 'text-danger': hasError }"
     ></div>
 
-
     // 渲染结果
     <div class="static active"></div>
-
     ```
 
 ## 计算属性
 
 + 计算属性
 
-    ```ts
+    ```js
     const isActive = ref(true)
     const error = ref(null)
 
@@ -98,13 +93,11 @@
     <!-- 在使用时添加一些 class -->
     <!-- 在使用组件时 -->
     <my-component class="baz boo"></my-component>
-
     ```
 
     ```html
     <!-- 渲染出的 HTML 为 -->
     <p class="foo bar baz boo">Hi</p>
-
     ```
 
 + 如果你的组件有多个根元素，你将需要指定哪个根元素来接收这个 class。你可以通过组件的 `$attrs` property 来实现指定
@@ -123,5 +116,4 @@
     <!-- 这将被渲染为 -->
     <p class="baz">Hi!</p>
     <span>This is a child component</span>
-
     ```

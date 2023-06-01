@@ -4,7 +4,7 @@
 
 + 类型
 
-  ```ts
+  ```js
   function customRef<T>(factory: CustomRefFactory<T>): Ref<T>
 
   type CustomRefFactory<T> = (

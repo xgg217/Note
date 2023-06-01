@@ -8,7 +8,7 @@
 
 + 类型
 
-  ```ts
+  ```js
   function isProxy(value: unknown): boolean
   ```
 

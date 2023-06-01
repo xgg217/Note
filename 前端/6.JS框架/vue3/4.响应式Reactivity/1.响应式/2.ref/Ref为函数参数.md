@@ -4,7 +4,7 @@
 
 + 代码
 
-  ```ts
+  ```js
   function add(a: number, b: number) {
     return a + b
   }
@@ -20,7 +20,7 @@
 
 + 代码
 
-  ```ts
+  ```js
   function add(a: Ref<number>, b: Ref<number>) {
     return computed(() => a.value + b.value)
   }
@@ -37,7 +37,7 @@
 
 + 代码
 
-  ```ts
+  ```js
   function add(
     a: Ref<number> | number,
     b: Ref<number> | number

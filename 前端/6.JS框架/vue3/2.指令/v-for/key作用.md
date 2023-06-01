@@ -8,21 +8,21 @@
 
 + 为了给 Vue 一个提示，以便它可以跟踪每个节点的标识，从而重用和重新排序现有的元素，你需要为每个项目提供一个唯一的 `key` attribute
 
-    ```html
-    <div v-for="item in items" :key="item.id">
-      <!-- 内容 -->
-    </div>
-    ```
+  ```html
+  <div v-for="item in items" :key="item.id">
+    <!-- 内容 -->
+  </div>
+  ```
 
 ## template
 
 + 当你使用 `<template v-for>` 时，`key` 应该被放置在这个 `<template>` 容器上
 
-    ```html
-    <template v-for="todo in todos" :key="todo.name">
-      <li>{{ todo.name }}</li>
-    </template>
-    ```
+  ```html
+  <template v-for="todo in todos" :key="todo.name">
+    <li>{{ todo.name }}</li>
+  </template>
+  ```
 
 ## 建议
 

@@ -9,22 +9,22 @@
 
 + 定义
 
-    ```js
-    // 只读
-    function computed<T>(
-      getter: () => T,
-      debuggerOptions?: DebuggerOptions
-    ): Readonly<Ref<Readonly<T>>>
+  ```js
+  // 只读
+  function computed<T>(
+    getter: () => T,
+    debuggerOptions?: DebuggerOptions
+  ): Readonly<Ref<Readonly<T>>>
 
-    // 可写的
-    function computed<T>(
-      options: {
-        get: () => T
-        set: (value: T) => void
-      },
-      debuggerOptions?: DebuggerOptions
-    ): Ref<T>
-    ```
+  // 可写的
+  function computed<T>(
+    options: {
+      get: () => T
+      set: (value: T) => void
+    },
+    debuggerOptions?: DebuggerOptions
+  ): Ref<T>
+  ```
 
 ## 标注类型TS
 

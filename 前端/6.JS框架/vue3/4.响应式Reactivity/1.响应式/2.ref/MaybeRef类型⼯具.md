@@ -4,7 +4,7 @@
 
 + 代码
 
-  ```ts
+  ```js
   import type { Ref } from 'vue'
 
   type MaybeRef<T> = Ref<T> | T
@@ -14,7 +14,7 @@
 
 + 示例1
 
-  ```ts
+  ```js
   export function useTimeAgo(
     time: Date | number | string | Ref<Date | number | string>,
   ) {
@@ -24,7 +24,7 @@
 
 + 示例2
 
-  ```ts
+  ```js
   import { computed, unref, Ref } from 'vue'
 
   type MaybeRef<T> = Ref<T> | T
@@ -36,13 +36,13 @@
   }
   ```
 
-## `ref` / `unref`
+## `ref` 与 `unref`
 
 + `MaybeRef<T>` 可以很好的配合 `ref` 和 `unref` 进⾏使⽤
 + 使⽤ `ref()` 当你想要想要将其标准化为 Ref
 + 使⽤ `unref()` 当你想要获得其值
 
-  ```ts
+  ```js
   type MaybeRef<T> = Ref<T> | T
 
   function useBala<T>(arg: MaybeRef<T>) {

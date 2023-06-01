@@ -8,7 +8,7 @@
 
 + 类型
 
-    ```ts
+    ```js
     function isReactive(value: unknown): boolean
     ```
 

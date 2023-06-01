@@ -37,7 +37,7 @@
 
 1. 当从组合式函数中返回响应式对象时，`toRefs` 大有作为，使用它，消费者组件可以解构/扩展返回的对象而不会失去响应性
 
-  ```ts
+  ```js
   function useFeatureX() {
     const state = reactive({
       foo: 1,
@@ -64,7 +64,7 @@
 
 + 类型
 
-  ```ts
+  ```js
   function toRefs<T extends object>(
     object: T
   ): {

@@ -4,12 +4,11 @@
 
 + `:style` 支持绑定 JavaScript 对象值，对应的是 [HTML 元素的](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style "HTML 元素的 ")[style](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style "style")[属性](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style " 属性")
 
-    ```ts
+    ```js
     const activeColor = ref('red')
     const fontSize = ref(30)
 
     <div :style="{ color: activeColor, fontSize: fontSize + 'px' }"></div>
-
     ```
 
 ## camelCase与kebab-cased&#x20;
@@ -24,14 +23,13 @@
 
 + 直接绑定一个样式对象通常是一个好主意，这样可以使模板更加简洁
 
-    ```ts
+    ```js
     const styleObject = reactive({
       color: 'red',
       fontSize: '13px'
     })
 
     <div :style="styleObject"></div>
-
     ```
 
 ## 计算属性

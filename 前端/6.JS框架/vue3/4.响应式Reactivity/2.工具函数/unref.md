@@ -14,7 +14,7 @@
   unref(bar) // 'bar'
   ```
 
-  ```ts
+  ```js
   import type { Ref } from 'vue';
 
   function useFoo(x : number | Ref<todos>){
@@ -27,9 +27,8 @@
 
 + 等同于：`isRef(val) ? val.value : val`
 
-  ```ts
+  ```js
   function unref<T>(r: Ref<T> | T): T {
-
-  return isRef(r) ? r.value : r
+    return isRef(r) ? r.value : r
   }
   ```

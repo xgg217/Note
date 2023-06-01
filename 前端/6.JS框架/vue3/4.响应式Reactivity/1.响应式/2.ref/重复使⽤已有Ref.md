@@ -11,7 +11,7 @@
   foo === bar // true
   ```
 
-  ```ts
+  ```js
   function useFoo(foo: Ref<string> | string) {
     // 不需要额外操作
     const bar = isRef(foo) ? foo : ref(foo)
