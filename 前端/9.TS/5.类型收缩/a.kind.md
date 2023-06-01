@@ -4,7 +4,7 @@
 
 + 定义
 
- ```ts
+  ```js
   type Rect = {
     hegiht: number
     width: number

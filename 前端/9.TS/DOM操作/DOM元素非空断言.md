@@ -4,6 +4,6 @@
 
 + 示例
 
-    ```ts
+   ```js
     const a1 = document.querySelector('.hd')!; // 断定该元素一定存在
     ```

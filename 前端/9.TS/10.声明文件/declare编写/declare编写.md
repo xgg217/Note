@@ -4,7 +4,7 @@
 
 + 声明文件示例
 
-   ```ts
+  ```js
     // 例如 global.d.ts
     interface Console {
       log(mes?:any):void,
@@ -18,7 +18,7 @@
 
 + 使用
 
-   ```ts
+  ```js
     console.log(12);
 
     setTimeout(() => {
@@ -30,7 +30,7 @@
 
 + 示例
 
-    ```ts
+   ```js
     // 文件位置 typescript/lib/lib.es5.d.ts
     declare function eval(x: string): any;
 
@@ -43,7 +43,7 @@
 
 + 声明
 
-   ```ts
+  ```js
     declare module "lodash" {
       export function chunk<T>(arr:T[], len:number):T[][]
     }
@@ -51,7 +51,7 @@
 
 + 使用
 
-   ```ts
+  ```js
     import _ from "lodash",
     const newArr = _.chunk([3,4,5,6, "1"], 2);
     ```
@@ -60,18 +60,18 @@
 
 + declare module
 
-    ![](image/image_OXYsSu37ER.png)
+    ![declare module](image/image3.png)
 
 ## 自定义
 
 + 使用 wx js-SDK
 
-    ![](image/image_s1Gt_eb4ZV.png)
+    ![wx js-SDK](image/image2.png)
 
 + 解决方案
 
-    ![](image/image_FHrHlC2imW.png)
+    ![image1](image/image1.png)
 
 + 更好的方案
 
-  - 定义一个wx.d.ts 文件
+  + 定义一个wx.d.ts 文件

@@ -10,7 +10,7 @@
 
 + 语法：当类型 T 可以赋值给 U 时（`extends` 在 TypeScript 中可以理解为 Assignable），返回 X 类型，否则返回 Y 类型
 
- ```ts
+  ```js
   // 其中的 T、U、X、Y 都是类型占位符
   T extends U ? X : Y
   ```
@@ -25,7 +25,7 @@
 
 + 例如
 
- ```ts
+  ```js
   // 需要判断一个类型是否为字符串类型
   type IsString<T> = T extends string ? true : false;
 
@@ -38,7 +38,7 @@
 
 + JS 的三元表达式的条件链
 
- ```ts
+  ```js
   condition1 ? value1
   : condition2 ? value3
   : condition3 ? value3
@@ -54,7 +54,7 @@
 
 + TS
 
- ```ts
+  ```js
   type TypeName<T> =
     T extends string ? 'string' :
     T extends string ? 'number' :
@@ -76,7 +76,7 @@
 
 + 当传入联合类型以后，发现最终返回的结果也变成了联合类型，并且是将传入的联合类型分别判断的结果
 
- ```ts
+  ```js
   type Test<T> = T extends number ? 1 : 2;
 
   // 相当于把 1传入Test求值，把 ‘a’传入Test求值
@@ -84,7 +84,7 @@
   type res = Test<1 | 'a'>; // 1 | 2
   ```
 
- ```ts
+ ```js
   type TypeName<T> =
     T extends string ? 'string' :
     T extends string ? 'number' :
@@ -102,15 +102,15 @@
 
 + 裸类型
 
-    + 没有被 数组（`T[]`）、元组（\[`T`]）、Promise（`Promise<T>`）等包装过的类型
+  + 没有被 数组（`T[]`）、元组（\[`T`]）、Promise（`Promise<T>`）等包装过的类型
 
 + 参数
 
-    + 下面的工具类型中，泛型表达式中的 `T` 就是类型参数
+  + 下面的工具类型中，泛型表达式中的 `T` 就是类型参数
 
-     ```ts
-      type IsString<T> = T extends string ? true : false
-      ```
+   ```js
+    type IsString<T> = T extends string ? true : false
+    ```
 
 ## 分布式类型计算过程
 

@@ -10,13 +10,13 @@
 
 1. `as const`
 
-    ```ts
+   ```js
     let y = [10, 'xgg'] as const;
     ```
 
 2. `<const>`
 
-    ```ts
+   ```js
     let y = <const>[10, 20];
     ```
 
@@ -24,25 +24,24 @@
 
 + 当我们使用关键字 `const` 声明一个字面量时，类型是等号右边的文字（将宽泛的类型，例如：字符串、数字转化成具体值类型）
 
- ```ts
+  ```js
   const x = 'a'; // x 的 类型为 'a'，不可被修改
-
   ```
 
 + 用 `let` 而不是 `const`， 那么该变量会被重新分配，并且类型会被扩展为字符串类型
 
- ```ts
+  ```js
   // x是宽泛的字符串类型，只要是字符串，即可赋值给变量x
   let x = 'a'; // 字符串类型
   ```
 
 + 使用 `as const`
 
- ```ts
+  ```js
   let y = 'a' as const; // x 的 类型为 'a'，不可被修改
   ```
 
- ```ts
+ ```js
   let x = "hello" as const;
   x = 'hello';  // ✅
   x = 'xx'; // ❌ 不能将类型“"xx"”分配给类型“"hello"”
@@ -52,7 +51,7 @@
 
 + 数组被限定成了一个元组
 
- ```ts
+  ```js
   let y = [10, 20] as const; // let y: readonly [10, 20]
   y[0] = 1; // ❌ 无法分配到 "0" ，因为它是只读属性
 
@@ -70,7 +69,7 @@
 
 + 在每个属性中附加了 `readonly` 修饰符
 
- ```ts
+  ```js
   const setCount = (n: number) => {
     return <const>{
       type: 'SET_COUNT',
@@ -85,12 +84,11 @@
     readonly type: "SET_COUNT";
     readonly payload: number
   };
-
   ```
 
 + 示例
 
- ```ts
+  ```js
   let obj = {
     x: 10,
     y: [20, 30],
@@ -117,7 +115,7 @@
 
 + 示例
 
- ```ts
+  ```js
   function asConst(){
     let a:string = "abc";
     let b = (firstname:string,lastname:string):string => firstname + lastname;
@@ -134,5 +132,4 @@
       let b = (firstname:string,lastname:string):string => firstname + lastname;
       return [a,b] as const; // 返回值由宽泛变成具体的
   }
-
   ```

@@ -8,6 +8,6 @@
 
 + 源码
 
-  ```ts
+  ```js
   type NonNullable<T> = T extends null | undefined ? never : T;
   ```

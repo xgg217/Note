@@ -17,8 +17,8 @@
   ```js
   // 例如
   <script lang="ts" setup>
-  // @ts-nocheck
-  import { computed } from 'vue-demi'
-  dosomething xxxxxxx
+    // @ts-nocheck
+    import { computed } from 'vue-demi'
+    dosomething xxxxxxx
   </script>
   ```

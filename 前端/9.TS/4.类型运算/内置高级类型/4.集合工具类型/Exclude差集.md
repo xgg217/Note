@@ -4,7 +4,7 @@
 
 + 从 T 中的删除可以赋值给 U 的类型
 
- ```ts
+  ```js
   type A = number | string | boolean
   type B = number | boolean
 
@@ -18,7 +18,7 @@
 
 + 源码
 
- ```ts
+  ```js
   type Exclude<T, U> = T extends U ? never : T;
   ```
 
@@ -32,7 +32,7 @@
 
     ![差集](image/差集.png)
 
- ```ts
+  ```js
   type SetA = 1 | 2 | 3 | 5;
 
   type SetB = 0 | 1 | 2 | 4;

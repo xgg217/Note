@@ -14,9 +14,9 @@
 
 ## 基础类型
 
-+ TypeScript 添加了一个`typeof`运算符，您可以在\_类型\_上下文中使用它来引用变量或属性的类型
++ TypeScript 添加了一个`typeof`运算符，您可以在类型上下文中使用它来引用变量或属性的类型
 
- ```ts
+  ```js
   let s = "hello";
   let n: typeof s; // let n: string
   ```
@@ -25,7 +25,7 @@
 
 + 对一个对象使用 `typeof`
 
- ```ts
+  ```js
   const lolo = {
     name: "lolo",
     age: 7,
@@ -37,7 +37,6 @@
 
   type Person = typeof lolo;
   type Address = typeof lolo["address"];
-
   ```
 
   ![](image/image_k2abfYmhu0.png)
@@ -46,7 +45,7 @@
 
 + 代码
 
- ```ts
+  ```js
   type Person = {
     name: string;
     age: number;
@@ -64,7 +63,7 @@
 
 + 对一个函数使用 `typeof`，获取对应函数类型
 
- ```ts
+  ```js
   function add(a: number, b: number) {
     return a + b;
   }
@@ -82,7 +81,7 @@
 
 + 利用 `keyof` 和 `typeof` 操作符，你就可以获取枚举类型的所有属性名
 
- ```ts
+  ```js
   enum HttpMethod {
     Get,
     Post,
@@ -102,7 +101,7 @@
 
 + 用 `number` 来获取数组元素的类型。结合 `typeof` 可以方便的捕获数组字面量的元素类型
 
- ```ts
+  ```js
   const MyArray = [
     { name: "Alice", age: 15 },
     { name: "Bob", age: 23 },
@@ -128,7 +127,7 @@
 
 + 在使用 typeof 操作符的过程中，如果你想要获取更精确的类型，那么你可以结合 TypeScript 3.4 版本中引入的 `const` 断言
 
- ```ts
+  ```js
   let requestMethod = "Get";
   let requestMethod2 = "Get" as const;
 
@@ -136,7 +135,7 @@
   type R1 = typeof requestMethod2; // "Get"
   ```
 
- ```ts
+  ```js
   let user = {
     id: 666,
     name: "阿宝哥",

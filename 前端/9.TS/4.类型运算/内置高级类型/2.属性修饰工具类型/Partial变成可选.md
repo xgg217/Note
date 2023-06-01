@@ -4,7 +4,7 @@
 
 + 将类型 T 中的成员变成 **可选**
 
- ```ts
+  ```js
   interface User {
     age: number
     name: string
@@ -19,7 +19,7 @@
 
 + 源码
 
- ```ts
+  ```js
   type Partial<T> = {
     [P in keyof T]?: T[P];
   };
