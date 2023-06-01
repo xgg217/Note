@@ -64,9 +64,9 @@
 
 + `ref` 可以接收一个函数值，用于对存储引用位置的完全控制
 
-    ```js
-    <ChildComponent :ref="(el) => child = el" />
-    ```
+  ```js
+  <ChildComponent :ref="(el) => child = el" />
+  ```
 
 ## 注意
 
