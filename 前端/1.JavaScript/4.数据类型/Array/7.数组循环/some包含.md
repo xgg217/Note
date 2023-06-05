@@ -18,41 +18,40 @@
 
 + 示例：检测在数组中是否有元素大于 10
 
-    ```js
-    function isBiggerThan10(element, index, array) {
-      return element > 10;
-    }
+  ```js
+  function isBiggerThan10(element, index, array) {
+    return element > 10;
+  }
 
-    [2, 5, 8, 1, 4].some(isBiggerThan10);  // false
-    [12, 5, 8, 1, 4].some(isBiggerThan10); // true
-
-    ```
+  [2, 5, 8, 1, 4].some(isBiggerThan10);  // false
+  [12, 5, 8, 1, 4].some(isBiggerThan10); // true
+  ```
 
 + 示例：判断数组元素中是否存在某个值
 
-    ```js
-    var fruits = ['apple', 'banana', 'mango', 'guava'];
-    function checkAvailability(arr, val) {
-      return arr.some(function(arrVal) {
-        return val === arrVal;
-      });
-    }
-    checkAvailability(fruits, 'kela');   // false
-    checkAvailability(fruits, 'banana'); // true
-    ```
+  ```js
+  var fruits = ['apple', 'banana', 'mango', 'guava'];
+  function checkAvailability(arr, val) {
+    return arr.some(function(arrVal) {
+      return val === arrVal;
+    });
+  }
+  checkAvailability(fruits, 'kela');   // false
+  checkAvailability(fruits, 'banana'); // true
+  ```
 
 ## 源码
 
 + 代码
 
-    ```js
-    const some = function(arr, funCb, thatThis) {
-      const len = arr.length;
-      for(let i = 0; i < len; i++) {
-        if(funCb.call(thatThis, arr[i], i, arr)) {
-          return true
-        }
+  ```js
+  const some = function(arr, funCb, thatThis) {
+    const len = arr.length;
+    for(let i = 0; i < len; i++) {
+      if(funCb.call(thatThis, arr[i], i, arr)) {
+        return true
       }
-      return false
     }
-    ```
+    return false
+  }
+  ```

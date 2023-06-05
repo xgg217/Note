@@ -53,22 +53,22 @@
 
 + 代码
 
-    ```js
-    /**
-     * 在list中逐项查找，返回第一个通过predicate迭代函数真值检测的元素值，
-      +  如果没有元素通过检测则返回 undefined
-      +  如果找到匹配的元素，函数将立即返回，不会遍历整个list
-     * @param {*} arr
-     * @param {*} funCb
-     * @param {*} thatThis
-     */
-    const find = function(arr, funCb, thatThis) {
-      const len = arr.length;
-      for(let i = 0; i < len; i++) {
-        if(funCb.call(thatThis, arr[i], i, arr)) {
-          return arr[i]
-        }
+  ```js
+  /**
+   * 在list中逐项查找，返回第一个通过predicate迭代函数真值检测的元素值，
+    +  如果没有元素通过检测则返回 undefined
+    +  如果找到匹配的元素，函数将立即返回，不会遍历整个list
+    * @param {*} arr
+    * @param {*} funCb
+    * @param {*} thatThis
+    */
+  const find = function(arr, funCb, thatThis) {
+    const len = arr.length;
+    for(let i = 0; i < len; i++) {
+      if(funCb.call(thatThis, arr[i], i, arr)) {
+        return arr[i]
       }
-      return undefined
     }
-    ```
+    return undefined
+  }
+  ```

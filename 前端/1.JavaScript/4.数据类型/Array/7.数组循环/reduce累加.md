@@ -34,101 +34,101 @@
 
 + 加对象数组里的值
 
-    ```js
-    var initialValue = 0;
-    var sum = [{x: 1}, {x:2}, {x:3}].reduce(function (accumulator, currentValue) {
-      return accumulator + currentValue.x;
-    },initialValue)
-    console.log(sum) // 6
-    ```
+  ```js
+  var initialValue = 0;
+  var sum = [{x: 1}, {x:2}, {x:3}].reduce(function (accumulator, currentValue) {
+    return accumulator + currentValue.x;
+  },initialValue)
+  console.log(sum) // 6
+  ```
 
 + 将二维数组转化为一维
 
-    ```js
-    var flattened = [[0, 1], [2, 3], [4, 5]].reduce(function(a, b) {
-      return a.concat(b);
-    },[]);
-    // flattened is [0, 1, 2, 3, 4, 5]
-    ```
+  ```js
+  var flattened = [[0, 1], [2, 3], [4, 5]].reduce(function(a, b) {
+    return a.concat(b);
+  },[]);
+  // flattened is [0, 1, 2, 3, 4, 5]
+  ```
 
 + 计算数组中每个元素出现的次数
 
-    ```js
-    var names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice'];
-    var countedNames = names.reduce(function (allNames, name) {
-      if (name in allNames) {
-        allNames[name]++;
-      } else {
-        allNames[name] = 1;
-      }
-      return allNames;
-    }, {});
-    // countedNames is: { 'Alice': 2, 'Bob': 1, 'Tiff': 1, 'Bruce': 1 }
-    ```
+  ```js
+  var names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice'];
+  var countedNames = names.reduce(function (allNames, name) {
+    if (name in allNames) {
+      allNames[name]++;
+    } else {
+      allNames[name] = 1;
+    }
+    return allNames;
+  }, {});
+  // countedNames is: { 'Alice': 2, 'Bob': 1, 'Tiff': 1, 'Bruce': 1 }
+  ```
 
 ## 源码
 
 + 代码
 
-    ```js
+  ```js
+  /**
+   * @param {*} isRight 从右到左开始计算
+    */
+  const createReduce = function(isRight = false) {
+    const reducer = function(newArr, funCb, memo = 0) {
+      if(!Array.isArray(newArr)) {
+        throw new Error(`函数 《${xggReduce.name}》 第一个参数必须为数组`);
+      }
+
+      const len = newArr.length;
+      let conunt = 0;
+      let i = 0;
+
+      // 长度为 0，同时未提供初始值，报错
+      if(!len && !memo) {
+        throw new Error(`函数 《${xggReduce.name}》 数组长度不能为0，或者提供初始值`);
+      }
+
+      // 长度为 0，提供初始值
+      if(!len && !memo) {
+        return memo;
+      }
+
+      // 长度为1，不进行循环，直接返回第一个数组
+      if(len === 1) {
+        return newArr[0];
+      }
+
+      if(memo) {
+        // 存在初始值
+        conunt = memo;
+      } else {
+        // 不存在:累计值的初始值为数组的第一项
+        conunt = newArr[0];
+        i = 1;
+      }
+
+      for(; i < len; i++) {
+        conunt = funCb(conunt, newArr[i], i, newArr);
+      }
+      return conunt;
+    }
+
     /**
-     * @param {*} isRight 从右到左开始计算
-     */
-    const createReduce = function(isRight = false) {
-      const reducer = function(newArr, funCb, memo = 0) {
-        if(!Array.isArray(newArr)) {
-          throw new Error(`函数 《${xggReduce.name}》 第一个参数必须为数组`);
-        }
-
-        const len = newArr.length;
-        let conunt = 0;
-        let i = 0;
-
-        // 长度为 0，同时未提供初始值，报错
-        if(!len && !memo) {
-          throw new Error(`函数 《${xggReduce.name}》 数组长度不能为0，或者提供初始值`);
-        }
-
-        // 长度为 0，提供初始值
-        if(!len && !memo) {
-          return memo;
-        }
-
-        // 长度为1，不进行循环，直接返回第一个数组
-        if(len === 1) {
-          return newArr[0];
-        }
-
-        if(memo) {
-          // 存在初始值
-          conunt = memo;
-        } else {
-          // 不存在:累计值的初始值为数组的第一项
-          conunt = newArr[0];
-          i = 1;
-        }
-
-        for(; i < len; i++) {
-          conunt = funCb(conunt, newArr[i], i, newArr);
-        }
-        return conunt;
+     *
+      * @param {*} arr 数组
+      * @param {*} funCb (上一次的累加值,本次循环项, 本次索引, 数组) 回调函数
+      * @param {*} memo 初始值
+      */
+    return function(arr, funCb, memo = 0) {
+      let newArr = arr;
+      if(isRight) {
+        newArr.reverse();
       }
+      return reducer(newArr, funCb, memo = 0)
+    }
+  };
 
-      /**
-       *
-       * @param {*} arr 数组
-       * @param {*} funCb (上一次的累加值,本次循环项, 本次索引, 数组) 回调函数
-       * @param {*} memo 初始值
-       */
-      return function(arr, funCb, memo = 0) {
-        let newArr = arr;
-        if(isRight) {
-          newArr.reverse();
-        }
-        return reducer(newArr, funCb, memo = 0)
-      }
-    };
-
-    reduce = createReduce(false);
-    reduceRight = createReduce(true);
-    ```
+  reduce = createReduce(false);
+  reduceRight = createReduce(true);
+  ```

@@ -8,23 +8,23 @@
 
 + 它可以弥补 `typeof` 运算符的不足
 
-    ```js
-    var a = [1, 2, 3];
+  ```js
+  var a = [1, 2, 3];
 
-    typeof a // "object"
-    Array.isArray(a) // true
-    ```
+  typeof a // "object"
+  Array.isArray(a) // true
+  ```
 
-    ```js
-    Array.isArray([]);   // true
-    ```
+  ```js
+  Array.isArray([]);   // true
+  ```
 
-    ```js
-    Array.isArray([1, 2, 3]); // true
+  ```js
+  Array.isArray([1, 2, 3]); // true
 
-    Array.isArray({foo: 123}); // false
+  Array.isArray({foo: 123}); // false
 
-    Array.isArray("foobar"); // false
+  Array.isArray("foobar"); // false
 
-    Array.isArray(undefined); // false
-    ```
+  Array.isArray(undefined); // false
+  ```
