@@ -20,15 +20,15 @@
 
 + 在下面的代码中，变量x是未定义的，`if` 语句的求值结果将是 `true`
 
-    ```js
-    var x;
+  ```js
+  var x;
 
-    if (x === undefined) {
-    // 执行这些语句
-    } else {
-    // 这些语句不会被执行
-    }
-    ```
+  if (x === undefined) {
+  // 执行这些语句
+  } else {
+  // 这些语句不会被执行
+  }
+  ```
 
 + 这里是必须使用严格相等操作符（ `===` ）而不是标准相等操作符（`==`），因为 `x == undefined` 会检查 `x` 是不是 `null`，但是严格相等不会检查
 
@@ -40,22 +40,22 @@
 
 + `typeof`
 
-    ```js
-    var x;
-    if(typeof x === 'undefined') {
-      // 执行这些语句
-    }
-    ```
+  ```js
+  var x;
+  if(typeof x === 'undefined') {
+    // 执行这些语句
+  }
+  ```
 
 + 使用 `typeof` 的原因是它不会在一个变量没有被声明的时候抛出一个错误
 
-    ```js
-    // 这里没有声明y
-    if(typeof y === 'undefined') {  // 没有错误，执行结果为true
-      console.log("y is " + typeof y )  // y is undefined
-    }
+  ```js
+  // 这里没有声明y
+  if(typeof y === 'undefined') {  // 没有错误，执行结果为true
+    console.log("y is " + typeof y )  // y is undefined
+  }
 
-    if(y === undefined) {  // ReferenceError: y is not defined
+  if(y === undefined) {  // ReferenceError: y is not defined
 
-    }
-    ```
+  }
+  ```

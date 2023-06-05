@@ -4,15 +4,15 @@
 
 + `NaN` 是一个全局对象的属性
 
-    ```js
-    5 - 'x'  // NaN
+  ```js
+  5 - 'x'  // NaN
 
-    Math.acos(2) // NaN
-    Math.log(-1) // NaN
-    Math.sqrt(-1) // NaN
+  Math.acos(2) // NaN
+  Math.log(-1) // NaN
+  Math.sqrt(-1) // NaN
 
-    0 / 0 // NaN
-    ```
+  0 / 0 // NaN
+  ```
 
 + `NaN` 属性的初始值就是 `NaN`，和 `Number.NaN` 的值一样
 
@@ -24,40 +24,40 @@
 
 + `NaN` 不等于任何值，包括它本身
 
-    ```js
-    NaN == NaN // false
+  ```js
+  NaN == NaN // false
 
-    NaN === NaN // false
-    ```
+  NaN === NaN // false
+  ```
 
 + 数组的 `indexOf` 方法内部使用的是 **严格相等** 运算符，所以该方法对 `NaN` 不成立
 
-    ```js
-    [NaN].indexOf(NaN) // -1
-    ```
+  ```js
+  [NaN].indexOf(NaN) // -1
+  ```
 
 + `NaN` 在布尔运算时被当作 `false`
 
-    ```js
-    Boolean(NaN) // false
-    ```
+  ```js
+  Boolean(NaN) // false
+  ```
 
 + `NaN` 与任何数（包括它自己）的运算，得到的都是 `NaN`
 
-    ```js
-    NaN + 32 // NaN
-    NaN - 32 // NaN
-    NaN * 32 // NaN
-    NaN / 32 // NaN
-    ```
+  ```js
+  NaN + 32 // NaN
+  NaN - 32 // NaN
+  NaN * 32 // NaN
+  NaN / 32 // NaN
+  ```
 
 ## typeof
 
 + 需要注意的是，`NaN` 不是独立的数据类型，而是一个特殊数值，它的数据类型依然属于 `Number`，使用 `typeof` 运算符可以看得很清楚
 
-    ```js
-    typeof NaN // 'number'
-    ```
+  ```js
+  typeof NaN // 'number'
+  ```
 
 ## 判断一个值是否是NaN
 
@@ -67,17 +67,17 @@
 
 + 在执行自比较之中：`NaN`，也只有 `NaN`，比较之中不等于它自己
 
-    ```js
-    NaN === NaN;        // false
-    Number.NaN === NaN; // false
-    isNaN(NaN);         // true
-    isNaN(Number.NaN);  // true
+  ```js
+  NaN === NaN;        // false
+  Number.NaN === NaN; // false
+  isNaN(NaN);         // true
+  isNaN(Number.NaN);  // true
 
-    function valueIsNaN(v) { return v !== v; }
-    valueIsNaN(1);          // false
-    valueIsNaN(NaN);        // true
-    valueIsNaN(Number.NaN); // true
-    ```
+  function valueIsNaN(v) { return v !== v; }
+  valueIsNaN(1);          // false
+  valueIsNaN(NaN);        // true
+  valueIsNaN(Number.NaN); // true
+  ```
 
 ## isNaN() 和 Number.isNaN() 区别
 
@@ -85,7 +85,7 @@
 
 + 而 `Number.isNaN()` 仅当值当前为 `NaN` 时才为 `true`&#x20;
 
-    ```js
-    isNaN('hello world');        // true
-    Number.isNaN('hello world'); // false
-    ```
+  ```js
+  isNaN('hello world');        // true
+  Number.isNaN('hello world'); // false
+  ```
