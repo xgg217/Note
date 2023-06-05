@@ -8,18 +8,18 @@
 
 + 如果所有 `case` 都不符合，则执行最后的 `default` 部分
 
-    ```js
-    switch (fruit) {
-      case "banana":
-        // ...
-        break;
-      case "apple":
-        // ...
-        break;
-      default:
-        // ...
-    }
-    ```
+  ```js
+  switch (fruit) {
+    case "banana":
+      // ...
+      break;
+    case "apple":
+      // ...
+      break;
+    default:
+      // ...
+  }
+  ```
 
 ## 注意
 
@@ -27,17 +27,17 @@
 
 2. 在比较运行结果时，采用的是**严格相等运算符**（ `===`），而不是相等运算符（`==`），这意味着比较时不会发生类型转换
 
-    ```js
-    var x = 1;
+  ```js
+  var x = 1;
 
-    switch (x) {
-      case true:
-        console.log('x发生类型转换');
-      default:
-        console.log('x没有发生类型转换');
-    }
-    // x没有发生类型转换
-    ```
+  switch (x) {
+    case true:
+      console.log('x发生类型转换');
+    default:
+      console.log('x没有发生类型转换');
+  }
+  // x没有发生类型转换
+  ```
 
 ## 改进
 
@@ -49,46 +49,46 @@
 
 + 此外，这种结构类似于 `goto` 语句，容易造成程序流程的混乱，使得代码结构混乱不堪，不符合面向对象编程的原则
 
-    ```js
-    // 原始
-    function doAction(action) {
-      switch (action) {
-        case 'hack':
-          return 'hack';
-          break;
-        case 'slash':
-          return 'slash';
-          break;
-        case 'run':
-          return 'run';
-          break;
-        default:
-          throw new Error('Invalid action.');
-      }
-    }
-    ```
-
-    ```js
-    // 改进
-    function doAction(action) {
-      var actions = {
-        'hack': function () {
-          return 'hack';
-        },
-        'slash': function () {
-          return 'slash';
-        },
-        'run': function () {
-          return 'run';
-        }
-      };
-
-      if (typeof actions[action] !== 'function') {
+  ```js
+  // 原始
+  function doAction(action) {
+    switch (action) {
+      case 'hack':
+        return 'hack';
+        break;
+      case 'slash':
+        return 'slash';
+        break;
+      case 'run':
+        return 'run';
+        break;
+      default:
         throw new Error('Invalid action.');
-      }
-
-      return actions[action]();
     }
-    ```
+  }
+  ```
+
+  ```js
+  // 改进
+  function doAction(action) {
+    var actions = {
+      'hack': function () {
+        return 'hack';
+      },
+      'slash': function () {
+        return 'slash';
+      },
+      'run': function () {
+        return 'run';
+      }
+    };
+
+    if (typeof actions[action] !== 'function') {
+      throw new Error('Invalid action.');
+    }
+
+    return actions[action]();
+  }
+  ```
 
 + 建议避免使用 `switch...case` 结构，用对象结构代替
