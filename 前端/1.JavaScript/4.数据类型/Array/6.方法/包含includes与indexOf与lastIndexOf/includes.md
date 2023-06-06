@@ -42,19 +42,19 @@
 
 + `includes()` 方法有意设计为通用方法。它不要求 `this` 值是数组对象，所以它可以被用于其他类型的对象 (比如类数组对象)
 
-    ```js
-    (function() {
-      console.log([].includes.call(arguments, 'a')); // true
-      console.log([].includes.call(arguments, 'd')); // false
-    })('a','b','c');
-    ```
+  ```js
+  (function() {
+    console.log([].includes.call(arguments, 'a')); // true
+    console.log([].includes.call(arguments, 'd')); // false
+  })('a','b','c');
+  ```
 
 ## 示例
 
 + `includes`方法返回一个布尔值，表示某个数组是否包含给定的值，与字符串的 `includes` 方法类似
 
-    ```js
-    [1, 2, 3].includes(2)     // true
-    [1, 2, 3].includes(4)     // false
-    [1, 2, NaN].includes(NaN) // true
-    ```
+  ```js
+  [1, 2, 3].includes(2)     // true
+  [1, 2, 3].includes(4)     // false
+  [1, 2, NaN].includes(NaN) // true
+  ```
