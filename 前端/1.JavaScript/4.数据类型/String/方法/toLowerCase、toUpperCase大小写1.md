@@ -8,19 +8,19 @@
 
 + 它们都返回一个新字符串，不改变原字符串
 
-    ```js
-    'Hello World'.toLowerCase()
-    // "hello world"
+  ```js
+  'Hello World'.toLowerCase()
+  // "hello world"
 
-    'Hello World'.toUpperCase()
-    // "HELLO WORLD"
-    ```
+  'Hello World'.toUpperCase()
+  // "HELLO WORLD"
+  ```
 
 + 这个方法也可以将布尔值或数组转为大写字符串，但是需要通过 `call` 方法使用
 
-    ```js
-    String.prototype.toUpperCase.call(true)
-    // 'TRUE'
-    String.prototype.toUpperCase.call(['a', 'b', 'c'])
-    // 'A,B,C'
-    ```
+  ```js
+  String.prototype.toUpperCase.call(true)
+  // 'TRUE'
+  String.prototype.toUpperCase.call(['a', 'b', 'c'])
+  // 'A,B,C'
+  ```

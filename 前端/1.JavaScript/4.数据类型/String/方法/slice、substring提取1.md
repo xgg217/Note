@@ -6,9 +6,9 @@
 
 + 它的第一个参数是子字符串的开始位置，第二个参数是子字符串的结束位置（不含该位置）
 
-    ```js
-    'JavaScript'.slice(0, 4) // "Java"
-    ```
+  ```js
+  'JavaScript'.slice(0, 4) // "Java"
+  ```
 
 ## substring
 
