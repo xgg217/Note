@@ -28,25 +28,25 @@
 
 + 未使用 `globalThis`
 
-    ```js
-    var getGlobal = function () {
-      if (typeof self !== 'undefined') { return self; }
-      if (typeof window !== 'undefined') { return window; }
-      if (typeof global !== 'undefined') { return global; }
-      throw new Error('unable to locate global object');
-    };
+  ```js
+  var getGlobal = function () {
+    if (typeof self !== 'undefined') { return self; }
+    if (typeof window !== 'undefined') { return window; }
+    if (typeof global !== 'undefined') { return global; }
+    throw new Error('unable to locate global object');
+  };
 
-    var globals = getGlobal();
+  var globals = getGlobal();
 
-    if (typeof globals.setTimeout !== 'function') {
-      // 此环境中没有 setTimeout 方法！
-    }
-    ```
+  if (typeof globals.setTimeout !== 'function') {
+    // 此环境中没有 setTimeout 方法！
+  }
+  ```
 
 + 有了 `globalThis` 之后，只需要
 
-    ```js
-    if (typeof globalThis.setTimeout !== 'function') {
-      //  此环境中没有 setTimeout 方法！
-    }
-    ```
+  ```js
+  if (typeof globalThis.setTimeout !== 'function') {
+    //  此环境中没有 setTimeout 方法！
+  }
+  ```
