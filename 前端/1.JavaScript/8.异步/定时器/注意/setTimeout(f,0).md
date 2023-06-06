@@ -14,44 +14,44 @@
 
 + 而并不是会立刻就执行这个任务
 
-    ```js
-    setTimeout(function () {
-      console.log('你好！');
-    }, 0);
-    ```
+  ```js
+  setTimeout(function () {
+    console.log('你好！');
+  }, 0);
+  ```
 
 + `setTimeout(f, 0)` 指定的任务，最早也要到下一次 `Event Loop` 才会执行
 
-    ```js
-    setTimeout(function() {
-      console.log("Timeout");
-    }, 0);
+  ```js
+  setTimeout(function() {
+    console.log("Timeout");
+  }, 0);
 
-    function a(x) {
-      console.log("a() 开始运行");
-      b(x);
-      console.log("a() 结束运行");
-    }
+  function a(x) {
+    console.log("a() 开始运行");
+    b(x);
+    console.log("a() 结束运行");
+  }
 
-    function b(y) {
-      console.log("b() 开始运行");
-      console.log("传入的值为" + y);
-      console.log("b() 结束运行");
-    }
+  function b(y) {
+    console.log("b() 开始运行");
+    console.log("传入的值为" + y);
+    console.log("b() 结束运行");
+  }
 
-    console.log("当前任务开始");
-    a(42);
-    console.log("当前任务结束");
+  console.log("当前任务开始");
+  a(42);
+  console.log("当前任务结束");
 
-    // 当前任务开始
-    // a() 开始运行
-    // b() 开始运行
-    // 传入的值为42
-    // b() 结束运行
-    // a() 结束运行
-    // 当前任务结束
-    // Timeout
-    ```
+  // 当前任务开始
+  // a() 开始运行
+  // b() 开始运行
+  // 传入的值为42
+  // b() 结束运行
+  // a() 结束运行
+  // 当前任务结束
+  // Timeout
+  ```
 
 ## 注意
 
