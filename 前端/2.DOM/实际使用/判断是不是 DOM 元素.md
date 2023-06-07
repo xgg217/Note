@@ -4,8 +4,8 @@
 
 + 代码
 
-    ```js
-    isElement = function(obj) {
-      return !!(obj && obj.nodeType === 1);
-    };
-    ```
+  ```js
+  isElement = function(obj) {
+    return !!(obj && obj.nodeType === 1);
+  };
+  ```

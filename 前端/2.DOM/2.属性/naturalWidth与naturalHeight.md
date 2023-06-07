@@ -6,9 +6,9 @@
 
 + naturalWidth 属性返回图像的原始宽度
 
-    ```js
-    var x = document.getElementById("myImg").naturalWidth;
-    ```
+  ```js
+  var x = document.getElementById("myImg").naturalWidth;
+  ```
 
 ## naturalWidth 与 width
 
