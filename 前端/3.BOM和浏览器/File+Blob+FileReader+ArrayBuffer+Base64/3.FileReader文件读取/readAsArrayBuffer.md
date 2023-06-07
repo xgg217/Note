@@ -6,11 +6,11 @@
 
 + 在文件操作时（比如将JPEG图像转为PNG图像），这个方法非常方便
 
-    ```js
-    var reader = new FileReader();
-    reader.onload = function(e) {
-      var arrayBuffer = reader.result;
-    }
+  ```js
+  var reader = new FileReader();
+  reader.onload = function(e) {
+    var arrayBuffer = reader.result;
+  }
 
-    reader.readAsArrayBuffer(file);
-    ```
+  reader.readAsArrayBuffer(file);
+  ```

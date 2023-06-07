@@ -44,18 +44,18 @@
 
 + 它的参数就是 `URL.createObjectURL()` 方法返回的 URL 字符串
 
-    ```js
-    var div = document.getElementById('display');
+  ```js
+  var div = document.getElementById('display');
 
-    // 一旦图片加载成功以后，为本地文件生成的 URL 字符串就没用了，于是可以在img.onload回调函数里面，通过URL.revokeObjectURL()方法卸载这个 URL 实例
-    function handleFiles(files) {
-      for (var i = 0; i < files.length; i++) {
-        var img = document.createElement('img');
-        img.src = window.URL.createObjectURL(files[i]);
-        div.appendChild(img);
-        img.onload = function() {
-          window.URL.revokeObjectURL(this.src);
-        }
+  // 一旦图片加载成功以后，为本地文件生成的 URL 字符串就没用了，于是可以在img.onload回调函数里面，通过URL.revokeObjectURL()方法卸载这个 URL 实例
+  function handleFiles(files) {
+    for (var i = 0; i < files.length; i++) {
+      var img = document.createElement('img');
+      img.src = window.URL.createObjectURL(files[i]);
+      div.appendChild(img);
+      img.onload = function() {
+        window.URL.revokeObjectURL(this.src);
       }
     }
-    ```
+  }
+  ```
