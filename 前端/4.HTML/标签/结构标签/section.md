@@ -20,12 +20,12 @@
 
 + 示例
 
-    ```html
-    <section>
-      <h1>苹果</h1>
-      <p>........(“苹果”文章正文)</p>
-    </section>
-    ```
+  ```html
+  <section>
+    <h1>苹果</h1>
+    <p>........(“苹果”文章正文)</p>
+  </section>
+  ```
 
 + 不推荐那些没有标题的内容使用`<section>`
 
@@ -33,40 +33,40 @@
 
 + 示例（带有 `<section>` 元素的 `<article>` 元素）
 
-    ```html
-    <!-- 关于苹果的文章 一段独立、完整的内容 -->
-    <article>
-      <section>
-        <h1>苹果</h1>
-        <p>........(“苹果”文章)</p>
-      </section>
-      <section>
-        <h2>红富士</h2>
-        <p>........(“苹果”文章正文--1)</p>
-      </section>
-      <section>
-        <h2>国光</h2>
-        <p>........(“苹果”文章正文--2)</p>
-      </section>
-    </article>
-    ```
+  ```html
+  <!-- 关于苹果的文章 一段独立、完整的内容 -->
+  <article>
+    <section>
+      <h1>苹果</h1>
+      <p>........(“苹果”文章)</p>
+    </section>
+    <section>
+      <h2>红富士</h2>
+      <p>........(“苹果”文章正文--1)</p>
+    </section>
+    <section>
+      <h2>国光</h2>
+      <p>........(“苹果”文章正文--2)</p>
+    </section>
+  </article>
+  ```
 
 + 示例（带有`<article>`元素的`<section>`元素）
 
-    ```html
-    <!-- 一篇文章中的一段 -->
-    <section>
-      <h1>水果</h1>
-      <article>
-        <h2>橘子</h2>
-        <p>........(“橘子”文章正文)</p>
-      </article>
-      <article>
-        <h2>香蕉</h2>
-        <p>........(“香蕉”文章正文)</p>
-      </article>
-    </section>
-    ```
+  ```html
+  <!-- 一篇文章中的一段 -->
+  <section>
+    <h1>水果</h1>
+    <article>
+      <h2>橘子</h2>
+      <p>........(“橘子”文章正文)</p>
+    </article>
+    <article>
+      <h2>香蕉</h2>
+      <p>........(“香蕉”文章正文)</p>
+    </article>
+  </section>
+  ```
 
 ## 注意点
 

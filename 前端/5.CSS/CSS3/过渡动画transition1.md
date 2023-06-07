@@ -4,29 +4,29 @@
 
 + 连写 `transition: 过渡属性, 过渡时长, [运动速度], [延迟时间];`
 
-    ```css
-    /* all 所有 */
-    transition: all 5s;
+  ```css
+  /* all 所有 */
+  transition: all 5s;
 
-    /* 具体属性 */
-    transition: width 5s;
-    ```
+  /* 具体属性 */
+  transition: width 5s;
+  ```
 
 + 具体属性
 
-    ```css
-    /* 过渡属性 */
-    transition-property
+  ```css
+  /* 过渡属性 */
+  transition-property
 
-    /* 过渡时长 */
-    transition-duration
+  /* 过渡时长 */
+  transition-duration
 
-    /* 过渡函数 */
-    transition-timing-function
+  /* 过渡函数 */
+  transition-timing-function
 
-    /* 延迟时间 */
-    transition-delay
-    ```
+  /* 延迟时间 */
+  transition-delay
+  ```
 
 ## 过渡函数 transition-timing-function
 
