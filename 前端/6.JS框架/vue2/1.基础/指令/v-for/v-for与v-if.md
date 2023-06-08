@@ -10,7 +10,7 @@
 
 + 例如
 
-  ```js
+  ```html
   <ul>
     <li
       v-for="user in users"

@@ -8,21 +8,19 @@
 
 1. 字符串，代表在 `for` 循环的 `array` 中 `item` 的某个 `property`，该 `property` 的值需要是列表中唯一的字符串或数字，且不能动态改变
 
-```js
-<switch wx:for="{{objectArray}}" wx:key="unique" style="display: block;"> {{item.id}} </switch>
+  ```js
+  <switch wx:for="{{objectArray}}" wx:key="unique" style="display: block;"> {{item.id}} </switch>
 
- <button bindtap="switch"> Switch </button>
+  <button bindtap="switch"> Switch </button>
 
- <button bindtap="addToFront"> Add to the front </button>
+  <button bindtap="addToFront"> Add to the front </button>
+  ```
 
-```
+  ```js
+  <switch wx:for="{{numberArray}}" wx:key="*this" style="display: block;"> {{item}} </switch>
 
-```js
-<switch wx:for="{{numberArray}}" wx:key="*this" style="display: block;"> {{item}} </switch>
-
- <button bindtap="addNumberToFront"> Add to the front </button>
-
-```
+  <button bindtap="addNumberToFront"> Add to the front </button>
+  ```
 
 ## 触发时机
 

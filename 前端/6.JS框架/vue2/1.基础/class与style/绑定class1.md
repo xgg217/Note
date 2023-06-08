@@ -4,7 +4,7 @@
 
 + 使用
 
-  ```js
+  ```html
   <div v-bind:class="{ red: isRed }"></div>
   ```
 
@@ -14,7 +14,7 @@
 
 + 可以把一个数组传给 v-bind:class，以应用一个 class 列表
 
-  ```js
+  ```html
   <div v-bind:class="[classA, classB]"></div>
   ```
 
@@ -22,7 +22,7 @@
 
 + 以使用三元表达式来切换class
 
-  ```js
+  ```html
   <div v-bind:class="[isActive ? activeClass : '', errorClass]"></div>
   ```
 
@@ -30,7 +30,7 @@
 
 + 使用
 
-  ```js
+  ```html
   <div v-bind:class="[classA, { classB: isB, classC: isC }]">
   <div v-bind:class="classA" class="red">
   ```
@@ -39,6 +39,6 @@
 
 + 使用
 
-  ```js
+  ```html
   <div v-bind:class="classA" class="red">
   ```

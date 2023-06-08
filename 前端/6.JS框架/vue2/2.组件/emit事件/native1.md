@@ -6,10 +6,10 @@
 
 + 这时，你可以使用 `v-on` 的 `.native` 修饰符：
 
-  ```js
+  ```html
   <base-input @focus.native="onFocus"></base-input>
   ```
 
-  ```js
+  ```html
   <base-input @click.native="onFocus"></base-input>
   ```

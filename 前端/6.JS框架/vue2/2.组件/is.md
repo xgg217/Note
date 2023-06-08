@@ -25,7 +25,6 @@
 
   ```html
   <!-- 注册my-component组件，全局或者局部都成。 -->
-
   <li is='my-component'></li>
   ```
 

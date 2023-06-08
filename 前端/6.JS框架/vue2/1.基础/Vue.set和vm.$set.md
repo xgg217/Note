@@ -58,23 +58,22 @@
 
 + 问题1解决方案（以下两种方式都可以实现和 `vm.items[indexOfItem] = newValue` 相同的效果，同时也会触发响应性系统的状态更新）
 
-    1. 方式1
+  1. 方式1
 
-        ```js
-        // Vue.set
-        Vue.set(vm.items, indexOfItem, newValue)
+      ```js
+      // Vue.set
+      Vue.set(vm.items, indexOfItem, newValue)
 
-        // vm.$set
-        vm.$set(vm.items, indexOfItem, newValue)
+      // vm.$set
+      vm.$set(vm.items, indexOfItem, newValue)
+      ```
 
-        ```
+  2. 方式2
 
-    2. 方式2
-
-        ```js
-        // Array.prototype.splice
-        vm.items.splice(indexOfItem, 1, newValue)
-        ```
+      ```js
+      // Array.prototype.splice
+      vm.items.splice(indexOfItem, 1, newValue)
+      ```
 
 + 问题2解决方案(使用 `splice`)
 

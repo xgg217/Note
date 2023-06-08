@@ -48,7 +48,7 @@
 
 + 数组语法可以将多个样式对象应用到同一个元素
 
-  ```js
+  ```html
   <div v-bind:style="[styleObjectA, styleObjectB]"></div>
   ```
 
@@ -58,7 +58,7 @@
 
 + 多重值 从 2.3.0 起你可以为 style 绑定中的属性提供一个包含多个值的数组，常用于提供多个带前缀的值
 
-  ```js
+  ```html
   <div v-bind:style="{ display: ['-webkit-box', '-ms-flexbox', 'flex'] }"></div>
   ```
 

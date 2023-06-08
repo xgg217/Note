@@ -12,7 +12,7 @@
 
 + 使用
 
-  ```js
+  ```html
   <input type="text" />
   <button>点击</button>
   <div id="app">

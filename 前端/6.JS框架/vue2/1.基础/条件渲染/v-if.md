@@ -8,7 +8,7 @@
 
 + 条件为**真**时，显示
 
-  ```js
+  ```html
   // 显示
   <p v-if="true">小刚刚</p>
   ```
@@ -42,7 +42,7 @@
 
 + 注意：一起使用，不能打断
 
-  ```js
+  ```html
   <div v-if="tyoe === 'a'">12</div>
   <div v-else-if="tyoe === 'b'">23</div>
   <span>v-else-if 指令失效</span>

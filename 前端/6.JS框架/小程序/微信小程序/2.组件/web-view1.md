@@ -10,9 +10,9 @@
 
 + 类型
 
-    ```html
-    <web-view src="https://www.baidu.com/"></web-view>
-    ```
+  ```html
+  <web-view src="https://www.baidu.com/"></web-view>
+  ```
 
 ## 注意
 

@@ -10,13 +10,13 @@
 
 + 想象一下 `<my-cmp>` 的模板是这样的：
 
-  ```js
+  ```html
   <input type="date" class="b">
   ```
 
 + 为了给我们的日期选择器插件定制一个主题，我们可能需要像这样添加一个特别的类名：
 
-  ```js
+  ```html
   <my-cmp
     class="my-cmp"
   ></my-cmp>
