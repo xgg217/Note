@@ -4,19 +4,19 @@
 
 + 代码
 
-    ```js
-    // 点击获取 ref
-    butClick = () => {
-      console.log(this.refs.test);
-    }
+  ```js
+  // 点击获取 ref
+  butClick = () => {
+    console.log(this.refs.test);
+  }
 
-    butClick
-    render() {
-      return (
-        <>
-          <h2 ref="test">这是h2标签</h2>
-          <button onClick={this.butClick}>点击获取ref</button>
-        </>
-      )
-    }
-    ```
+  butClick
+  render() {
+    return (
+      <>
+        <h2 ref="test">这是h2标签</h2>
+        <button onClick={this.butClick}>点击获取ref</button>
+      </>
+    )
+  }
+  ```

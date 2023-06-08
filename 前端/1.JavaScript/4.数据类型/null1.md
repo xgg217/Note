@@ -20,25 +20,25 @@
 
 + 当检测 `null` 或 `undefined` 时，注意相等（`==`）与全等（`===`）两个操作符的区别 ，前者会执行类型转换：
 
-    ```js
-    typeof null           // "object" (因为一些以前的原因而不是'null')
-    typeof undefined      // "undefined"
-    null === undefined    // false
-    null  == undefined    // true
-    null === null         // true
-    null == null          // true
-    !null                 //true
-    isNaN(1 + null)       // false
-    isNaN(1 + undefined)  // true
-    ```
+  ```js
+  typeof null           // "object" (因为一些以前的原因而不是'null')
+  typeof undefined      // "undefined"
+  null === undefined    // false
+  null  == undefined    // true
+  null === null         // true
+  null == null          // true
+  !null                 //true
+  isNaN(1 + null)       // false
+  isNaN(1 + undefined)  // true
+  ```
 
 ## typeof 检测 null
 
 + 对于 `null` 来说，虽然它是基本类型，但是使用 `typeof` 检测显示 `'object'`，这是一个存在很久了的 Bug
 
-    ```js
-    typeof null // 'object'
-    ```
+  ```js
+  typeof null // 'object'
+  ```
 
 + 为什么会出现这种情况呢？因为在 JS 的最初版本中，使用的是 32 位系统，为了性能考虑使用低位存储了变量的类型信息，000 开头代表是对象，然而 null 表示为全零，所以将它错误的判断为 object&#x20;
 
@@ -48,9 +48,9 @@
 
 + 使用 `===` 或者 `!==`
 
-    ```js
-    const ele = document.getElementById('ele');
-    if(ele !== null) {
-      // ....
-    }
-    ```
+  ```js
+  const ele = document.getElementById('ele');
+  if(ele !== null) {
+    // ....
+  }
+  ```

@@ -18,10 +18,10 @@
 
 + 示例
 
-    ```js
-    const callback = () => {
-      doSomething(a, b);
-    }
+  ```js
+  const callback = () => {
+    doSomething(a, b);
+  }
 
-    const memoizedCallback = useCallback(callback, [a, b])
-    ```
+  const memoizedCallback = useCallback(callback, [a, b])
+  ```

@@ -14,55 +14,55 @@
 
 + 示例
 
-    ```js
-    const callback = () => {
-      doSomething(a, b);
-    }
+  ```js
+  const callback = () => {
+    doSomething(a, b);
+  }
 
-    const memoizedCallback = useCallback(() => {
-      return ...
-    }, [a, b])
-    ```
+  const memoizedCallback = useCallback(() => {
+    return ...
+  }, [a, b])
+  ```
 
 + 实际代码
 
-    ```js
-    import React,{ useState, useMemo } from 'react';
+  ```js
+  import React,{ useState, useMemo } from 'react';
 
-    function Item(props) {
-      console.log(11111)
-      return <li>{ props.value }</li>
-    }
+  function Item(props) {
+    console.log(11111)
+    return <li>{ props.value }</li>
+  }
 
-    function App() {
+  function App() {
 
-      const [range, setRange] = useState({min:1, max: 1000});
-      const [n, setN] = useState(0);
+    const [range, setRange] = useState({min:1, max: 1000});
+    const [n, setN] = useState(0);
 
-      const list = useMemo(() => {
-        const list = [];
-        for(let i = range.min; i < range.max; i++) {
-          list.push(<Item key={ i } value={ i }></Item>)
-        }
-        return list
-      }, [range.min, range.max])
+    const list = useMemo(() => {
+      const list = [];
+      for(let i = range.min; i < range.max; i++) {
+        list.push(<Item key={ i } value={ i }></Item>)
+      }
+      return list
+    }, [range.min, range.max])
 
 
-      return (
-        <div className="App">
-          { list }
-          <input
-            type="number"
-            value={ n }
-            onChange={ e => {
-              setN(parseInt(e.target.value))
-            } } />
-        </div>
-      );
-    }
+    return (
+      <div className="App">
+        { list }
+        <input
+          type="number"
+          value={ n }
+          onChange={ e => {
+            setN(parseInt(e.target.value))
+          } } />
+      </div>
+    );
+  }
 
-    export default App;
-    ```
+  export default App;
+  ```
 
 ## 重点
 

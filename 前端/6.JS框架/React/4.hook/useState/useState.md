@@ -14,28 +14,28 @@
 
 + 使用
 
-    ```jsx
-    import React, { useState } from 'react'
+  ```jsx
+  import React, { useState } from 'react'
 
-    export default function Dome1() {
+  export default function Dome1() {
 
-      const [n, setN] = useState(0); // 默认值为0
-      // n: 得到状态的值
-      // setN：该函数用于改变状态
+    const [n, setN] = useState(0); // 默认值为0
+    // n: 得到状态的值
+    // setN：该函数用于改变状态
 
-      return (
-        <div>
-          <button onClick={ () => {
-            setN(n -1);
-          } }>-</button>
-          <p>{ n }</p>
-          <button onClick={() => {
-            setN(n + 1);
-          }}>+</button>
-        </div>
-      )
-    }
-    ```
+    return (
+      <div>
+        <button onClick={ () => {
+          setN(n -1);
+        } }>-</button>
+        <p>{ n }</p>
+        <button onClick={() => {
+          setN(n + 1);
+        }}>+</button>
+      </div>
+    )
+  }
+  ```
 
 ## useState 细节
 
@@ -49,43 +49,28 @@
 
 5. 使用函数改变数据，传入的值不会和原来的数据进行合并，而是直接**替换**
 
-    \`\`\`jsx
+    ```jsx
 
-    const \[n, setN] = useState({
-
-    x: 1,
-
-    y: 2
-
+    const [n, setN] = useState({
+      x: 1,
+      y: 2
     });
 
     // 错误
-
-    \<button onClick={ () => {
-
-    setN({
-
-    x: n.x - 1
-
-    });
-
-    } }>-\</button>
+    <button onClick={ () => {
+      setN({
+        x: n.x - 1
+      });
+    } }>-</button>
 
     // 正确
-
-    \<button onClick={ () => {
-
-    setN({
-
-    ...n,
-
-    x: n.x - 1
-
-    });
-
-    } }>-\</button>
-
-    \`\`\`
+    <button onClick={ () => {
+      setN({
+        ...n,
+        x: n.x - 1
+      });
+    } }>-</button>
+    ```
 
 6. 如果要实现强制刷新组件
 

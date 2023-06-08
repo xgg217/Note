@@ -12,16 +12,16 @@
 
 + 并且应该保持
 
-    ```js
-    render() {
-      return (
-        <div>
-          // 错误
-          <CompA key={ Math.random() } />
-        </div>
-      )
-    }
-    ```
+  ```js
+  render() {
+    return (
+      <div>
+        // 错误
+        <CompA key={ Math.random() } />
+      </div>
+    )
+  }
+  ```
 
 + 一般使用数据的ID
 
