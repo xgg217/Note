@@ -10,11 +10,11 @@
 
 + 通过在根实例中注册 `store` 选项，该 `store` 实例会注入到根组件下的所有子组件中，且子组件能通过 `this.$store` 访问
 
-    ```js
-    <div class="home">
-      {{ $store.state.count }}
-    </div>
-    ```
+  ```js
+  <div class="home">
+    {{ $store.state.count }}
+  </div>
+  ```
 
 ## mapState 辅助函数
 
@@ -22,22 +22,22 @@
 
 + 为了解决这个问题，我们可以使用 `mapState` 辅助函数帮助我们生成计算属性：
 
-    ```js
-    import { mapState } from 'vuex';
+  ```js
+  import { mapState } from 'vuex';
 
-    computed: {
-      ...mapState(['count', 'a', 'b']),
-    },
-    ```
+  computed: {
+    ...mapState(['count', 'a', 'b']),
+  },
+  ```
 
 + 使用不同的名字：
 
-    ```js
-    computed: {
-      ...mapState({
-        storeCount: state => state.count,
-        // 简写
-        storeCount: 'count', // 等同于 state => state.count
-      }),
-    },
-    ```
+  ```js
+  computed: {
+    ...mapState({
+      storeCount: state => state.count,
+      // 简写
+      storeCount: 'count', // 等同于 state => state.count
+    }),
+  },
+  ```
