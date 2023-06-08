@@ -16,18 +16,18 @@
 
 + 在节点上设置 `textContent` 属性的话，会删除它的所有子节点，并替换为一个具有给定值的文本节点
 
-    ```js
-    <div id="divA">This is <span>some</span> text</div>
+  ```js
+  <div id="divA">This is <span>some</span> text</div>
 
-    // 获得文本内容:
-    var text = document.getElementById("divA").textContent;
-    console.log(text); // This is some text
+  // 获得文本内容:
+  var text = document.getElementById("divA").textContent;
+  console.log(text); // This is some text
 
-    // 设置文本内容:
-    document.getElementById("divA").textContent = "This is some text";
-    // divA的HTML现在是这样的:
-    <div id="divA">This is some text</div>
-    ```
+  // 设置文本内容:
+  document.getElementById("divA").textContent = "This is some text";
+  // divA的HTML现在是这样的:
+  <div id="divA">This is some text</div>
+  ```
 
 ## 与 innerText 的区别
 

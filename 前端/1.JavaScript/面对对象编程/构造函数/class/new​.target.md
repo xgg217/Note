@@ -10,35 +10,35 @@
 
 ## 使用
 
-+ 函数调用中的 new\.target
++ 函数调用中的 new.target
 
-    ```js
-    function Foo() {
-      if (!new.target) throw "Foo() must be called with new";
-      console.log("Foo instantiated with new");
-    }
+  ```js
+  function Foo() {
+    if (!new.target) throw "Foo() must be called with new";
+    console.log("Foo instantiated with new");
+  }
 
-    Foo(); // throws "Foo() must be called with new"
-    new Foo(); // logs "Foo instantiated with new"
-    ```
+  Foo(); // throws "Foo() must be called with new"
+  new Foo(); // logs "Foo instantiated with new"
+  ```
 
 + 构造方法中的 `new.target`
 
-    ```js
-    class A {
-      constructor() {
-        console.log(new.target.name);
-      }
+  ```js
+  class A {
+    constructor() {
+      console.log(new.target.name);
     }
+  }
 
-    class B extends A { constructor() { super(); } }
+  class B extends A { constructor() { super(); } }
 
-    var a = new A(); // logs "A"
-    var b = new B(); // logs "B"
+  var a = new A(); // logs "A"
+  var b = new B(); // logs "B"
 
-    class C { constructor() { console.log(new.target); } }
-    class D extends C { constructor() { super(); } }
+  class C { constructor() { console.log(new.target); } }
+  class D extends C { constructor() { super(); } }
 
-    var c = new C(); // logs class C{constructor(){console.log(new.target);}}
-    var d = new D(); // logs class D extends C{constructor(){super();}}
-    ```
+  var c = new C(); // logs class C{constructor(){console.log(new.target);}}
+  var d = new D(); // logs class D extends C{constructor(){super();}}
+  ```

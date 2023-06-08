@@ -8,9 +8,9 @@
 
 + `property: calc(expression)`
 
-    ```css
-    width: calc(100% - 80px);
-    ```
+  ```css
+  width: calc(100% - 80px);
+  ```
 
 + 支持操作符
 
@@ -42,14 +42,14 @@
 
 + 代码
 
-    ```css
-    .foo {
-      --widthA: 100px;
-      --widthB: calc(var(--widthA) / 2);
-      --widthC: calc(var(--widthB) / 2);
-      width: var(--widthC);
-    }
-    ```
+  ```css
+  .foo {
+    --widthA: 100px;
+    --widthB: calc(var(--widthA) / 2);
+    --widthC: calc(var(--widthB) / 2);
+    width: var(--widthC);
+  }
+  ```
 
 + 在所有的变量都被展开后，widthC 的值就会变成 `calc( calc( 100px / 2) / 2)`，然后，当它被赋值给 `.foo` 的 `width` 属性时，所有内部的这些 `calc()`（无论嵌套的有多深）都将会直接被扁平化为一个括号，所以这个 `width` 属性的值就直接相当于 `calc( ( 100px / 2) / 2)` 了，或者说就变成 `25px` 了。&#x20;
 

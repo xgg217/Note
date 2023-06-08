@@ -12,24 +12,24 @@
 
 + 代码
 
-    ```html
-    <div id="mydiv" data-foo="bar">
-    ```
+  ```html
+  <div id="mydiv" data-foo="bar">
+  ```
 
 ## 读写
 
 + 代码
 
-    ```js
-    var n = document.getElementById('mydiv');
-    n.dataset.foo // bar
-    n.dataset.foo = 'baz'
-    ```
+  ```js
+  var n = document.getElementById('mydiv');
+  n.dataset.foo // bar
+  n.dataset.foo = 'baz'
+  ```
 
 ## 删除
 
 + 代码
 
-    ```js
-    delete document.getElementById('myDiv').dataset.foo;
-    ```
+  ```js
+  delete document.getElementById('myDiv').dataset.foo;
+  ```

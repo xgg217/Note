@@ -4,11 +4,11 @@
 
 + 当储存的数据发生变化时，会触发 `storage` 事件
 
-    ```js
-    function onStorageChange(e) {
-     console.log(e.key);
-    }
-    ```
+  ```js
+  function onStorageChange(e) {
+    console.log(e.key);
+  }
+  ```
 
 + 除了 `key` 属性，`event` 对象的属性还有三个：
 
