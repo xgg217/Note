@@ -14,36 +14,36 @@
 
 + 优化：对属性和状态进行**浅**比较，如果相等则不会重新渲染
 
-    ```js
-    // 比较函数
-    const ObjectEqual = (obj1, obj2) => {
-      for(let prop in obj1) {
-        if(Object.is(obj1[prop], obj2[prop])) {
-          return false;
-        }
-      }
-      return true;
-    };
-
-    // 钩子函数
-    shouldComponentUpdate(nextProps, nextState) {
-      console.log('重新渲染')
-      if(ObjectEqual(this.props, nextProps) && ObjectEqual(this.state, nextState)) {
+  ```js
+  // 比较函数
+  const ObjectEqual = (obj1, obj2) => {
+    for(let prop in obj1) {
+      if(Object.is(obj1[prop], obj2[prop])) {
         return false;
       }
-      return true;
     }
-    ```
+    return true;
+  };
+
+  // 钩子函数
+  shouldComponentUpdate(nextProps, nextState) {
+    console.log('重新渲染')
+    if(ObjectEqual(this.props, nextProps) && ObjectEqual(this.state, nextState)) {
+      return false;
+    }
+    return true;
+  }
+  ```
 
 + React 自带 `PureComponent`
 
-    ```jsx
-    // 原来
-    import React, { Component } from 'react';
+  ```jsx
+  // 原来
+  import React, { Component } from 'react';
 
-    // 现在
-    import React, { PureComponent } from 'react'
-    ```
+  // 现在
+  import React, { PureComponent } from 'react'
+  ```
 
 ## 注意
 

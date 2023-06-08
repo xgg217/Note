@@ -10,10 +10,10 @@
 
 + 使用
 
-    ```html
-    <!-- 不会被编译 -->
-    <span v-pre>{{ msg }}</span>
+  ```html
+  <!-- 不会被编译 -->
+  <span v-pre>{{ msg }}</span>
 
-    <!-- 渲染结果 -->
-    <span v-pre>{{ msg }}</span>
-    ```
+  <!-- 渲染结果 -->
+  <span v-pre>{{ msg }}</span>
+  ```

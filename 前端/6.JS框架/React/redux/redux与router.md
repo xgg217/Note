@@ -8,11 +8,11 @@
 
 + 本质上 router 中的某些数据可能会更数据仓库中的数据进行联动
 
-    ```js
-    npm install --save connected-react-router
+  ```js
+  npm install --save connected-react-router
 
-    yarn add connected-react-router
-    ```
+  yarn add connected-react-router
+  ```
 
 + 该组件会将下面的路由数据和仓库保持同步
 

@@ -4,9 +4,9 @@
 
 + 另一个可以用来按条件显示一个元素的指令是 `v-show`
 
-    ```html
-    <h1 v-show="ok">Hello!</h1>
-    ```
+  ```html
+  <h1 v-show="ok">Hello!</h1>
+  ```
 
 ## 不同之处
 

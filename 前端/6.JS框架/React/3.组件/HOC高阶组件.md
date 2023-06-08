@@ -4,12 +4,12 @@
 
 + 高阶函数：以函数作为参数，并返回一个函数
 
-    ```js
-    function name(func) {
-      return function() {
-      }
+  ```js
+  function name(func) {
+    return function() {
     }
-    ```
+  }
+  ```
 
 ## 高阶组件 HOC： Higher-Order Component
 
@@ -25,7 +25,7 @@
 
 + 不要在 `render` 中使用高阶组件
 
-  - 因为如果更新 `state`，就会触发 render 函数，每次又要重新 创建新的组件 和 销毁上次创建的组件。浪费性能
+  + 因为如果更新 `state`，就会触发 render 函数，每次又要重新 创建新的组件 和 销毁上次创建的组件。浪费性能
 
     ```jsx
     import withTest from './HOC/withTest.jsx';
@@ -56,59 +56,59 @@
 
 + 建议一般以 `with` 开头，后面接功能。例如：`withTest.jsx`
 
-    ```jsx
-    import React, { Component } from 'react'
+  ```jsx
+  import React, { Component } from 'react'
 
-    export default function withTest(Comp) {
-      return class Push extends Component {
-        render() {
-          return <Comp {...this.props} />
-        }
+  export default function withTest(Comp) {
+    return class Push extends Component {
+      render() {
+        return <Comp {...this.props} />
       }
     }
-    ```
+  }
+  ```
 
-    ```jsx
-    import withTest from './HOC/withTest.jsx';
+  ```jsx
+  import withTest from './HOC/withTest.jsx';
 
-    function A() {
-      return <h1>h1标签</h1>
-    }
+  function A() {
+    return <h1>h1标签</h1>
+  }
 
-    const BPush = withTest(A);
+  const BPush = withTest(A);
 
-    function App() {
+  function App() {
 
-      return (
-        <div className="App">
-          <BPush />
-        </div>
-      );
-    }
+    return (
+      <div className="App">
+        <BPush />
+      </div>
+    );
+  }
 
-    export default App;
-    ```
+  export default App;
+  ```
 
 ## 高阶组件继续包装高阶组件
 
 + 代码
 
-    ```jsx
-    import withTest from './HOC/withTest.jsx';
-    import withLogin from './HOC/withLogin.jsx';
+  ```jsx
+  import withTest from './HOC/withTest.jsx';
+  import withLogin from './HOC/withLogin.jsx';
 
-    function A() {
-      return <h1>h1标签</h1>
-    }
+  function A() {
+    return <h1>h1标签</h1>
+  }
 
-    const BPush = withLogin(withTest(A));
+  const BPush = withLogin(withTest(A));
 
-    function App() {
+  function App() {
 
-      return (
-        <div className="App">
-          <BPush />
-        </div>
-      );
-    }
-    ```
+    return (
+      <div className="App">
+        <BPush />
+      </div>
+    );
+  }
+  ```

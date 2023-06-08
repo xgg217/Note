@@ -12,27 +12,27 @@
 
 + 使用
 
-    ```js
-    <!-- 单个元素 -->
-    <span v-once>This will never change: {{msg}}</span>
-    ```
+  ```html
+  <!-- 单个元素 -->
+  <span v-once>This will never change: {{msg}}</span>
+  ```
 
-    ```js
-    <!-- 有子元素 -->
-    <div v-once>
-      <h1>comment</h1>
-      <p>{{msg}}</p>
-    </div>
-    ```
+  ```html
+  <!-- 有子元素 -->
+  <div v-once>
+    <h1>comment</h1>
+    <p>{{msg}}</p>
+  </div>
+  ```
 
-    ```js
-    <!-- 组件 -->
-    <my-component v-once :comment="msg"></my-component>
-    ```
+  ```html
+  <!-- 组件 -->
+  <my-component v-once :comment="msg"></my-component>
+  ```
 
-    ```js
-    <!-- `v-for` 指令-->
-    <ul>
-      <li v-for="i in list" v-once>{{i}}</li>
-    </ul>
-    ```
+  ```html
+  <!-- `v-for` 指令-->
+  <ul>
+    <li v-for="i in list" v-once>{{i}}</li>
+  </ul>
+  ```

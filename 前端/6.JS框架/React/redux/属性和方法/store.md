@@ -4,11 +4,11 @@
 
 + 通过 `createStore` 方法创建的对象
 
-    ```js
-    import reducer from './reducer/index';
+  ```js
+  import reducer from './reducer/index';
 
-    const stort = createStore(reducer);
-    ```
+  const stort = createStore(reducer);
+  ```
 
 ## store 方法
 

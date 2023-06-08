@@ -2,63 +2,63 @@
 
 ## 全局样式
 
-  - `uni.scss`
++ `uni.scss`
 
-    ```js
-    $uni-color-primary: #007aff;
-    ```
+  ```js
+  $uni-color-primary: #007aff;
+  ```
 
-    ```js
-    // 使用
-    <style scoped>
-      @import url("@/static/style/index.css");
-      .box {
-        border: 1rpx solid $uni-color-warning;
-      }
-    </style>
-    ```
+  ```css
+  // 使用
+  <style scoped>
+    @import url("@/static/style/index.css");
+    .box {
+      border: 1rpx solid $uni-color-warning;
+    }
+  </style>
+  ```
 
 ## scss
 
-  - 使用
++ 使用
 
-    ```css
-    <style scoped lang="scss">
-    @import url("@/static/style/index.css");
-    .box {
-      border: 1rpx solid red;
-    }
+  ```css
+  <style scoped lang="scss">
+  @import url("@/static/style/index.css");
+  .box {
+    border: 1rpx solid red;
+  }
 
-    .xg {
-      .blue {
-        color: blue;
-      }
+  .xg {
+    .blue {
+      color: blue;
     }
-    </style>
-    ```
+  }
+  </style>
+  ```
 
 ## class
 
-  - class
++ class
 
-    ```js
-    <view class="normal_view" />
-    ```
+  ```js
+  <view class="normal_view" />
+  ```
 
-    ```js
-    <view :class="{ active: isActive }">111</view>
-    <view class="static" v-bind:class="{ active: isActive, 'text-danger': hasError }">222</view>
-    <view class="static" :class="[activeClass, errorClass]">333</view>
-    <view class="static" v-bind:class="[isActive ? activeClass : '', errorClass]">444</view>
-    <view class="static" v-bind:class="[{ active: isActive }, errorClass]">555</view>
-    ```
+  ```html
+  <view :class="{ active: isActive }">111</view>
+  <view class="static" v-bind:class="{ active: isActive, 'text-danger': hasError }">222</view>
+  <view class="static" :class="[activeClass, errorClass]">333</view>
+  <view class="static" v-bind:class="[isActive ? activeClass : '', errorClass]">444</view>
+  <view class="static" v-bind:class="[{ active: isActive }, errorClass]">555</view>
+  ```
 
 ## 行内样式设置
 
-  - style
++ style
 
-    ```js
-    <view :style="{color:color}"></view>
-    <view v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }">666</view>
-    <view v-bind:style="[{ color: activeColor, fontSize: fontSize + 'px' }]">777</view>
-    ```
+  ```html
+  <view :style="{color:color}"></view>
+  <view v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }">666</view>
+  <view v-bind:style="[{ color: activeColor, fontSize: fontSize + 'px' }]">777</view>
+  ```

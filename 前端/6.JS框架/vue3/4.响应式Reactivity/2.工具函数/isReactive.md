@@ -8,27 +8,26 @@
 
 + 类型
 
-    ```js
-    function isReactive(value: unknown): boolean
-    ```
+  ```js
+  function isReactive(value: unknown): boolean
+  ```
 
 ## 示例
 
 + 示例
 
-    ```js
-    const obj1 = reactive({ a:' 张三' });
-    console.log(isReactive(obj1)); // true
+  ```js
+  const obj1 = reactive({ a:' 张三' });
+  console.log(isReactive(obj1)); // true
+  ```
 
-    ```
+  ```js
+  const obj2 = readonly({ a:' 张三' });
+  console.log(isReactive(obj2)); // false
+  ```
 
-    ```js
-    const obj2 = readonly({ a:' 张三' });
-    console.log(isReactive(obj2)); // false
-    ```
-
-    ```js
-    const obj1 = reactive({ a:' 张三' });
-    const obj6 = readonly(obj1);
-    console.log(isReactive(obj6)); // false
-    ```
+  ```js
+  const obj1 = reactive({ a:' 张三' });
+  const obj6 = readonly(obj1);
+  console.log(isReactive(obj6)); // false
+  ```

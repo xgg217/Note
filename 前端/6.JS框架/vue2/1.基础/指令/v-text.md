@@ -8,11 +8,11 @@
 
 + 使用
 
-    ```js
-    <span v-text="msg"></span>
-    <!-- 和下面的一样 -->
-    <span>{{msg}}</span>
-    ```
+  ```js
+  <span v-text="msg"></span>
+  <!-- 和下面的一样 -->
+  <span>{{msg}}</span>
+  ```
 
 ## v-text VS Mustache
 
@@ -20,13 +20,13 @@
 
 + Mustache只替换自己，不清空元素内容
 
-    ```js
-    <!-- 渲染为：<span>杉杉最美</span> -->
-    <span v-text="msg">----</span>
+  ```js
+  <!-- 渲染为：<span>杉杉最美</span> -->
+  <span v-text="msg">----</span>
 
-    <!-- 渲染为：<span>----杉杉最美----</span> -->
-    <span>----{{msg}}----</span>
-    ```
+  <!-- 渲染为：<span>----杉杉最美----</span> -->
+  <span>----{{msg}}----</span>
+  ```
 
 + `v-text` 优先级高于 `{{ }}`
 
@@ -48,28 +48,28 @@
 
 + html
 
-    ```js
-    <ul class="list">
-      <li>1</li>
-      <!-- 此处省略998个 -->
-      <li>1000</li>
-    </ul>
-    ```
+  ```js
+  <ul class="list">
+    <li>1</li>
+    <!-- 此处省略998个 -->
+    <li>1000</li>
+  </ul>
+  ```
 
 + js
 
-    ```js
-    const oList = document.getElementById("list");
+  ```js
+  const oList = document.getElementById("list");
 
-    console.time("innerText");
-    for(let i = 0; i < oList.childElementCount; i++){
-      ul.children[i].innerText="innerText";
-    }
-    console.timeEnd("innerText");
+  console.time("innerText");
+  for(let i = 0; i < oList.childElementCount; i++){
+    ul.children[i].innerText="innerText";
+  }
+  console.timeEnd("innerText");
 
-    console.time("textContent");
-    for(let i = 0; i < oList.childElementCount; i++){
-      ul.children[i].textContent="innerText";
-    }
-    console.timeEnd("textContent");
-    ```
+  console.time("textContent");
+  for(let i = 0; i < oList.childElementCount; i++){
+    ul.children[i].textContent="innerText";
+  }
+  console.timeEnd("textContent");
+  ```
