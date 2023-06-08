@@ -10,26 +10,26 @@
 
 + 例如
 
-    ```js
-    <ul>
-      <li
-        v-for="user in users"
-        v-if="user.isActive"
-        :key="user.id"
-      >
-        {{ user.name }}
-      </li>
-    </ul>
-    ```
+  ```js
+  <ul>
+    <li
+      v-for="user in users"
+      v-if="user.isActive"
+      :key="user.id"
+    >
+      {{ user.name }}
+    </li>
+  </ul>
+  ```
 
 + 将会经过如下运算：
 
-    ```js
-    this.users.map(function (user) {
-      if (user.isActive) {
-        return user.name
-      }
-    })
-    ```
+  ```js
+  this.users.map(function (user) {
+    if (user.isActive) {
+      return user.name
+    }
+  })
+  ```
 
 + 因此哪怕我们只渲染出一小部分用户的元素，也得在每次重新渲染的时候遍历整个列表，不论活跃用户是否发生了变化

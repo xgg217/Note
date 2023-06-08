@@ -10,33 +10,33 @@
 
 + 由于 Vue 在实例初始化期间执行 getter/setter 转换过程，因此必须在 `data` 对象中存在一个 property，以便 Vue 对其进行转换并使其具有响应式
 
-    ```js
-    var vm = new Vue({
-      data: {
-        a: 1
-      }
-    })
-    // `vm.a` 现在是响应式的
+  ```js
+  var vm = new Vue({
+    data: {
+      a: 1
+    }
+  })
+  // `vm.a` 现在是响应式的
 
-    vm.b = 2
-    // `vm.b` 不是响应式的
-    ```
+  vm.b = 2
+  // `vm.b` 不是响应式的
+  ```
 
 + 对于已经创建的实例，Vue 不允许动态添加根级别的响应式 property。但是，可以使用 `Vue.set(object, propertyName, value)` 方法向嵌套对象添加响应式 property
 
-    ```js
-    Vue.set(vm.someObject, 'b', 2)
+  ```js
+  Vue.set(vm.someObject, 'b', 2)
 
-    // 或者还可以使用 vm.$set 实例方法，这也是全局 Vue.set 方法的别名
-    this.$set(this.someObject, 'b', 2)
-    ```
+  // 或者还可以使用 vm.$set 实例方法，这也是全局 Vue.set 方法的别名
+  this.$set(this.someObject, 'b', 2)
+  ```
 
 + 为已有对象赋值多个新 property
 
-    ```js
-    // 而不是 `Object.assign(this.someObject, { a: 1, b: 2 })`
-    this.someObject = Object.assign({}, this.someObject, { a: 1, b: 2 })
-    ```
+  ```js
+  // 而不是 `Object.assign(this.someObject, { a: 1, b: 2 })`
+  this.someObject = Object.assign({}, this.someObject, { a: 1, b: 2 })
+  ```
 
 ## 数组
 
@@ -78,6 +78,6 @@
 
 + 问题2解决方案(使用 `splice`)
 
-    ```js
-    vm.items.splice(newLength)
-    ```
+  ```js
+  vm.items.splice(newLength)
+  ```

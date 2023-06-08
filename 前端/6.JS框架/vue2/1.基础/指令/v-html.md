@@ -12,10 +12,10 @@
 
 + 使用
 
-    ```js
-    <input type="text" />
-    <button>点击</button>
-    <div id="app">
-      <div v-html="msg"></div>
-    </div
-    ```
+  ```js
+  <input type="text" />
+  <button>点击</button>
+  <div id="app">
+    <div v-html="msg"></div>
+  </div
+  ```

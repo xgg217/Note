@@ -1,21 +1,21 @@
 # $route
 
-## $route
+## $route 对象
 
 + 只读，路由信息对象
 
-    ```js
-    $route = {
-      fullPath: "",
-      hash: "",
-      matched: [],
-      meta: {},
-      name: "",
-      params: {},
-      path: "",
-      query: {}
-    }
-    ```
+  ```js
+  $route = {
+    fullPath: "",
+    hash: "",
+    matched: [],
+    meta: {},
+    name: "",
+    params: {},
+    path: "",
+    query: {}
+  }
+  ```
 
 ## $route.path
 
@@ -43,21 +43,21 @@
 
 + 一个数组，包含当前路由的所有嵌套路径片段的路由记录 。路由记录就是 `routes` 配置数组中的对象副本 (还有在 `children` 数组)
 
-    ```js
-    const router = new VueRouter({
-      routes: [
-        // 下面的对象就是路由记录
-        {
-          path: '/foo',
-          component: Foo,
-          children: [
-            // 这也是个路由记录
-            { path: 'bar', component: Bar }
-          ]
-        }
-      ]
-    })
-    ```
+  ```js
+  const router = new VueRouter({
+    routes: [
+      // 下面的对象就是路由记录
+      {
+        path: '/foo',
+        component: Foo,
+        children: [
+          // 这也是个路由记录
+          { path: 'bar', component: Bar }
+        ]
+      }
+    ]
+  })
+  ```
 
 + 当 URL 为 `/foo/bar`，`\$route.matched` 将会是一个包含从上到下的所有对象 (副本)
 
