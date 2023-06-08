@@ -19,7 +19,6 @@
   ```js
   const obj1 = reactive({ a:' 张三' });
   console.log(isReactive(obj1)); // true
-
   ```
 
   ```js
