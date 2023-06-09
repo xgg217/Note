@@ -2,8 +2,6 @@ const {resolve, extname, join} = require('node:path');
 const fs = require("node:fs")
 console.log(resolve);
 
-const beseUrl = 'D:\LX\笔记\Note\前端';
-
 
 console.log(__dirname);
 
@@ -58,7 +56,7 @@ console.log(__dirname);
 
   }
 
-  await fileDisplay(resolve(__dirname, './前端'), (arr) => {
+  await fileDisplay(resolve(__dirname, './'), (arr) => {
     console.log('arr', arr);
   })
 
