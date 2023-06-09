@@ -20,30 +20,30 @@
 
 + 生产速度和消费速度不一致，一般情况下生产速度要比消费速度快很多
 
-    ```js
-    const fs = require('fs');
+  ```js
+  const fs = require('fs');
 
-    const ws = fs.createWriteStream('test.txt', {
-      highWaterMark: 3
-    });
+  const ws = fs.createWriteStream('test.txt', {
+    highWaterMark: 3
+  });
 
-    // 第一次调用 write 方法时是将数据直接写入到文件中
-    let falg = ws.write('1');
-    console.log(falg);
+  // 第一次调用 write 方法时是将数据直接写入到文件中
+  let falg = ws.write('1');
+  console.log(falg);
 
-    falg = ws.write('2');
-    console.log(falg);
+  falg = ws.write('2');
+  console.log(falg);
 
-    falg = ws.write('3');
-    console.log(falg);
+  falg = ws.write('3');
+  console.log(falg);
 
-    falg = ws.write('4');
-    console.log(falg);
+  falg = ws.write('4');
+  console.log(falg);
 
-    ws.on('drain', () => {
-      console.log(11);
-    });
-    ```
+  ws.on('drain', () => {
+    console.log(11);
+  });
+  ```
 
 + 当 `ws.write(data)` 返回 `false` 时，并不意味着当前次的数据不能被写入了，但是我们应该告诉数据的生产者，当前的消费速度已经跟不上生产速度，所以一般我们会将可读流模块修改为暂停模式
 

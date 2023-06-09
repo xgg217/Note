@@ -70,64 +70,64 @@
 
 + 示例1
 
-    ```js
-    const filend = path.resolve(__dirname, "./files/1.txt");
-    const str = fs.createReadStream(filend, {
-      encoding: "utf-8",
-    });
+  ```js
+  const filend = path.resolve(__dirname, "./files/1.txt");
+  const str = fs.createReadStream(filend, {
+    encoding: "utf-8",
+  });
 
-    str.on("open", (fd) => {
-      console.log("文件被打开了");
-    })
+  str.on("open", (fd) => {
+    console.log("文件被打开了");
+  })
 
-    str.on("error", () => {
-      console.log("出错了");
-    });
+  str.on("error", () => {
+    console.log("出错了");
+  });
 
-    str.on("close", () => {
-      console.log("文件关闭");
-    });
+  str.on("close", () => {
+    console.log("文件关闭");
+  });
 
-    // 消费数据
-    str.on("data", (chunk) => {
-      console.log("读取了一部分文件");
-      console.log(chunk);
-      // 暂停
-      str.pause();
-    })
+  // 消费数据
+  str.on("data", (chunk) => {
+    console.log("读取了一部分文件");
+    console.log(chunk);
+    // 暂停
+    str.pause();
+  })
 
-    str.on("pause", () => {
-      console.log("暂停");
-      setTimeout(() => {
-        // 继续执行
-        str.resume()
-      }, 1000)
-    });
+  str.on("pause", () => {
+    console.log("暂停");
+    setTimeout(() => {
+      // 继续执行
+      str.resume()
+    }, 1000)
+  });
 
-    str.on("resume", () => {
-      console.log("恢复读取");
-    });
+  str.on("resume", () => {
+    console.log("恢复读取");
+  });
 
-    str.on("end", () => {
-      console.log("end 全部数据读取完毕");
-    });
-    ```
+  str.on("end", () => {
+    console.log("end 全部数据读取完毕");
+  });
+  ```
 
 + 示例2
 
-    ```js
-    const fs = require('fs');
+  ```js
+  const fs = require('fs');
 
-    const rs = fs.createReadStream('./test.txt', {
-      highWaterMark: 2
-    });
+  const rs = fs.createReadStream('./test.txt', {
+    highWaterMark: 2
+  });
 
-    rs.on('readable', () => {
-      let data = rs.read();
+  rs.on('readable', () => {
+    let data = rs.read();
 
-      while(data !== null) {
-        console.log(data.toString());
-        data = rs.read();
-      }
-    })
-    ```
+    while(data !== null) {
+      console.log(data.toString());
+      data = rs.read();
+    }
+  })
+  ```

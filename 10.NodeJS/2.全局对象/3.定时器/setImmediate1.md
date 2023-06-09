@@ -6,11 +6,11 @@
 
 + 类似于 setTimeout 0
 
-    ```js
-    setImmediate(() => {
+  ```js
+  setImmediate(() => {
 
-    }, 0);
-    ```
+  }, 0);
+  ```
 
 ## 执行
 
