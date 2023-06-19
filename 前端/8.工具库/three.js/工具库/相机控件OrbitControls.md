@@ -80,3 +80,23 @@
   }
   render();
   ```
+
+## 通过OrbitControls设置.lookAt()参数
+
++ 参照 `OrbitControls` 设置相机位置 `.position` 的过程，你可以平移三维场景，然后选择一个合适的渲染效果，记录下此时相机控件目标属性 `controls.target` 的值，然后作为透视投影相机 `.lookAt()` 的参数。
+
++ 注意相机控件 `OrbitControls` 会影响 `lookAt` 设置，注意手动设置 `OrbitControls` 的目标参数
+
+  ```js
+  // camera.lookAt(0, 0, 0);
+  const x = -1.2,y = -15,z = 10;//通过OrbitControls辅助设置
+  camera.lookAt(x, y, z);
+
+  // 设置相机控件轨道控制器OrbitControls
+  const controls = new OrbitControls(camera, renderer.domElement);
+
+  // 相机控件.target属性在OrbitControls.js内部表示相机目标观察点，默认0,0,0
+  // console.log('controls.target', controls.target);
+  controls.target.set(x, y, z); //与lookAt参数保持一致
+  controls.update(); //update()函数内会执行camera.lookAt(controls.target)
+  ```
