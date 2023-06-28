@@ -1,6 +1,6 @@
-# splice
+# splice 与 toSpliced
 
-## 语法
+## splice 语法
 
 + `array.splice(start, deleteCount, item1, item2, ...)`
 
@@ -23,6 +23,17 @@
 
 + `splice` 的第一个参数是删除的起始位置，第二个参数是被删除的元素个数。如果后面还有更多的参数，则表示这些就是要被插入数组的新元素
 
-## 注意
+## splice 注意
 
 + 改变原数组
+
+## toSpliced()
+
++ `toSpliced` 是 `splice()` 方法的非破坏性版本，它会返回更新后的数组，原数组不会变化，并且无法再得到已经删除的元素
+
+  ```js
+  const arr = ['a', 'b', 'c', 'd'];
+  const result = arr.toSpliced(1, 2, 'X');
+  console.log(result); // ['a', 'X', 'd']
+  console.log(arr);    // ['a', 'b', 'c', 'd']
+  ```

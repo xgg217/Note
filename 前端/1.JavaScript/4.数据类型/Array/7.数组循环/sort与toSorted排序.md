@@ -1,6 +1,6 @@
-# sort
+# sort 与 toSorted
 
-## 语法
+## sort 语法
 
 + 默认排序顺序是根据字符串 `Unicode`码点
 
@@ -8,7 +8,7 @@
 
 + 作用：数组的元素进行排序，并返回数组
 
-## 注意
+## sort 注意
 
 + 改变原数组
 
@@ -20,7 +20,7 @@
 
   + 这个规定已经做到了，现在 JavaScript 各个主要实现的默认排序算法都是稳定的
 
-## 示例
+## sort 示例
 
 + 示例
 
@@ -69,4 +69,15 @@
   arr.sort(function(a,b) {
     return (Math.random()-0.5);
   });
+  ```
+
+## toSorted()
+
++ `toSorted()` 是 `sort()` 方法的非破坏性版本
+
+  ```js
+  const arr = ['c', 'a', 'b'];
+  const result = arr.toSorted();
+  console.log(result);  // ['a', 'b', 'c']
+  console.log(arr);     // ['c', 'a', 'b']
   ```
