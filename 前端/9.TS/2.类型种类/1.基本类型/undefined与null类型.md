@@ -1,0 +1,127 @@
+# undefined 类型，null 类型
+
+## 概述
+
++ `undefined` 和 `null` 是两种独立类型，它们各自都只有一个值
+
+## undefined
+
++ `undefined` 类型只包含一个值 `undefined`
++ 表示未定义（即还未给出定义，以后可能会有定义）
+
+  ```js
+  // 第一个是类型，第二个是值
+  let x:undefined = undefined;
+  ```
+
+## null
+
++ `null` 类型也只包含一个值 `null` ，表示为空（即此处没有值）
+
+  ```js
+  const x:null = null;
+  ```
+
+## 注意
+
++ 如果没有声明类型的变量，被赋值为 `undefined` 或 `null` ，它们的类型会被推断为 `any`
+
+  ```js
+  let a = undefined;   // any
+  const b = undefined; // any
+
+  let c = null;        // any
+  const d = null;      // any
+  ```
+
++ 如果希望避免这种情况，则需要打开编译选项strictNullChecks
+
+  ```json
+  {
+    // 配置编译选项的默认值
+    "compilerOptions": {
+      "strictNullChecks": true, // 更加严格的空类型检查
+    },
+  }
+  ```
+
+  ```js
+  // 打开编译设置 strictNullChecks
+
+  // 赋值为undefined的变量会被推断为undefined类型
+  let a = undefined;   // undefined
+  const b = undefined; // undefined
+
+  // 赋值为null的变量会被推断为null类型
+  let c = null;        // null
+  const d = null;      // null
+  ```
+
+## undefined 和 null 的特殊性
+
++ `undefined` 和 `null` 既是值，又是类型
+
++ 作为值，它们有一个特殊的地方：任何其他类型的变量都可以赋值为 `undefined` 或 `null`
+
+  ```js
+  let age:number = 24;
+
+  // 变量age的类型是number，但是赋值为null或undefined并不报错
+  age = null;      // 正确
+  age = undefined; // 正确
+  ```
+
++ 原因
+
+  + 这并不是因为 `undefined` 和 `null` 包含在 `number` 类型里面，而是故意这样设计，任何类型的变量都可以赋值为 `undefined` 和 `null` ，以便跟 JavaScript 的行为保持一致
+
+  + JavaScript 的行为是，变量如果等于 `undefined` 就表示还没有赋值，如果等于 `null` 就表示值为空。所以，TypeScript 就允许了任何类型的变量都可以赋值为这两个值
+
++ 但是有时候，这并不是开发者想要的行为，也不利于发挥类型系统的优势
+
+  ```js
+  const obj:object = undefined;
+
+  obj.toString() // 编译不报错，运行就报错
+  ```
+
++ 为了避免这种情况，及早发现错误，TypeScript 提供了一个编译选项 `strictNullChecks`
++ 只要打开这个选项，`undefined` 和 `null` 就不能赋值给其他类型的变量（除了 `any` 类型和 `unknown` 类型）
+
+  ```json
+  // tsconfig.json
+  {
+    "compilerOptions": {
+      "strictNullChecks": true
+      // ...
+    }
+  }
+  ```
+
+  ```js
+  // tsc --strictNullChecks app.ts
+
+  let age:number = 24;
+
+  age = null;      // 报错
+  age = undefined; // 报错
+  ```
+
++ 打开strictNullChecks以后，`undefined` 和 `null` 这两种值也不能互相赋值了
+
+  ```js
+  // 打开 strictNullChecks
+
+  // undefined类型的变量赋值为null，或者null类型的变量赋值为undefind
+  let x:undefined = null; // 报错
+  let y:null = undefined; // 报错
+  ```
+
++ 总之，打开strictNullChecks以后，`undefined`和`null`只能赋值给自身，或者`any`类型和`unknown`类型的变量
+
+  ```js
+  let x:any     = undefined;
+
+  let y:unknown = null;
+  ```
+
