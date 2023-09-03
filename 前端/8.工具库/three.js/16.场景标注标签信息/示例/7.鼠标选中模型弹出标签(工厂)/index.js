@@ -96,6 +96,7 @@ const {composer, outlinePass} = (() => {
 (() => {
   let chooseObj = null;
   const span = document.querySelector('#name');
+  const close = document.getElementById('close');
 
   renderer.domElement.addEventListener('click', (e) => {
     const px = e.offsetX;
@@ -132,17 +133,24 @@ const {composer, outlinePass} = (() => {
       outlinePass.selectedObjects = [intersects[0].object.ancestors];
       intersects[0].object.ancestors.add(tag);
       chooseObj = intersects[0].object.ancestors;
-      
       span.innerHTML = intersects[0].object.ancestors.name;
     }
     else {
       // 把原来选中模型对应的标签和发光描边隐藏
-      if(chooseObj) {
-        outlinePass.selectedObjects = [];//无发光描边
-        chooseObj.remove(tag);//从场景移除
-      }
+      // if(chooseObj) {
+      //   outlinePass.selectedObjects = [];//无发光描边
+      //   chooseObj.remove(tag);//从场景移除
+      // }
     }
   });
+  
+  // 关闭按钮
+  close.addEventListener('click', () => {
+    if (chooseObj) {//把原来选中模型对应的标签和发光描边隐藏
+      outlinePass.selectedObjects = []; //无发光描边
+      chooseObj.remove(tag); //从场景移除
+    }
+  })
 })();
 
 
