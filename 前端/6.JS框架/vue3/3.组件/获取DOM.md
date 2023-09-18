@@ -31,6 +31,10 @@
 + 这是因为直到组件被挂载前，这个 `ref` 的值都是初始的 `null`，并且在由于 `v-if` 的行为将引用的元素卸载时也可以被设置为 `null`
 
   ```html
+  <template>
+    <input ref="el" />
+  </template>
+
   <script setup lang="ts">
   import { ref, onMounted } from 'vue'
 
@@ -40,10 +44,6 @@
     el.value?.focus()
   })
   </script>
-
-  <template>
-    <input ref="el" />
-  </template>
   ```
 
 ## 方式3 ts + 组件
