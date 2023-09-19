@@ -1,11 +1,12 @@
-import {BoxGeometry, MeshLambertMaterial, Mesh, KeyframeTrack,AnimationClip,AnimationMixer, Clock} from 'three';
+import {BoxGeometry, MeshLambertMaterial, Mesh, KeyframeTrack,AnimationClip,AnimationMixer, Clock,LoopOnce} from 'three';
 import {GUI} from 'three/addons/libs/lil-gui.module.min.js';
 const gui = new GUI();
 
 
 const geometry = new BoxGeometry(50,50,50);
 
-
+const target1 = new BoxGeometry(50,200,50).attributes.position; // 变高
+const target2 = new BoxGeometry(10,50,10).attributes.position; // 变细
 
 // 几何体顶点变形目标数据，可以设置1组或多组
 geometry.morphAttributes.position = [target1, target2];
@@ -17,8 +18,7 @@ const material = new MeshLambertMaterial({
 const mesh = new Mesh(geometry, material);
 
 (() => {
-    // const target1 = new BoxGeometry(50,200,50).attributes.position; // 变高
-    // const target2 = new BoxGeometry(10,50,10).attributes.position; // 变细
+
 
 
     // 创建变形动画权重系数的关键帧数据
@@ -32,7 +32,7 @@ const mesh = new Mesh(geometry, material);
     const mixer = new AnimationMixer(mesh);
     const clipAction = mixer.clipAction(clip);
     clipAction.play();
-    clipAction.loop = THREE.LoopOnce; //不循环播放
+    clipAction.loop = LoopOnce; //不循环播放
     clipAction.clampWhenFinished = true // 物体状态停留在动画结束的时候
 
     const clock = new Clock();
