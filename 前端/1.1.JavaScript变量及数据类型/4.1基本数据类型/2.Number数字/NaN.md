@@ -2,23 +2,32 @@
 
 ## 描述
 
++ `NaN`是 JavaScript 的特殊值，表示“非数字”（Not a Number），主要出现在将字符串解析成数字出错的场合
+
 + `NaN` 是一个全局对象的属性
 
-  ```js
-  5 - 'x'  // NaN
++ `NaN` 属性的初始值就是 `NaN`，和 `Number.NaN` 的值一样
 
++ 在现代浏览器中（ES5中）， `NaN` 属性是一个不可配置（non-configurable），不可写（non-writable）的属性
++ 但在ES3中，这个属性的值是可以被更改的，但是也应该避免覆盖
+
++ 编码中很少直接使用到 `NaN`
+
+## 出现的场景
+
++ 通常都是在计算失败时，作为 `Math` 的某个方法的返回值出现的（例如：`Math.sqrt(-1)`）或者尝试将一个字符串解析成数字但失败了的时候（例如：`parseInt("blabla")`）
+
+  ```js
+  5 - 'x' // NaN
+  ```
+
+  ```js
   Math.acos(2) // NaN
   Math.log(-1) // NaN
   Math.sqrt(-1) // NaN
 
   0 / 0 // NaN
   ```
-
-+ `NaN` 属性的初始值就是 `NaN`，和 `Number.NaN` 的值一样
-
-+ 在现代浏览器中（ES5中）， NaN 属性是一个不可配置（non-configurable），不可写（non-writable）的属性。但在ES3中，这个属性的值是可以被更改的，但是也应该避免覆盖
-
-+ 编码中很少直接使用到 `NaN`。通常都是在计算失败时，作为 `Math` 的某个方法的返回值出现的（例如：`Math.sqrt(-1)`）或者尝试将一个字符串解析成数字但失败了的时候（例如：`parseInt("blabla")`）
 
 ## 运算规则
 
@@ -83,7 +92,7 @@
 
 + 如果当前值是 `NaN`，或者将其强制转换为数字后将是 `NaN`，则 `isNaN()` 将返回 `true`
 
-+ 而 `Number.isNaN()` 仅当值当前为 `NaN` 时才为 `true`&#x20;
++ 而 `Number.isNaN()` 仅当值当前为 `NaN` 时才为 `true`
 
   ```js
   isNaN('hello world');        // true
