@@ -1,4 +1,4 @@
-# getOwnPropertyDescriptors
+# getOwnPropertyNames
 
 ## Object.keys()，Object.getOwnPropertyNames()
 
