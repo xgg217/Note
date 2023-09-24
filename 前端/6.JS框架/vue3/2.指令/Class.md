@@ -5,7 +5,7 @@
 + 对象
 
   ```html
-  // active 是否存在取决于数据属性 isActive 的真假值
+  <!-- active 是否存在取决于数据属性 isActive 的真假值 -->
   <div :class="{ active: isActive }"></div>
   ```
 
@@ -124,9 +124,9 @@
 
   ```css
   <style scoped>
-  .a :deep(.b) {
-    /*...*/
-  }
+    .a :deep(.b) {
+      /*...*/
+    }
   </style>
   ```
 
