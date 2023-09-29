@@ -29,7 +29,7 @@ scene.add(axesHelper);
 
   // 平行光设置产生阴影的光源对象,开启光源阴影的计算功能
   directionalLight.castShadow = true;
-  
+
   // 设置三维场景计算阴影的范围
   directionalLight.shadow.camera.left = -100;
   directionalLight.shadow.camera.right = 100;
@@ -37,16 +37,16 @@ scene.add(axesHelper);
   directionalLight.shadow.camera.bottom = -100;
   directionalLight.shadow.camera.near = 0.5;
   directionalLight.shadow.camera.far = 100;
-  
+
   // 可视化平行光阴影对应的正投影相机对象
   const cameraHelper = new THREE.CameraHelper(directionalLight.shadow.camera);
   scene.add(cameraHelper);
-  //
+
   // console.log('阴影相机属性',directionalLight.shadow.camera);
-  
+
   const dirHelper = new THREE.DirectionalLightHelper(directionalLight, 5);
   scene.add(dirHelper);
-  
+
   const dirFolder = gui.addFolder('平行光');
   const obj = {
     R: 100,
@@ -62,7 +62,7 @@ scene.add(axesHelper);
     directionalLight.position.z = obj.R * Math.sin(value);
     dirHelper.update();
   });
-  
+
 })();
 
 //相机
@@ -80,14 +80,14 @@ const renderer = (() => {
   renderer.setPixelRatio(window.devicePixelRatio); //防止输出模糊
   renderer.setSize(width, height);
   document.body.appendChild(renderer.domElement);
-  
+
   // 模型表面产生条纹影响渲染效果，可以改变.shadowMap.type默认值优化
   renderer.shadowMap.type = THREE.VSMShadowMap;
-  
+
   // 设置渲染器，允许光源阴影渲染
   renderer.shadowMap.enabled = true;
   return renderer;
-  
+
 })();
 
 
