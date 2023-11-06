@@ -4,7 +4,8 @@
 
 + `arr.every(callback(element[, index[, array]])[, thisArg])`
 
-+ `every` 方法为数组中的每个元素执行一次 `callback` 函数，直到它找到一个使 `callback` 返回 `false`（表示可转换为布尔值 `false` 的值）的元素。如果发现了一个这样的元素，`every` 方法将会立即返回 `false`
++ `every` 方法为数组中的每个元素执行一次 `callback` 函数，直到它找到一个使 `callback` 返回 `false`（表示可转换为布尔值 `false` 的值）的元素
++ 如果发现了一个这样的元素，`every` 方法将会立即返回 `false`
 
 + 即：如果该函数对每一项都返回 `true`，则返回 `true`
 
