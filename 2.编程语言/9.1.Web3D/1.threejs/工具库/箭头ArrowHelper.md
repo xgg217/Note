@@ -64,7 +64,7 @@
   // 绘制一个从A指向B的箭头
   const AB = B.clone().sub(A);
   const L = AB.length();//AB长度
-  const dir = AB.clone().normalize();//单位向量表示AB方向
+  const dir = AB.clone().normalize(); // 单位向量表示AB方向
 
   // 生成箭头从A指向B
   const arrowHelper = new THREE.ArrowHelper(dir, A, L)
