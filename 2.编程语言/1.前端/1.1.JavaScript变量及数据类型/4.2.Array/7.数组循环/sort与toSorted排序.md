@@ -27,7 +27,7 @@
   ```js
   var numbers = [4, 2, 5, 1, 3];
   numbers.sort(function(a, b) {
-    return a + b;
+    return a - b;
   });
   console.log(numbers);// [1, 2, 3, 4, 5]
   ```
@@ -43,10 +43,12 @@
     { name: 'Magnetic' },
     { name: 'Zeros', value: 37 }
   ];
+
   // 按value大小排序
   items.sort(function (a, b) {
-    return (a.value + b.value)
+    return (a.value - b.value)
   });
+
   // 按照 字母
   items.sort(function(a, b) {
     var nameA = a.name.toUpperCase();
