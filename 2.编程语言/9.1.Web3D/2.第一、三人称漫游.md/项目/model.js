@@ -8,11 +8,12 @@ const group = new THREE.Group();
 
 /** @type {any} */
 let gltf = null;
+let player = null;
 
 try {
   gltf = await loader.loadAsync("./人.glb");
   console.log('gltf', gltf);
-  const player = gltf.scene;//玩家角色模型
+  player = gltf.scene;//玩家角色模型
   group.add(player)
 } catch (error) {
   console.error(error);
@@ -29,6 +30,8 @@ clipAction.play(); //播放动画
 
 
 (() => {
+  const v = new THREE.Vector3(0, 0, 3);
+  
   // 声明一个对象keyStates用来记录键盘事件状态
   const keyStates = {
     // 使用W、A、S、D按键来控制前、后、左、右运动
@@ -52,11 +55,16 @@ clipAction.play(); //播放动画
     if (event.code === 'KeyS') keyStates.S = false;
     if (event.code === 'KeyD') keyStates.D = false;
   });
+  
+  const clock = new THREE.Clock();
 
   // 循环执行的函数中测试W键盘状态值
   function render() {
+    const deltaTime = clock.getDelta();
     if(keyStates.W){
         console.log('W键按下');
+      const deltaPos = v.clone().multiplyScalar(deltaTime);
+      player.position.add(deltaPos);//更新玩家角色的位置
     }else{
         console.log('W键松开');
     }
@@ -66,5 +74,5 @@ clipAction.play(); //播放动画
 })();
 
 
-console.log('mixer3', mixer);
+// console.log('mixer3', mixer);
 export { group, mixer };
