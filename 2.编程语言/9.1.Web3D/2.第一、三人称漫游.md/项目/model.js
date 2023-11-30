@@ -30,7 +30,11 @@ clipAction.play(); //播放动画
 
 
 (() => {
-  const v = new THREE.Vector3(0, 0, 3);
+  // 用三维向量表示玩家角色(人)运动漫游速度
+  const v = new THREE.Vector3(0, 0, 0);//初始速度设置为0
+  const a = 12;//加速度：调节按键加速快慢
+  const vMax = 5;//限制玩家角色最大速度
+  const damping = -0.04; // 阻尼
   
   // 声明一个对象keyStates用来记录键盘事件状态
   const keyStates = {
@@ -57,16 +61,25 @@ clipAction.play(); //播放动画
   });
   
   const clock = new THREE.Clock();
-
   // 循环执行的函数中测试W键盘状态值
   function render() {
     const deltaTime = clock.getDelta();
     if(keyStates.W){
-        console.log('W键按下');
+      console.log('W键按下');
+      //先假设W键对应运动方向为z
+      const front = new THREE.Vector3(0,0,1);
+      if (v.length() < vMax) {//限制最高速度
+        // W键按下时候，速度随着时间增加
+        // front.multiplyScalar(a * deltaTime) 速度的改变量
+        // v（当前速度） + 速度的改变量
+        v.add(front.multiplyScalar(a * deltaTime));
+      }
+      console.log(v)
       const deltaPos = v.clone().multiplyScalar(deltaTime);
       player.position.add(deltaPos);//更新玩家角色的位置
     }else{
-        console.log('W键松开');
+      v.addScaledVector(v, damping);//阻尼减速
+      console.log('W键松开');
     }
     requestAnimationFrame(render);
   }
