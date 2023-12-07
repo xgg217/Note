@@ -12,7 +12,7 @@
   gui.domElement.style.width = '300px';
   ```
 
-## gui控制环境光光照强度.intensity
+## gui控制环境光光照强度 .intensity
 
 + `gui.add(ambient, 'intensity', 0, 2).name('环境光.intensity');`
 
