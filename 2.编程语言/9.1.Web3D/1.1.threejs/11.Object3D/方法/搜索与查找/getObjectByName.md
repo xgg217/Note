@@ -1,0 +1,26 @@
+# getObjectByName
+
+## 语法
+
++ `.getObjectByName ( name : String ) : Object3D`
+
+  + name —— 用于来匹配子物体中Object3D.name属性的字符串
+
++ 返回值：从该对象开始，搜索一个对象及其子级，返回第一个带有匹配name的子对象
++ 请注意，大多数的对象中name默认是一个空字符串，要使用这个方法，你将需要手动地设置name属性
+
+## 示例
+
++ 在 gltf 中查找
+
+  ```js
+  loader.load("./士兵.glb", function (gltf) {
+
+    group.add(gltf.scene);
+    console.log(gltf.scene);
+
+    // 根据骨骼关节名字获取骨关节Bone
+    // 在三维软件中，骨骼关节层层展开，可以看到下面三个骨骼关节
+    const bone1 = gltf.scene.getObjectByName('mixamorigRightArm'); //关节1
+  })
+  ```
