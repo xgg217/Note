@@ -24,6 +24,8 @@ scene.add( group );
 const directionLight = new THREE.DirectionalLight(0xffffff, 0.4);
 directionLight.position.set(80, 100, 50);
 scene.add(directionLight);
+const ambient = new THREE.AmbientLight(0xffffff, 0.4);
+scene.add(ambient);
 
 
 // 初始化渲染器
@@ -33,7 +35,7 @@ const renderer = new THREE.WebGLRenderer({
 // 设置渲染的尺寸大小
 renderer.setSize(window.innerWidth, window.innerHeight)
 // console.log(renderer)
-renderer.setClearColor(0x444444, 1); //设置背景颜色
+// renderer.setClearColor(0x444444, 1); //设置背景颜色
 // 将webgl渲染的canvas内容添加到body
 document.body.appendChild(renderer.domElement)
 
@@ -55,6 +57,8 @@ scene.add( gridHelper );
   const a = 12;//加速度：调节按键加速快慢
   const vMax = 5;//限制玩家角色最大速度
   const damping = -0.04; // 阻尼
+  let leftButtonBool = false;//记录鼠标左键状态
+  const clock = new THREE.Clock();
 
   // 声明一个对象keyStates用来记录键盘事件状态
   const keyStates = {
@@ -120,14 +124,18 @@ scene.add( gridHelper );
     };
   });
 
-  let leftButtonBool = false;//记录鼠标左键状态
+
+  // 鼠标左键按下时候，旋转
   document.addEventListener('mousedown', () => {
     leftButtonBool = true;
   });
+
+  // 鼠标左键抬起时候，不再旋转
   document.addEventListener('mouseup', () => {
     leftButtonBool = false;
   });
 
+  // 鼠标左键按下时候，才旋转玩家角色
   document.addEventListener('mousemove', (event) => {
     // console.log('event.movementX', event.movementX);
 
@@ -138,7 +146,7 @@ scene.add( gridHelper );
     }
   });
 
-  const clock = new THREE.Clock();
+
   // 循环执行的函数中测试W键盘状态值
   function render() {
     const deltaTime = clock.getDelta();
@@ -148,7 +156,7 @@ scene.add( gridHelper );
         console.log('W键按下');
         //先假设W键对应运动方向为z
         const front = new THREE.Vector3();
-        player.getWorldDirection(front); // 获取玩家角色(相机)正前方
+        player.getWorldDirection(front);//获取玩家角色(相机)正前方
 
         // W键按下时候，速度随着时间增加
         // front.multiplyScalar(a * deltaTime) 速度的改变量
@@ -161,7 +169,7 @@ scene.add( gridHelper );
 
       if(keyStates.S){
         // 与W按键相反方向
-        const front = new THREE.Vector3(0, 0, -1);
+        const front = new THREE.Vector3();
         player.getWorldDirection(front);
 
         // - a：与W按键反向相反
