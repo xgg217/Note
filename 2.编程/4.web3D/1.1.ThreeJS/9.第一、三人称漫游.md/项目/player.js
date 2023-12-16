@@ -21,6 +21,9 @@ player.add(cameraGroup); // 第三人称视角：相机作为人的子对象，�
 
 const { keyStates } = (() => {
 
+  // 获取指针锁定按钮
+  const lockDom = document.querySelector('.lock');
+
   // 用三维向量表示玩家角色(人)运动漫游速度
 
   let leftButtonBool = false;//记录鼠标左键状态
@@ -39,6 +42,11 @@ const { keyStates } = (() => {
     S: false,
     D: false,
   };
+
+  // 开启指针锁定或者关闭指针锁定
+  lockDom.addEventListener("click", () => {
+
+  });
 
   // 当某个键盘按下设置对应属性设置为true
   document.addEventListener('keydown', (event) => {
@@ -147,6 +155,7 @@ const { playerUpdate } = (() => {
     const front = new THREE.Vector3();
     if (v.length() < vMax) {//限制最高速度
 
+      // 向前运动
       if(keyStates.W){
         console.log('W键按下');
         //先假设W键对应运动方向为z
@@ -159,6 +168,7 @@ const { playerUpdate } = (() => {
         v.add(front.multiplyScalar(a * deltaTime));
       }
 
+      // 向后运动
       if(keyStates.S){
         // 与W按键相反方向
         player.getWorldDirection(front);
@@ -167,10 +177,21 @@ const { playerUpdate } = (() => {
         v.add(front.multiplyScalar(-a * deltaTime));
       }
 
-      if (keyStates.A) {//向左运动
+      //向左运动
+      if (keyStates.A) {
+        player.getWorldDirection(front);
+        const up = new THREE.Vector3(0, 1, 0);//y方向
+        const left = up.clone().cross(front);
+        v.add(left.multiplyScalar(a * deltaTime));
       }
 
-      if (keyStates.D) {//向右运动
+      //向右运动
+      if (keyStates.D) {
+        player.getWorldDirection(front);
+        const up = new THREE.Vector3(0, 1, 0);//y方向
+
+        const right = front.clone().cross(up);
+        v.add(right.multiplyScalar(a * deltaTime));
       }
     }
 
