@@ -44,9 +44,36 @@ const { keyStates } = (() => {
   };
 
   // 开启指针锁定或者关闭指针锁定
-  lockDom.addEventListener("click", () => {
+  lockDom && lockDom.addEventListener("click", () => {
+    const isBool = document.pointerLockElement === document.body;
+    setButText(isBool);
+
+    if(isBool) {
+      // 退出指针锁定
+      document.exitPointerLock();
+    }else {
+      // 进入指针锁定
+      document.body.requestPointerLock();
+    }
 
   });
+
+  /**
+   *
+   * @param {boolean} isBool 是否进入指针锁定
+   */
+  const setButText = (isBool) => {
+    console.log('12');
+
+    // 进入了指针锁定
+    if(isBool) {
+      // @ts-ignore
+      lockDom.innerText = '退出指针锁定';
+    } else {
+      // @ts-ignore
+      lockDom.innerText = '进入指针锁定';
+    }
+  }
 
   // 当某个键盘按下设置对应属性设置为true
   document.addEventListener('keydown', (event) => {
@@ -97,9 +124,11 @@ const { keyStates } = (() => {
   });
 
 
-  // 鼠标左键按下时候，旋转
+  // 鼠标左键按下时候进入指针锁定模式（鼠标无线滑动）
   document.addEventListener('mousedown', () => {
-    leftButtonBool = true;
+    // leftButtonBool = true;
+    console.log(123);
+    document.body.requestPointerLock(); // 进入指针锁定模式
   });
 
   // 鼠标左键抬起时候，不再旋转
@@ -109,10 +138,13 @@ const { keyStates } = (() => {
 
   // 鼠标左键按下时候，才旋转玩家角色
   document.addEventListener('mousemove', (event) => {
-    // console.log('event.movementX', event.movementX);
+    const isBool = document.pointerLockElement === document.body;
 
-    //鼠标左键按下时候，才旋转玩家角色
-    if(leftButtonBool){
+
+    // 针锁定模式下，才能执行的代码
+    if(isBool){
+      setButText(isBool);
+
       // 左右旋转
       player.rotation.y -= event.movementX / 600;
 
@@ -133,6 +165,8 @@ const { keyStates } = (() => {
 
       // @ts-ignore
       cameraGroup.rotation.x = x;
+    }else {
+      setButText(isBool);
     }
   });
 
