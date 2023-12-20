@@ -5,6 +5,26 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+
+  <style>
+
+    .lock, .third {
+      position: fixed;
+      top: 100px;
+      cursor: pointer;
+      left: 50%;
+    }
+    .lock {
+
+      transform: translateX(-100%);
+
+    }
+    .third {
+
+      transform: translateX(100%);
+
+    }
+  </style>
 </head>
 <body>
 
@@ -17,6 +37,8 @@
     }
   </script>
 
+  <button type="button" class="lock">指针锁定</button>
+  <button type="button" class="third">第三人称</button>
   <script src="./index.js" type="module"></script>
 </body>
 </html>

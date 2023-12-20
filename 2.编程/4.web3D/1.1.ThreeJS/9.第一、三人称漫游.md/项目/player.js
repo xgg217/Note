@@ -14,6 +14,9 @@ const camera = new THREE.PerspectiveCamera(30, window.innerWidth / window.innerH
 camera.position.set(0, 1.6, -5.5); // 玩家角色后面一点
 camera.lookAt(0, 1.6, 0);//对着人身上某个点  视线大致沿着人的正前方
 
+// camera.position.set(0, 1.6, 1);//第一人称
+// camera.lookAt(0, 1.6, 2);//目标观察点注意在相机位置前面一点
+
 const cameraGroup = new THREE.Group();
 // 层级关系：player <—— cameraGroup <—— camera
 cameraGroup.add(camera);
@@ -23,6 +26,10 @@ const { keyStates } = (() => {
 
   // 获取指针锁定按钮
   const lockDom = document.querySelector('.lock');
+  const thirdDom = document.querySelector('.third');
+
+  let viewBool = true; // 记录是否是第三人称
+  let isLock = false; // 记录是否锁定
 
   // 用三维向量表示玩家角色(人)运动漫游速度
 
@@ -46,34 +53,56 @@ const { keyStates } = (() => {
   // 开启指针锁定或者关闭指针锁定
   lockDom && lockDom.addEventListener("click", () => {
     const isBool = document.pointerLockElement === document.body;
-    setButText(isBool);
+    // setButText(isBool);
 
     if(isBool) {
       // 退出指针锁定
       document.exitPointerLock();
+      lockDom.innerText = '进入指针锁定';
+      isLock = false;
     }else {
       // 进入指针锁定
       document.body.requestPointerLock();
+      lockDom.innerText = '退出指针锁定';
+      isLock = true
     }
 
   });
+
+  // 第一人称视角 与 第三人称视角切换
+  thirdDom && thirdDom.addEventListener("click", () => {
+    // 切换到第一人称视角
+    if(viewBool) {
+      // @ts-ignore
+      camera.position.z  = 1;//第一人称
+      // camera.lookAt(0, 1.6, 2);//目标观察点注意在相机位置前面一点
+
+      thirdDom.content = '第一人称视角';
+      viewBool = false;
+    } else {
+      // @ts-ignore
+      camera.position.z  = -2.3;//玩家角色后面一点
+      thirdDom.content = '第三人称视角';
+      viewBool = true;
+    }
+  })
 
   /**
    *
    * @param {boolean} isBool 是否进入指针锁定
    */
-  const setButText = (isBool) => {
-    console.log('12');
+  // const setButText = (isBool) => {
+  //   // console.log('12');
 
-    // 进入了指针锁定
-    if(isBool) {
-      // @ts-ignore
-      lockDom.innerText = '退出指针锁定';
-    } else {
-      // @ts-ignore
-      lockDom.innerText = '进入指针锁定';
-    }
-  }
+  //   // 进入了指针锁定
+  //   if(isBool) {
+  //     // @ts-ignore
+  //     lockDom.innerText = '退出指针锁定';
+  //   } else {
+  //     // @ts-ignore
+  //     lockDom.innerText = '进入指针锁定';
+  //   }
+  // }
 
   // 当某个键盘按下设置对应属性设置为true
   document.addEventListener('keydown', (event) => {
@@ -128,7 +157,7 @@ const { keyStates } = (() => {
   document.addEventListener('mousedown', () => {
     // leftButtonBool = true;
     console.log(123);
-    document.body.requestPointerLock(); // 进入指针锁定模式
+    // document.body.requestPointerLock(); // 进入指针锁定模式
   });
 
   // 鼠标左键抬起时候，不再旋转
@@ -142,8 +171,8 @@ const { keyStates } = (() => {
 
 
     // 针锁定模式下，才能执行的代码
-    if(isBool){
-      setButText(isBool);
+    if(isBool && isLock){
+      // setButText(isBool);
 
       // 左右旋转
       player.rotation.y -= event.movementX / 600;
@@ -166,7 +195,7 @@ const { keyStates } = (() => {
       // @ts-ignore
       cameraGroup.rotation.x = x;
     }else {
-      setButText(isBool);
+      // setButText(isBool);
     }
   });
 
