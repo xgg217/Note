@@ -1,6 +1,6 @@
-import * as THREE from "./three.module.min.js"
+import * as THREE from "three"
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { group,mixer, player } from './model.js'
+import { group,mixer } from './model.js'
 import { camera,
   playerUpdate } from "./player.js"
 
