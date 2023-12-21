@@ -24,7 +24,10 @@ player.add(cameraGroup); // 第三人称视角：相机作为人的子对象，�
 const { keyStates } = (() => {
 
   // 获取指针锁定按钮
+  /** @type {HTMLButtonElement | null} */
   const lockDom = document.querySelector('.lock');
+
+  /** @type {HTMLButtonElement | null} */
   const thirdDom = document.querySelector('.third');
 
   let viewBool = true; // 记录是否是第三人称
@@ -36,7 +39,6 @@ const { keyStates } = (() => {
   // 上下俯仰角度范围
   const angleMin = THREE.MathUtils.degToRad(-15);//角度转弧度
   const angleMax = THREE.MathUtils.degToRad(15);
-  // @ts-ignore
   const clock = new THREE.Clock();
 
   // 声明一个对象keyStates用来记录键盘事件状态
@@ -76,12 +78,12 @@ const { keyStates } = (() => {
       camera.position.z  = 1;//第一人称
       // camera.lookAt(0, 1.6, 2);//目标观察点注意在相机位置前面一点
 
-      thirdDom.content = '第一人称视角';
+      thirdDom.innerText = '第一人称视角';
       viewBool = false;
     } else {
       // @ts-ignore
       camera.position.z  = -2.3;//玩家角色后面一点
-      thirdDom.content = '第三人称视角';
+      thirdDom.innerText = '第三人称视角';
       viewBool = true;
     }
   })
