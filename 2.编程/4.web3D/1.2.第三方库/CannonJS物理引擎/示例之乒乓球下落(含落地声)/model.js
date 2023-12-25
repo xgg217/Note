@@ -5,19 +5,20 @@ import * as CANNON from 'cannon-es';
 const group = new THREE.Group();
 const size = 0.02; // 乒乓球半径
 const height = 1; // 高度1m
+const fixedTimeStep = 1/60;
 
 // threejs中的小球 + 地面
 const mesh = (() => {
   const metr = new THREE.MeshLambertMaterial({
     color: 0x0000ff
   });
-    // 小球
-    const geometry = new THREE.SphereGeometry(size);
-    // 创建线模型对象
-    const mesh = new THREE.Mesh(geometry, metr);
-    mesh.position.y = height;
-    
-    group.add(mesh);
+  // 小球
+  const geometry = new THREE.SphereGeometry(size);
+  // 创建线模型对象
+  const mesh = new THREE.Mesh(geometry, metr);
+  mesh.position.y = height;
+  
+  group.add(mesh);
   
   
   // 地面
@@ -35,11 +36,16 @@ const mesh = (() => {
 })();
 
 // 物理引擎中的 小球 + 地面
-(() => {
+// 按钮点击控制
+const render = (() => {
+  const butDom = document.querySelector(".but"); // 小球下落
+  const ppbDom = document.querySelector(".ppb"); // 打开小球的声音
+  const audioPDom = document.querySelector(".audioP"); // 小球落地的音频
+  
   // 材质
   const sphereMaterial = new CANNON.Material(); // 小球材质
   const groundMaterial = new CANNON.Material(); // 地面材质
-  const fixedTimeStep = 1/60;
+  
   const world = new CANNON.World();
   world.gravity.set(0,-9.8,0);
 
@@ -52,6 +58,7 @@ const mesh = (() => {
     shape: bodyShape,//碰撞体的几何体形状
     material: sphereMaterial
   });
+  // world.addBody(body);
   
   // 物理地面
   {
@@ -69,17 +76,43 @@ const mesh = (() => {
     world.addBody(groundBody);
   }
   
-  // 反弹了
+  // 反弹
   {
     const contactMaterial = new CANNON.ContactMaterial(groundMaterial, sphereMaterial, {
-      restitution: 0.5, //反弹恢复系数
+      restitution: 0.7, //反弹恢复系数
     })
     // 把关联的材质添加到物理世界中
     world.addContactMaterial(contactMaterial)
   }
 
-  world.addBody(body);
-
+  // 按钮点击设置小球下楼
+  let isAdd = false;
+  butDom.addEventListener('click', () => {
+    body.position.y = height;
+    if(!isAdd) {
+      isAdd = true;
+      world.addBody(body);
+    }
+  })
+  
+  // 打开声音，因为浏览器限制音频首次播放需要用户触发
+  ppbDom.addEventListener('click', () => {
+    audioPDom.volume = 0; // 按钮开启声音时候，设置静音
+    audioPDom.play();
+  })
+  
+  body.addEventListener('collide', event => {
+    console.log(event);
+    const contact = event.contact;
+    
+    console.log(contact.getImpactVelocityAlongNormal())
+    
+    const ImpactV = contact.getImpactVelocityAlongNormal();
+    audioPDom.volume = ImpactV / 4.5;
+    audioPDom.play();
+  })
+  
+  // 循环渲染
   function render() {
     world.step(fixedTimeStep);//更新物理计算
     
@@ -88,8 +121,16 @@ const mesh = (() => {
     // console.log('小球的位置', body.position.y,)
     requestAnimationFrame(render);
   }
- render()
+  
+  //
+  
+  return render
 
 })();
+
+
+render();
+
+
 
 export default group;
