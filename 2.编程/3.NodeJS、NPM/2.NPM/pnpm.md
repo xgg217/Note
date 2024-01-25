@@ -47,7 +47,7 @@
 
   ```bash
   pnpm config get registry  //查看源
-  pnpm config set registry http://registry.npm.taobao.org  //切换淘宝源
+  pnpm config set registry https://registry.npmmirror.com  //切换淘宝源
   ```
 
 + 切换国内源
