@@ -8,19 +8,19 @@
   npm config list
 
   // 结果
-  metrics-registry = "http://registry.npm.taobao.org/"
+  metrics-registry = "https://registry.npmmirror.com"
 
-  // 或者 直接查看
+  // 或者 直接查看（检测是否切换成功）
   npm config get registry
   ```
 
 + 修改registry地址，比如修改为淘宝镜像源
 
   ```bash
-  npm set registry https://registry.npm.taobao.org/
+  npm set registry https://registry.npmmirror.com
 
   // 或者 直接设置
-  npm config set registry https://registry.npm.taobao.org/
+  npm config set registry https://registry.npmmirror.com
   ```
 
 + 删除淘宝镜像源
