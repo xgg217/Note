@@ -1,4 +1,4 @@
-# camera.getWorldDirection()获取相机视线方向
+# camera.getWorldDirection() 获取相机视线方向
 
 ## 概述
 
