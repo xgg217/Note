@@ -10,13 +10,13 @@
   console.log('[测试 ref]', count)
   ```
 
-+ 会看到控制台输出了一个 `RefImpl`对象
++ 会看到控制台输出了一个 `RefImpl` 对象
 
   ![RefImpl](image/RefImpl.png)
 
 ## 方式1
 
-+ 通过 `.value`来获取
++ 通过 `.value` 来获取
 
   ```js
   console.log('[测试 ref]', count.value);

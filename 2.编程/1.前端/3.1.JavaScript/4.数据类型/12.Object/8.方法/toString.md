@@ -2,7 +2,7 @@
 
 ## 作用
 
-+ `toString`方法的作用是返回一个对象的字符串形式，
++ `toString` 方法的作用是返回一个对象的字符串形式，
 
 + 默认情况下返回类型字符串
 
@@ -48,7 +48,7 @@
 
   + 数值：返回 `[object Number]`
 
-  + 字符串：返回`[object String]`
+  + 字符串：返回 `[object String]`
 
   + 布尔值：返回 `[object Boolean]`
 
@@ -60,7 +60,7 @@
 
   + `arguments` 对象：返回 `[object Arguments]`
 
-  + 函数：返回`[object Function]`
+  + 函数：返回 `[object Function]`
 
   + `Error` 对象：返回 `[object Error]`
 

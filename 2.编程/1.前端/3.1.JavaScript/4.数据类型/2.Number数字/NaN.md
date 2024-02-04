@@ -2,7 +2,7 @@
 
 ## 描述
 
-+ `NaN`是 JavaScript 的特殊值，表示“非数字”（Not a Number），主要出现在将字符串解析成数字出错的场合
++ `NaN` 是 JavaScript 的特殊值，表示“非数字”（Not a Number），主要出现在将字符串解析成数字出错的场合
 
 + `NaN` 是一个全局对象的属性
 

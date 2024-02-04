@@ -2,7 +2,7 @@
 
 ## React Router Dom
 
-+ `react-router-dom` 是应用程序中路由的库。`React`库中没有路由功能，需要单独安装`react-router-dom`
++ `react-router-dom` 是应用程序中路由的库。`React` 库中没有路由功能，需要单独安装 `react-router-dom`
 
   ```js
   http://127.0.0.1:3000/article/num1
@@ -22,7 +22,7 @@
 
 + `Link` 组件用于在应用程序中创建链接。 它将在HTML中渲染为锚标记
 
-+ `NavLink`是突出显示当前活动链接的特殊链接
++ `NavLink` 是突出显示当前活动链接的特殊链接
 
 + `Switch` 不是必需的，但在组合路由时很有用
 

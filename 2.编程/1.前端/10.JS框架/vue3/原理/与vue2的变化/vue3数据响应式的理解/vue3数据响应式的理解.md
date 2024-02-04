@@ -10,7 +10,7 @@
 
 ## 组件实例中的API
 
-+ 在`vue3`中，组件实例是一个`Proxy`，它仅提供了下列成员，功能和`vue2`一样
++ 在vue3中，组件实例是一个 `Proxy`，它仅提供了下列成员，功能和vue2一样
 
 + 属性：[https://v3.vuejs.org/api/instance-properties.html](https://v3.vuejs.org/api/instance-properties.html "https://v3.vuejs.org/api/instance-properties.html")
 

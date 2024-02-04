@@ -26,7 +26,7 @@
   r.test(s) // false
   ```
 
-+ 可以通过正则对象的`lastIndex`属性指定开始搜索的位置
++ 可以通过正则对象的 `lastIndex` 属性指定开始搜索的位置
 
   ```js
   var r = /x/g;

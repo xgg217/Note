@@ -2,7 +2,7 @@
 
 ## 概述
 
-+ 判断某个数据是否是通过`readonly()` 或 `shallowReadonly()` 创建的
++ 判断某个数据是否是通过 `readonly()` 或 `shallowReadonly()` 创建的
 
 ## TS类型
 

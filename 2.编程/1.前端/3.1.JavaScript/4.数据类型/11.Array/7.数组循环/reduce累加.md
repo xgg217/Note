@@ -22,11 +22,11 @@
 
 + 回调函数第一次执行时，`accumulator` 和 `element` 的取值有两种情况：
 
-  + 如果调用 `reduce()` 时提供了 `initialValue`，`accumulator` 取值为`initialValue`，`element` 取数组中的第一个值；
+  + 如果调用 `reduce()` 时提供了 `initialValue`，`accumulator` 取值为 `initialValue`，`element` 取数组中的第一个值；
 
-  + 如果没有提供 `initialValue`，那么`accumulator`取数组中的第一个值， `element`取数组中的第二个值
+  + 如果没有提供 `initialValue`，那么 `accumulator` 取数组中的第一个值， `element` 取数组中的第二个值
 
-  + **注意**：如果没有提供 `initialValue`，`reduce` 会从索引1的地方开始执行 `callback` 方法，跳过第一个索引。如果提供`initialValue`，从索引0开始
+  + **注意**：如果没有提供 `initialValue`，`reduce` 会从索引1的地方开始执行 `callback` 方法，跳过第一个索引。如果提供 `initialValue`，从索引0开始
 
   + **提供初始值通常更安全**
 

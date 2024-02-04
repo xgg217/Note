@@ -29,7 +29,7 @@
     | `npm i <pkg>`   | [pnpm add \<pkg>](https://www.pnpm.cn/cli/add "pnpm add <pkg>") 默认 -S                                                            |
     |                 | `pnpm add -D`                                                                                                                    |
     |                 | `pnpm add -g`  全局安装                                                                                                              |
-    |                 | `pnpm add sax@3.0.0`安装指定版本                                                                                                       |
+    |                 | `pnpm add sax@3.0.0` 安装指定版本                                                                                                       |
     |                 | `pnpm up` 更新                                                                                                                     |
     | `npm run <cmd>` | [pnpm remove \<cmd>](https://www.pnpm.cn/cli/run "pnpm remove <cmd>") 别名 `pnpm rm <cmd>` `pnpm uninstall <cmd>`  `pnpm un <cmd>` |
 

@@ -9,11 +9,9 @@
     console.log(exports === module.exports); // true
     ```
 
-+ 刚开始指向同个对象&#x20;
++ 刚开始指向同个对象
 
-![指向](指向.png "指向")
-
-+ 当 `module.exports` 与  `exports`冲突时，导出的是 `module.exports`
++ 当 `module.exports` 与  `exports` 冲突时，导出的是 `module.exports`
 
     ```js
     // test.js

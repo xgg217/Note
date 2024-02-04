@@ -34,7 +34,7 @@
         arr.includes('c', 100); // false
         ```
 
-  + 返回值：返回一个布尔值 `Boolean` ，如果在数组中找到了（如果传入了 `fromIndex` ，表示在 `fromIndex`指定的索引范围中找到了）则返回 `true`
+  + 返回值：返回一个布尔值 `Boolean` ，如果在数组中找到了（如果传入了 `fromIndex` ，表示在 `fromIndex` 指定的索引范围中找到了）则返回 `true`
 
 ## 注意
 
@@ -51,7 +51,7 @@
 
 ## 示例
 
-+ `includes`方法返回一个布尔值，表示某个数组是否包含给定的值，与字符串的 `includes` 方法类似
++ `includes` 方法返回一个布尔值，表示某个数组是否包含给定的值，与字符串的 `includes` 方法类似
 
   ```js
   [1, 2, 3].includes(2)     // true
