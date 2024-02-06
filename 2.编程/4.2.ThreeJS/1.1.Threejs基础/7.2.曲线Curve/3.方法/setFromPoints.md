@@ -1,4 +1,4 @@
-# setFromPoints()提取曲线坐标数据
+# setFromPoints() 提取曲线坐标数据
 
 ## 概述
 

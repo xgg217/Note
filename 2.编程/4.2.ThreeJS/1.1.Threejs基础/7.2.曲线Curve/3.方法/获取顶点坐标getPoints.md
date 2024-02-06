@@ -1,4 +1,13 @@
-# getPoints
+# 获取顶点坐标 getPoints
+
+## API
+
++ `.getPoint ( t : Float, optionalTarget : Vector ) : Vector`
+
+  + t - 曲线上的位置。必须在 `[0,1]` 范围内
+  + optionalTarget — (可选) 如果需要, 结果将复制到此向量中，否则将创建一个新向量
+
++ 返回值：返回曲线上给定位置的点
 
 ## 概述
 
