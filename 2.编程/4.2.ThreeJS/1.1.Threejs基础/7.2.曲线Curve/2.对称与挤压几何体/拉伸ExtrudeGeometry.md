@@ -2,7 +2,7 @@
 
 ## 概述
 
-+ 拉伸几何体ExtrudeGeometry和上节课讲到的轮廓填充几何体ShapeGeometry一样，都是基于一个基础的平面轮廓Shape进行变换，生成一个几何体
++ 拉伸几何体 ExtrudeGeometry 和上节课讲到的轮廓填充几何体ShapeGeometry一样，都是基于一个基础的平面轮廓Shape进行变换，生成一个几何体
 
   ![拉伸成型](images/拉伸成型.png)
 
