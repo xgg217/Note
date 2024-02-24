@@ -59,7 +59,7 @@
 
 + `.getDelta () : Float`
 
-  + 获取自 `.oldTime` 设置后到当前的秒数
+  + 获取自 `.oldTime` 设置后到当前的*秒*数
   + 同时将 `.oldTime` 设置为当前时间
   + 如果 `.autoStart` 设置为 `true` 且时钟并未运行，则该方法同时启动时钟
 
@@ -72,7 +72,8 @@
 
   function render() {
     // 获取每次更新后的时间间隔
-    const deltaTime = clock.getDelta();
+    const t = clock.getDelta();
+    console.log("两帧渲染时间间隔",t + "秒")
 
     requestAnimationFrame(render);
   }
