@@ -33,4 +33,10 @@
     ]
   };
   </script>
+
+  <style lang="scss" scoped>
+    :deep(.el-table td.el-table__cell > .cell) {
+      height: 50px;
+    }
+</style>
   ```
