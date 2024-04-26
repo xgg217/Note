@@ -5,26 +5,26 @@
 + 声明文件示例
 
   ```js
-    // 例如 global.d.ts
-    interface Console {
-      log(mes?:any):void,
-      error(mes?:any):void,
-    }
+  // 例如 global.d.ts
+  interface Console {
+    log(mes?:any):void,
+    error(mes?:any):void,
+  }
 
-    declare var console:Console
+  declare var console:Console
 
-    declare function setTimeout(handler:()=> void, times:number):number
-    ```
+  declare function setTimeout(handler:()=> void, times:number):number
+  ```
 
 + 使用
 
   ```js
-    console.log(12);
+  console.log(12);
 
-    setTimeout(() => {
+  setTimeout(() => {
 
-    }, 1000)
-    ```
+  }, 1000)
+  ```
 
 ## 声明全局函数
 
@@ -44,33 +44,33 @@
 + 声明
 
   ```js
-    declare module "lodash" {
-      export function chunk<T>(arr:T[], len:number):T[][]
-    }
-    ```
+  declare module "lodash" {
+    export function chunk<T>(arr:T[], len:number):T[][]
+  }
+  ```
 
 + 使用
 
   ```js
-    import _ from "lodash",
-    const newArr = _.chunk([3,4,5,6, "1"], 2);
-    ```
+  import _ from "lodash",
+  const newArr = _.chunk([3,4,5,6, "1"], 2);
+  ```
 
 ## 扩张已有的类型
 
 + declare module
 
-    ![declare module](image/image3.png)
+  ![declare module](image/image3.png)
 
 ## 自定义
 
 + 使用 wx js-SDK
 
-    ![wx js-SDK](image/image2.png)
+  ![wx js-SDK](image/image2.png)
 
 + 解决方案
 
-    ![image1](image/image1.png)
+  ![image1](image/image1.png)
 
 + 更好的方案
 
