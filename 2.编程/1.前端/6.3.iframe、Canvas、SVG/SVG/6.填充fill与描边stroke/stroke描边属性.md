@@ -72,3 +72,88 @@
   ```
 
   ![alt text](images/设置虚线开始的位置（偏移）.png)
+
+## 示例
+
++ 设置偏移位置，生成动画(css)
+
+  ```html
+  <style>
+    #c1{
+      fill:#fac;
+      stroke: skyblue;
+      stroke-width: 2;
+      stroke-dasharray: 200;
+      transition: 2s;
+    }
+
+    #c1:hover{
+      fill:#caf;
+      stroke: blueviolet;
+      stroke-dashoffset: 200;
+      /* stroke-dasharray: 200; */
+    }
+  </style>
+
+  <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" style="border: #aaa solid">
+    <path id="c1" d="M20 50, A30 30 0 0 1 80 50, A30 30 0 0 1 20 50" />
+  </svg>
+
++ 设置偏移位置，生成动画(js)
+
+  ```html
+  <style>
+    #c1{
+      fill:#fac;
+      stroke: skyblue;
+      stroke-dashoffset: 0;
+      stroke-width: 2;
+      /* stroke-dasharray: 0; */
+      transition: 2s;
+    }
+  </style>
+
+   <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" style="border: #aaa solid">
+    <path id="c1" d="M20 50, A30 30 0 0 1 80 50, A30 30 0 0 1 20 50" />
+  </svg>
+
+  <script>
+    const fillColorArr = ['#caf', '#fac'];
+    const strokeColorArr = ['blueviolet', 'skyblue'];
+    const c1 = document.querySelector("#c1");
+    const len = c1.getTotalLength();
+
+    c1.setAttribute('stroke-dasharray', len);
+
+    c1.style.fill = "#caf";
+    c1.style.stroke = "blueviolet";
+    c1.style.strokeDashoffset = len;
+
+    // 准备动画，连续改变（上一次过渡完成，触发下一次过渡）
+
+    // 方式1 setTimeout
+
+    // 方式2 setInterval
+
+    // 方式3 过渡事件函数，每完成一次过渡，就会触发事件
+    let fillIndex = 0;
+    let strokeIndex = 0;
+    c1.ontransitionend = function (e) {
+
+      // 回到初始状态
+      if(e.propertyName === 'fill') {
+        fillIndex = fillIndex === 0 ? 1 : 0;
+        c1.style.fill = fillColorArr[fillIndex];
+      }
+      if(e.propertyName === 'stroke') {
+        strokeIndex = strokeIndex === 0 ? 1 : 0;
+        c1.style.stroke = strokeColorArr[strokeIndex];
+      }
+      if(e.propertyName === 'stroke-dashoffset') {
+        c1.style.strokeDashoffset = parseInt(c1.style.strokeDashoffset) + len * 1;
+      }
+
+    }
+
+  </script>
+  ```
