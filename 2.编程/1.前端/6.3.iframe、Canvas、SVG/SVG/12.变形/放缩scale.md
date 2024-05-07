@@ -6,7 +6,7 @@
 
 + 放缩后的位置，默认会参考0 0原点
 
-+ 可以使用transform-origin 设置新的原点位置
++ 可以使用 `transform-origin` 设置新的原点位置
 
   ```html
   <rect x="10" y="10" width="60" height="40" fill="#fcc" fill-opacity="0.8"/>

@@ -4,7 +4,6 @@
 
 + 默认是以坐标系原点进行旋转
 
-
   ```html
   <rect x="0" y="0" width="60" height="40" fill="#fcc" fill-opacity="0.8"/>
   <rect x="0" y="0" width="60" height="40" fill="none" stroke="#f00" stroke-dasharray="2.5"
@@ -15,8 +14,8 @@
 
 + 可以设置旋转的中心点
 
-  + 利用rotate函数指定旋转的中心点 rotate(45,30,20)
-  + 利用transform-origin="30 20"
+  + 利用 `rotate` 函数指定旋转的中心点 `rotate(45,30,20)`
+  + 利用 `transform-origin="30 20"`
 
   ```html
   <rect x="10" y="10" width="60" height="40" fill="#fcc" fill-opacity="0.8"/>
