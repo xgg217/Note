@@ -1,14 +1,11 @@
 # viewBox
 
-## viewBox作用特点
+## 概述
 
-+ 坐标系
-+ 每一个svg标签，都会有一个自己的坐标系。
-+ 这个坐标系是隐式
-+ 坐标系是无穷大的
-+ 这个坐标系还有其他的象限部分，只不过默认窗口左上角为0 0点。 向右为x正，向下为y正
++ 如果只设置了 `width` 和 `height` ，没有设置 `viewbox` ， 则 `viewbox` 默认为 `0 0 width height`
 
-  ![alt text](images/viewBox作用之坐标系.png)
++ 一旦设置了 `viewbox`，则svg会充满窗口
++ 一般都会 `viewBox` 配合 `width` 和 `height`
 
 ## viewBox属性
 
@@ -53,9 +50,3 @@
   ```
 
   ![alt text](images/viewBox属性的width和height.png)
-
-
-
-
-
-
