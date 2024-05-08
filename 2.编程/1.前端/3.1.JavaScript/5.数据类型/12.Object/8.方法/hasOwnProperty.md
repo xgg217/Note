@@ -1,5 +1,10 @@
 # hasOwnProperty
 
+## 注意
+
++ 不推荐使用
++ 建议使用 `Object.hasOwn()`
+
 ## 作用
 
 + `Object.prototype.hasOwnProperty` 方法接受一个字符串作为参数，返回一个布尔值，表示该实例对象自身是否具有该属性

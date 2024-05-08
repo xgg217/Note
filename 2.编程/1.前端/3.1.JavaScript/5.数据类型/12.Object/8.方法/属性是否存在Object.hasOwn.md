@@ -17,3 +17,7 @@
   let object3 = Object.create(null)
   Object.hasOwn(object3, "foo") // false
   ```
+
+## 注意点
+
++ `Object.hasOwn()` 旨在取代 `Object.prototype.hasOwnProperty()`
