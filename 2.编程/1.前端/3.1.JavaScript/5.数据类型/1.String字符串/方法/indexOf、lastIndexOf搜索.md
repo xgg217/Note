@@ -1,4 +1,4 @@
-# 搜索indexOf、lastIndexOf
+# 搜索 indexOf、lastIndexOf
 
 ## indexOf()，lastIndexOf() 使用
 

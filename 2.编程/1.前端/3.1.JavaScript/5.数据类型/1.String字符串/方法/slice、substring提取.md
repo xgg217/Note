@@ -10,7 +10,7 @@
   'JavaScript'.slice(0, 4) // "Java"
   ```
 
-## substring
+## substring 不建议使用
 
 + `substring` 方法用于从原字符串取出子字符串并返回，不改变原字符串
 

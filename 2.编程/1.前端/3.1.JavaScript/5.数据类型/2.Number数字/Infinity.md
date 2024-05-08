@@ -17,7 +17,10 @@
   1 / 0 // Infinity
   ```
 
-+ `Infinity` 有正负之分，`Infinity` 表示正的无穷，`-Infinity` 表示负的无穷
++ `Infinity` 有正负之分
+
+  + `Infinity` 表示正的无穷
+  + `-Infinity` 表示负的无穷
 
   ```js
   Infinity === -Infinity // false
@@ -38,7 +41,7 @@
   ```
 
 + 0 乘以 `Infinity` ，返回 `NaN`
-+ 0除以 `Infinity` ，返回 `0`
++ 0 除以 `Infinity` ，返回 `0`
 + `Infinity` 除以0，返回 `Infinity`
 
   ```js
