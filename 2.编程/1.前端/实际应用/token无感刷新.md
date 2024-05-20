@@ -40,25 +40,23 @@
       setRefreshToken(refreshtoken)
     }
 
-   // 如果无权限
-  if(res.data.code === 401 && isRefreshToken(res.config)) {
-    // 刷新token
-    const isBool = await refreshToken();
+    // 如果无权限
+    if(res.data.code === 401 && isRefreshToken(res.config)) {
+      // 刷新token
+      const isBool = await refreshToken();
 
-    // 是否刷新到了token
-    if(isBool) {
-      // 重新请求
-      res.config.headers.Authorization = `Bearer ${getToken()}`; // 更换新的token
-      const res = await ins.request(res.config)
-      return res;
-    } else {
-      // 无权限-退出登录
-      cosnole.error('退出登录到登录页')
-      return res.data;
+      // 是否刷新到了token
+      if(isBool) {
+        // 重新请求
+        res.config.headers.Authorization = `Bearer ${getToken()}`; // 更换新的token
+        const res = await ins.request(res.config)
+        return res;
+      } else {
+        // 无权限-退出登录
+        cosnole.error('退出登录到登录页')
+        return res.data;
+      }
     }
-
-
-  }
 
     return res.data;
   })
@@ -97,8 +95,6 @@
     })
 
     return promise
-
-
 
   }
 
