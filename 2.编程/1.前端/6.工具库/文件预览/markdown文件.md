@@ -13,3 +13,20 @@
   + marked：它的作用是将markdown文本转换（解析）为HTML
 
   + highlight：它允许开发者在网页上高亮显示代码
+
+  ```shell
+  pnpm add marked
+  ```
+
+  ```js
+  import { marked } from "marked";
+
+  fetch("/src/views/examples/AnimationSkinningMorph/说明.md")
+  .then((response) => response.text())
+  .then((data) => {
+    // 转换后的html
+    console.log(marked(data))
+  }).catch((error) => {
+    console.log(error)
+  })
+  ```
