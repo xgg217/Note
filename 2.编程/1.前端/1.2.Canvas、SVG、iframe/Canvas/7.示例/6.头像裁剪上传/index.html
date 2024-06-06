@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <input type="file">
+  <img  alt="头像">
+  <button type="button">确认</button>
+
+  <script>
+    (function() {
+      "use strict";
+
+      const input = document.querySelector("input");
+      const img = document.querySelector("img");
+      const button = document.querySelector("button");
+
+      // 1. 头像本地预览
+      input.addEventListener("change", e => {
+        console.log(e.target.files[0]);
+        const file = e.target.files[0];
+
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = (e) => {
+          img.src = e.target.result;
+        }
+      });
+
+      // 2. 交互
+
+      // 3. 文件上传 canvas -> blob -> File
+
+      // 3.1 获取裁剪后的file对象
+      const cut = () => {
+        const cutInfo = {
+          x: 100, // 头像选择框在原图中距离上边的距离
+          y: 100, // 头像选择框在原图中距离左边的距离
+          oWidth: 50, // 头像选择框的宽度
+          OHeight: 50, // 头像选择框的高度
+          width: 80, // 在canvas中的宽度
+          height: 80 // 在canvas中的高度
+        };
+
+        const csv = document.createElement("canvas");
+        const ctx = csv.getContext("2d");
+        csv.width = cutInfo.width;
+        csv.height = cutInfo.height;
+
+        // 将图片绘制到canvas中
+        ctx.drawImage(img, cutInfo.x, cutInfo.y, cutInfo.oWidth, cutInfo.OHeight, 0,0, cutInfo.width, cutInfo.height);
+
+        // canvas -> blob
+        csv.toBlob((blob) => {
+          // blob -> File
+          const file = new File([blob], "cut.png", {
+            type: "image/png"
+          });
+          console.log(file);
+        });
+
+        // document.body.appendChild(csv);
+      };
+
+      button.addEventListener('click', cut)
+
+
+
+
+    })();
+  </script>
+</body>
+
+</html>
