@@ -52,16 +52,36 @@
   + 停止时钟
   + 同时将 `oldTime` 设置为当前时间
 
-+ `.getElapsedTime () : Float`
++ `.getElapsedTime () : Float` 获取自时钟启动后的秒数
 
   + 获取自时钟启动后的秒数，同时将 `.oldTime` 设置为当前时间
   + 如果 `.autoStart` 设置为 `true` 且时钟并未运行，则该方法同时启动时钟
 
-+ `.getDelta () : Float`
++ `.getDelta () : Float` 获取2帧之间的时间间隔
 
   + 获取自 `.oldTime` 设置后到当前的*秒*数
   + 同时将 `.oldTime` 设置为当前时间
   + 如果 `.autoStart` 设置为 `true` 且时钟并未运行，则该方法同时启动时钟
+
+    ```js
+    // 设置时钟
+    const clock = new THREE.Clock();
+    function render() {
+      // 获取时钟运行的总时长
+      let time = clock.getElapsedTime();
+      console.log("时钟运行总时长：", time);
+      //   let deltaTime = clock.getDelta();
+      //     console.log("两次获取时间的间隔时间：", deltaTime);
+      let t = time % 5;
+      cube.position.x = t * 1;
+
+      renderer.render(scene, camera);
+      //   渲染下一帧的时候就会调用render函数
+      requestAnimationFrame(render);
+    }
+
+    render();
+    ```
 
 ## 实际使用
 
