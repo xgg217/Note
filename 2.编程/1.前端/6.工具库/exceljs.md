@@ -38,42 +38,53 @@
   ```js
   const { Workbook } = require('exceljs');
 
-  // 读取文件
-  readerData(rawFile) {
-    return new Promise((res, rej) => {
-      const reader = new FileReader();
-      reader.readAsArrayBuffer(rawFile);
-      reader.onload = e => {
-        // 代码
-        resolve();
-      };
-
-      reader.onerror = e => {
-        this.$message.error('上传文件失败');
-        console.error(e);
-        this.loading = false;
-        reject();
-      };
-
-
-    })
-  }
-
   async function main(){
 
 
     const workbook = new Workbook();
 
-    const workbook2 = await workbook.xlsx.readFile('./data.xlsx');
-
-    workbook2.eachSheet((sheet, index1) => {
-      console.log('工作表' + index1);
-
+    const workbook2 = await workbook.xlsx.load(files);
+    workbook2.eachSheet((sheet, index) => {
       const value = sheet.getSheetValues();
-    })
+
+      const arr = value.filter((item, index) => {
+        return index !== 0;
+      }).map(item => {
+        return item.filter((item, index) => {
+          return index !== 0;
+        });
+      });
+
+      setKeyAndVal(arr);
+    });
   }
 
   main();
+  ```
+
+  ```js
+  // 对照模板
+  // 文件 key val 对照
+  setKeyAndVal(arr) {
+    // 未传入对照模板 { 'excel行头名称': '对应的key' } 如 { '客户名称': 'customerName' }
+    if (isEmpty(this.keyAndValObj)) {
+      this.$emit('chenge', arr);
+      return;
+    }
+
+    //
+    const list = [];
+    const valueArr = Object.values(this.keyAndValObj);
+
+    arr.slice(1).map(item => {
+      const obj = {};
+      valueArr.forEach((key, i) => {
+        obj[key] = item[i];
+      });
+
+      list.push(obj);
+    });
+  }
   ```
 
 ## 写入 + 下载
