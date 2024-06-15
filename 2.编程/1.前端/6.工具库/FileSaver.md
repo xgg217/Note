@@ -1,0 +1,45 @@
+# FileSaver
+
+## FileSaver.js 简介
+
++ FileSaver.js 是 HTML5 的 saveAs() FileSaver 实现
++ 它支持大多数主流的浏览器
+
++ [FileSaver](https://github.com/eligrey/FileSaver.js)
+
+  ```shell
+  import { saveAs } from 'file-saver';
+  ```
+
+
+## API
+
++ FileSaver saveAs(Blob/File/Url, optional DOMString filename, optional Object { autoBom })
+
+  + 参数
+
+    + 参数1 支持 Blob/File/Url 三种类型
+    + 参数2 表示文件名（可选）
+    + 参数3 如果你需要 FlieSaver.js 自动提供 Unicode 文本编码提示（参考：字节顺序标记），则需要设置 { autoBom: true}
+
++ 保存文本
+
+  ```js
+  let blob = new Blob(["大家好，我是阿宝哥!"], { type: "text/plain;charset=utf-8" });
+  FileSaver.saveAs(blob, "hello.txt");
+  ```
+
++ 保存线上资源
+
+  ```js
+  FileSaver.saveAs("https://httpbin.org/image", "image.jpg");
+  ```
+
++ 保存 Canvas 画布内容
+
+  ```js
+  let canvas = document.getElementById("my-canvas");
+  canvas.toBlob(function(blob) {
+    saveAs(blob, "abao.png");
+  });
+  ```
