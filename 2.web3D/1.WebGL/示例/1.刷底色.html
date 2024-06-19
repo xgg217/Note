@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+    #canvas {
+      background-color: antiquewhite;
+    }
+  </style>
+
+</head>
+<body>
+
+  <canvas id="canvas"></canvas>
+
+  <script>
+    (function() {
+      "use strict";
+      const canvas = document.getElementById('canvas');
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      const gl=canvas.getContext('webgl');
+      gl.clearColor(0,0,0,1); // clearColor(r,g,b,a) 中的参数是红、绿、蓝、透明度 其定义域是[0,1]
+      gl.clear(gl.COLOR_BUFFER_BIT);
+
+    })();
+  </script>
+</body>
+
+</html>
