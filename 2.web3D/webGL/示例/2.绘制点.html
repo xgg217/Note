@@ -23,7 +23,7 @@
 
   <script type="notjs" id="vertex">
     void main () {
-      gl_Position = vec4(0, 0, 0, 0);
+      gl_Position = vec4(0, 0, 0, 1);
       gl_PointSize = 10.0;
     }
   </script>
@@ -38,8 +38,8 @@
     (function() {
       "use strict";
       const canvas = document.getElementById('canvas');
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      // canvas.width = window.innerWidth;
+      // canvas.height = window.innerHeight;
       const gl = canvas.getContext('webgl');
 
 
@@ -91,8 +91,12 @@
       const program = createProgram(gl, vertexShader, fragmentShader);
       gl.useProgram(program);
 
+      // 清空画布
+      gl.clearColor(0,0,1,1);
+      gl.clear(gl.COLOR_BUFFER_BIT);
 
-
+      // 绘制点
+      gl.drawArrays(gl.POINTS, 0, 1)
     })();
   </script>
 </body>
