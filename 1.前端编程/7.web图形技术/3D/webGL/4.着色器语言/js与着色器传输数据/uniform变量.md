@@ -1,6 +1,10 @@
-# 获取 uniform 变量的存储位置
+# uniform 变量
 
-## API
+## 概述
+
++ uniform 变量传输的是那些对于所有顶点都相同（或与顶点无关）的数据
+
+## 获取 uniform 变量的存储位置
 
 + `gl.getUniformLocation(program, name)` 获取指定名称的 `uniform` 变量存储位置
 
@@ -19,6 +23,10 @@
   + `INVALLD_OPERATION` 程序对象未能成功连接
   + `INVALLD_VALUE` name参数的长度大于 `uniform` 变量名的最大长度(默认256字节)
 
-## 注意
++ 注意
 
-+ 如果不存在该变量或者该变量名为保留字则返回 `null`
+  + 如果不存在该变量或者该变量名为保留字则返回 `null`
+
+## 向uniform变量赋值
+
++ gl.uniform4f
