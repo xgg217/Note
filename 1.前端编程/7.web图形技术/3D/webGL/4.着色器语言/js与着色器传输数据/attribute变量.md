@@ -18,6 +18,7 @@
 
   ```js
   // attribute 变量的声明
+  // 存储限定符号 - 类型 - 变量名
   attribute vec4 a_Position
   ```
 
@@ -57,15 +58,15 @@
 + `.vertexAttrib1f()` 将数据 (v0, v1, v2) 传给由 `location` 参数指定的 `attribute` 变量
 
   ```js
-  void gl.vertexAttrib1f(index, v0);
-  void gl.vertexAttrib2f(index, v0, v1);
-  void gl.vertexAttrib3f(index, v0, v1, v2);
-  void gl.vertexAttrib4f(index, v0, v1, v2, v3);
+  void gl.vertexAttrib1f(location, v0);
+  void gl.vertexAttrib2f(location, v0, v1);
+  void gl.vertexAttrib3f(location, v0, v1, v2);
+  void gl.vertexAttrib4f(location, v0, v1, v2, v3);
 
-  void gl.vertexAttrib1fv(index, value);
-  void gl.vertexAttrib2fv(index, value);
-  void gl.vertexAttrib3fv(index, value);
-  void gl.vertexAttrib4fv(index, value);
+  void gl.vertexAttrib1fv(location, value);
+  void gl.vertexAttrib2fv(location, value);
+  void gl.vertexAttrib3fv(location, value);
+  void gl.vertexAttrib4fv(location, value);
   ```
 
   + 参数
