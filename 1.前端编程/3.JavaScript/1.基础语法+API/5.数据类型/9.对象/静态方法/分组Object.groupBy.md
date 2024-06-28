@@ -2,7 +2,8 @@
 
 ## 概述
 
-+ `Object.groupBy()` 静态方法根据提供的回调函数返回的字符串值对给定可迭代对象中的元素进行分组。返回的对象具有每个组的单独属性，其中包含组中的元素的数组
++ `Object.groupBy()` 静态方法根据提供的回调函数返回的字符串值对给定可迭代对象中的元素进行分组
++ 返回的对象具有每个组的单独属性，其中包含组中的元素的数组
 
 + 当分组名称可以用字符串表示时，应使用此方法
 + 如果你需要使用某个任意值作为键来对元素进行分组，请改用 `Map.groupBy()` 方法
@@ -20,7 +21,15 @@
     + element 数组中当前正在处理的元素
     + index 正在处理的元素在数组中的索引
 
-+ 返回值: 个带有所有分组属性的 `null` 原型对象，每个属性都分配了一个包含相关组元素的数组
++ 返回值: 返回一个没有原型（即没有继承任何属性和方法）的对象。这意味着该对象不会继承 `Object.prototype` 上的任何属性或方法
+
+  + 例如hasOwnProperty或toString等。虽然这样做可以避免意外覆盖Object.prototype上的属性，但也意味着不能使用一些与对象相关的方法
+
+  ```js
+  const fruitsByColor = Object.groupBy(fruits, (fruit) => fruit.color);
+  console.log(fruitsByColor.hasOwnProperty("red"));
+  // TypeError: fruitsByColor.hasOwnProperty is not a function
+  ```
 
 ## 示例
 
