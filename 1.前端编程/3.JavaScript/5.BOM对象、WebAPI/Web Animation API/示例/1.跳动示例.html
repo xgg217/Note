@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .animate {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50px;
+      height: 50px;
+      border: 1px solid #000;
+
+    }
+  </style>
+</head>
+<body>
+
+  <div class="animate"></div>
+
+  <script>
+    // 提取纯数字
+
+
+
+    // 参数1
+    var keyframes = [
+      {
+        transform: 'translateY(-1000px) scaleY(2.5) scaleX(.2)',
+        transformOrigin: '50% 0',
+        filter: 'blur(40px)',
+        opacity: 0
+      },{
+        transform: 'translateY(0) scaleY(1) scaleX(1)',
+        transformOrigin: '50% 50%',
+        filter: 'blur(0)',
+        opacity: 1
+      }
+    ];
+
+    // 参数2
+    var options = {
+      iterations: Infinity,
+      iterationStart: 0,
+      delay: 0,
+      endDelay: 0,
+      direction: 'alternate',
+      duration: 700,
+      fill: 'forwards',
+      easing: 'ease-out',
+    };
+
+    var element = document.querySelector('.animate');
+    element.animate(keyframes, options);
+
+    element.play()
+
+  </script>
+</body>
+</html>

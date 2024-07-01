@@ -18,3 +18,9 @@
     return elem.remove();
   });
   ```
+
+  ```js
+  box1ItemEl.getAnimations()
+    .forEach(el=> el.pause()) // 暂停全部动画
+
+  ```
