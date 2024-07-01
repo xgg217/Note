@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    :root, body {
+      width: 100%;
+      height: 100%;
+    }
+
+    .animate {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      /* border: 1px solid #000; */
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="animate"></div>
+
+  <script>
+    const bodyEl = document.querySelector('body');
+    const animateEl = document.querySelector('.animate');
+
+
+    bodyEl.addEventListener('click', (e) => {
+      // console.log(e.clientX);
+      const x = e.clientX + 25;
+      const y = e.clientY + 25;
+
+      // console.log(e.clientY);
+      // 从原来的位置移动到当前位置
+      const left = animateEl.offsetLeft;
+      const top = animateEl.offsetTop;
+
+      const a = animateEl.animate([
+        {
+          transform: `translate(${left}px, ${top}px, 0)`,
+        },
+        {
+          transform: `translate(${x}px, ${y}px, 0)`,
+        }
+      ], {
+        fill: 'forwards',
+        duration: 1
+      })
+
+      a.play()
+    })
+
+  </script>
+</body>
+</html>
