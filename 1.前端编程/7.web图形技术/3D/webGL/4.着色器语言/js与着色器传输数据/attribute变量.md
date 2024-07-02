@@ -82,3 +82,29 @@
 
   + `INVALLD_OPERATION` 没有当前的 program 对象
   + `INVALLD_VALUE` 大于等于 `attribute` 变量名的最大长度(默认8)
+
+## JS向 attribute 变量传参的步骤
+
+1. 在顶点着色器中声明 attribute 变量
+
+    ```html
+    <script type="notjs" id="vertex">
+      attribute vec4 a_Position;
+      void main () {
+        gl_Position = a_Position;
+        gl_PointSize = 10.0;
+      }
+    </script>
+    ```
+
+2. 在js中获取 attribute 变量
+
+    ```js
+    const a_Position = gl.getAttribLocation(gl.program, 'a_Position');
+    ```
+
+3. 修改 attribute 变量
+
+    ```js
+    gl.vertexAttrib3fv(a_Position, 0.0, 0.5, 0.0);
+    ```
