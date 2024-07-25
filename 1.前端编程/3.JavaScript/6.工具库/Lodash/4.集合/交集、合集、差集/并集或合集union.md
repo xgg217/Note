@@ -4,9 +4,9 @@
 
 + 创建一个按顺序排列的唯一值的数组。所有给定数组的元素值使用[SameValueZero](http://ecma-international.org/ecma-262/6.0/#sec-samevaluezero "SameValueZero")做等值比较。（注： `arrays`（数组）的并集，按顺序返回，返回数组的元素是唯一的
 
-## union
+## union 并集
 
-+ union 返回一个新的联合数组。
++ union 返回一个新的联合数组
 
   ```js
   _.union([2], [1, 2]);

@@ -10,14 +10,14 @@
 
 + 参数
 
-  + func (Function): 要节流的函数。
-  + [wait=0] (number): 需要节流的毫秒。
-  + [options=] (Object): 选项对象。
+  + `func (Function)`: 要节流的函数
+  + `[wait=0] (number)`: 需要节流的毫秒
+  + `[options=] (Object)`: 选项对象
 
-    + [options.leading=true] (boolean): 指定调用在节流开始前。
-    + [options.trailing=true] (boolean): 指定调用在节流结束后。
+    + `[options.leading=true]` (boolean): 指定调用在节流开始前。
+    + `[options.trailing=true]` (boolean): 指定调用在节流结束后。
 
-+ 返回值 (Function): 返回节流的函数。
++ 返回值 (Function): 返回节流的函数
 
   ```js
   // 避免在滚动时过分的更新定位
