@@ -1,26 +1,6 @@
-# 基础
+# postcss
 
-## 兼容性 查找
-
-> <http://css.doyoe.com>
-> <https://www.caniuse.com>
---更加权威
-
-## 预处理器
-
-+ less
-
-+ sass
-
-+ **cssNext** 插件
-
-## 后处理器
-
-+ post-prosessor
-
-+ autoprefixer
-
-## postcss
+## 概述
 
 + 用 js 实现的 css 的抽象语法树**AST**(`Abstract Syntax Tree`)
 
@@ -29,3 +9,4 @@
 ## cssNext--插件
 
 + 可以理解为 CSS 4,虽然不一定所有特性都成为正式标准
+
