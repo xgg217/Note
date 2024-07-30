@@ -15,7 +15,7 @@
 
 ## unionBy
 
-+ unionBy
++ 根据某个字段来计算合集
 
   ```js
   _.unionBy([{ 'x': 1, 'y': 5 }], [{ 'x': 2, 'y': 3 }, { 'x': 1, 'y': 6 }], 'x');
@@ -24,7 +24,7 @@
 
 ## unionWith
 
-+ unionWith
++ 根据某个条件函数来计算合集
 
   ```js
   var objects = [{ 'x': 1, 'y': 2 }, { 'x': 2, 'y': 1 }];

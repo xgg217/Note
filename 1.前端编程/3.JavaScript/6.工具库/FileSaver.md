@@ -7,10 +7,9 @@
 
 + [FileSaver](https://github.com/eligrey/FileSaver.js)
 
-  ```shell
+  ```js
   import { saveAs } from 'file-saver';
   ```
-
 
 ## API
 
