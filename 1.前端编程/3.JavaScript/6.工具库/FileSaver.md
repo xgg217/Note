@@ -25,7 +25,7 @@
 
   ```js
   let blob = new Blob(["大家好，我是阿宝哥!"], { type: "text/plain;charset=utf-8" });
-  FileSaver.saveAs(blob, "hello.txt");
+  saveAs(blob, "hello.txt");
   ```
 
 + 保存线上资源
