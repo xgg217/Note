@@ -30,6 +30,15 @@
   });
   ```
 
+## 设置单元格文本格式 numFmt
+
++ 文本格式
+
+  ```js
+  // 设置为文本格式
+  Sheet1.getCell(row, 12).numFmt = '@';
+  ```
+
 ## 读取 + 下载
 
 + 读取:workbook（工作簿） > worksheet（工作表） > row（行） > cell（列）
