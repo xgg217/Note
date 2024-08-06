@@ -27,3 +27,11 @@
   Math.hypot(3, 4, "5"); // 7.0710678118654755, +'5' => 5
   Math.hypot(-3); // 3, the same as Math.abs(-3)
   ```
+
+## 示例
+
++ 计算两点距离
+
+  ```js
+  Math.hypot(x1 - x0, y1 - y0)
+  ```
