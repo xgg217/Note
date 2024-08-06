@@ -1,10 +1,20 @@
-# max
+# Math.max
 
-## Math.max([x[,y[,…]]])
+## Math.max()
 
-+ 返回一组数中的最大值
++ `Math.max()`
++ `Math.max(value0)`
++ `Math.max(value0, value1)`
++ `Math.max(value0, value1, /* … ,*/ valueN)`
 
-+ 如果给定的参数中**至少**有一个参数**无法**被转换成数字，则会返回 `NaN`
+  + 参数
+
+    + value1, value2, … , valueN : 0 个或多个数字，将在其中选择，并返回最大的值
+
+  + 返回值 给定数值中最大的数
+
+    + 如果给定的参数中**至少**有一个参数**无法**被转换成数字，则会返回 `NaN`
+    + 如果没有提供参数，返回 `-Infinity`
 
   ```js
   const a1 = Math.max(10, 20,30); // 30
@@ -18,4 +28,7 @@
   Math.max(true, '2', null) // 2
   Math.max(1, undefined) // NaN
   Math.max(1, {}) // NaN
+
+  const arr = [1, 2, 3];
+  const max = Math.max(...arr);
   ```
