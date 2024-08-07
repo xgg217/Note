@@ -2,7 +2,7 @@
 
 ## 概述
 
-+ 可用于为响应式对象 (`reactive`)上的 `property` 创建 `ref`
++ 基于响应式对象的某一个属性，将其转换为 `ref` 值
 
 + 这样创建的 `ref` 与其源 `property` 保持同步：改变源 `property` 将更新 `ref` ，反之亦然
 

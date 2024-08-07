@@ -3,7 +3,7 @@
 ## 使用
 
 + 如果传入 `Ref` 返回其值
-+ 负责原样返回
++ 否则原样返回
 
   ```js
   import { unref, ref } from 'vue'
