@@ -20,7 +20,12 @@
   const u_FragColor=gl.getUniformLocation(gl.program,'u_FragColor');
   ```
 
-+ 步骤3
++ 步骤3:修改uniform 变量
+
+  ```js
+  gl.uniform4f(u_FragColor,1.0,1.0,0.0,1.0);
+  ```
+
 + 步骤4
 + 步骤1
 + 步骤1
