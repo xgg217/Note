@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+
+    #canvas {
+      background-color: antiquewhite;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <canvas id="canvas" width="100%" height="100%"></canvas>
+  <!-- 顶点着色器 -->
+  <script id="vertexShader" type="x-shader/x-vertex">
+    attribute vec4 a_Position;
+    attribute float a_PointSize;
+    void main(){
+      // 点位
+      gl_Position = a_Position;
+      //尺寸
+      gl_PointSize = a_PointSize;
+    }
+  </script>
+
+  <!-- 片元着色器 -->
+  <script id="fragmentShader" type="x-shader/x-fragment">
+    void main(){
+      // 点位
+      gl_FragColor = vec4(1,1,0,1);
+    }
+  </script>
+
+  <script type="module">
+    import { initShaders,getRandomInt  } from './utils.js';
+
+    const canvas = document.querySelector("#canvas");
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    const vsSource = document.getElementById('vertexShader').innerText;
+    const fsSource = document.getElementById('fragmentShader').innerText;
+
+    const gl = canvas.getContext("webgl"); // 获取上下文
+    // gl.clearColor(1, 1, 0, 1);
+
+    initShaders(gl, vsSource, fsSource);
+
+    const a_Position = gl.getAttribLocation(gl.program, 'a_Position');
+    const a_PointSize = gl.getAttribLocation(gl.program, 'a_PointSize');
+    gl.clearColor(0.0, 0.0, 0.0, 1.0);
+    gl.clear(gl.COLOR_BUFFER_BIT);
+
+    const gPointsArr=[];
+    canvas.addEventListener('click', function (event) {
+      const { clientX, clientY } = event;
+      const { left, top, width, height } = canvas.getBoundingClientRect();
+      const [cssX, cssY] = [
+        clientX - left,
+        clientY - top
+      ];
+      const [halfWidth, halfHeight] = [width / 2, height / 2];
+      const [xBaseCenter, yBaseCenter] = [cssX - halfWidth, cssY - halfHeight];
+      const yBaseCenterTop = -yBaseCenter;
+      const [x, y] = [xBaseCenter / halfWidth, yBaseCenterTop / halfHeight];
+
+      gPointsArr.push({x,y, size:getRandomInt(10, 50)});
+      gl.clear(gl.COLOR_BUFFER_BIT);
+
+
+      gPointsArr.forEach(({x,y,size}) => {
+        gl.vertexAttrib2f(a_Position, x, y);
+        gl.vertexAttrib1f(a_PointSize, size);
+        gl.drawArrays(gl.POINTS, 0, 1);
+      })
+
+      // gl.vertexAttrib2f(a_Position, x, y);
+      // gl.drawArrays(gl.POINTS, 0, 1);
+    })
+
+
+
+
+
+  </script>
+</body>
+
+</html>
