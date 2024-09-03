@@ -1,6 +1,6 @@
-# isInteger
+# Number.isInteger
 
-## Number.isInteger()
+## 概述
 
 + 用来判断一个数值是否为整数
 
@@ -25,3 +25,13 @@
   Number.isInteger('15') // false
   Number.isInteger(true) // false
   ```
+
+## API
+
++ `Number.isInteger(value)` 用来判断一个数值是否为整数
+
+  + 参数
+
+    + value 要测试是否为整数的值
+
+  + 返回值  如果给定值是整数，则返回布尔值 true。否则为 false
