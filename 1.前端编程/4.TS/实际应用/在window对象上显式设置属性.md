@@ -25,9 +25,15 @@
 
   ```js
   // 方法2 推荐使用
-  declare interface Window {
-    MyNamespace: any;
+  // 在一个单独的文件中添加以下内容
+  export {};
+
+  declare global {
+    interface Window {
+      myProperty: string;
+    }
   }
 
-  window.MyNamespace = window.MyNamespace || {};
+  // 在另一个地方使用
+  window.myProperty = "Hello World!";
   ```
