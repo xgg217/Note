@@ -50,3 +50,27 @@ function loadShader (gl, type, source) {
   //返回着色器对象
   return shader;
 }
+
+/**
+ * 获取 canvas 与 webgl 坐标转换
+ * @param {MouseEvent} event 事件对象
+ * @param {HTMLCanvasElement} canvasElement
+ * @returns {[number, number]} 返回转换后的坐标
+ */
+export const getMousePosInWebgl = (event, canvasElement) => {
+  const { clientX, clientY } = event;
+  const { left, top, width, height } = canvasElement.getBoundingClientRect();
+  const [cssX, cssY] = [
+    clientX - left,
+    clientY - top
+  ];
+  const [halfWidth, halfHeight] = [width / 2, height / 2];
+  const [xBaseCenter, yBaseCenter] = [cssX - halfWidth, cssY - halfHeight];
+  const yBaseCenterTop = -yBaseCenter;
+  const [x, y] = [xBaseCenter / halfWidth, yBaseCenterTop / halfHeight];
+
+  return [x, y]
+}
+
+
+

@@ -30,14 +30,14 @@
 
 + 示例
 
-   ```js
-    // 文件位置 typescript/lib/lib.es5.d.ts
-    declare function eval(x: string): any;
+  ```js
+  // 文件位置 typescript/lib/lib.es5.d.ts
+  declare function eval(x: string): any;
 
-    declare function parseInt(string: string, radix?: number): number;
+  declare function parseInt(string: string, radix?: number): number;
 
-    declare function parseFloat(string: string): number;
-    ```
+  declare function parseFloat(string: string): number;
+  ```
 
 ## 模块声明
 
