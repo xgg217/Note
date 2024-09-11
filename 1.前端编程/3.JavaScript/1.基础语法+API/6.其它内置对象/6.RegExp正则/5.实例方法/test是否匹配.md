@@ -1,4 +1,4 @@
-# test
+# RegExp.prototype.test()
 
 ## 概述
 

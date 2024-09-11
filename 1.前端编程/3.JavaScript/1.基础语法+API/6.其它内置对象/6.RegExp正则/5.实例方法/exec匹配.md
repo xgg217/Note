@@ -1,4 +1,4 @@
-# exec
+# RegExp.prototype.exec()
 
 ## 概述
 
