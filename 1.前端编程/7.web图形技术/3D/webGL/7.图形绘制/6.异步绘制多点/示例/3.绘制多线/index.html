@@ -46,6 +46,7 @@
 
     import { initShaders, getMousePosInWebgl } from './utils.js';
     import Poly from './poly.js';
+    import Sky from './sky.js';
 
     const canvas = document.querySelector("#canvas");
     canvas.width = window.innerWidth;
@@ -80,17 +81,67 @@
     // gl.enableVertexAttribArray(a_Position)
 
 
-    const poly=new Poly({
-      gl,
-      types:['POINTS','LINE_STRIP']
+    // const poly=new Poly({
+    //   gl,
+    //   types:['POINTS','LINE_STRIP']
+    // });
+
+    gl.clear(gl.COLOR_BUFFER_BIT);
+
+    //夜空
+    const sky = new Sky(gl);
+    //当前正在绘制的多边形
+    let poly = null;
+
+    //取消右击提示
+    canvas.oncontextmenu = function(){
+      return false;
+    }
+
+    // 鼠标点击事件
+    canvas.addEventListener("mousedown", (event) => {
+      if(event.button===2){
+        popVertice();
+      }else{
+        const {x,y}=getMousePosInWebgl(event,canvas);
+        console.log(x, y);
+
+        if(poly){
+          poly.addVertice(x,y);
+        }else{
+          crtPoly(x,y);
+        }
+      }
+      render()
+    });
+    //鼠标移动
+    canvas.addEventListener("mousemove", (event) => {
+      if(poly){
+        const {x,y}=getMousePosInWebgl(event,canvas)
+        poly.setVertice(poly.count-1,x,y)
+        render()
+      }
     });
 
-    canvas.addEventListener('click', e => {
-      const [x,y]=getMousePosInWebgl(e,canvas);
-      poly.addVertice(x,y);
-      gl.clear(gl.COLOR_BUFFER_BIT);
-      poly.draw()
-    })
+    //删除最后一个顶点
+    function popVertice(){
+      poly.popVertice();
+      poly = null;
+    }
+    //创建多边形
+    function crtPoly(x,y){
+      poly=new Poly({
+        gl,
+        vertices:[x,y,x,y],
+        types:['POINTS','LINE_STRIP']
+      })
+      sky.add(poly)
+    }
+    // 渲染方法
+    function render(){
+      gl.clear(gl.COLOR_BUFFER_BIT)
+      sky.draw()
+    }
 
     // poly.draw();
 

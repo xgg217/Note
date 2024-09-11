@@ -55,7 +55,7 @@ function loadShader (gl, type, source) {
  * 获取 canvas 与 webgl 坐标转换
  * @param {MouseEvent} event 事件对象
  * @param {HTMLCanvasElement} canvasElement
- * @returns {[number, number]} 返回转换后的坐标
+ * @returns {{x: number, y:number}} 返回转换后的坐标
  */
 export const getMousePosInWebgl = (event, canvasElement) => {
   const { clientX, clientY } = event;
@@ -69,7 +69,10 @@ export const getMousePosInWebgl = (event, canvasElement) => {
   const yBaseCenterTop = -yBaseCenter;
   const [x, y] = [xBaseCenter / halfWidth, yBaseCenterTop / halfHeight];
 
-  return [x, y]
+  // console.log(x, y);
+
+
+  return {x, y}
 }
 
 
