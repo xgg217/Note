@@ -46,6 +46,7 @@
 
     import { initShaders, getMousePosInWebgl } from './utils.js';
     import Poly from './poly.js';
+    import ShapeGeo from './ShapeGeo.js';
 
     const canvas = document.querySelector("#canvas");
     canvas.width = window.innerWidth;
@@ -121,6 +122,14 @@
         types: ["POINTS", "LINE_LOOP"],
     });
     rect.draw();
+
+    const shapGeo = new ShapeGeo(glData);
+    const face = new Poly({
+      gl,
+      vertices: shapGeo.vertices,
+      type: ['TRIANGLES']
+    });
+    face.fraw();
 
 
 

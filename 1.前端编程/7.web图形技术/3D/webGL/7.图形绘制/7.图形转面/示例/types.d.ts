@@ -28,3 +28,8 @@ export type IPoly = {
   count:number; // 顶点数量
   types: string[] //  绘图方式，可以用多种方式绘图
 }
+
+export type IGeoData = {
+  x: number
+  y :number
+}
