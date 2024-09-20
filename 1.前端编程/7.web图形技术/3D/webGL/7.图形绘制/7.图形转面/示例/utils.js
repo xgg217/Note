@@ -75,5 +75,18 @@ export const getMousePosInWebgl = (event, canvasElement) => {
   return {x, y}
 }
 
+//线性比例尺
+export function ScaleLinear(ax, ay, bx, by) {
+  const delta = {
+    x: bx - ax,
+    y: by - ay,
+  };
+  const k = delta.y / delta.x;
+  const b = ay - ax * k;
+  return function (x) {
+    return k * x + b;
+  };
+}
+
 
 
