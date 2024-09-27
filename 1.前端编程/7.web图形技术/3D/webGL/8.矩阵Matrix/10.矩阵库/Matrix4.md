@@ -14,11 +14,11 @@
 + 实例化矩阵对象，在其中写入旋转信息
 
   ```js
-  const matrix=new Matrix4()
-  matrix.makeRotationZ(Math.PI/6)
+  const matrix=new Matrix4();
+  matrix.makeRotationZ(Math.PI/6);
   ```
 
-+ 基于matrix 对象的elements 属性，修改uniform 变量
++ 基于matrix 对象的 elements 属性，修改uniform 变量
 
   ```js
   const u_Matrix=gl.getUniformLocation(gl.program,'u_Matrix')
