@@ -1,4 +1,4 @@
-# hasOwnProperty
+# Object.prototype.hasOwnProperty()
 
 ## 注意
 
