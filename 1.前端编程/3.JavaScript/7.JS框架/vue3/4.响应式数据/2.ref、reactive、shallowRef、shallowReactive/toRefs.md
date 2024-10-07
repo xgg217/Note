@@ -2,9 +2,19 @@
 
 ## 概述
 
-+ 将一个响应式对象转换为一个普通对象，这个普通对象的每个 property 都是指向源对象相应 property 的 ref
++ 将一个响应式对象转为一个普通对象，普通对象的每一个属性对应的是一个 ref 值
 
-+ 每个单独的 ref 都是使用 [toRef()](https://staging-cn.vuejs.org/api/reactivity-utilities.html#toref "toRef()") 创建的
+  ```js
+  import { reactive, toRefs } from 'vue'
+  const state = reactive({
+    count: 0,
+    message: 'hello'
+  })
+  const stateRefs = toRefs(state)
+  console.log(stateRefs) // {count: RefImpl, message: RefImpl}
+  console.log(stateRefs.count.value)
+  console.log(stateRefs.message.value)
+  ```
 
 ## toRefs 概述
 
