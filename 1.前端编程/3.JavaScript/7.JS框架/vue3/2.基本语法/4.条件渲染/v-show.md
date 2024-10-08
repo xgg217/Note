@@ -1,8 +1,8 @@
-# 条件渲染v-show
+# v-show
 
 ## 概述
 
-+ v-show 的切换靠的是 CSS 的 display 属性，当值为 false 的时候，会将 display 属性设置为 none
++ `v-show` 的切换靠的是 CSS 的 `display` 属性，当值为 `false` 的时候，会将 `display` 属性设置为 `none`
 
   ```html
   <template>
