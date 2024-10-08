@@ -1,10 +1,10 @@
-# router-link
+# RouterLink
 
 ## 作用
 
 + `router-link` 通过一个作用域插槽暴露底层的定制能力
 + 相当于 a 标签
-+ to 路由path
++ to 路由 path
 
 ## 插槽 prop
 
@@ -19,7 +19,7 @@
 + `isExactActive`：如果需要应用精确激活的 `class` 则为 `true`。允许应用一个任意的 `class`
 
   ```html
-  <router-link
+  <RouterLink
     to="/foo"
     v-slot="{ href, route, navigate, isActive, isExactActive }"
   >
@@ -28,5 +28,25 @@
     >
       <a :href="href" @click="navigate">{{ route.fullPath }}</a>
     </li>
-  </router-link>
+  </RouterLink>
+  ```
+
+## 2个样式类
+
++ activeClass：当链接所指向的路径匹配当前路由路径时，应用于该链接的 CSS 类，默认类名为 linkActiveClass
+
+  + 当前路径是 /about：会应用 my-active 样式类
+  + 当前路径是 /about/team：会应用 my-active 样式类
+
+  ```html
+  <RouterLink to="/about" activeClass="my-active">About</RouterLink>
+  ```
+
++ exactActiveClass：当链接所指向的路径精确匹配当前路由路径时，应用于该链接的 CSS 类，默认类名为 linkExactActiveClass
+
+  + 当前路径是 /about：会应用 my-exact-active 样式类
+  + 当前路径是 /about/team：不会应用 my-exact-active 样式类
+
+  ```html
+  <RouterLink to="/about" exactActiveClass="my-exact-active">About</RouterLink>
   ```
