@@ -4,7 +4,7 @@
 
 + `.getWorldDirection ( target : Vector3 ) : Vector3`
 
-  + target — 结果将被复制到这个 `Vector3` 中
+  + target 结果将被复制到这个 `Vector3` 中
 
 + 返回值：返回一个表示该物体在世界空间中*Z轴*正方向的矢量（表示的获取obj对象自身z轴正方向在世界坐标空间中的方向）
 
