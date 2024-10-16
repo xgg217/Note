@@ -10,20 +10,21 @@
   ```js
   //相机观察目标指向Threejs 3D空间中某个位置
   camera.lookAt(0, 0, 0); // 坐标原点
-  ```
 
-  ```js
-  camera.lookAt(0, 10, 0); // y轴上位置10
-  ```
+  // 设置摄像机朝向
+  camera.lookAt(new THREE.Vector3(0, 0, 0));
 
-  ```js
-  camera.lookAt(mesh.position); // 指向mesh对应的位置
+  // y轴上位置10
+  camera.lookAt(0, 10, 0);
+
+  // 指向mesh对应的位置
+  camera.lookAt(mesh.position);
   ```
 
 ## 注意点
 
-+ 注意相机控件OrbitControls会影响lookAt设置
-+ 注意手动设置OrbitControls的目标参数
++ 注意相机控件 `OrbitControls` 会影响 `lookAt` 设置
++ 注意手动设置 `OrbitControls` 的目标参数
 + `controls.target.set(x, y, z)` 设置成与 `camera.lookAt(x, y, z)` 一样的值
 + 还需要更新 `controls.update()`
 
