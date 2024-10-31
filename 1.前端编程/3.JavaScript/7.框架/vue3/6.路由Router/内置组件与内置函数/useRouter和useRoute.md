@@ -1,10 +1,11 @@
-# vue-router函数
+# useRouter和useRoute
 
 ## 概述
 
-+ **在 setup 中没有 this**，因此无法像 Vue2 那样通过 this.$router 或者 this.$route 来访问路由实例和当前路由
++ 在 `setup` 中没有 `this`
++ 因此无法像 Vue2 那样通过 `this.router` 或者 `this.route` 来访问路由实例和当前路由
 
-+ 与之替代的就是通过 useRouter 和 useRoute 这两个内置函数
++ 与之替代的就是通过 `useRouter` 和 `useRoute` 这两个内置函数
 
   ```js
   import { useRouter, useRoute } from 'vue-router'
@@ -23,21 +24,27 @@
   }
   ```
 
-+ 另外，在模板中可以直接访问 `$router` 和 `$route`  ，所以如果只在模板中使用这些对象的话，那就不需要 `useRouter` 或 `useRoute`
++ 在模板中可以直接访问 `$router` 和 `$route`
 
-+ 注意
+  ```html
+  <div>{{ $router }} {{ $route }}</div>
+  ```
 
-  + `params` 不能与 `path` 一起使用
++ 所以如果只在模板中使用这些对象的话，那就不需要 `useRouter` 或 `useRoute`
 
-    ```js
-    router.push({ path: '/user', params: { username } }) // -> /user
-    ```
+## 注意点
 
-  + 解决办法 使用 query
++ `params` 不能与 `path` 一起使用
 
-    ```js
-    router.push({ path: '/register', query: { plan: 'private' } })
-    ```
+  ```js
+  router.push({ path: '/user', params: { username } }) // -> /user
+  ```
+
++ 解决办法 使用 `query`
+
+  ```js
+  router.push({ path: '/register', query: { plan: 'private' } })
+  ```
 
 ## push 添加
 
@@ -89,7 +96,9 @@
   router.push({ params: { username: 'jolyne' } })
   ```
 
-+ 当指定 `params` 时，可提供 `string` 或 `number` 参数（或者对于可重复的参数可提供一个数组）。任何其他类型（如 undefined、false 等）都将被自动字符串化。对于可选参数，你可以提供一个空字符串（""）来跳过它
++ 当指定 `params` 时，可提供 `string` 或 `number` 参数（或者对于可重复的参数可提供一个数组）
++ 任何其他类型（如 undefined、false 等）都将被自动字符串化
++ 对于可选参数，你可以提供一个空字符串（""）来跳过它
 
 + 由于属性 `to` 与 `router.push` 接受的对象种类相同，所以两者的规则完全相同
 
@@ -107,7 +116,7 @@
   router.replace(...)
   ```
 
-+ 也可以直接在传递给 router.push 的 routeLocation 中增加一个属性 replace: true
++ 也可以直接在传递给 `router.push` 的 `routeLocation` 中增加一个属性 `replace: true`
 
   ```js
   router.push({ path: '/home', replace: true })
