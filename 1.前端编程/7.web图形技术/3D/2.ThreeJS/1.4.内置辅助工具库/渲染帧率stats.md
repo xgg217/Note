@@ -21,6 +21,9 @@
 
     ```js
     const stats = new Stats();
+
+    stats.stype.left = "0px";
+    stats.stype.top = "0px";
     ```
 
 3. stats.domElement:web 页面上输出计算结果，一个div元素
