@@ -27,6 +27,9 @@
 
     ```js
     document.getElementById('app')!.appendChild(stats.domElement);
+
+    // 或者
+    document.getElementById('app')!.appendChild(stats.dom);
     ```
 
 4. 渲染循环中更新
