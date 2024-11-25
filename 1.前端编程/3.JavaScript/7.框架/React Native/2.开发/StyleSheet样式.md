@@ -27,7 +27,7 @@
   });
   ```
 
-+ adsoluteFill: (position: 'absolute', left: 0, right: 0, top: 0, bottom: 0) 的缩写形式
++ `adsoluteFill: (position: 'absolute', left: 0, right: 0, top: 0, bottom: 0)` 的缩写形式
 
   ```js
   const styles = StyleSheet.create({
@@ -67,11 +67,47 @@
   // returns { flex: 1, fontSize: 16, color: 'green' }
   ```
 
+## 复用
+
 + 如果要复用 `StyleSheet.create` 中所定义的样式，可以传入一个数组，但是要注意在数组中位置居后的样式对象比居前的优先级更高，这样你可以间接实现样式的继承
 
   ```html
   <Text style={[styles.bigBlue, styles.red]}>bigBlue,then red</Text>
   <Text style={[styles.red, styles.bigBlue]}>red,then bigBlue</Text>
+  ```
+
+  ```js
+  import { View, StyleSheet, Text } from 'react-native';
+
+  export default function HomeScreen() {
+    return (
+      <View
+        style={styles.warpp}
+      >
+        // 颜色会被覆盖，但是其他属性会被继承
+        <Text style={[styles.red, styles.blue]}>12</Text>
+        <Text style={[styles.red, styles.blue]}>14</Text>
+
+      </View>
+    );
+  }
+
+  const styles = StyleSheet.create({
+    warpp: {
+      flex: 1,
+      alignItems: "center",
+      justifyContent: "center"
+    },
+    red: {
+      color: "red",
+      fontWeight: "300",
+      fontSize: 50
+    },
+
+    blue: {
+      color: "blue",
+    },
+  });
   ```
 
 ## 示例

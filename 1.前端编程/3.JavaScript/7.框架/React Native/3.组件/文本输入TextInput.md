@@ -3,8 +3,12 @@
 ## 概述
 
 + RN 中提供了一个 `TextInput` 组件，该组件是一个允许用户输入文本的基础组件
-+ 它有一个名为 `onChangeText` 的属性，此属性接受一个函数，而此函数会在文本变化时被调用
-+ 另外还有一个名为 `onSubmitEditing` 的属性，会在文本被提交后（用户按下软键盘上的提交键）调用
+
++ 属性
+
+  + `defaultValue` 默认值
+  + `onChangeText` 接受一个函数，而此函数会在文本变化时被调用
+  + `onSubmitEditing` 在文本被提交后（用户按下软键盘上的提交键）调用
 
   ```js
   import React, { useState } from "react";

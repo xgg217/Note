@@ -2,26 +2,28 @@
 
 ## 概述
 
-+ FlatList 组件用于显示一个垂直的滚动列表，其中的元素之间结构近似而仅数据不同
++ `FlatList` 组件用于显示一个垂直的滚动列表，其中的元素之间结构近似而仅数据不同
 
-+ FlatList 更适于长列表数据，且元素个数可以增删
-+ 和 ScrollView 不同的是，FlatList 并不立即渲染所有元素，而是优先渲染屏幕上可见的元素
++ `FlatList` 更适于长列表数据，且元素个数可以增删
++ 和 `ScrollView` 不同的是， `latList` 并不立即渲染所有元素，而是优先渲染屏幕上可见的元素
 
 ## 属性
 
 + FlatList 组件必须的两个属性是
 
-  + data：data 是列表的数据源(一般为数组格式)
-  + renderItem：表示每行的绘制方法（从数据源中逐个解析数据，然后返回一个设定好格式的组件来渲染）
-  + keyExtractor: item 的 key：使用 FlatList 组件实现列表效果时，系统要求给每一行子组件设置一个 key，key 是列表项的唯一标识，目的是当某个子视图的数据发生改变时可以快速地重绘改变的子组件
+  + `data` data 是列表的数据源(一般为数组格式)
+  + `renderItem` 表示每行的绘制方法（从数据源中逐个解析数据，然后返回一个设定好格式的组件来渲染）
+  + `keyExtractor` item 的 key：使用 FlatList 组件实现列表效果时，系统要求给每一行子组件设置一个 `key` ， `key` 是列表项的唯一标识，目的是当某个子视图的数据发生改变时可以快速地重绘改变的子组件
 
-    + 一般，我们使用 FlatList 组件提供的 keyExtractor 属性来达到此效果
+    + 一般，我们使用 FlatList 组件提供的 `keyExtractor` 属性来达到此效果
 
-  + ListHeaderComponent
-  + ListFooterComponent
-  + seperator 分割线 FlatList 组件本身的分割线并不是很明显，如果要实现分割线，主要有两种策略：设置 borderBottom 或者 ItemSeperatorComponent 属性。如果只是一条简单的分割线，在 Item 组件里面添加 borderBottom 相关属性即可
+  + `ListHeaderComponent`
+  + `ListFooterComponent`
+  + `seperator` 分割线 `FlatList` 组件本身的分割线并不是很明显，如果要实现分割线，主要有两种策略：设置 `borderBottom` 或者 `ItemSeperatorComponent` 属性
 
-    + 需要注意的是，使用 borderBottom 实现分割线时，列表顶部和底部的组件是不需要绘制的
+    + 如果只是一条简单的分割线，在 Item 组件里面添加 `borderBottom` 相关属性即可
+
+    + 需要注意的是，使用 `borderBottom` 实现分割线时，列表顶部和底部的组件是不需要绘制的
 
     ```html
     <View style={{borderTopWidth: 0, borderBottomWidth: 1}}>
@@ -37,11 +39,16 @@
 
 + 官方文档：https://reactnative.dev/docs/flatlist#itemseparatorcomponent
 
-  ```js
+  ```html
   <FlatList
     data={[{key:"a"},{key:"b"}]}
-    renderItem={({item})=><Text>{item.key}</Text>}
-  >
+      renderItem={({ item }) => {
+        return (
+          <Text>{item.key}</Text>
+        )
+      }}
+      keyExtractor={(item) => item.key}
+  />
   ```
 
   ```js

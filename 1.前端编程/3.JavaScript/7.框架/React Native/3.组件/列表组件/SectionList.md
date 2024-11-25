@@ -2,8 +2,10 @@
 
 ## 概述
 
-+ 和 FlatList 一样，SectionList 组件也是由 VirtualizedList 组件扩展来的
-+ 不同于 FlatList 组件，SectionList 组件主要用于开发列表分组、吸顶悬浮等功能
++ 和 `FlatList` 一样， `SectionList` 组件也是由 `VirtualizedList` 组件扩展来的
++ 不同于 `FlatList` 组件， `SectionList` 组件主要用于开发列表分组、吸顶悬浮等功能
+
+  ![alt text](images/SectionList.png)
 
 ## API
 
@@ -17,7 +19,7 @@
 
   + stickySectionHeadersEnabled ：当 section 把它前一个 section 的可视区推离屏幕时，这个 section 的 header 是否粘连在屏幕顶端
 
-  + keyExtractor：和 FlatList 组件一样，表示项目的唯一标识。此函数用于为给定的 item 生成一个不重复的 key
+  + `keyExtractor` 和 FlatList 组件一样，表示项目的唯一标识。此函数用于为给定的 item 生成一个不重复的 key
 
     + Key 的作用是使 react 能够区分同类元素的不同个体，以便在刷新时能够确定其变化的位置，减少重新渲染的开销
 

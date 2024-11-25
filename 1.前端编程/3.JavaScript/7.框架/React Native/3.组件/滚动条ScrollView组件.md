@@ -2,17 +2,23 @@
 
 ## 概述
 
-+ ScrollView 是一个支持横向或竖向的滚动组件，几乎所有页面都会用到
++ `ScrollView` 是一个支持横向或竖向的滚动组件，几乎所有页面都会用到
 
-+ ScrollView 组件类似于 Web 中的 html 或 body 标签，浏览器中的页面之所以能上下滚动，就是因为 html 或 body 标签默认有一个 overflow-y: scroll 的属性，如果你把标签的属性设置为 overflow-y: hidden，页面就不能滚动了。
++ `ScrollView` 组件类似于 Web 中的 html 或 body 标签，浏览器中的页面之所以能上下滚动，就是因为 html 或 body 标签默认有一个 `overflow-y: scroll` 的属性，如果你把标签的属性设置为 `overflow-y: hidden` ，页面就不能滚动了
 
-+ ReactNative 的 ScrollView 组件在 Android 的底层实现用的是 ScrollView 和 HorizontalScrollView，在 iOS 的底层实现用的是 UIScrollView
++ ReactNative 的 `ScrollView` 组件
 
-+ 使用 ScrollView 组件时，必须要有一个确定的高度才能正常工作。如果不知道容器的准确高度，可以将 ScrollView 组件的样式设置为 {flex: 1}，让其自动填充父容器的空余空间。
+  + 在Android 的底层实现用的是 `ScrollView` 和 `HorizontalScrollView`
+  + 在 iOS 的底层实现用的是 `UIScrollView`
 
 + ScrollView 通常包裹在视图的外面，用于控制视图的滚动，并且很多时候我们并不直接给 ScrollView 设置固定高度或宽度，而是给其父组件设置固定高度或宽度
 
 + API 文档地址：https://reactnative.dev/docs/scrollview
+
+## 设置高度
+
++ 使用 ScrollView 组件时，必须要有一个确定的高度才能正常工作
++ 如果不知道容器的准确高度，可以将 `ScrollView` 组件的样式设置为 `{flex: 1}` ，让其自动填充父容器的空余空间
 
 ## 滑屏操作
 
