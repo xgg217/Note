@@ -14,9 +14,69 @@
 
 + 还有就是在 RN 中无法使用缩写样式，例如` border:1px solid` 这样的样式是无法使用的，只能分成两条样式来写 `borderWidth:1` ,`borderStyle:'solid'`
 
-## StyleSheet.create
+## 属性
 
-+ 在 RN 中提供了一个 `StyleSheet.create` 方法来集中定义组件的样式
++ hairlineWidth: 自适应不同设备生成一条线
+
+  ```js
+  var styles = StyleSheet.create({
+    separator: {
+      borderBottomColor: '#bbb',
+      borderBottomWidth: StyleSheet.hairlineWidth,
+    },
+  });
+  ```
+
++ adsoluteFill: (position: 'absolute', left: 0, right: 0, top: 0, bottom: 0) 的缩写形式
+
+  ```js
+  const styles = StyleSheet.create({
+    wrapper: {
+      ...StyleSheet.absoluteFill,
+      top: 10,
+      backgroundColor: 'transparent',
+    },
+  });
+
+  // 相当于以下代码的缩写
+  position: 'absolute',
+  left: 0,
+  right: 0,
+  top: 0,
+  bottom: 0
+  ```
+
+## 方法
+
++ create: 根据对象创建样式表
++ flatten: 可以把样式对象的数组整合成一个样式对象，重复的样式属性以后一个为准
+
+  ```js
+  var styles = StyleSheet.create({
+    listItem: {
+      flex: 1,
+      fontSize: 16,
+      color: 'white',
+    },
+    selectedListItem: {
+      color: 'green',
+    },
+  });
+
+  console.log(StyleSheet.flatten([styles.listItem, styles.selectedListItem]));
+  // returns { flex: 1, fontSize: 16, color: 'green' }
+  ```
+
++ 如果要复用 `StyleSheet.create` 中所定义的样式，可以传入一个数组，但是要注意在数组中位置居后的样式对象比居前的优先级更高，这样你可以间接实现样式的继承
+
+  ```html
+  <Text style={[styles.bigBlue, styles.red]}>bigBlue,then red</Text>
+  <Text style={[styles.red, styles.bigBlue]}>red,then bigBlue</Text>
+  ```
+
+## 示例
+
++ 示例
 
   ```js
   import { StyleSheet, Text, View } from "react-native";
@@ -51,11 +111,4 @@
   });
   ```
 
-## 复用 StyleSheet.create
 
-+ 如果要复用 `StyleSheet.create` 中所定义的样式，可以传入一个数组，但是要注意在数组中位置居后的样式对象比居前的优先级更高，这样你可以间接实现样式的继承
-
-  ```html
-  <Text style={[styles.bigBlue, styles.red]}>bigBlue,then red</Text>
-  <Text style={[styles.red, styles.bigBlue]}>red,then bigBlue</Text>
-  ```
