@@ -4,7 +4,13 @@
 
 + 在 RN 中，所有组件都接受名为 `style` 的属性，属性值为一个对象，用来书写 CSS 样式
 
-+ 书写样式时需要注意的是要按照 JavaScript 语法来使用驼峰命名法，例如将 `background-color` 改为 `backgroundColor`
++ StyleSheet 是一种类似于 CSS StyleSheets 的抽象
+
+## 注意点
+
++ 并不是所有的 CSS 属性在 StyleSheet 中都支持
+
++ 书写样式时要使用驼峰命名法，例如将 `background-color` 改为 `backgroundColor`
 
 + 还有就是在 RN 中无法使用缩写样式，例如` border:1px solid` 这样的样式是无法使用的，只能分成两条样式来写 `borderWidth:1` ,`borderStyle:'solid'`
 
