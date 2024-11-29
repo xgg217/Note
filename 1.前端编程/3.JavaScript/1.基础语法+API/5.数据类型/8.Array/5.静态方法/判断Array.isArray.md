@@ -13,13 +13,9 @@
 
   typeof a // "object"
   Array.isArray(a) // true
-  ```
 
-  ```js
   Array.isArray([]);   // true
-  ```
 
-  ```js
   Array.isArray([1, 2, 3]); // true
 
   Array.isArray({foo: 123}); // false
