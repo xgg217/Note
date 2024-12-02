@@ -2,7 +2,7 @@
 
 ## 特性
 
-+ 特性：允许用户自定义着色器代码。
++ 特性：允许用户自定义着色器代码
 + 属性：包括顶点着色器 (vertexShader) 和片段着色器 (fragmentShader)
 
   ```js
@@ -27,5 +27,4 @@
     vertexShader: vertexShader,
     fragmentShader: fragmentShader
   });
-
   ```
