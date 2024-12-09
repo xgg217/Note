@@ -2,12 +2,13 @@
 
 ## 概述
 
-+ THREE.WireframeGeometry 是 Three.js 中用于从现有的几何体创建线框几何体的一个类。线框几何体显示的是原几何体的所有边，而不是填充的表面
++ `THREE.WireframeGeometry` 是 Three.js 中用于从现有的几何体创建线框几何体的一个类
++ 线框几何体显示的是原几何体的所有边，而不是填充的表面
 + 这对于调试目的非常有用，可以清晰地看到几何体的拓扑结构
 
 ## 构造函数
 
-+ new THREE.WireframeGeometry(geometry)
++ `new THREE.WireframeGeometry(geometry)`
 
   + geometry：一个有效的 Three.js 几何体对象，如 THREE.Geometry 或 THREE.BufferGeometry
 
