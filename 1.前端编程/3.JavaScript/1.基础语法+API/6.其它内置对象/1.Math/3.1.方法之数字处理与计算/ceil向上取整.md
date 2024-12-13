@@ -8,7 +8,9 @@
 
     + x 一个数值
 
-  + 返回值 大于等于 x 的最小整数。它的值与 -Math.floor(-x) 相同
+  + 返回值 大于等于 x 的最小整数
+
+    + 它的值与 `-Math.floor(-x)` 相同
 
   ```js
   Math.ceil(-Infinity); // -Infinity
