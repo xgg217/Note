@@ -14,6 +14,8 @@
   console.table(languages);
   ```
 
+  ![alt text](images/table.png)
+
 ## 对象时空固定
 
 + 对象时空固定

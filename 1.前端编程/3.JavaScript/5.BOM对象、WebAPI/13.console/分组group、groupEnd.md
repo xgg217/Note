@@ -15,3 +15,5 @@
   console.groupEnd();
   console.groupEnd();
   ```
+
+  ![alt text](images/group.gif)

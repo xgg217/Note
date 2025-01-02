@@ -1,20 +1,23 @@
-# time、timeEnd
+# time 、 timeEnd
 
 ## time()，timeEnd()
 
 + 这两个方法用于计时，可以算出一个操作所花费的准确时间
 
   ```js
-  console.time('Array initialize');
-
-  var array= new Array(1000000);
-  for (var i = array.length - 1; i >= 0; i--) {
-      array[i] = new Object();
-  };
-
-  console.timeEnd('Array initialize');
-  // Array initialize: 1914.481ms
+  console.time("myTimer");
+  // 执行需要计时的代码，比如一个循环或者一段复杂的函数
+  let sum = 0;
+  for (let i = 0; i < 100; i++) {
+    sum += i;
+    console.timeLog("myTimer");
+  }
+  console.timeEnd("myTimer"); // 输出执行时间，单位为毫秒
+  console.timeStamp();
   ```
+
+  ![alt text](images/time.png)
+  ![alt text](images/time2.png)
 
 + `time` 方法表示计时开始，`timeEnd` 方法表示计时结束
 

@@ -15,4 +15,8 @@
   //   __proto__: Object
   ```
 
-+ 该方法对于输出DOM对象非常有用，因为会显示DOM对象的所有属性
+  ![alt text](images/dir.png)
+
+## dirxml
+
++ console.dirxml 方法用于在控制台中显示指定 XML 或 HTML 元素的内容，并以 XML 树的形式呈现。这对于查看和分析 DOM 结构非常有用
