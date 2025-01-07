@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .box {
+
+      width: 300px;
+      height: 100px;
+      line-height: 100px;
+      text-align: center;
+      /* color: #fff;
+      background-color: #000; */
+      color: var(--color);
+      background-color: var(--bg);
+      transition: all 1s;
+    }
+
+    .linght-theme {
+      --color: #fac;
+      --bg: skyblue;
+    }
+
+    .dark-theme {
+      --color: #fff;
+      --bg: #000;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box dark-theme">切换主题</div>
+
+  <script>
+    (function ()
+    {
+      "use strict";
+      const boxDom = document.querySelector('.box');
+
+      const DARK_THEME = "dark-theme";
+      const LINGHT_THEME = "linght-theme";
+
+
+      boxDom.addEventListener('click', function ()
+      {
+        console.log(this);
+        // this.classList
+        // 当前是暗黑模式
+        const boxClassList = boxDom.classList;
+        console.log(boxClassList.contains(DARK_THEME));
+
+        if (boxClassList.contains(DARK_THEME)) {
+          boxClassList.replace(DARK_THEME, LINGHT_THEME);
+        } else {
+          boxClassList.replace(LINGHT_THEME, DARK_THEME);
+        }
+
+      })
+
+    })();
+  </script>
+</body>
+
+</html>
