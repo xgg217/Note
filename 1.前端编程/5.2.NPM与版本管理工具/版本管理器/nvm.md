@@ -25,11 +25,23 @@
   > npm淘宝镜像：[https://npm.taobao.org/mirrors/npm/](https://npm.taobao.org/mirrors/npm/ "https://npm.taobao.org/mirrors/npm/")
 
   ```bash
-  nvm node_mirror https://npm.taobao.org/mirrors/node/
+  nvm node_mirror https://registry.npmmirror.com/node/
   ```
 
   ```bash
   nvm npm_mirror [https://npm.taobao.org/mirrors/npm/](https://npm.taobao.org/mirrors/npm/)
+  ```
+
++ settings.txt
+
+  ```
+  root: C:\Users\fuzum\AppData\Roaming\nvm
+  arch: 64
+  proxy: none
+  originalpath: .
+  originalversion:
+  node_mirror: https://npmmirror.com/mirrors/node/
+  npm_mirror: https://npmmirror.com/mirrors/npm/
   ```
 
 ## 命令
@@ -68,4 +80,10 @@
 
   ```js
   nvm uninstall 8.5.4
+  ```
+
++ 用nvm root 查看安装路径
+
+  ```
+  nvm root
   ```
