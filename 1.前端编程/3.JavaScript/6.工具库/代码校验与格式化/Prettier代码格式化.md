@@ -34,6 +34,7 @@
 
     insertPragma: false,  // 可以在文件顶部插入一个特殊标记，指定该文件已使用 Prettier 格式化
 
+
     proseWrap: "preserve",  // 用于控制文本是否应该被换行以及如何进行换行
 
     htmlWhitespaceSensitivity: "css", // 在html中空格是否是敏感的 "css" - 遵守 CSS 显示属性的默认值， "strict" - 空格被认为是敏感的 ，"ignore" - 空格被认为是不敏感的
