@@ -7,6 +7,12 @@
 
 + [FileSaver](https://github.com/eligrey/FileSaver.js)
 
+  ```bash
+  npm install file-saver --save
+
+  npm install @types/file-saver --save-dev
+  ```
+
   ```js
   import { saveAs } from 'file-saver';
   ```
@@ -21,14 +27,14 @@
     + 参数2 表示文件名（可选）
     + 参数3 如果你需要 FlieSaver.js 自动提供 Unicode 文本编码提示（参考：字节顺序标记），则需要设置 { autoBom: true}
 
-+ 保存文本
++ 保存文本 txt
 
   ```js
   let blob = new Blob(["大家好，我是阿宝哥!"], { type: "text/plain;charset=utf-8" });
   saveAs(blob, "hello.txt");
   ```
 
-+ 保存线上资源
++ 保存线上资源(URL)
 
   ```js
   FileSaver.saveAs("https://httpbin.org/image", "image.jpg");
