@@ -20,11 +20,11 @@
 
     + obj 要测试的 JavaScript 实例对象
 
-    + prop 要测试属性的 String 类型的名称或者 Symbol
+    + prop 要测试属性的 `String` 类型的名称或者 `Symbol`
 
   + 返回值
 
-    + 如果指定的对象中直接定义了指定的属性，则返回 true；否则返回 false
+    + 如果指定的对象中直接定义了指定的属性，则返回 `true` 否则返回 `false`
 
 ## 示例
 
@@ -88,6 +88,3 @@
   Object.hasOwn(fruits, 3); // true ('Orange')
   Object.hasOwn(fruits, 4); // false——没有定义的
   ```
-
-
-
