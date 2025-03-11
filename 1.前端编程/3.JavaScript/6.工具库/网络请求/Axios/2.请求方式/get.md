@@ -31,7 +31,8 @@
   ```js
   // 上述请求也可以按以下方式完成（可选）
 
-  axios.get('/user', {
+  axios.get('/user',
+    {
       // axios 会自动进行URL编码（自动调用encodeURLComponent()）
       params: {
         ID: 12345
@@ -49,7 +50,7 @@
     });
   ```
 
-+ 支持async/await用法
++ 支持 `async/await` 用法
 
   ```js
   // 支持async/await用法
@@ -62,5 +63,3 @@
     }
   }
   ```
-
-

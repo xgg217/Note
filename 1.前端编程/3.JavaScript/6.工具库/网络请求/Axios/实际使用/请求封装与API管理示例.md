@@ -2,7 +2,8 @@
 
 ## 引入
 
-+ 一般我会在项目的src目录中，新建一个request文件夹，然后在里面新建一个http.js和一个api.js文件。http.js文件用来封装我们的axios，api.js用来统一管理我们的接口
++ 一般我会在项目的src目录中，新建一个 request 文件夹，然后在里面新建一个http.js和一个api.js文件
++ http.js文件用来封装我们的axios，api.js用来统一管理我们的接口
 
   ```js
   // 在http.js中引入axios
@@ -14,19 +15,20 @@
 
 ## 环境的切换
 
-+ 我们的项目环境可能有开发环境、测试环境和生产环境。我们通过node的环境变量来匹配我们的默认的接口url前缀
-+ axios.defaults.baseURL可以设置axios的默认请求地址就不多说了
++ 我们的项目环境可能有开发环境、测试环境和生产环境
++ 我们通过node的环境变量来匹配我们的默认的接口url前缀
++ `axios.defaults.baseURL` 可以设置axios的默认请求地址就不多说了
 
   ```js
 
   // 环境的切换
   if (process.env.NODE_ENV == 'development') {
-      axios.defaults.baseURL = 'https://www.baidu.com';}
+    axios.defaults.baseURL = 'https://www.baidu.com';}
   else if (process.env.NODE_ENV == 'debug') {
-      axios.defaults.baseURL = 'https://www.ceshi.com';
+    axios.defaults.baseURL = 'https://www.ceshi.com';
   }
   else if (process.env.NODE_ENV == 'production') {
-      axios.defaults.baseURL = 'https://www.production.com';
+    axios.defaults.baseURL = 'https://www.production.com';
   }
   ```
 
@@ -70,7 +72,10 @@
   })
   ```
 
-+ 这里说一下token，一般是在登录完成之后，将用户的token通过localStorage或者cookie存在本地，然后用户每次在进入页面的时候（即在main.js中），会首先从本地存储中读取token，如果token存在说明用户已经登陆过，则更新vuex中的token状态。然后，在每次请求接口的时候，都会在请求的header中携带token，后台人员就可以根据你携带的token来判断你的登录是否过期，如果没有携带，则说明没有登录过
++ 这里说一下token，一般是在登录完成之后，将用户的token通过localStorage或者cookie存在本地，然后用户每次在进入页面的时候（即在main.js中），会首先从本地存储中读取token，如果token存在说明用户已经登陆过，则更新vuex中的token状态
+
+  + 然后，在每次请求接口的时候，都会在请求的header中携带token，后台人员就可以根据你携带的token来判断你的登录是否过期，如果没有携带，则说明没有登录过
+
 + 这时候或许有些小伙伴会有疑问了，就是每个请求都携带token，那么要是一个页面不需要用户登录就可以访问的怎么办呢？其实，你前端的请求可以携带token，但是后台可以选择不接收啊
 
 ## 响应的拦截
@@ -154,7 +159,9 @@
   });
   ```
 
-+ 响应拦截器很好理解，就是服务器返回给我们的数据，我们在拿到之前可以对他进行一些处理。例如上面的思想：如果后台返回的状态码是200，则正常返回数据，否则的根据错误的状态码类型进行一些我们需要的错误，其实这里主要就是进行了错误的统一处理和没登录或登录过期后调整登录页的一个操作。
++ 响应拦截器很好理解，就是服务器返回给我们的数据，我们在拿到之前可以对他进行一些处理
+
+  + 例如上面的思想：如果后台返回的状态码是200，则正常返回数据，否则的根据错误的状态码类型进行一些我们需要的错误，其实这里主要就是进行了错误的统一处理和没登录或登录过期后调整登录页的一个操作
 
 + 要注意的是，上面的Toast()方法，是我引入的vant库中的toast轻提示组件，你根据你的ui库，对应使用你的一个提示组件
 
@@ -282,87 +289,3 @@
   );
   export default instance;
   ```
-
-## api 管理
-
-+ base.js:管理接口域
-
-  + 通过base.js来管理我们的接口域名，不管有多少个都可以通过这里进行接口的定义
-  + 即使修改起来，也是很方便的
-
-  ```js
-  /**
-   * 接口域名的管理
-   */
-  const base = {
-    sq: 'https://xxxx111111.com/api/v1',
-    bd: 'http://xxxxx22222.com/api'
-  }
-
-  export default base;
-  ```
-
-+ article模块接口列表
-
-  ```js
-  import base from './base'; // 导入接口域名列表
-  import axios from '@/utils/http'; // 导入http中创建的axios实例
-  import qs from 'qs'; // 根据需求是否导入qs模块
-
-  const article = {
-    // 新闻列表
-    articleList () {
-      return axios.get(`${base.sq}/topics`);
-    },
-    // 新闻详情,演示
-    articleDetail (id, params) {
-      return axios.get(`${base.sq}/topic/${id}`, {
-        params: params
-      });
-    },
-    // post提交
-    login (params) {
-      return axios.post(`${base.sq}/accesstoken`, qs.stringify(params));
-    }
-    // 其他接口…………
-  }
-
-  export default article;
-  ```
-
-## 断网的处理
-
-+ 断网的处理
-
-  ```html
-  <template>
-    <div id="app">
-        <div v-if="!network">
-            <h3>我没网了</h3>
-            <div @click="onRefresh">刷新</div>
-        </div>
-        <router-view/>
-    </div>
-  </template>
-
-  <script>
-    import { mapState } from 'vuex';
-    export default {
-      name: 'App',
-      computed: {
-        ...mapState(['network'])
-      },
-      methods: {
-        // 通过跳转一个空页面再返回的方式来实现刷新当前页面数据的目的
-        onRefresh () {
-          this.$router.replace('/refresh')
-        }
-      }
-    }
-  </script>
-  ```
-
-
-
-
-
