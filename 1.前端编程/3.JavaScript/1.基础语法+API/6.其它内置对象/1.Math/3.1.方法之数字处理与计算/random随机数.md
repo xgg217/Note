@@ -30,4 +30,3 @@
     return Math.floor(Math.random() * (maxVal - minVal + 1)) + minVal; //含最大值，含最小值
   }
   ```
-
