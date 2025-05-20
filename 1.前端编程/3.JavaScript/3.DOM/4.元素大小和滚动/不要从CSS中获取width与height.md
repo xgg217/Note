@@ -31,5 +31,8 @@
     + 因此，可用于内容的实际宽度小于 CSS 宽度
     + 而 `clientWidth` / `clientHeight` 则会考虑到这一点
 
-    + 但是，使用 getComputedStyle(elem).width 时，情况就不同了。某些浏览器（例如 Chrome）返回的是实际内部宽度减去滚动条宽度，而某些浏览器（例如 Firefox）返回的是 CSS 宽度（忽略了滚动条）。这种跨浏览器的差异是不使用 getComputedStyle 而依靠几何属性的原因
+    + 但是，使用 `getComputedStyle(elem).width` 时，情况就不同了
+
+      + 某些浏览器（例如 Chrome）返回的是实际内部宽度减去滚动条宽度，而某些浏览器（例如 Firefox）返回的是 CSS 宽度（忽略了滚动条）
+      + 这种跨浏览器的差异是不使用 getComputedStyle 而依靠几何属性的原因
 
