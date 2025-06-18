@@ -1,7 +1,13 @@
 <template>
-  <div>about</div>
+  <div>
+    12
+    <img :src="url" />
+  </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const url = new URL("~/assets/images/nm.jpg", import.meta.url).href;
+// const url = "~/assets/images/nm.jpg";
+</script>
 
 <style lang="scss" scoped></style>
