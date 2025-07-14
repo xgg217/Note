@@ -91,6 +91,36 @@
 
 + 值为对象
 
++ 参数
+
+  + toggleActions 触发器的行为 默认 `play none none none`
+
+    + 参数1 播放： start 进入时的行为
+    + 参数2 end 离开时的行为
+    + 参数3 end 进入时的行为
+    + 参数4 start 离开时的行为
+
+    + 值
+
+      + play 播放
+      + none 不触发行为
+      + restart 重新播放
+      + pause 暂停
+      + resume 继续播放
+      + reset 重置
+
+  + start
+
+    + start: 100,  // 滚动条的位置
+    + `start: 'top center'` // top: 控制trigger的元素 center可视区
+
+      ![alt text](images/ScrollTrigger滚动之start.png)
+
+
+  + end
+
+  + scrub 与滚动条方向匹配的参数
+
   ```js
   gsap.to('.green', {
     x: 500,
@@ -98,7 +128,7 @@
     scrollTrigger: {
       trigger: '.green',
       //start: 100,  // 滚动条的位置
-      start: 'top center', // top: 控制trigger center可视区
+      start: 'top center', // top: 控制trigger的元素 center可视区
       markers: true,  // 参考线
       //toggleActions: 'play none none none',  // 触发器的行为 默认：play播放
       //toggleActions: 'play pause resume pause',  // start进入 end离开 end进入 start离开
