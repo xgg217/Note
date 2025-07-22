@@ -87,23 +87,55 @@
 
   + 坐标轴刻度最大值
 
-+ scale
-+ splitNumber
++ scale 默认 `false`
+
+  + 只在数值轴中（type: 'value'）有效。
+  + 是否是脱离 0 值比例。设置成 true 后坐标刻度不会强制包含零刻度。在双数值轴的散点图中比较有用
+  + 在设置 min 和 max 之后该配置项无效
+
++ splitNumber 默认 `5`
+
+  + 坐标轴的分割段数，需要注意的是这个分割段数只是个预估值，最后实际显示的段数会在这个基础上根据分割后坐标轴刻度显示的易读程度作调整
+
+  + 在类目轴中无效
+
 + minInterval
+
+  + 自动计算的坐标轴最小间隔大小
+
+  + 例如可以设置成1保证坐标轴分割刻度显示成整数
+
 + maxInterval
+
+  + 自动计算的坐标轴最大间隔大小
+
 + interval
+
+  + 强制设置坐标轴分割间隔
+
+  + 因为 splitNumber 是预估的值，实际根据策略计算出来的刻度可能无法达到想要的效果，这时候可以使用 interval 配合 min、max 强制设定刻度划分，**一般不建议使用**
+
+  + 无法在类目轴中使用。在时间轴（type: 'time'）中需要传时间戳，在对数轴（type: 'log'）中需要传指数值
+
 + logBase
 + startValue
 + silent
 + triggerEvent
-+ axisLine
-+ axisTick
++ axisLine 坐标轴轴线相关设置 详见下面
++ axisTick 坐标轴刻度相关设置 详见下面
 + minorTick
-+ axisLabel
-+ splitLine
++ axisLabel 坐标轴刻度标签的相关设置
+
+  ![alt text](images/xAxis之axisLabel.png)
+
++ splitLine 坐标轴在 grid 区域中的分隔线
+
+  ![alt text](images/xAxis之splitLine.png)
+
 + minorSplitLine
 + splitArea
-+ data
++ data `Array` 详见下面
+
 + axisPointer
 + tooltip
 + animation
@@ -217,3 +249,105 @@
     ```
 
   + 'log' 对数轴。适用于对数数据。对数轴下的堆积柱状图或堆积折线图可能带来很大的视觉误差，并且在一定情况下可能存在非预期效果，应避免使用
+
+## xAxis 之 axisLine
+
++ 坐标轴轴线相关设置 `Object`
+
+  ![alt text](images/xAxis之axisLine.png)
+
++ 属性
+
+  + show 默认 `true`
++ onZero `true`
+
+  + X 轴或者 Y 轴的轴线是否在另一个轴的 0 刻度上，只有在另一个轴为数值轴且包含 0 刻度时有效
+
++ onZeroAxisIndex
++ symbol `string | Array` 默认 `'none'`
+
+  + 轴线两边的箭头。可以是字符串，表示两端使用同样的箭头；或者长度为 2 的字符串数组，分别表示两端的箭头
+  + 默认不显示箭头，即 `'none'`
+  + 两端都显示箭头可以设置为 'arrow'，只在末端显示箭头可以设置为 `['none', 'arrow']`
+
+  ![alt text](images/xAxis之axisLine之symol.png)
+
++ symbolSize `Array` `[10, 15]`
+
+  + 轴线两边的箭头的大小，第一个数字表示宽度（垂直坐标轴方向），第二个数字表示高度（平行坐标轴方向）
+
++ symbolOffset `Array | number`
+
+  + 轴线两边的箭头的偏移，如果是数组，第一个数字表示起始箭头的偏移，第二个数字表示末端箭头的偏移；
+  + 如果是数字，表示这两个箭头使用同样的偏移
+
++ lineStyle `Object`
+
+  + color 坐标轴线线的颜色
+
+    ```js
+    xAxis: {
+      data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"],
+      type: "category",
+      axisLine: {
+        lineStyle: {
+          color: "red",
+        },
+      },
+    },
+    ```
+
+      ![alt text](images/xAxis之axisLine之lineStyle之color.png)
+
+  + width
+  + type
+  + dashOffset
+  + cap
+  + join
+  + miterLimit
+  + shadowBlur
+  + shadowColor
+  + shadowOffsetX
+  + shadowOffsetY
+  + opacity
+
+## Axis 之 axisTick
+
++ 坐标轴刻度相关设置
+
+  ![alt text](images/xAxis之axisTick.png)
+
++ 属性
+
++ show
++ alignWithLabel
++ interval
++ inside
++ length
++ lineStyle
++ customValues
+
+## Axis 之 data
+
++ `Array`
+
++ 类目数据，在类目轴（type: 'category'）中有效
+
++ 如果没有设置 type，但是设置了 axis.data，则认为 type 是 'category'
+
++ 如果设置了 type 是 'category'，但没有设置 axis.data，则 axis.data 的内容会自动从 series.data 中获取，这会比较方便。不过注意，axis.data 指明的是 'category' 轴的取值范围。如果不指定而是从 series.data 中获取，那么只能获取到 series.data 中出现的值。比如说，假如 series.data 为空时，就什么也获取不到
+
+  ```js
+  // 所有类目名称列表
+  data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+
+  // 每一项也可以是具体的配置项，此时取配置项中的 `value` 为类目名
+  data: [{
+      value: '周一',
+      // 突出周一
+      textStyle: {
+          fontSize: 20,
+          color: 'red'
+      }
+  }, '周二', '周三', '周四', '周五', '周六', '周日']
+  ```
