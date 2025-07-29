@@ -197,7 +197,7 @@
 
 + 形式为：[rangeModeForStart, rangeModeForEnd]。
 
-  + 例如 rangeMode: ['value', 'percent']，表示 start 值取绝对数值，end 取百分比。
+  + 例如 rangeMode: ['value', 'percent']，表示 start 值取绝对数值，end 取百分比
 
 + 每项可选值为：'value', 'percent'
 

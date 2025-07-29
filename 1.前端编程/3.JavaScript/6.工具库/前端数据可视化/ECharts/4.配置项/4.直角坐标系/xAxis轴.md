@@ -13,7 +13,8 @@
 
 + alignTicks
 
-  + 在多个 x 轴为数值轴的时候，可以开启该配置项自动对齐刻度。只对'value'和'log'类型的轴有效
+  + 在多个 x 轴为数值轴的时候，可以开启该配置项自动对齐刻度
+  + 只对'value'和'log'类型的轴有效
 
 + position
 
@@ -89,8 +90,9 @@
 
 + scale 默认 `false`
 
-  + 只在数值轴中（type: 'value'）有效。
-  + 是否是脱离 0 值比例。设置成 true 后坐标刻度不会强制包含零刻度。在双数值轴的散点图中比较有用
+  + 只在数值轴中（type: 'value'）有效
+  + 是否是脱离 0 值比例
+  + 设置成 true 后坐标刻度不会强制包含零刻度。在双数值轴的散点图中比较有用
   + 在设置 min 和 max 之后该配置项无效
 
 + splitNumber 默认 `5`
@@ -320,7 +322,13 @@
 + 属性
 
 + show
-+ alignWithLabel
++ alignWithLabel `boolean`
+
+  + 默认值 `false`
+  + 类目轴中在 boundaryGap 为 true 的时候有效，可以保证刻度线和标签对齐
+
+    ![alt text](images/axis-align-with-label.png)
+
 + interval
 + inside
 + length
