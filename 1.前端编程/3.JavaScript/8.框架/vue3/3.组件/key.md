@@ -14,7 +14,7 @@
 
 + 如果传了 `key`，则将根据 `key` 的变化顺序来重新排列元素，并且将始终移除/销毁 `key` 已经不存在的元素
 
-## key与v-for
+## key 与 v-for
 
 + 示例
 
@@ -26,7 +26,7 @@
 
 + 当使用 `<template>` 进行 `v-for` 循环时，需要把 `key` 值放到 `<template>` 中，而不是它的子元素中
 
-## key与v-if
+## key 与 v-if
 
 + 当使用 `v-if` `v-else-if` `v-else` 分支的时候，不再需要指定 `key` 值，因为 vue3 会自动给予每个分支一个唯一的 `key`
 
