@@ -14,4 +14,7 @@
   // The `_.property` iteratee shorthand.
   _.groupBy(['one', 'two', 'three'], 'length');
   // => { '3': ['one', 'two'], '5': ['three'] }
+
+  // 按月分组
+  _.groupBy(arr, item => dayjs(item.date).format('YYYY-MM'))
   ```
