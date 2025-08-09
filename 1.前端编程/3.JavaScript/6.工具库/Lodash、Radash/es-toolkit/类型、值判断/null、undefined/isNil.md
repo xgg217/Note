@@ -13,3 +13,14 @@
 ## API
 
 + `function isNil(x: unknown): x is null | undefined;`
+
+  ```js
+  import { isNil } from 'es-toolkit/predicate';
+
+  const value1 = null;
+  const value2 = undefined;
+  const value3 = 42;
+  const result1 = isNil(value1); // true
+  const result2 = isNil(value2); // true
+  const result3 = isNil(value3); // false
+  ```
