@@ -22,3 +22,12 @@
 + 返回值
 
   + (T[]) 包含仅存在于第一个数组中但不在第二个数组中的元素的新数组
+
+  ```js
+  import { difference } from 'es-toolkit/array';
+
+  const array1 = [1, 2, 3, 4, 5];
+  const array2 = [2, 4];
+  const result = difference(array1, array2);
+  // 结果将是 [1, 3, 5]，因为 2 和 4 都在两个数组中，所以它们被排除在结果之外。
+  ```
