@@ -2,11 +2,11 @@
 
 ## 概述
 
-创建一个函数的备忘版本。备忘函数会基于接收到的参数缓存结果，因此如果再次传递相同的参数，它会返回缓存的结果，而不是重新计算。
++ 创建一个函数的备忘版本。备忘函数会基于接收到的参数缓存结果，因此如果再次传递相同的参数，它会返回缓存的结果，而不是重新计算
 
-这个功能适用于接受零个或一个参数的函数。如果你的函数接受多个参数，你应该将其重构为接受一个组合了这些参数的对象或数组。
++ 这个功能适用于接受零个或一个参数的函数。如果你的函数接受多个参数，你应该将其重构为接受一个组合了这些参数的对象或数组
 
-如果参数不是原始类型（例如数组或对象），请提供一个 getCacheKey 函数来生成唯一的缓存键，以确保正确缓存
++ 如果参数不是原始类型（例如数组或对象），请提供一个 getCacheKey 函数来生成唯一的缓存键，以确保正确缓存
 
 ## API
 
@@ -33,15 +33,15 @@
 
 + 参数
 
-  + fn (F) - 要备忘的函数，它接受零个或一个参数。
-  + options: 备忘配置的可选项。
+  + fn (F) - 要备忘的函数，它接受零个或一个参数
+  + options: 备忘配置的可选项
 
-    + options.cache (MemoizeCache<any, ReturnType<F>>): 用于存储结果的缓存对象。默认为一个新的 Map。
-    + options.getCacheKey ((args: A) => unknown): 可选函数，用于为每个参数生成唯一的缓存键。
+    + options.cache (MemoizeCache<any, ReturnType<F>>): 用于存储结果的缓存对象。默认为一个新的 Map
+    + options.getCacheKey ((args: A) => unknown): 可选函数，用于为每个参数生成唯一的缓存键
 
 + 返回
 
-  + (F & { cache: MemoizeCache<any, ReturnType<F>> }): 备忘版本的函数，并带有一个额外的 cache 属性，用于暴露内部缓存。
+  + (F & { cache: MemoizeCache<any, ReturnType<F>> }): 备忘版本的函数，并带有一个额外的 cache 属性，用于暴露内部缓存
 
   ```js
   import { memoize, MemoizeCache } from 'es-toolkit/function';

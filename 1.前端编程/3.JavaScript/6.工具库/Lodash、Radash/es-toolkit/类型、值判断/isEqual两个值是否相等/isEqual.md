@@ -2,7 +2,7 @@
 
 ## 概述
 
-+ isEqual 函数用于检查两个值是否相等，包括支持 Date、RegExp 和深层对象比较
++ isEqual 函数用于检查两个值是否相等，包括支持 `Date` 、 `RegExp` 和深层对象比较
 
 ## API
 

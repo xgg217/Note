@@ -10,11 +10,11 @@
 
 + 参数
 
-  + value (unknown): 要检查的值。
+  + value (unknown): 要检查的值
 
 + 返回
 
-  + (value is null | undefined | string | number | boolean | symbol | bigint): 如果值是原始类型则返回 true，否则返回 false。
+  + (value is null | undefined | string | number | boolean | symbol | bigint): 如果值是原始类型则返回 true，否则返回 false
 
   ```js
   import { isPrimitive } from 'es-toolkit/predicate';

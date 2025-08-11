@@ -2,7 +2,7 @@
 
 ## 概述
 
-+ 检查一个值是否为 TypedArray。
++ 检查一个值是否为 TypedArray
 
 ## API
 
@@ -31,7 +31,9 @@
 
 + 返回值
 
-  + (x is Uint8Array | Uint8ClampedArray | Uint16Array | Uint32Array | BigUint64Array | Int8Array | Int16Array | Int32Array | BigInt64Array | Float32Array | Float64Array): 如果值是 TypedArray，则为 true，否则为 false。
+  + (x is Uint8Array | Uint8ClampedArray | Uint16Array | Uint32Array | BigUint64Array | Int8Array | Int16Array | Int32Array | BigInt64Array | Float32Array | Float64Array):
+
+    + 如果值是 TypedArray，则为 `true` 否则为 `false`
 
   ```js
   import { isTypedArray } from 'es-toolkit/predicate';

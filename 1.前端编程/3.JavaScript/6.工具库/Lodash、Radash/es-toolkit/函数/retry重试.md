@@ -2,7 +2,8 @@
 
 ## 概述
 
-+ Promise返回的函数会在成功之前进行重试。您可以设置重试次数和每次重试之间的间隔
++ Promise返回的函数会在成功之前进行重试
++ 您可以设置重试次数和每次重试之间的间隔
 
 ## API
 
@@ -16,17 +17,21 @@
 
 + 参数
 
-  + func (() => Promise<T>): 一个返回 Promise 的函数。
-  + retries: 重试的次数。默认值为 Number.POSITIVE_INFINITY，即会一直重试直到成功。
-  + delay: 每次重试之间的间隔。可以是毫秒数，也可以是一个根据当前重试次数 (attempts) 动态计算的函数。默认值为 0。
-  + signal: 一个可以用来取消重试的 AbortSignal。
+  + func (() => Promise<T>): 一个返回 Promise 的函数
+  + retries: 重试的次数。默认值为 `Number.POSITIVE_INFINITY` ，即会一直重试直到成功
+  + delay: 每次重试之间的间隔
+
+    + 可以是毫秒数，也可以是一个根据当前重试次数 (attempts) 动态计算的函数
+    + 默认值为 0
+
+  + signal: 一个可以用来取消重试的 AbortSignal
 
 + 返回值
 
   + (Promise<T>): func 返回的值
 
 + 错误
-  
+
   + 如果重试次数达到 retries 则抛出错误
 
   ```js
@@ -54,9 +59,3 @@
   const data5 = await retry(() => fetchData(), { signal: controller.signal });
   console.log(data5);
   ```
-
-
-
-
-
-

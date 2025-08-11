@@ -12,12 +12,14 @@
 
 + 参数
 
-  + value (number): 要四舍五入的数字。
-  + precision (number, 可选): 要四舍五入到的小数位数。默认为 0。
+  + value (number): 要四舍五入的数字
+  + precision (number, 可选): 要四舍五入到的小数位数
+
+    + 默认为 0
 
 + 返回值
 
-  + (number): 四舍五入后的数字。
+  + (number): 四舍五入后的数字
 
 
   ```js

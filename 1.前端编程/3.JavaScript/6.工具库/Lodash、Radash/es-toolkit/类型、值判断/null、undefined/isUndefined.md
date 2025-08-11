@@ -16,11 +16,11 @@
 
 + 参数
 
-  + x (unknown): 要检查是否为 undefined 的值。
+  + x (unknown): 要检查是否为 `undefined` 的值
 
 + 返回值
 
-  + (x is undefined): 如果值为 undefined，则返回 true；否则返回 false。
+  + (x is undefined): 如果值为 `undefined` ，则返回 `true` ；否则返回 `false`
 
   ```js
   const value1 = undefined;

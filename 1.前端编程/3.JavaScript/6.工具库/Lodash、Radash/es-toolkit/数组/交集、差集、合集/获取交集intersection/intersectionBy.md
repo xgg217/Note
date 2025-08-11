@@ -14,9 +14,9 @@
 
 + 参数
 
-  + firstArr (T[]): 要比较的第一个数组。
-  + secondArr (U[]): 要比较的第二个数组。
-  + mapper ((item: T | U) => unknown): 用于映射两个数组元素以进行比较的函数。
+  + firstArr (T[]): 要比较的第一个数组
+  + secondArr (U[]): 要比较的第二个数组
+  + mapper ((item: T | U) => unknown): 用于映射两个数组元素以进行比较的函数
 
 + 返回值
 

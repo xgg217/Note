@@ -10,11 +10,11 @@
 
 + 参数
 
-  + value (unknown): 要检查的值。
+  + value (unknown): 要检查的值
 
 + 返回值
 
-  + (boolean): 如果该值是JSON对象，则返回 true，否则返回 false。
+  + (boolean): 如果该值是JSON对象，则返回 `true` ，否则返回 `false`
 
   ```js
   console.log(isJSONObject({ nested: { boolean: true, array: [1, 2, 3], string: 'test', null: null } })); // true

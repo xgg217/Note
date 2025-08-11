@@ -21,7 +21,7 @@
 
 + 返回值
 
-  + (boolean): 如果值在指定范围内返回 true，否则返回 false。
+  + (boolean): 如果值在指定范围内返回 `true` ，否则返回 `false`
 
 + 抛出异常
 

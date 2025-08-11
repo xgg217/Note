@@ -17,11 +17,11 @@
 
 + 参数
 
-  + func (F extends (() => any) | ((...args: any[]) => void)): 要限制的函数。
+  + func (F extends (() => any) | ((...args: any[]) => void)): 要限制的函数
 
 + 返回值
 
-  + (F): 调用 func 一次并缓存结果的新函数。
+  + (F): 调用 func 一次并缓存结果的新函数
 
   ```js
   const initialize = once(() => {

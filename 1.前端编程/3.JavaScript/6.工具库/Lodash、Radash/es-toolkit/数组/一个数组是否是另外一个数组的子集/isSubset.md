@@ -10,12 +10,12 @@
 
 + 参数
 
-  + superset (T[]): 可能包含子集所有元素的数组。
-  + subset (T[]): 要与超集进行检查的数组。
+  + superset (T[]): 可能包含子集所有元素的数组
+  + subset (T[]): 要与超集进行检查的数组
 
 + 返回值
 
-  + (boolean): 如果 subset 中的所有元素都存在于 superset 中，则返回 true，否则返回 false
+  + (boolean): 如果 subset 中的所有元素都存在于 superset 中，则返回 `true` ，否则返回 `false`
 
   ```js
   const superset1 = [1, 2, 3, 4, 5];
