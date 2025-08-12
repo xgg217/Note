@@ -6,7 +6,7 @@
 
 + 所谓『内置』，即内置在坐标系中
 
-  + 平移：在坐标系中滑动拖拽进行数据区域平移。
+  + 平移：在坐标系中滑动拖拽进行数据区域平移
 
   + 缩放：
 
@@ -61,11 +61,11 @@
 + satart
 
   + 数据窗口范围的起始百分比。范围是：0 ~ 100
-  + 表示 0% ~ 100%。
+  + 表示 0% ~ 100%
 
 + end
 
-  + 数据窗口范围的结束百分比。范围是：0 ~ 100。
+  + 数据窗口范围的结束百分比。范围是：0 ~ 100
 
   + dataZoom-inside.start 和 dataZoom-inside.end 共同用 百分比 的形式定义了数据窗口范围
 
@@ -195,9 +195,9 @@
 
 + `Array`
 
-+ 形式为：[rangeModeForStart, rangeModeForEnd]。
++ 形式为：`[rangeModeForStart, rangeModeForEnd]`
 
-  + 例如 rangeMode: ['value', 'percent']，表示 start 值取绝对数值，end 取百分比
+  + 例如 rangeMode: `['value', 'percent']` ，表示 start 值取绝对数值，end 取百分比
 
 + 每项可选值为：'value', 'percent'
 
