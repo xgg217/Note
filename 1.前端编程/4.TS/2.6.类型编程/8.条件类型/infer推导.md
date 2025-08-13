@@ -12,7 +12,7 @@
 
 + 错误使用
 
-  ![推导1](image/infer推导1.png)
+  ![推导1](images/infer推导1.png)
 
 ## 示例-获取数组类型中元素的类型
 
@@ -28,7 +28,7 @@
 
 + 执行流程
 
-  ![推导2](image/infer推导2.png)
+  ![推导2](images/infer推导2.png)
 
 ## 示例
 
