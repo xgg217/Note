@@ -108,6 +108,7 @@
   + 两端的文本，如 `['High', 'Low']`
 
     ![alt text](images/text.png)
+    ![alt text](images/text2.png)
 
 + textGap `number`
 

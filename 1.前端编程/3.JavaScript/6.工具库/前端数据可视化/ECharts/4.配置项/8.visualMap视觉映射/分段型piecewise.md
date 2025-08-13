@@ -58,8 +58,22 @@
   + 当 type 为 piecewise 且使用 min/max/splitNumber 时，此参数有效
   + 当值为 true 时，界面上会额外多出一个『< min』的选块
 
-+ maxOpen
-+ selectedMode
++ maxOpen `boolean`
+
+  + 当 type 为 piecewise 且使用 min/max/splitNumber 时，此参数有效
+  + 当值为 true 时，界面上会额外多出一个『> max』的选块
+
++ selectedMode `string | boolean`
+
+  + 选择模式，可以是：
+
+    + 'multiple'（多选） **默认值**
+    + 'single'（单选）
+    + true（单选）从5.3.3版本支持
+    + false（禁止选择）从5.3.3版本支持
+
+  ![alt text](images/selectedMode.png)
+
 + inverse
 + precision
 + itemWidth
@@ -77,6 +91,28 @@
 + hoverLink
 + inRange
 + outOfRange
++ controller
++ zlevel
++ z
++ left
++ top
++ right
++ bottom
++ coordinateSystem
++ coordinateSystemUsage
++ coord
++ calendarIndex
++ calendarId
++ matrixIndex
++ matrixId
++ orient
++ padding
++ backgroundColor
++ borderColor
++ borderWidth
++ color
++ textStyle
++ formatter
 
 ## pieces 连续型数据自定义分段
 
