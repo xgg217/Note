@@ -124,23 +124,51 @@
 
 + dimension `number`
 
-  + 指定用数据的『哪个维度』，映射到视觉元素上。『数据』即 series.data。 可以把 series.data 理解成一个二维数组
+  + 下标
+
+    ![alt text](images/dimension.png)
+
+  + 默认取 data 中最后一个维度
+  + 指定用数据的『哪个维度』，映射到视觉元素上
+  + 『数据』即 series.data
+  + 可以把 series.data 理解成一个二维数组
 
     ```js
     [
       [12, 23, 43],
       [12, 23, 43],
-      [43, 545, 65],
+      [43, 54, 65],
       [92, 23, 33]
     ]
     ```
 
-+ seriesIndex
+  + 其中每个列是一个维度，即 dimension
+
+    +  例如 dimension 为 1 时，取第二列（即 23，23，54，23），映射到视觉元素上
+
++ seriesIndex `number | string | Array`
+
+  + 指定取哪个系列的数据，即哪个系列的 series.data。
+
+  + 可取值：
+
+    + 一个系列的 index
+    + 系列的 index 的数组
+    + 'all'/null/undefined (default)：取所有系列
+
 + seriesId
-+ hoverLink
-+ inRange
-+ outOfRange
-+ controller
++ hoverLink `boolean`
+
+  + 默认值 `true`
+  + 打开 hoverLink 功能时，鼠标悬浮到 visualMap 组件上时，鼠标位置对应的数值 在 图表中对应的图形元素，会高亮
+
+    ![alt text](images/hoverLink.png)
+
+  + 反之，鼠标悬浮到图表中的图形元素上时，在 visualMap 组件的相应位置会有三角提示其所对应的数值
+
++ inRange 详见下面
++ outOfRange 详见下面
++ controller 详见下面
 + zlevel
 + z
 + left
