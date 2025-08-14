@@ -25,6 +25,8 @@
 + 连续型数据自定义分段: 依据 visualMap-piecewise.pieces 来定义每块范围
 + 离散数据根据类别分段: 类别定义在 visualMap-piecewise.categories 中
 
+  ![alt text](images/categories.png)
+
 ## 属性
 
 + type
