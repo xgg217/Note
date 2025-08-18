@@ -1,8 +1,10 @@
 # round 四舍五入
 
-## _.round(number, [precision=0])
+## round
 
 + 根据 precision（精度） 四舍五入 number
+
++ `_.round(number, [precision=0])`
 
 + 参数
   + number (number): 要四舍五入的数字
