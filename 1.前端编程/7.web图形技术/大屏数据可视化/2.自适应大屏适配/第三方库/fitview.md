@@ -27,7 +27,7 @@
 + cdn 引入
 
   ```html
-  <scriptsrc="https://unpkg.com/fitview@[version]/lib/fitview.umd.js"></script>
+  <script src="https://unpkg.com/fitview@[version]/lib/fitview.umd.js"></script>
   ```
 
 ## 示例
