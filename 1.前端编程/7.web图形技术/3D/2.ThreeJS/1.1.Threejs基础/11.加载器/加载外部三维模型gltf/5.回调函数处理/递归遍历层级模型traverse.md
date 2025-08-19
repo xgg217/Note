@@ -39,7 +39,7 @@
   })
   ```
 
-## 批量修改gltf所有Mesh的材质
+## 批量修改gltf
 
 + 批量修改gltf所有Mesh的材质
 
@@ -54,4 +54,19 @@
       }
     });
   })
+  ```
+
++ 修改颜色
+
+  ```js
+  gltf.scene.traverse(obj => {
+    if(obj.isMesh) {
+      console.log('mesh', obj);
+      if(obj.name === 'Cylinder') {
+        obj.material.color = new THREE.Color('white');
+      } else if(obj.name === 'Cylinder_1') {
+        obj.material.color = new THREE.Color('pink');
+      }
+    }
+  });
   ```
