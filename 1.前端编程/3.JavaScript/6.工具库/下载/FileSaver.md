@@ -19,7 +19,7 @@
 
 ## API
 
-+ FileSaver saveAs(Blob/File/Url, optional DOMString filename, optional Object { autoBom })
++ `FileSaver saveAs(Blob/File/Url, optional DOMString filename, optional Object { autoBom })`
 
   + 参数
 
@@ -46,5 +46,20 @@
   let canvas = document.getElementById("my-canvas");
   canvas.toBlob(function(blob) {
     saveAs(blob, "abao.png");
+  });
+  ```
+
++ 文件流
+
+  ```js
+  axios({
+    method: 'get',
+    url: 'your_file_url',
+    responseType: 'blob', // 指定响应数据类型为 blob
+  }).then((response) => {
+    //上面是接口
+    const blob = new Blob([response.data]);
+    const fileName = 'your_file_name';
+    saveAs(blob, fileName);
   });
   ```
