@@ -4,12 +4,12 @@
 
 + `_.ceil(number, [precision=0])` 根据 precision（精度） 向上舍入 number。（注： precision（精度）可以理解为保留几位小数）
 
-  + 参数
++ 参数
 
-    + `number (number)`: 要向上舍入的值
-    + `[precision=0] (number)` : 向上舍入的的精度
+  + `number (number)`: 要向上舍入的值
+  + `[precision=0] (number)` : 向上舍入的的精度
 
-  + 返回 (number): 返回向上舍入的值
++ 返回 (number): 返回向上舍入的值
 
   ```js
   _.ceil(4.006);
@@ -24,14 +24,14 @@
 
 ## floor 向下舍入
 
-+ `_.floor(number, [precision=0])` 根据 precision（精度） 向下舍入 number。（注： precision（精度）可以理解为保留几位小数。）
++ `_.floor(number, [precision=0])` 根据 precision（精度） 向下舍入 number。（注： precision（精度）可以理解为保留几位小数）
 
-  + 参数
++ 参数
 
-    + `number (number)`: 要向下舍入的值
-    + `[precision=0] (number)`: 向下舍入的精度
+  + `number (number)`: 要向下舍入的值
+  + `[precision=0] (number)`: 向下舍入的精度
 
-  + 返回值 (number): 返回向下舍入的值
++ 返回值 (number): 返回向下舍入的值
 
   ```js
   _.floor(4.006);

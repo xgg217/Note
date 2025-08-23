@@ -1,6 +1,8 @@
 # random 随机数
 
-## _.random([lower=0], [upper=1], [floating])
+## random
+
++ `_.random([lower=0], [upper=1], [floating])`
 
 + 产生一个包括 lower 与 upper 之间的数。 如果只提供一个参数返回一个0到提供数之间的数
 
