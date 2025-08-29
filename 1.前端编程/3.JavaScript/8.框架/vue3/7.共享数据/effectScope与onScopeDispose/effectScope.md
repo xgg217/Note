@@ -4,6 +4,9 @@
 
 + Vue3 中的api `effectScope`
 + Pinia 的底层原理就是依赖了 effectScope
++ vueuse 中的 createGlobalState
+
+  + 推荐使用
 
 + 调用effectScope函数可以创建独立作用域
 
@@ -17,6 +20,7 @@
 + 避免泄漏：组合函数可自主管理内部副作用，向调用者暴露简洁的控制接口，防止内存泄漏
 + 灵活层级：嵌套作用域链式停止，天然支持逻辑树状结构，符合组件化设计思维
 + 架构清晰：为复杂功能建立明确的资源管理边界
++ 全局状态管理
 
 ## API
 
@@ -46,36 +50,6 @@
   + pause():暂停作用域内所有副作用（可恢复）
   + resume():恢复被暂停的所有副作用
   + active: 作用域是否处于活动状态（未停止）
-
-## onScopeDispose
-
-+ onScopeDispose是一个注册回调函数的方法，该回调会在所属的 effectScope 被停止 (scope.stop()) 时执行
-
-  ```js
-  import { onScopeDispose } from 'vue';
-
-  const scope = effectScope();
-  scope.run(() => {
-    const count = ref(0);
-    //定时器计数
-    let intervalId = setInterval(() => {
-      count.value++;
-      console.log(count.value, "count");
-    }, 1000);
-    watchEffect(() => {
-      console.log(count.value, "Count changed");
-    });
-
-    //在作用域停止时清理定时器
-    onScopeDispose(() => {
-      clearInterval(intervalId);
-    });
-  });
-
-  // 当调用 stop 时，作用域内定时器会被清理
-  scope.stop();
-
-  ```
 
 ## 场景
 
