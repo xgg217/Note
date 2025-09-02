@@ -7,29 +7,29 @@
   ```js
   var runninLogEl = document.querySelector('.running-log');
 
-  anime({
-    targets: '.running-demo .square.el',
+  animate('.running-demo .square.el',{
     translateX: 270,
-    direction: 'alternate',
+    // alternate: true,
+    alternate: true,
     loop: true,
-    easing: 'linear'
+    ease: 'linear'
   });
 
-  anime({
-    targets: '.running-demo .circle.el',
+  animate('.running-demo .circle.el',{
     translateX: 270,
-    direction: 'alternate',
+    // alternate: true,
+    alternate: true,
     loop: true,
-    easing: 'easeInOutCirc'
+    ease: 'inOutCirc'
   });
 
-  anime({
-    targets: '.running-demo .triangle.el',
+  animate('.running-demo .triangle.el',{
     translateX: 270,
-    direction: 'alternate',
-    easing: 'easeInOutQuad',
+    // alternate: true,
+    alternate: true,
+    ease: 'inOutQuad',
     loop: true,
-    update: function() {
+    onUpdate: function() {
       runninLogEl.innerHTML = 'there are currently ' + anime.running.length + ' instances running';
     }
   });
