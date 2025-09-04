@@ -69,10 +69,11 @@
   + 如果不想被污染，修改引入方式
 
     ```html
-    <style src="@/style/reset.css"  scoped></style>
+    <style src="@/style/reset.css" scoped></style>
+    <style src="./reset.css" scoped></style>
 
     <!-- 引入scss文件 -->
-    <style src="./download.scss"  lang="scss" scoped>
+    <style src="./download.scss" lang="scss" scoped>
 
     <style scoped>
       //新的css样式
