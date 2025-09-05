@@ -22,7 +22,11 @@
       event: "change", // 将默认的事件名 input 改为 change
     },
     props: {
-      title: String, // 注意 template 代码中也要修改为 title
+      // 注意 template 代码中也要修改为 title
+      title: {
+        type: [String, Number],
+        required: true
+      },
     },
   };
   </script>
