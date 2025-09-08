@@ -9,8 +9,6 @@
   + widthSegments — （可选）平面的宽度分段数，默认值是1
   + heightSegments — （可选）平面的高度分段数，默认值是1
 
-+ 代码
-
   ```js
   const geometry = new THREE.PlaneGeometry(100,50);
   ```
