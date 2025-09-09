@@ -62,6 +62,18 @@
 
   ![declare module](image/image3.png)
 
+  ```js
+  // .ts
+  window.APP_CONFIG.apiUrl = "1111"
+
+  // global.d.ts
+  interface Window {
+    APP_CONFIG: {
+      apiUrl: string;
+    };
+  }
+  ```
+
 ## 自定义
 
 + 使用 wx js-SDK
