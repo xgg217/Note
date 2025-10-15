@@ -69,7 +69,7 @@
   ```
 
   ```js
-   // worker.js
+  // worker.js
   onmessage = e => {
     // 获取传递的数据
     const data = e.data;
@@ -79,7 +79,6 @@
 
     // 获取上下文
     const ctx = canvas.getContext('2d');
-
 
     postMessage('完成')
   }
