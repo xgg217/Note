@@ -8,7 +8,7 @@
 
 + 代码
 
-  ![引入Canvas图像](../images/引入Canvas图像.png)
+  ![引入Canvas图像](./images/引入Canvas图像.png)
 
   ```html
   <canvas class="c1" width="200" height="200"></canvas>
