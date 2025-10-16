@@ -14,7 +14,6 @@
     /** @type {CanvasRenderingContext2D} */
     const ctx = canvas1.getContext("2d");
 
-
     const video = document.querySelector("video");
     // ctx.drawImage(video,0,0, 400,400, 0, 0, 400,400);
 
