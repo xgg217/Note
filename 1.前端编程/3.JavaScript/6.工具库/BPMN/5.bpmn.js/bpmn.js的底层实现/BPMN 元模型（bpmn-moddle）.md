@@ -2,12 +2,13 @@
 
 ## 概述
 
-bpmn-moddle 是专门用于处理 BPMN 2.0 语义 / 元模型 / XML 的库。它与 diagram-js 是分离的、语义角度独立的那部分。
++ bpmn-moddle 是专门用于处理 BPMN 2.0 语义 / 元模型 / XML 的库
++ 它与 diagram-js 是分离的、语义角度独立的那部分
 
-它的职责 /功能包括：
+## 职责 /功能包括：
 
-元模型定义 (Meta-model) bpmn-moddle 基于 moddle（一个定义元模型的通用库）来定义 BPMN 的类型、属性、关系等。
-XML ↔ 对象模型 映射
++ 元模型定义 (Meta-model) bpmn-moddle 基于 moddle（一个定义元模型的通用库）来定义 BPMN 的类型、属性、关系等。
++ XML ↔ 对象模型 映射
 fromXML(xmlString)：把 BPMN 2.0 的 XML 文档解析为 JavaScript 对象（按照元模型结构组织）
 toXML(objectModel)：把 JavaScript 对象模型（经过编辑后的）序列化回合规的 BPMN 2.0 XML。
 验证 / 结构约束 因为 bpmn-moddle 知道 BPMN 2.0 的规范（哪些元素合法、哪些属性可有可无、关系约束等），它可以在导入 / 编辑 / 导出时进行基础验证。比如，不允许把某些类型连线到不合适的节点。
