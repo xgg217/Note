@@ -28,6 +28,8 @@
 + 基本用法
 
   ```js
+  import { delay } from 'es-toolkit/promise';
+
   async function foo() {
     console.log('Start');
     await delay(1000); // 延迟执行 1 秒钟
@@ -40,6 +42,8 @@
 + 使用 AbortSignal
 
   ```js
+  import { delay } from 'es-toolkit/promise';
+
   async function foo() {
     const controller = new AbortController();
     const signal = controller.signal;
