@@ -14,10 +14,10 @@
 
 + 参数
 
-  + ms (number): 要延迟的毫秒数。
-  + options (DelayOptions, 可选): 一个选项对象。
+  + ms (number): 要延迟的毫秒数
+  + options (DelayOptions, 可选): 一个选项对象
 
-    + signal (AbortSignal, 可选): 用于取消延迟的可选 AbortSignal。
+    + signal (AbortSignal, 可选): 用于取消延迟的可选 AbortSignal
 
 + 返回值
 
