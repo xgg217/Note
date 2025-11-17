@@ -19,6 +19,18 @@
   };
   ```
 
+## 与联合类型
+
++ 与联合类型
+
+  ```js
+  {
+    [k in "x" | "y"]: number
+  }
+
+  // {x: number; y:number}
+  ```
+
 ## 与 keyof 结合
 
 + 把 `keyof` 放入到索引中使用
@@ -31,6 +43,7 @@
     address?: string
   }
 
+  // keyof User --> id | name | tel | address
   type CopyUser = {
     [key in keyof User]: User[key]
   }
