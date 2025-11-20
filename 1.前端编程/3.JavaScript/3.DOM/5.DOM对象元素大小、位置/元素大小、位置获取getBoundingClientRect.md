@@ -7,7 +7,7 @@
 + 主要的 DOMRect 属性
 
   + x/y —— 矩形原点相对于窗口的 X/Y 坐标，
-  + width/height —— 矩形的 width/height（可以为负）
+  + width/height —— 矩形的 width/height（可以为负） 包含元素的 border 和 padding
   + top/bottom —— 顶部/底部矩形边缘的 Y 坐标 (派生（derived）属性)
   + left/right —— 左/右矩形边缘的 X 坐标 (派生（derived）属性)
 

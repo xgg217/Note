@@ -24,4 +24,17 @@
 ## 解决方案
 
 + 方案1 `eval`
-+ 方案2 `new Function()` 推荐使用
+
+  ```js
+  if (typeof data === 'string') {
+    data = eval("(" + data + ")")
+  }
+  ```
+
++ 方案2 `new Function()` *推荐使用*
+
+  ```js
+  if (typeof data === 'string') {
+    new Function('return' + data)()
+  }
+  ```
