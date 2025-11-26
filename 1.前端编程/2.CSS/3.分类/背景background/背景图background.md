@@ -20,15 +20,58 @@
 
 ## 背景图属性
 
++ background-clip
++ background-color
 + `background-image`：背景图路径（可写可不写 `""`，如果路径中包含特殊符号，需要写 `""`）
+
++ background-origin
+
++ `background-position`：设置背景图的位置
 
 + `background-repeat`：背景在 `x` 、 `y` 轴进行重复
 
 + `background-size`：尺寸
 
-+ `background-position`：设置背景图的位置
-
 + `background-attachment`：控制被进图是否固定（类似固定定位）
+
+## background-clip 裁剪背景
+
++ 取值
+
+  + border-box 默认 背景延伸至边框外沿（但是在边框下层）
+
+    ![alt text](images/border-box.png)
+
+  + padding-box 背景延伸至内边距（padding）外沿。不会绘制到边框处
+
+    ![alt text](images/padding-box.png)
+
+  + content-box 背景被裁剪至内容区（content box）外沿
+
+    ![alt text](images/content-box.png)
+
+  + text 背景被裁剪成文字的前景色
+
+    ![alt text](images/text.png)
+
+  ```css
+  /*  */
+  background-clip: border-box;
+
+  /*  */
+  background-clip: padding-box;
+
+  /*  */
+  background-clip: content-box;
+
+  /* 同事设置文字为透明 */
+  background-clip: text;
+  color: transparent;
+
+  /* 不裁剪 */
+  background-clip: no-clip;
+  ```
+
 
 ## background-repeat
 
@@ -75,23 +118,7 @@
   background-size: contain;
   ```
 
-## background-clip 裁剪背景
 
-+ 取值
-
-  ```css
-  /* 默认 从边框向外 裁剪背景 */
-  background-clip: border-box;
-
-  /* 从内边距向外 裁剪背景 */
-  background-clip: padding-box;
-
-  /* 从内容向外 裁剪背景 */
-  background-clip: content-box;
-
-  /* 不裁剪 */
-  background-clip: no-clip;
-  ```
 
 ## background-position 位置
 
