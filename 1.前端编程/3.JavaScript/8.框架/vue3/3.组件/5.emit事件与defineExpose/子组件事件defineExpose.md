@@ -23,6 +23,8 @@
   ```
 
   ```html
+  <MyModal ref="modal" />
+
   <!-- 父组件 -->
   <script setup lang="ts">
 
@@ -31,7 +33,10 @@
 
     // 为组件模板引用标注类型
     // 为了获取 MyModal 的类型，我们首先需要通过 typeof 得到其类型，再使用 TypeScript 内置的 InstanceType 工具类型来获取其实例类型
-    const modal = ref<InstanceType<typeof MyModal> | null>(null)
+    const modal = ref<InstanceType<typeof MyModal> | null>(null);
+
+    // 或者
+    const modalRef = useTemplateRef<InstanceType<typeof MyModal>>('modal');
 
     const openModal = () => {
       modal.value?.open()
