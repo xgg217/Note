@@ -1,0 +1,75 @@
+# 过渡函数 transition-timing-function
+
+##  概述
+
++ CSS transition-timing-function 属性设置如何计算受过渡效果影响的 CSS 属性的中间值
+
+## 语法
+
++ 语法
+
++ 默认值 ease
+
+  ```css
+  /* Keyword values */
+  transition-timing-function: ease;
+  transition-timing-function: ease-in;
+  transition-timing-function: ease-out;
+  transition-timing-function: ease-in-out;
+  transition-timing-function: linear;
+  transition-timing-function: step-start;
+  transition-timing-function: step-end;
+
+  /* Function values */
+  transition-timing-function: steps(4, jump-end);
+  transition-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
+
+  /* Steps Function keywords */
+  transition-timing-function: steps(4, jump-start);
+  transition-timing-function: steps(10, jump-end);
+  transition-timing-function: steps(20, jump-none);
+  transition-timing-function: steps(5, jump-both);
+  transition-timing-function: steps(6, start);
+  transition-timing-function: steps(8, end);
+
+  /* Multiple timing functions */
+  transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
+
+  /* Global values */
+  transition-timing-function: inherit;
+  transition-timing-function: initial;
+  transition-timing-function: revert;
+  transition-timing-function: revert-layer;
+  transition-timing-function: unset;
+    ```
+
++ 取值
+
+  + `linear` 匀速 相当于 `cubic-bezier(0, 0, 1, 1)`
+
+  + `ease`  两头慢中间快 cubic-bezier(0.25,0.1,0.25,1)
+
+  + `ease-in`  先慢后快 cubic-bezier(0.42,0,1,1)
+
+  + `ease-out` 先快后慢 cubic-bezier(0,0,0.58,1)
+
+  + `ease-in-out` 两头慢，中间快（匀变速） cubic-bezier(0.42,0,0.58,1)
+
+  + `cubic-bezier(n, n, n, n)`
+
+## 贝塞尔曲线
+
++ cubic-bezier(n, n, n, n)
+
+## 定格动画 steps(n，start|end)
+
++ 步数（steps）：一个整数，表示你想要动画分割成多少步
+
++ 方向（direction）：可以是 start 或 end。这个参数是可选的，默认值为 end
+
+  + 当设置为 start 时，函数在每个时间间隔的开始时改变属性值
+  + 当设置为 end 时，函数在每个时间间隔的结束时改变属性值
+
+  ![alt text](images/steps.png)
+
++ steps() 功能特别适用于那些需要模拟机械运动或不需要平滑过渡的动画场景，比如电子钟的秒针跳动，或者图像精灵的逐帧动画
