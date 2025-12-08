@@ -1,15 +1,5 @@
 # 基础
 
-## 使用
-
-+ 使用
-
-  ```js
-  div {
-    animation:mymove 5s infinite;
-  }
-  ```
-
 ## animation 属性
 
 + `animation-name` 执行动画的 `keyframe` 名
@@ -28,21 +18,36 @@
 
 + `animation-play-state` 用来控制元素动画的状态
 
+## 语法
+
++ 语法
+
+  ```css
+  animation: 3s ease-in 1s 2 reverse both paused slidein;
+
+  animation: 3s linear 1s slidein;
+
+  /* 属性用来指定多组动画，每组之间用逗号相隔 */
+  animation:
+    3s linear slidein,
+    3s ease-out 5s slideout;
+  ```
+
 ## animation-direction
 
 + 取值
 
   ```css
-  /* 默认值 每个动画循环结束，动画重置到起点重新开始  */
+  /* 每一轮动画方向都是 0%→100%、0%→100% */
   animation-direction: normal;
 
-  /*  */
+  /* 每一轮动画方向都是 100%→0%、100%→0% */
   animation-direction: alternate;
 
-  /* 反向运行动画，每周期结束动画由尾到头运行 */
+  /* 每一轮动画方向都是 0%→100%、100%→0% */
   animation-direction: reverse;
 
-  /*  */
+  /* 每一轮动画方向都是 100%→0%，0%→100% */
   animation-direction: alternate-reverse;
   ```
 
@@ -70,15 +75,15 @@
   animation-iteration-count: 2, 0, infinite;
   ```
 
-## animation-fill-mode
+## animation-fill-mode 动画结束状态
 
 + 取值
 
   ```css
-  /* 默认值 表示懂啊胡将按预期结束，在完成最后一帧时，回到初始值 */
+  /* 默认值 在完成最后一帧时，回到初始值 */
   animation-fill-mode: none;
 
-  /* 听到最后一帧 */
+  /* 停留在最后一帧 */
   animation-fill-mode: forwards;
 
   /* 回到初始值 */
