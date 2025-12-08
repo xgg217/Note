@@ -29,8 +29,8 @@
 
   /* 属性用来指定多组动画，每组之间用逗号相隔 */
   animation:
-    3s linear slidein,
-    3s ease-out 5s slideout;
+    name 3s linear slidein,
+    name2 3s ease-out 5s slideout;
   ```
 
 ## animation-direction
