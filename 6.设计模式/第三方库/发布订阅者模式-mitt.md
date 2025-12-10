@@ -1,5 +1,9 @@
 # 第三方库
 
+## 概述
+
++ Mitt是一个微型的 EventEmitter 库
+
 ## 文档
 
 + http://m.wuhantxg.com/doc/web/API/Vue/mitt/
