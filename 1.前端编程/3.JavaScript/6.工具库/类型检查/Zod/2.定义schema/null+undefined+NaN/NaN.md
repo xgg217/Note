@@ -1,12 +1,7 @@
-# NaN、undefined、null
+# NaN
 
 ## 验证
 
-+ + z.symbol() : 验证数据是否为 Symbol
-
-+ z.undefined() : 验证数据是否为 undefined
-
-+ z.null() : 验证数据是否为 null
 
 + 如果（因某些原因）想验证 NaN，使用 `z.nan()`
 

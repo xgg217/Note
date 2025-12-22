@@ -2,46 +2,63 @@
 
 ## z.enum
 
-+ z.enum([option1, option2, ...]) : 验证数据是否为预定义字符串列表中的一个
++ `z.enum([option1, option2, ...])` : 验证数据是否为预定义字符串列表中的一个
 + 这对于字符串枚举非常有用
 
   ```js
   import { z } from 'zod';
 
-  const UserRoleSchema = z.enum(["ADMIN", "USER", "GUEST"]);
-  type UserRole = z.infer<typeof UserRoleSchema>; // "ADMIN" | "USER" | "GUEST"
+  const FishEnum = z.enum(["Salmon", "Tuna", "Trout"]);
 
-  console.log(UserRoleSchema.parse("ADMIN"));
-  // UserRoleSchema.parse("EDITOR"); // 抛出 ZodError
-
+  FishEnum.parse("Salmon"); // => "Salmon"
+  FishEnum.parse("Swordfish"); // => ❌
   ```
 
-## nativeEnum
+## 注意
 
-+ z.nativeEnum(nativeEnumObject) : 用于验证 TypeScript 的原生 enum
++ 如果将字符串数组声明为变量，Zod 将无法正确推断每个元素的确切值
 
   ```js
-  import { z } from 'zod';
+  const fish = ["Salmon", "Tuna", "Trout"];
 
-  enum Color {
-    Red = "RED",
-    Green = "GREEN",
-    Blue = "BLUE",
-  }
+  const FishEnum = z.enum(fish);
+  type FishEnum = z.infer<typeof FishEnum>; // string
+  ```
 
-  const ColorSchema = z.nativeEnum(Color);
-  type ColorType = z.infer<typeof ColorSchema>; // Color (原生枚举类型)
++ 要解决此问题，请始终将数组直接传递给 z.enum() 函数，或使用 as const
 
-  console.log(ColorSchema.parse(Color.Red)); // "RED"
-  console.log(ColorSchema.parse("GREEN"));   // "GREEN"
-  // ColorSchema.parse("YELLOW"); // 抛出 ZodError
+  ```js
+  const fish = ["Salmon", "Tuna", "Trout"] as const;
 
-  enum NumericEnum {
-    Zero, // 0
-    One,  // 1
-  }
-  const NumericEnumSchema = z.nativeEnum(NumericEnum);
-  console.log(NumericEnumSchema.parse(0)); // 0
-  console.log(NumericEnumSchema.parse(NumericEnum.One)); // 1
+  const FishEnum = z.enum(fish);
+  type FishEnum = z.infer<typeof FishEnum>; // "Salmon" | "Tuna" | "Trout"
+  ```
 
+## .enum
+
++ 要将模式的值提取为类似枚举的对象
+
+  ```js
+  const FishEnum = z.enum(["Salmon", "Tuna", "Trout"]);
+
+  FishEnum.enum;
+  // => { Salmon: "Salmon", Tuna: "Tuna", Trout: "Trout" }
+  ```
+
+## .exclude()
+
++ 要创建新的枚举架构并排除某些值：
+
+  ```js
+  const FishEnum = z.enum(["Salmon", "Tuna", "Trout"]);
+  const TunaOnly = FishEnum.exclude(["Salmon", "Trout"]);
+  ```
+
+## .extract()
+
++ 要创建新的枚举架构并提取某些值
+
+  ```js
+  const FishEnum = z.enum(["Salmon", "Tuna", "Trout"]);
+  const SalmonAndTroutOnly = FishEnum.extract(["Salmon", "Trout"]);
   ```

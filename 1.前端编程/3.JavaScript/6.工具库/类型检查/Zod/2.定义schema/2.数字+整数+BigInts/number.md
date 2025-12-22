@@ -23,9 +23,9 @@
 + `nonnegative(message?)` : 验证是否为非负数 (>=0)
 + `negative(message?)` : 验证是否为负数 (<0)
 + `nonpositive(message?)` : 验证是否为非正数 (<=0)
-+ `multipleOf(value, message?)` 或 .step(value, message?) : 验证是否为 value 的倍数
-+ `finite(message?)` : 验证是否为有限数 (不是 Infinity 或 -Infinity)
-+ `safe(message?)` : 验证是否为安全整数 (在 Number.MIN_SAFE_INTEGER 和 Number.MAX_SAFE_INTEGER 之间)
++ `multipleOf(value, message?)` 或 `.step(value, message?)` : 验证是否为 value 的倍数
++ `finite(message?)` : 验证是否为有限数 (不是 `Infinity` 或 `-Infinity` )
++ `safe(message?)` : 验证是否为安全整数 (在 `Number.MIN_SAFE_INTEGER` 和 `Number.MAX_SAFE_INTEGER` 之间)
 
   ```js
   import { z } from 'zod';
@@ -37,17 +37,6 @@
 
   console.log(ageSchema.safeParse(30)); // { success: true, data: 30 }
   console.log(ageSchema.safeParse(17.5)); // { success: false, error: ... }
-  ```
-
-  ```
-
-## 验证整数：
-
-+ 验证整数：
-
-  ```js
-  z.int();     // 限制在安全整数范围
-  z.int32();   // 限制在 int32 范围
   ```
 
 
