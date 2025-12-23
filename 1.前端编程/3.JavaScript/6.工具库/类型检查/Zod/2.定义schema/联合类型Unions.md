@@ -13,6 +13,7 @@
   ```js
   import { z } from 'zod';
 
+  // 字符串或数字
   const stringOrNumberSchema = z.union([z.string(), z.number()]);
   type StringOrNumber = z.infer<typeof stringOrNumberSchema>; // string | number
 
@@ -34,7 +35,7 @@
 
 ## z.discriminatedUnion 可区分联合
 
-+ z.discriminatedUnion(discriminatorKey, [schemaA, schemaB, ...]) : 可辨识联合类型
++ `z.discriminatedUnion(discriminatorKey, [schemaA, schemaB, ...])`
 + 它基于一个共同的“辨别器”字段来确定应该使用哪个 schema 进行验证
 + 这对于处理具有不同形状但共享某个类型字段的对象非常有用
 

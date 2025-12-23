@@ -4,21 +4,28 @@
 
 + Zod 会根据你的模式定义推断出静态类型
 
-## z.infer<>
+## z.infer
 
-+ 可以使用 z.infer<> 实用程序提取此类型，并根据需要使用它
++ 可以使用 `z.infer<>` 实用程序提取此类型，并根据需要使用它
 
   ```js
-  const Player = z.object({
-    username: z.string(),
-    xp: z.number()
+  const ProductSchema = z.object({
+    id: z.uuid(),
+    name: z.string(),
+    price: z.number().positive(),
+    inStock: z.boolean(),
   });
 
-  // extract the inferred type
-  type Player = z.infer<typeof Player>;
+  // 自动推导类型
+  type Product = z.infer<typeof ProductSchema>;
 
-  // use it in your code
-  const player: Player = { username: "billie", xp: 100 };
+  // 等价于：
+  // type Product = {
+  //   id: string;
+  //   name: string;
+  //   price: number;
+  //   inStock: boolean;
+  // };
   ```
 
 ## .transform()

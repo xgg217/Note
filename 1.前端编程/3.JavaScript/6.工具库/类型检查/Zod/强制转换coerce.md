@@ -65,3 +65,26 @@
   ```
 
 + 若要完全控制强制转换逻辑，考虑使用 z.transform() 或 z.pipe()
+
+## 类型转换与默认值
+
++ zod 支持在验证过程中对数据进行转换，同时支持设置默认值：
+
+  ```js
+  const UserSchema = z.object({
+    // 将输入转换为字符串（如数字 123 → "123"）
+    id: z.coerce.string(),
+
+    // 若未提供，默认值为 "unknown"
+    nickname: z.string().default("unknown"),
+
+    // 将字符串转换为日期对象
+    birthdate: z.coerce.date(),
+  });
+
+  // 验证并转换数据
+  const user = UserSchema.parse({
+    id: 123, // 转换为 "123"
+    birthdate: "2000-01-01", // 转换为 Date 对象
+  });
+  ```
