@@ -20,17 +20,6 @@
   console.log(date instanceof Date); // true
   ```
 
-+ `instanceof` 三大弊端
-
-  1. 对于基本数据类型来说，字面量方式创建出来的结果和实例方式创建的是有一定的区别的
-
-      ```js
-      console.log(1 instanceof Number)//false
-      console.log(new Number(1) instanceof Number)//true
-      ```
-
-  2. 不能检测 `null` 和 `undefined`
-
 ## instanceof 弊端
 
 1. 对于基本数据类型来说，字面量方式创建出来的结果和实例方式创建的是有一定的区别的
