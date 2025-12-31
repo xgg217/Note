@@ -18,13 +18,3 @@
   let myArray = ["value1", "value2", "value3"];
   let mySet = new Set(myArray);
   ```
-
-## 数组去重
-
-+ 示例
-
-  ```js
-  const arr = [12, 2, 23, 12, 2]);
-  const newArr = [...new Set(arr)];
-  console.log(newArr)
-  ```

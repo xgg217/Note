@@ -14,41 +14,41 @@
   Array.from(arrayLike, mapFn, thisArg)
   ```
 
-  + 参数
++ 参数
 
-    + arrayLike 想要转换成数组的类数组或可迭代对象
+  + arrayLike 想要转换成数组的类数组或可迭代对象
 
-      + 类数组（带有 length 属性和索引元素的对象）
-      + 可迭代对象（例如 Map 和 Set 对象）
+    + 类数组（带有 length 属性和索引元素的对象）
+    + 可迭代对象（例如 Map 和 Set 对象）
 
-    + mapFn `[可选]` 调用数组每个元素的函数。如果提供，每个将要添加到数组中的值首先会传递给该函数，然后将 mapFn 的返回值增加到数组中。使用以下参数调用该函数
+  + mapFn `[可选]` 调用数组每个元素的函数。如果提供，每个将要添加到数组中的值首先会传递给该函数，然后将 mapFn 的返回值增加到数组中。使用以下参数调用该函数
 
-      + element 数组当前正在处理的元素
-      + index 数组当前正在处理的元素的索引
+    + element 数组当前正在处理的元素
+    + index 数组当前正在处理的元素的索引
 
-        ```js
-        let arrayLike = {
-          '0': 'a',
-          '1': 'b',
-          '2': 'c',
-          length: 3
-        };
-        Array.from(arrayLike, x => x * x);
-        // 等同于
-        Array.from(arrayLike).map(x => x * x);
+      ```js
+      let arrayLike = {
+        '0': 'a',
+        '1': 'b',
+        '2': 'c',
+        length: 3
+      };
+      Array.from(arrayLike, x => x * x);
+      // 等同于
+      Array.from(arrayLike).map(x => x * x);
 
-        Array.from([1, 2, 3], (x) => x * x)
-        // [1, 4, 9]
-        ```
+      Array.from([1, 2, 3], (x) => x * x)
+      // [1, 4, 9]
+      ```
 
-        ```js
-        Array.from({ length: 2 }, () => 'jack')
-        // ['jack', 'jack']
-        ```
+      ```js
+      Array.from({ length: 2 }, () => 'jack')
+      // ['jack', 'jack']
+      ```
 
-    + thisArg `[可选]` 执行 mapFn 时用作 this 的值
+  + thisArg `[可选]` 执行 mapFn 时用作 this 的值
 
-  + 返回值 一个新的数组实例
++ 返回值 一个新的数组实例
 
 ## 示例
 
