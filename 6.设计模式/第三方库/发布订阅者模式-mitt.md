@@ -2,7 +2,7 @@
 
 ## 概述
 
-+ Mitt是一个微型的 EventEmitter 库
++ Mitt 是一个微型的 EventEmitter 库
 
 ## 文档
 

@@ -52,5 +52,3 @@
     console.error(error);
   }
   ```
-
-
