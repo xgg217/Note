@@ -4,7 +4,7 @@
 
 + KeepAlive 是一个内置组件，该组件的主要作用是缓存组件的状态
 
-+ 当 使用了 `vue-router` 时，无论路由实际对应的 vue 组件是否发生了实质性的界面更新，只要进行了路由切换，无论是否有用 `keep-alive` 缓存组件，都会触发路由对应 vue 组件的 `onUpdated` 钩子
++ 当使用了 `vue-router` 时，无论路由实际对应的 vue 组件是否发生了实质性的界面更新，只要进行了路由切换，无论是否有用 `keep-alive` 缓存组件，都会触发路由对应 vue 组件的 `onUpdated` 钩子
 
   ```html
   <router-view v-slot="{ Component }">
