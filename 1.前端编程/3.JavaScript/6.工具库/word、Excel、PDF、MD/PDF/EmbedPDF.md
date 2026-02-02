@@ -16,7 +16,7 @@
 
 + 方式一：Ready-made Viewer（开箱即用）
 
-  + 如果你只想 快速集成一个完整 PDF 查看器， 直接用官方内置 Viewer。
+  + 如果你只想 快速集成一个完整 PDF 查看器， 直接用官方内置 Viewer
 
   ```besh
   npm install @embedpdf/snippet
