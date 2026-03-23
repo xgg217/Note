@@ -8,7 +8,7 @@
 
 + 语言环境
 
-  + 'zh-CN
+  + zh-CN
   + en-US
 
   ```js
