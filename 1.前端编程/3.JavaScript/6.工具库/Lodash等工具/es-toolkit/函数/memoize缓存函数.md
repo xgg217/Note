@@ -89,3 +89,108 @@
   console.log(memoizedSumWithCustomCache([1, 2])); // 3 （缓存结果）
   console.log(memoizedAddWithCustomCache.cache.size); // 1
   ```
+
+
+
+
+## 使用场景
+
++ memoize函数在以下场景中特别有效：
+
+  ```
+  场景类型          优势            示例
+  纯函数计算        避免重复计算      数学运算、转换函数
+  API调用          减少网络请求      用户数据、配置信息
+  渲染优化         避免重复渲染      React组件、模板生成
+  数据转换         缓存转换结果      日期格式化、货币转换
+  ```
+
++ 计算密集型函数优化
+
+  ```js
+  const fibonacci = memoize((n: number): number => {
+    if (n <= 1) return n;
+    return fibonacci(n - 1) + fibonacci(n - 2);
+  });
+
+  // 传统递归会导致指数级时间复杂度
+  // 使用memoize后变为线性时间复杂度
+  console.time('Fibonacci with memoization');
+  console.log(fibonacci(40)); // 快速计算
+  console.timeEnd('Fibonacci with memoization');
+  ```
+
++ API调用缓存
+
+  ```js
+  const fetchUserData = memoize(async (userId: number) => {
+    console.log(`Fetching user ${userId} from API...`);
+    const response = await fetch(`/api/users/${userId}`);
+    return response.json();
+  });
+
+  // 相同用户ID的请求只会发生一次
+  const user1 = await fetchUserData(123);
+  const user2 = await fetchUserData(123); // 从缓存获取
+  ```
+
++ 自定义缓存实现：es-toolkit的memoize支持完全自定义的缓存实现，这在需要特殊缓存策略时非常有用：
+
+  ```js
+  class LRUCache<K, V> implements MemoizeCache<K, V> {
+    private cache = new Map<K, V>();
+    private maxSize: number;
+
+    constructor(maxSize: number = 100) {
+      this.maxSize = maxSize;
+    }
+
+    set(key: K, value: V): void {
+      if (this.cache.size >= this.maxSize) {
+        // 移除最久未使用的项
+        const firstKey = this.cache.keys().next().value;
+        this.cache.delete(firstKey);
+      }
+      this.cache.set(key, value);
+    }
+
+    get(key: K): V | undefined {
+      const value = this.cache.get(key);
+      if (value) {
+        // 更新访问顺序
+        this.cache.delete(key);
+        this.cache.set(key, value);
+      }
+      return value;
+    }
+
+    has(key: K): boolean { return this.cache.has(key); }
+    delete(key: K): boolean { return this.cache.delete(key); }
+    clear(): void { this.cache.clear(); }
+    get size(): number { return this.cache.size; }
+  }
+
+  const memoizedWithLRU = memoize(expensiveFunction, {
+    cache: new LRUCache<string, number>(50)
+  });
+  ```
+
++ 内存管理考虑：虽然memoize能显著提升性能，但也需要注意内存使用情况：
+
+  ```js
+  // 监控缓存大小
+  const memoizedFn = memoize(expensiveFunction);
+  console.log(`Cache size: ${memoizedFn.cache.size}`);
+
+  // 定期清理缓存
+  setInterval(() => {
+    if (memoizedFn.cache.size > 1000) {
+      memoizedFn.cache.clear();
+      console.log('Cache cleared due to size limit');
+    }
+  }, 60000);
+
+  // 手动管理缓存
+  memoizedFn.cache.delete(specificKey);
+  memoizedFn.cache.clear();
+  ```

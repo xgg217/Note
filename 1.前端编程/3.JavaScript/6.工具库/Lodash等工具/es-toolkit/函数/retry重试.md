@@ -1,4 +1,4 @@
-# retry
+# retry 重试
 
 ## 概述
 
@@ -58,4 +58,47 @@
   const controller = new AbortController();
   const data5 = await retry(() => fetchData(), { signal: controller.signal });
   console.log(data5);
+  ```
+
+## 使用场景
+
++ 网络重试
+
+  ```js
+  import { retry } from 'es-toolkit';
+
+  // 基本重试
+  const result = await retry(() => fetchData());
+
+  // 固定次数重试
+  const result = await retry(() => apiCall(), 3);
+
+  // 固定延迟重试
+  const result = await retry(() => uploadFile(), {
+    delay: 1000,
+    retries: 5
+  });
+
+  // 指数退避策略: 高并发下的服务调用
+  const result = await retry(() => connectToService(), {
+    delay: (attempt) => Math.min(100 * Math.pow(2, attempt), 10000),
+    retries: 8
+  });
+
+  // 带取消功能的重试
+  const controller = new AbortController();
+  try {
+    const result = await retry(() => longRunningOperation(), {
+      delay: 500,
+      retries: 10,
+      signal: controller.signal
+    });
+  } catch (error) {
+    if (error.message.includes('aborted')) {
+      console.log('Operation was cancelled');
+    }
+  }
+
+  // 取消重试
+  controller.abort();
   ```

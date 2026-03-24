@@ -38,12 +38,13 @@
 
   const curriedSum = curry(sum);
 
-  // 参数 `a` 应该被赋值为 `10`。
-  const sum10 = curriedSum(10);
+  // 逐步应用参数
+  const add10 = curriedSum(10);      // 返回接收b和c的函数
+  const add25 = add10(15);           // 返回接收c的函数
+  const result = add25(5);           // 返回最终结果: 30
 
-  // 参数 `b` 应该被赋值为 `15`。
-  const sum25 = sum10(15);
-
-  // 参数 `c` 应该被赋值为 `5`。函数 'sum' 已经接收到了所有参数，现在将返回一个值。
-  const result = sum25(5);
+  // 也可以一次性调用
+  console.log(curriedSum(10)(15)(5)); // 同样输出: 30
   ```
+
+    ![alt text](curry函数的内部实现采用了递归策略.png)
