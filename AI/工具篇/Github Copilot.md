@@ -1,11 +1,5 @@
 # Cursor vs Github Copilot
 
->原文连接：https://www.builder.io/blog/cursor-vs-github-copilot
->
->翻译：谢杰
->
->审校：谢杰
-
 <img src="https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2025-05-19-015715.png" alt="image-20250519095715496" style="zoom:50%;" />
 
 让我们聊聊 AI 编码助手。它们已经成为开发工具领域的新宠，这并不令人意外。AI 编码助手的目标是帮助开发者更高效地编写代码，减少错误，确实相当酷炫。
