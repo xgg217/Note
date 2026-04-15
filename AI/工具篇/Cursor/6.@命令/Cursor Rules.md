@@ -5,4 +5,4 @@
 + 通过在聊天中使用 `@Cursor Rules`，你可以明确告诉 AI：“请按照我们项目的规范来生成或修改代码”
 + 这样可以让 AI 的输出更加贴合你项目的实际需求，而不是“随心所欲”
 
-  ![alt text](<Cursor Rules.png>)
+  ![alt text](<images/Cursor Rules.png>)
