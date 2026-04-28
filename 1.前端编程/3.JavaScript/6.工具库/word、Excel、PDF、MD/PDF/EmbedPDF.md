@@ -2,30 +2,57 @@
 
 ## 概述
 
-+ 功能
++ EmbedPDF 是一个开源、框架无关的 Web PDF 查看器解决方案
 
-  + PDF 预览（高性能渲染）
-  + 文本搜索、选择
-  + 缩放、旋转
-  + 多种注释方式（高亮 / 便签 / 自由文本）
-  + 内容删除与修改⚡ 虚拟化滚动，长文档不卡
-  + 插件化扩展，深度定制
-  + 多框架兼容，可用于任何 JavaScript 项目
++ 参考文档 https://www.embedpdf.com
 
-## 使用
+## 功能
+
++ PDF 预览（高性能渲染）
++ 文本搜索、选择
++ 缩放、旋转
++ 多种注释方式（高亮 / 便签 / 自由文本）
++ 内容删除与修改⚡ 虚拟化滚动，长文档不卡
++ 插件化扩展，深度定制
++ 多框架兼容，可用于任何 JavaScript 项目
+
+  ![alt text](images/预览与编辑.gif)
+
+## 使用方式
 
 + 方式一：Ready-made Viewer（开箱即用）
++ 方式二：Headless（无 UI，自定义能力）
 
-  + 如果你只想 快速集成一个完整 PDF 查看器， 直接用官方内置 Viewer
+## 方式一：Ready-made Viewer（开箱即用）
+
++ 如果你只想 快速集成一个完整 PDF 查看器， 直接用官方内置 Viewer
 
   ```besh
   npm install @embedpdf/snippet
   ```
 
-  + 几行代码就能跑起来，带 UI、工具栏、搜索、缩放
-  + 适合： ✅ 中后台 ✅ 表单系统 ✅ 快速上线需求
++ 几行代码就能跑起来，带 UI、工具栏、搜索、缩放
++ 适合： ✅ 中后台 ✅ 表单系统 ✅ 快速上线需求
 
-+ 方式二：Headless（无 UI，自定义能力）
+  ```html
+  <template>
+    <PDFViewer
+      :config="{ src: 'https://snippet.embedpdf.com/ebook.pdf' }"
+      :style="{ height: '500px' }"
+      @ready="onReady"
+    />
+  </template>
 
-  + 如果你对 UI / 交互有强定制需求， 可以只用 EmbedPDF 的渲染和能力层，自行组合界面
-  + 这种方式非常适合：设计体系统一的项目复杂业务流程深度集成场景
+  <script setup lang="ts">
+  import { PDFViewer } from '@embedpdf/vue-pdf-viewer';
+
+  function onReady(registry) {
+    console.log('PDF viewer ready!', registry);
+  }
+  </script>
+  ``
+
+## 方式二：Headless（无 UI，自定义能力）
+
++ 如果你对 UI / 交互有强定制需求， 可以只用 EmbedPDF 的渲染和能力层，自行组合界面
++ 这种方式非常适合：设计体系统一的项目复杂业务流程深度集成场景
