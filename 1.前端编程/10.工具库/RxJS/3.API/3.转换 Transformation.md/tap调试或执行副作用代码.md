@@ -13,11 +13,17 @@
 
 + 参数
 
-  + next	(value: T) => void 可选。默认是 。undefined
+  + `next (value: T) => void` 可选
 
-  + error	(error: any) => void 可选。默认是 。undefined
+    + 默认 `undefined`
 
-  + complete	() => void 可选。默认是 。undefined
+  + `error (error: any) => void` 可选
+
+    + 默认 `undefined`
+
+  + `complete () => void` 可选
+
+    + 默认 `undefined`
 
 ## 示例
 
