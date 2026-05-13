@@ -27,6 +27,26 @@
     → 立刻自动取消订阅 source$
     → 不会再接收任何数据
 
+## 注意点
+
++ takeUntil 必须放最后
+
+  ```js
+  // 错误
+  source$.pipe(
+    takeUntil(stop$), // 错！
+    map(...),
+    filter(...)
+  )
+  ```
+
+  ```js
+  source$.pipe(
+    map(...),
+    filter(...),
+    takeUntil(stop$) // 对！
+  )
+  ```
 
 ## 示例
 
@@ -59,4 +79,34 @@
   3
   4
   （然后自动停止，不再输出）
+  ```
+
++ 组件销毁时取消订阅（防内存泄漏）
+
+  ```js
+  import { Component, OnDestroy } from '@angular/core';
+  import { Subject, takeUntil } from 'rxjs';
+
+  @Component({
+    selector: 'app-test',
+    template: ''
+  })
+  export class TestComponent implements OnDestroy {
+    // 1. 创建停止信号（固定写法）
+    private destroy$ = new Subject<void>();
+
+    constructor() {
+      // 订阅任何流都套上 takeUntil
+      someObservable$.pipe(
+        takeUntil(this.destroy$)
+      ).subscribe();
+    }
+
+    // 2. 组件销毁时自动触发
+    ngOnDestroy() {
+      // 发信号 → 所有订阅全部自动取消
+      this.destroy$.next();
+      this.destroy$.complete();
+    }
+  }
   ```
