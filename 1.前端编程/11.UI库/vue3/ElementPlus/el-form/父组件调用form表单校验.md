@@ -29,6 +29,13 @@
       }
     });
 
+    // 或者
+    formEl.validate().then(res => {
+      // ...
+    }).catch(err => {
+      consoleerror(err)
+    })
+
     return arr;
   };
 

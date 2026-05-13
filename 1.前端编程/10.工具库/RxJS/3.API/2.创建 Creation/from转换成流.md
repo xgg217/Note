@@ -30,6 +30,19 @@
 + 示例2 将 Promise 转换成流
 
   ```js
+  function fetchUser(userId) {
+    return from(
+      fetch(`https://jsonplaceholder.typicode.com/users/${userId}`).then(response => response.json())
+    );
+  }
+
+  fetchUser(1).pipe(
+    map(user => user.name)
+  ).subscribe(name => console.log('用户名:', name));
+  // 输出: 用户名: Leanne Graham
+  ```
+
+  ```js
   import { fromEvent, of, from } from "rxjs";
 
   fromEvent(input, "input")
