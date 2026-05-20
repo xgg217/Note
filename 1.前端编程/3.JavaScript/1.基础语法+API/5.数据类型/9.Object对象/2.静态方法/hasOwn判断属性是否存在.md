@@ -4,9 +4,7 @@
 
 + 如果指定的属性是该对象的直接属性 `Object.hasOwn()` 方法返回 `true` ，即使属性值是 `null` 或 `undefined`
 + 如果属性是继承的或者不存在，该方法返回 `false`
-+ 它不像 in 运算符，这个方法不检查对象的原型链中的指定属性
-
-
++ 它不像 `in` 运算符，这个方法不检查对象的原型链中的指定属性
 
 ## 注意
 
@@ -16,15 +14,15 @@
 
 + `Object.hasOwn(obj, prop)`
 
-  + 参数
++ 参数
 
-    + obj 要测试的 JavaScript 实例对象
+  + obj 要测试的 JavaScript 实例对象
 
-    + prop 要测试属性的 `String` 类型的名称或者 `Symbol`
+  + prop 要测试属性的 `String` 类型的名称或者 `Symbol`
 
-  + 返回值
++ 返回值
 
-    + 如果指定的对象中直接定义了指定的属性，则返回 `true` 否则返回 `false`
+  + 如果指定的对象中直接定义了指定的属性，则返回 `true` 否则返回 `false`
 
 ## 示例
 
