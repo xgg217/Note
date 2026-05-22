@@ -2,7 +2,57 @@
 
 ## 概述
 
-+ 将一个类型的所有属性值都映射到另一个类型上并创造一个新的类型
++ 定义一个对象的 key 和 value 类型
+
+## 语法
+
++ 语法
+
+  ```ts
+  type Record<K extends string | number | symbol, T> = {、
+    [P in K]: T;
+  };
+  ```
+
+## 定义普通对象类型
+
++ 定义普通对象类型
+
+  ```ts
+  type obj = Record<string, any>;
+
+  let a: obj = { x: 1, y: 2 };
+  ```
+
+## 配合联合类型
+
++ 可用于多个属性类型相同的情况，可以方便快捷的写出这个对象的类型定义
+
+  ```js
+  type keys = 'x'|'y'|'z'
+  type obj = Record<keys,number>;
+
+  let a:obj = { x:1, y:2, z:3 }
+  ```
+
+## 搭配接口
+
++ 搭配接口
+
+  ```js
+  type keys = "x" | "y";
+
+  interface values {
+    name: string;
+    age: number;
+  }
+
+  type obj = Record<keys, values>;
+  let a: obj = {
+    x: { name: "wang", age: 10 },
+    y: { name: "li", age: 15 }
+  };
+  ```
 
 ## 源码
 
@@ -20,7 +70,7 @@
   type ProxKType = Record<K, T>
   ```
 
-+ K可以是联合类型、对象、枚举
++ K 可以是联合类型、对象、枚举
 
 ## 实际使用
 
