@@ -18,13 +18,15 @@
 
 + 返回值
 
-  + (value is Record<PropertyKey, any>): 如果该值是普通对象，则返回 true，否则返回 false
+  + (value is Record<PropertyKey, any>): 如果该值是普通对象，则返回 `true` ，否则返回 `false`
 
   ```js
   isPlainObject({}); // true
   isPlainObject([]); // false
   isPlainObject(Object.create(null)); // true
+  ```
 
+  ```js
   class Foo {}
   isPlainObject(new Foo()); // false
   isPlainObject(new Date()); // false
