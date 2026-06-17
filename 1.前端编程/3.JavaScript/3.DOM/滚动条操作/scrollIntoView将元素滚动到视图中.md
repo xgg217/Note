@@ -1,0 +1,131 @@
+# Element.scrollIntoView
+
+## 概述
+
++ Element 接口的 scrollIntoView() 方法会滚动元素的祖先容器，使得被调用该方法的元素对用户可见
+
++ 用于将元素滚动到视图中。如果元素在视口中已经可见，则不会有任何效果
+
++ 主要用于确保某个元素进入视口中，这个方法不需要开发者手动计算目标位置，可以方便快速实现某些滚动功能，可以简化代码复杂度 因此建议优先使用这个
+
+## 语法
+
++ API
+
+  ```js
+  scrollIntoView()
+  scrollIntoView(alignToTop)
+  scrollIntoView(options)
+  ```
+
++ 参数
+
+  + alignToTop 【可选】 一个布尔值：
+
+    + true 元素的顶端将和其所在滚动区的可视区域的顶端对齐。对应于 `scrollIntoViewOptions: {block: "start", inline: "nearest"}` 这是默认值
+
+    + false 元素的底端将和其所在滚动区的可视区域的底端对齐。对应于 `scrollIntoViewOptions: {block: "end", inline: "nearest"}`
+
+  + options 【可选】 一个包含下列属性的对象：
+
+    + behavior 【可选】 定义滚动是立即的还是平滑的动画。可以为以下值之一：
+
+      + smooth：滚动应该是平滑的动画
+      + instant：滚动应该通过一次跳跃立刻发生
+      + auto：滚动行为由 scroll-behavior 的计算值决定 默认值
+
+    + block 【可选】 定义元素在可滚动祖先容器内的垂直对齐方式。其取值可为以下任一选项：
+
+      + start：将元素顶部边缘与可滚动容器顶部对齐，使元素垂直方向出现在可见区域起始处 默认值
+      + center：将元素垂直居中于可滚动容器，使其位于可见区域中央
+      + end：将元素底部边缘与可滚动容器底部对齐，使元素垂直位于可见区域末端
+      + nearest：沿垂直方向将元素滚动至最近边缘。若元素更靠近滚动容器顶部，则对齐顶部；若更靠近底部，则对齐底部。此方式可最小化滚动距离
+
+    + container 【可选】 定义可滚动祖先容器。其值可为以下之一：
+
+      + all：所有可滚动容器均受影响（包括视口） 默认值
+      + nearest：仅最近的可滚动容器受滚动影响
+
+    + inline 【可选】 定义元素在可滚动祖先容器内的水平对齐方式。其取值可为以下任一选项：
+
+      + start：将元素左边缘与可滚动容器左侧对齐，使元素在可见区域水平方向上显示于起始位置
+      + center：将元素水平居中对齐于可滚动容器中央，使其位于可见区域正中
+      + end：将元素右边缘与可滚动容器右侧对齐，使元素水平方向位于可见区域末端
+      + nearest：将元素水平方向滚动至最近边缘。若元素更靠近滚动容器左侧，则向左对齐；若更靠近右侧，则向右对齐。此方式可最小化滚动距离 默认值
+
++ 返回值
+
+  + 无 (undefined)
+
+
+## 示例
+
++ 示例1
+
+  ```js
+  const element = document.getElementById("box");
+
+  element.scrollIntoView();
+  element.scrollIntoView(false);
+  element.scrollIntoView({ block: "end" });
+  element.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+  ```
+
++ 示例2
+
+  ```js
+  // 默认情况下，元素与可滚动祖先的顶部（或底部）边缘对齐
+  // 如需自定义间距，使用 scroll-margin-top 或 scroll-margin-bottom 属性。当页面存在固定页眉时，此功能通常很有用
+  ```
+
+  ```html
+  <body>
+    <header class="navbar">导航栏</header>
+    <main class="content">
+      <button id="go-to-bottom">去底部</button>
+      <button id="go-to-top">去顶部</button>
+    </main>
+  </body>
+
+  <style>
+    .navbar {
+      height: 50px;
+      position: sticky;
+      top: 0;
+      border-bottom: 1.5px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .content {
+      height: 2000px;
+      position: relative;
+    }
+    #go-to-bottom {
+      position: absolute;
+      top: 10px;
+      /* 若未设置此项，按钮在滚动时将对齐至页面顶部而非导航栏底部。 */
+      scroll-margin-top: 60px;
+    }
+    #go-to-top {
+      position: absolute;
+      bottom: 10px;
+      scroll-margin-bottom: 0;
+    }
+  </style>
+
+  <script>
+    const goToTop = document.getElementById("go-to-top");
+    const goToBottom = document.getElementById("go-to-bottom");
+
+    goToBottom.addEventListener("click", () => {
+      goToTop.scrollIntoView({ behavior: "instant", block: "end" });
+    });
+
+    goToTop.addEventListener("click", () => {
+      goToBottom.scrollIntoView({ behavior: "instant", block: "start" });
+    });
+  </script>
+
+  ```
+
