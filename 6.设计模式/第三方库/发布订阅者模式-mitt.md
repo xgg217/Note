@@ -40,11 +40,14 @@
   };
 
   const emitter = mitt<Events>();
+
+  export default emitter;
   ```
 
 + 方式2 使用内置类型
 
   ```js
+  // eventBus.ts
   import mitt, { Emitter } from 'mitt';
 
   type Events = {
@@ -53,6 +56,8 @@
   };
 
   const emitter: Emitter<Events> = mitt<Events>();
+
+  export default emitter;
   ```
 
 ## mitt 使用
@@ -60,30 +65,28 @@
 + 使用
 
   ```js
-  import mitt from 'mitt'
-
-  const emitter = mitt()
+  import EventBus from '@/eventBus';
 
   // 添加事件
   // emitter.on('事件名', (接收到的值) => {逻辑处理}) )
-  emitter.on('foo', e => console.log('foo', e) )
+  EventBus.on('foo', e => console.log('foo', e) )
 
   // 监听所有事件
-  emitter.on('*', (type, e) => console.log(type, e) )
+  EventBus.on('*', (type, e) => console.log(type, e) )
 
   // 派发(通过事件总线对象发送一个事件，并传递需要改变的数据)
   // emitter.emit('事件名', 需要传的值)
-  emitter.emit('foo', { a: 'b' })
+  EventBus.emit('foo', { a: 'b' })
 
   // 取消所有事件
-  emitter.all.clear()
+  EventBus.all.clear()
 
   // working with handler references:
   function onFoo() {}
-  emitter.on('foo', onFoo)   // listen
+  EventBus.on('foo', onFoo)   // listen
 
   // 取消监听(off)
-  emitter.off('foo', onFoo)  // unlisten
+  EventBus.off('foo', onFoo)  // unlisten
   ```
 
 ## 实际使用
@@ -105,9 +108,9 @@
   </template>
 
   <script setup lang="ts">
-  import emitter from "@/tool/mitt";
+  import EventBus from '@/eventBus';
   const toMessage = () => {
-    emitter.emit("message", "A组件的数据");
+    EventBus.emit("message", "A组件的数据");
   };
   ```
 
@@ -117,9 +120,9 @@
     <div>我是B组件</div>
   </template>
   <script setup lang="ts">
-  import emitter from "@/tool/mitt";
+  import EventBus from '@/eventBus';
 
-  emitter.on("message", (data: any) => {
+  EventBus.on("message", (data: any) => {
     console.log(data); //A组件的数据
   });
   </script>
@@ -151,13 +154,13 @@
   </template>
 
   <script>
-  import emitter from './eventBus';
+  import EventBus from './eventBus';
 
   export default {
     name: 'ChildComponent',
     methods: {
       emitEvent() {
-        emitter.emit('customEvent', { message: 'Hello from ChildComponent!' });
+        EventBus.emit('customEvent', { message: 'Hello from ChildComponent!' });
       }
     }
   }
@@ -178,7 +181,7 @@
 
   <script>
   import ChildComponent from './ChildComponent.vue';
-  import emitter from './eventBus';
+  import EventBus from './eventBus';
 
   export default {
     name: 'ParentComponent',
@@ -191,12 +194,12 @@
       };
     },
     mounted() {
-      emitter.on('customEvent', (payload) => {
+      EventBus.on('customEvent', (payload) => {
         this.eventMessage = payload.message;
       });
     },
     beforeUnmount() {
-      emitter.off('customEvent');
+      EventBus.off('customEvent');
     }
   }
   </script>
