@@ -9,6 +9,18 @@
 
 + 对 Vue2 支持的比较好
 
+## VUE 3 版本
+
++ VueDraggableNext
+
+  ```shell
+  pnpm add vue-draggable-next
+  ```
+
+  ```js
+  import { VueDraggableNext } from 'vue-draggable-next
+  ```
+
 ## 基本使用
 
 + 安装
