@@ -14,7 +14,7 @@
 + VueDraggableNext
 
   ```shell
-  pnpm add vue-draggable-next
+  pnpm add vue-draggable-next -S
   ```
 
   ```js
@@ -53,16 +53,47 @@
   </script>
   ```
 
-+ 这是 vuedraggable 的一个标准用法
++ 参数
 
-  1. `v-model="myArray"`：数组包含了需要拖拽排序的元素
-  2. `group="people"`：group 属性用于配置分组，相同 `group` 名称的 `draggable` 实例之间允许相互拖拽元素
-  3. `@start="drag=true"`：当拖拽操作开始时触发，这里将 `drag` 变量设置为 `true` ，这可以用于在拖拽开始时触发一些行为，比如改变样式或显示一些提示
-  4. `@end="drag=false"`：当拖拽操作结束时触发，这里将 `drag` 变量设置为 `false`
+  + `v-model="myArray"`
+
+    + v-model 是 Vue 的双向数据绑定语法糖。在这里，它绑定了一个数组 myArray，这个数组包含了需要拖拽排序的元素
+    + 当数组的顺序改变时（由于拖拽），myArray 会自动更新以反映新的顺序
+
+  + `group="people"`
+
+    + group 属性用于配置分组，相同 `group` 名称的 `draggable` 实例之间允许相互拖拽元素
+
+      ```html
+      <!-- 列表1 与 列表2 之间允许相互拖拽 -->
+
+      <!-- 列表1 -->
+      <draggable v-model="list1" group="tasks" @start="drag = true" @end="endHandle" itemKey="id">
+      </draggable>
+
+      <!-- 列表2 -->
+      <draggable v-model="list2" group="tasks" @start="drag = true" @end="endHandle" itemKey="id">
+      </draggable>
+      ```
+
+    + 相同 group 名称的 draggable 实例之间允许相互拖拽元素。在这个例子中，所有 group 为 people 的 draggable 实例之间都可以互相拖拽元素
+
+  1. `@start="drag=true"`：当拖拽操作开始时触发，这里将 `drag` 变量设置为 `true` ，这可以用于在拖拽开始时触发一些行为，比如改变样式或显示一些提示
+  2. `@end="drag=false"`：当拖拽操作结束时触发，这里将 `drag` 变量设置为 `false`
+
++ 事件
+
+  + start
+
+    + @start 是一个事件监听器，当拖拽操作开始时触发
+
+  + end
+
+    + @end 是一个事件监听器，当拖拽操作结束时触发
 
 ## 示例
 
-+ 示例
++ 示例1
 
   ```html
   <template>
@@ -128,4 +159,24 @@
   </script>
   ```
 
++ 示例2
+
+  ```html
+  <draggable
+    v-model="editorStore.coms"
+    class="drag-container"
+    item-key="id"
+    @start="dragstart"
+  >
+    <CardCmp
+      v-for="(item, index) in editorStore.getAllComsList"
+      :key="item.id"
+      :isActive="editorStore.currentComponentIndex === index"
+      :row="item"
+      :ref="(el) => (componentsRefs[index] = el)"
+      @click="clickHandle(index)"
+      @del="removeCom(index)"
+    />
+  </draggable>
+  ```
 
