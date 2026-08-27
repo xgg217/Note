@@ -55,7 +55,6 @@
 
   ![alt text](与nvm对比.png)
 
-
 ## 推荐使用 pnpm 的场景：
 
 + 已经在用 pnpm 管理依赖
