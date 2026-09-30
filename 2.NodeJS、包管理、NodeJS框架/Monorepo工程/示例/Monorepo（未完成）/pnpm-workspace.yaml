@@ -1,5 +1,0 @@
-packages:
-  # 下所有子包，但是不包括子包下面的包
-  - 'components/*'
-  - 'utils/*'
-  - 'projects/*'
