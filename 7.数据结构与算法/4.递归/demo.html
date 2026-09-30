@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    (() => {
+      /*
+      *
+      */
+      const arr = [9,8,7,6,5,4,3,2,1];
+
+      const maoPao = (arr) => {
+        const newArr = JSON.parse(JSON.stringify(arr));
+        for(let i = 0; i < newArr.length; i++) {
+          for(let j = 1; j < newArr.length; j++) {
+            if(newArr[i] > newArr[j]) {
+              const val = newArr[i];
+              newArr[i] = newArr[j];
+              newArr[j] = val;
+            }
+          }
+        }
+        return newArr;
+        // console.log(newArr)
+      }
+      console.log(maoPao(arr));
+
+
+
+    })();
+    (() => {
+       /*
+      *
+      */
+     const arr = [1, 2];
+
+      const a = arr[0];
+      arr[0] = arr[1];
+      arr[1] = a;
+      console.log(arr)
+    })();
+    (() => {
+       /*
+      *
+      */
+      const arr = [9,8,7,6,5,4,3,2,1];
+      const compare = (a, b) => {
+        if(a > b) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+
+      const exchange = (arr, a, b) => {
+        const temp = arr[a];
+        arr[a] = arr[b];
+        arr[b] = temp;
+      }
+
+      const sort = (arr) => {
+        const newArr = JSON.parse(JSON.stringify(arr));
+        for( i = 0; i < arr.length; i++) {
+          for(let j = 0; j < (newArr.length - 1 - i); j++) {
+            if (compare(newArr[j], newArr[j + 1])) {
+              exchange(newArr, j, j + 1);
+            }
+          }
+        }
+        return newArr
+      }
+      
+      console.log(sort(arr));
+      
+    })();
+    (() => {
+       /*
+      *
+      */
+    })();
+    (() => {
+       /*
+      *
+      */
+    })();
+    (() => {
+       /*
+      *
+      */
+    })();
+    (() => {
+       /*
+      *
+      */
+    })();
+    (() => {
+       /*
+      *
+      */
+    })();
+    (() => {
+       /*
+      *
+      */
+    })();
+  </script>
+</body>
+</html>
