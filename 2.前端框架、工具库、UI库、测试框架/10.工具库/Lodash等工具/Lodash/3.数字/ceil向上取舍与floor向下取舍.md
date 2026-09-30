@@ -1,0 +1,45 @@
+# 向上取舍与向下取舍
+
+## ceil 向上舍入
+
++ `_.ceil(number, [precision=0])` 根据 precision（精度） 向上舍入 number。（注： precision（精度）可以理解为保留几位小数）
+
++ 参数
+
+  + `number (number)`: 要向上舍入的值
+  + `[precision=0] (number)` : 向上舍入的的精度
+
++ 返回 (number): 返回向上舍入的值
+
+  ```js
+  _.ceil(4.006);
+  // => 5
+
+  _.ceil(6.004, 2);
+  // => 6.01
+
+  _.ceil(6040, -2);
+  // => 6100
+  ```
+
+## floor 向下舍入
+
++ `_.floor(number, [precision=0])` 根据 precision（精度） 向下舍入 number。（注： precision（精度）可以理解为保留几位小数）
+
++ 参数
+
+  + `number (number)`: 要向下舍入的值
+  + `[precision=0] (number)`: 向下舍入的精度
+
++ 返回值 (number): 返回向下舍入的值
+
+  ```js
+  _.floor(4.006);
+  // => 4
+
+  _.floor(0.046, 2);
+  // => 0.04
+
+  _.floor(4060, -2);
+  // => 4000
+  ```
