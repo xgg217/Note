@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>模板模式</title>
+</head>
+<body>
+  
+  <script>
+    // 咖啡
+    // class Coffee{
+    //   boilWater() {
+    //     console.log('把水煮开');
+    //   }
+
+    //   brewCoffeeGriends() {
+    //     console.log('用开水冲泡咖啡');
+    //   }
+
+    //   pourInCup() {
+    //     console.log('把咖啡倒进杯子');
+    //   }
+
+    //   addSugarAndMilk() {
+    //     console.log('加糖和牛奶');
+    //   }
+
+    //   init() {
+    //     this.boilWater();
+    //     this.brewCoffeeGriends();
+    //     this.pourInCup();
+    //     this.addSugarAndMilk();
+    //   }
+    // }
+
+    // const coffee = new Coffee();
+    // coffee.init();
+
+    // console.log('-----------------------');
+
+    // // 咖啡
+    // class Tea{
+    //   boilWater() {
+    //     console.log('把水煮开');
+    //   }
+
+    //   steepTeaBag() {
+    //     console.log('用开水浸泡茶叶');
+    //   }
+
+    //   pourInCup() {
+    //     console.log('把茶叶倒进杯子');
+    //   }
+
+    //   addLemon() {
+    //     console.log('加柠檬');
+    //   }
+
+    //   init() {
+    //     this.boilWater();
+    //     this.steepTeaBag();
+    //     this.pourInCup();
+    //     this.addLemon();
+    //   }
+    // }
+
+    // const tea = new Tea();
+    // tea.init();
+
+
+    class Beverage {
+      boilWater() {
+        console.log('把水煮开');
+      }
+
+      // 空方法 应该由子类重新写
+      brew() {
+        throw new Error('子类必须重新 brew 方法');
+      }
+
+      // 空方法 应该由子类重新写
+      pourInCup() {
+        throw new Error('子类必须重新 pourInCup 方法');
+      }
+
+      // 空方法 应该由子类重新写
+      addCondiments() {
+        throw new Error('子类必须重新 addCondiments 方法');
+      }
+
+      // 钩子
+      customerWantsCondiments() {
+        return true; // 默认需要
+      }
+
+      init() {
+        this.boilWater();
+        this.brew();
+        this.pourInCup();
+        if(this.customerWantsCondiments()) {
+          // 如果返回true， 则需要
+          this.addCondiments();
+        }
+      }
+    }
+
+    class Coffee extends Beverage{
+      constructor(){
+        super();
+      }
+
+      brew() {
+        console.log('用开水冲泡咖啡11');
+      }
+
+      pourInCup() {
+        console.log('把咖啡倒进杯子');
+      }
+
+      addCondiments() {
+        console.log('加糖和牛奶');
+      }
+
+      customerWantsCondiments() {
+        return window.confirm('需要吗？');
+      }
+
+      // init() {
+      //   super.boilWater();
+      //   this.brew();
+      //   this.pourInCup();
+      //   this.addCondiments();
+      // }
+    }
+
+    const coffee = new Coffee();
+    coffee.init();
+
+    console.log('-----------------------');
+
+  </script>
+</body>
+</html>

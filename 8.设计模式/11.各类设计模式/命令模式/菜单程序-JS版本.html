@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>菜单程序-JS版本</title>
+</head>
+<body>
+  <button class="but1">点击按钮1</button>
+  <button class="but2">点击按钮2</button>
+  <button class="but3">点击按钮3</button>
+
+  <script>
+    const oBut1 = document.querySelector('.but1');
+    const oBut2 = document.querySelector('.but2');
+    const oBut3 = document.querySelector('.but3');
+
+    /*
+    * 发送者
+    */
+    const setCommand = (button, command) => {
+      // console.log(button)
+      button.addEventListener('click', () => {
+        command.execute();
+      }, false);
+    };
+
+    /*
+    * 命令对象
+    * 增加 execute 方法 是为后续增加 撤销命令
+    */
+    const Refresh = (res) => {
+      return {
+        execute() {
+          res.refresh();
+        }
+      }
+    };
+
+    const RefreshAdd = (res) => {
+      return {
+        execute() {
+          res.add();
+        }
+      }
+    };
+
+    const RefreshDel = (res) => {
+      return {
+        execute() {
+          res.del();
+        }
+      }
+    };
+
+
+
+    /*
+    * 接收者
+    */
+    const MenuBar = {
+      refresh() {
+        console.log('刷新菜单命令');
+      }
+    };
+    const SubMenu = {
+      add() {
+        console.log('增加子菜单');
+      },
+      del(){
+        console.log('删除子菜单');
+      }
+    };
+
+    const redd = Refresh(MenuBar);
+    const redAdd = RefreshAdd(SubMenu);
+    const redDel = RefreshDel(SubMenu);
+    setCommand(oBut1, redd);
+    setCommand(oBut2, redAdd);
+    setCommand(oBut3, redDel);
+
+  </script>
+</body>
+</html>

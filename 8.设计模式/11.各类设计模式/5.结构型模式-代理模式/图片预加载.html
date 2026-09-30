@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>虚拟代理</title>
+  <style>
+    div{
+      width: 500px;
+      height: 500px;
+      border: 1px solid red;
+    }
+    div img{
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  
+  <div>
+    <!-- <img src="" alt=""> -->
+  </div>
+
+  <script>
+    const divImg = document.querySelector('div');
+
+    // 添加图片
+    const myImage = ((dom) => {
+      const imgNode = document.createElement('img');
+      console.log(imgNode)
+      console.log(dom)
+      // dom.insertAdjacentText('afterbegin', imgNode);
+      dom.appendChild(imgNode)
+      
+      return {
+        setSrc(src) {
+          imgNode.src = src;
+        }
+      }
+    })(divImg);
+
+    // 虚拟代理--不要使用箭头函数
+    const proxyImage = (function() {
+      const img = new Image();
+      img.onload = function() {
+        myImage.setSrc(this.src);
+      };
+      return {
+        setSrc(src) {
+          console.log(1)
+          // 加载中的过渡图片
+          myImage.setSrc('./images/timg.gif');
+          img.src = src;
+        }
+      }
+    }());
+    console.log(proxyImage.setSrc)
+    proxyImage.setSrc('https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=4045464508,3989258126&fm=26&gp=0.jpg');
+  </script>
+</body>
+</html>

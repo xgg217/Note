@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>策略模式</title>
+</head>
+<body>
+  
+  <script>
+    const cb = (jx, gz) => {
+      if(jx === 'S') { return gz * 4; }
+      if(jx === 'A') { return gz * 3; }
+      if(jx === 'B') { return gz * 2; }
+    };
+
+    console.log(cb('B', 20000)); // 40000
+    console.log(cb('S', 6000)); // 24000
+
+    const strategies = {
+      S(gz){
+        return gz * 4;
+      },
+      A(gz){
+        return gz * 3;
+      },
+      B(gz){
+        return gz * 2;
+      },
+    };
+
+    const cbb = (jx, gz) => {
+      return strategies[jx](gz);
+    };
+
+    console.log(cbb('B', 20000)); // 40000
+    console.log(cbb('S', 6000)); // 24000
+  </script>
+</body>
+</html>
