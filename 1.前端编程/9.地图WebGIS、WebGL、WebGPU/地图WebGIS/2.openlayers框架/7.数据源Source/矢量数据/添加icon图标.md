@@ -2,11 +2,13 @@
 
 ## 概述
 
-+ OpenLayers框架可以给矢量数据点添加icon图标展示。
++ OpenLayers框架可以给矢量数据点添加 icon 图标展示
 
   ```javascript
   import { Style, Icon } from 'ol/style'
-  import center from './assets/center.svg'
+  import { Point } from "ol/geom";
+  import { Feature } from "ol";
+  import center from './assets/center.svg' // 图标
 
   const vectorLayer = new VectorLayer({
     source: new Vector({
