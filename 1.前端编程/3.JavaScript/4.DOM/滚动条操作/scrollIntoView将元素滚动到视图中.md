@@ -2,7 +2,7 @@
 
 ## 概述
 
-+ Element 接口的 scrollIntoView() 方法会滚动元素的祖先容器，使得被调用该方法的元素对用户可见
++ Element 接口的 `scrollIntoView()` 方法会滚动元素的祖先容器，使得被调用该方法的元素对用户可见
 
 + 用于将元素滚动到视图中。如果元素在视口中已经可见，则不会有任何效果
 
@@ -13,9 +13,9 @@
 + API
 
   ```js
-  scrollIntoView()
-  scrollIntoView(alignToTop)
-  scrollIntoView(options)
+  element.scrollIntoView(); // 等同于 element.scrollIntoView(true)
+  element.scrollIntoView(alignToTop); // Boolean 型参数
+  element.scrollIntoView(scrollIntoViewOptions); // Object 型参数
   ```
 
 + 参数
@@ -56,7 +56,6 @@
 + 返回值
 
   + 无 (undefined)
-
 
 ## 示例
 
@@ -126,6 +125,5 @@
       goToBottom.scrollIntoView({ behavior: "instant", block: "start" });
     });
   </script>
-
   ```
 

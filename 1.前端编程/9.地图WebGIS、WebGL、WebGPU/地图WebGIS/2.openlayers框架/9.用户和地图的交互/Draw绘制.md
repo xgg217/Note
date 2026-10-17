@@ -1,8 +1,10 @@
-# Draw 交互
+# Draw 绘制
 
 ## 概述
 
 + 用于绘制点、线、面、圆、多边形等
+
+  ![alt text](images/Draw绘制.gif)
 
 ## API
 
@@ -12,21 +14,71 @@
 
   + source‌：绘制完成的要素要存放的数据源，必须配合一个 VectorLayer 才能在地图上显示
 
-  + ‌type‌：绘制类型，支持 Point、LineString、Polygon、Circle 等，这是必填项
+  + ‌type‌：绘制类型 必填项
+
+    + Point 点(需要增加样式，不然看不到)
+
+      ```js
+      const vectorLayer = new VectorLayer({
+        source: vectorSource,
+
+        style: (feature) => {
+          const name = feature.get("name");
+
+          return new Style({
+            stroke: new Stroke({
+              color: "#FF0000",
+              width: 2,
+            }),
+            fill: new Fill({
+              color: "#FFFF0080",
+            }),
+            text: new Text({
+              font: "16px sans-serif",
+              fill: new Fill({
+                color: "black",
+              }),
+              text: name,
+            }),
+
+            // 点的样式设置
+            image: new Circle({
+              radius: 7,
+              fill: new Fill({ color: "#FFFF00" }),
+              stroke: new Stroke({ color: "#FF0000", width: 2 }),
+            }),
+          });
+        },
+      });
+      ```
+
+    + LineString 线
+    + Polygon 面
+    + Circle 圆
 
   + ‌freehand‌：设为 true 时进入手绘模式，按住鼠标拖拽即可绘制，适合随手画草图
 
-  + ‌clickTolerance‌：区分“单击加点”和“拖拽平移”的像素阈值，默认 6。精密测绘可以调低到 3 以下，但移动端触摸屏不建议太低，容易误判
+  + ‌clickTolerance‌：判断用户的行为是添加点，还是按住鼠标不松开进行拖拽地图。默认值是 6 像素，当按下鼠标和抬起鼠标左键之间的这段时间段内，如果地图被拖动没有超过 6 像素，那么默认为添加一个点，相反如果超过了 6 像素，那么不会添加点，只是平移一下地图
 
-  + ‌snapTolerance‌：绘制结束时的吸附判定距离，默认 12 像素，配合 Snap 交互可实现闭合多边形自动咬合
+  + ‌snapTolerance‌：默认值是 12 像素。多边形第一个点和最后一个点的吸附判定范围
 
-  + ‌minPoints / maxPoints‌：限制完成绘制所需的最少/最多点数，比如多边形默认至少 3 个点
+  + ‌minPoints：表示绘制单个要素最少的点数限制
 
-  + ‌condition‌：自定义触发绘制的条件，比如加上权限校验：condition: (event) => isApproved && noModifierKeys(event)
+  + maxPoints：表示绘制单个要素最多的点数限制
+
+  + geometryName：设置绘制的要素的名称
+
+  + ‌condition‌：自定义触发绘制的条件，比如加上权限校验：
+
+    ```js
+    condition: (event) => isApproved && noModifierKeys(event)
+    ```
 
   + ‌freehandCondition‌：定义进入手绘模式的触发条件，默认是按住 Shift 键，也可以改成 ctrlKey && altKey 之类的组合键
 
-  + ‌style‌：绘制过程中的预览样式，不设置时用图层默认样式
+  + ‌style‌：表示绘制的样式，如果没有设置样式，会使用上面Source对应的Layer的样式
+
+  + wrapX：当地图水平显示多个相同位置时（缩放级别低的情况下会发生），是否显示多个勾绘任务。默认为false
 
   ```js
   import { Draw } from 'ol/interaction'
@@ -42,7 +94,7 @@
 
 ## 监听事件
 
-+ ‌drawstart‌：点击开始绘制时触发，event.feature 是正在绘制的要素，可以在这里监听它的 change 事件实现实时测量。
++ ‌drawstart‌：点击开始绘制时触发，event.feature 是正在绘制的要素，可以在这里监听它的 change 事件实现实时测量
 
 + ‌drawend‌：绘制完成时触发，event.feature 是最终生成的要素，可以在这里打标记、算面积或导出。
 
