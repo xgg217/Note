@@ -28,9 +28,7 @@
   ```py
   type(3)
   # <class 'int'>
-  ```
 
-  ```py
   type(3.6)
   # <class 'float'>
   ```
@@ -38,14 +36,10 @@
   ```py
   type(True)
   # <class 'bool'>
-  ```
 
-  ```py
   type(None)
   # <class 'NoneType'>
-  ```
 
-  ```py
   type("1")
   # <class 'str'>
   ```
