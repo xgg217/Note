@@ -7,6 +7,7 @@
   ```ts
   import type { Geometry } from 'ol/geom'
   import { Feature } from "ol"
+  import type { FeatureLike } from "ol/Feature";
   ```
 
 ## 第三方
