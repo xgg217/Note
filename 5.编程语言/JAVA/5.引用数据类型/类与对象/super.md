@@ -11,7 +11,12 @@
 + 访问父类的属性，但不能访问父类 `private` 属性
 
   ```java
-  super.属性名;
+  class B extends A {
+      public void hi() {
+        // 调用父类属性
+        super.属性名;
+      }
+  }
   ```
 
 + 访问父类的方法，不能访问父类的 `private` 方法
@@ -19,6 +24,13 @@
 
   ```java
   super.方法名(参数列表);
+
+  class B extends A {
+      public void hi() {
+        // 调用父类方法
+        super.test();
+      }
+  }
   ```
 
 + 访问父类构造器
